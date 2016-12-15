@@ -1,0 +1,17 @@
+C:\Users\Bilel\documents\visual studio 15\Projects\Planner\DataLab\bin\ARM\Debug\DataLab.dll
+C:\Users\Bilel\documents\visual studio 15\Projects\Planner\DataLab\bin\ARM\Debug\DataLab.pdb
+C:\Users\Bilel\documents\visual studio 15\Projects\Planner\DataLab\bin\ARM\Debug\DataLab.pri
+C:\Users\Bilel\documents\visual studio 15\Projects\Planner\DataLab\obj\ARM\Debug\DataLab.dll
+C:\Users\Bilel\documents\visual studio 15\Projects\Planner\DataLab\obj\ARM\Debug\DataLab.pdb
+C:\Users\Bilel\documents\visual studio 15\Projects\Planner\DataLab\obj\ARM\Debug\priconfig.xml
+C:\Users\Bilel\documents\visual studio 15\Projects\Planner\DataLab\obj\ARM\Debug\priconfig.xml.intermediate
+C:\Users\Bilel\documents\visual studio 15\Projects\Planner\DataLab\obj\ARM\Debug\layout.resfiles
+C:\Users\Bilel\documents\visual studio 15\Projects\Planner\DataLab\obj\ARM\Debug\layout.resfiles.intermediate
+C:\Users\Bilel\documents\visual studio 15\Projects\Planner\DataLab\obj\ARM\Debug\resources.resfiles
+C:\Users\Bilel\documents\visual studio 15\Projects\Planner\DataLab\obj\ARM\Debug\resources.resfiles.intermediate
+C:\Users\Bilel\documents\visual studio 15\Projects\Planner\DataLab\obj\ARM\Debug\pri.resfiles
+C:\Users\Bilel\documents\visual studio 15\Projects\Planner\DataLab\obj\ARM\Debug\pri.resfiles.intermediate
+C:\Users\Bilel\documents\visual studio 15\Projects\Planner\DataLab\obj\ARM\Debug\qualifiers.txt
+C:\Users\Bilel\documents\visual studio 15\Projects\Planner\DataLab\obj\ARM\Debug\qualifiers.txt.intermediate
+C:\Users\Bilel\documents\visual studio 15\Projects\Planner\DataLab\obj\ARM\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Bilel\documents\visual studio 15\Projects\Planner\DataLab\obj\ARM\Debug\DataLab.csprojResolveAssemblyReference.cache

@@ -1,0 +1,2 @@
+C:\Users\Bilel\documents\visual studio 15\Projects\Planner\DataLab\DataLab.csproj;arm
+C:\Users\Bilel\documents\visual studio 15\Projects\Planner\Planner\Planner.csproj;arm
