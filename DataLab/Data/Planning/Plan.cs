@@ -36,8 +36,8 @@ namespace DataLab.Data.Planning
         [XmlArray("Diaries"), XmlArrayItem(typeof(Diary), ElementName = "Diary")]
         public ObservableCollection<Diary> Diaries { get; set; } = new ObservableCollection<Diary>();
 
-        [XmlArray("Archive")]
-        public Plan Archive { get; set; } = new Plan();
+        [XmlIgnore]
+        public Plan Archive { get; set; }
 
         [XmlIgnore]
         public List<PlanningItem> AllItems { get { return getAllItems(); } }

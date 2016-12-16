@@ -1,0 +1,17 @@
+C:\Users\Bilel\Source\Repos\Plenner\DataLab\bin\Debug\DataLab.dll
+C:\Users\Bilel\Source\Repos\Plenner\DataLab\bin\Debug\DataLab.pdb
+C:\Users\Bilel\Source\Repos\Plenner\DataLab\bin\Debug\DataLab.pri
+C:\Users\Bilel\Source\Repos\Plenner\DataLab\obj\Debug\DataLab.csprojResolveAssemblyReference.cache
+C:\Users\Bilel\Source\Repos\Plenner\DataLab\obj\Debug\DataLab.dll
+C:\Users\Bilel\Source\Repos\Plenner\DataLab\obj\Debug\DataLab.pdb
+C:\Users\Bilel\Source\Repos\Plenner\DataLab\obj\Debug\priconfig.xml
+C:\Users\Bilel\Source\Repos\Plenner\DataLab\obj\Debug\priconfig.xml.intermediate
+C:\Users\Bilel\Source\Repos\Plenner\DataLab\obj\Debug\layout.resfiles
+C:\Users\Bilel\Source\Repos\Plenner\DataLab\obj\Debug\layout.resfiles.intermediate
+C:\Users\Bilel\Source\Repos\Plenner\DataLab\obj\Debug\resources.resfiles
+C:\Users\Bilel\Source\Repos\Plenner\DataLab\obj\Debug\resources.resfiles.intermediate
+C:\Users\Bilel\Source\Repos\Plenner\DataLab\obj\Debug\pri.resfiles
+C:\Users\Bilel\Source\Repos\Plenner\DataLab\obj\Debug\pri.resfiles.intermediate
+C:\Users\Bilel\Source\Repos\Plenner\DataLab\obj\Debug\qualifiers.txt
+C:\Users\Bilel\Source\Repos\Plenner\DataLab\obj\Debug\qualifiers.txt.intermediate
+C:\Users\Bilel\Source\Repos\Plenner\DataLab\obj\Debug\MultipleQualifiersPerDimensionFound.txt

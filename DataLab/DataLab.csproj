@@ -152,6 +152,8 @@
     <Compile Include="Storage\ServerStorage.cs" />
     <Compile Include="Storage\SettingsStorage.cs" />
     <Compile Include="Storage\Storage.cs" />
+    <Compile Include="Tools\ClassConverters.cs" />
+    <Compile Include="Tools\GeoTools.cs" />
     <Compile Include="Tools\PasswordHasher.cs" />
     <Compile Include="Tools\StaticTools.cs" />
     <Compile Include="Tools\ThreadTools.cs" />
