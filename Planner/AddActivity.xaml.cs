@@ -120,7 +120,10 @@ namespace Planner
                         Activity activity = new Activity(nameTextBox.Text, descriptionTextBox.Text, getStartTime(), getEndTime(), _lastSelectedLocation);
                         activity.Silent = checkBox1.IsChecked.GetValueOrDefault();
                         activity.MinutesToAlertBeforeActualAlarm = listBoxMinutes.SelectedIndex;
-
+                        if (proximityNotification.IsChecked.GetValueOrDefault())
+                        {
+                            activity.setGeoFence();
+                        }
                         Storage.addPlanningItem(activity);
 
 
