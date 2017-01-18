@@ -57,6 +57,11 @@ namespace DataLab.Data.Planning
             
         }
 
+        public void setGeoFence()
+        {
+            FenceItem fenceItem = new FenceItem(Name, basicgeoloc);
+        }
+
         public override bool Equals(object obj)
         {
 

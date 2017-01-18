@@ -107,6 +107,7 @@
         </CheckBox>
         
         <TimePicker x:Name="standardTimePicker" HorizontalAlignment="Left" Margin="37,191,0,0" VerticalAlignment="Top" Loaded="standardTimePicker_Loaded"/>
+        <CheckBox x:Name="proximityNotification" Content="Proximity notification" HorizontalAlignment="Left" Margin="40,557,0,0" VerticalAlignment="Top" Width="20" RenderTransformOrigin="-0.167,0.625"/>
 
         <!-- end checkbox2 is checked -->
     </Grid>
