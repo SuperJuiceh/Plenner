@@ -58,7 +58,7 @@ namespace Planner
             if (_splash != null)
             {
                 loadingStatusTextBlock.Text = "Connecting to server";
-                await PacketClient.Connect();
+                //await PacketClient.Connect();
 
                 // Register an event handler to be executed when the splash screen has been dismissed.
                 _splash.Dismissed += new TypedEventHandler<SplashScreen, Object>(DismissedEventHandler);

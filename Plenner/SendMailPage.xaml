@@ -1,0 +1,32 @@
+﻿<Page
+    x:Class="Plenner.SendMailPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Plenner"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid DoubleTapped="Grid_DoubleTapped">
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/Background_orange.png"/>
+        </Grid.Background>
+        <TextBlock x:Name="textBox" HorizontalAlignment="Left" Margin="20,20,0,0" TextWrapping="Wrap" Text="Send mail" VerticalAlignment="Top"/>
+        <TextBox x:Name="recepients_textbox" HorizontalAlignment="Left" Margin="70,60,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="211"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="23,109,0,0" TextWrapping="Wrap" Text="Message" VerticalAlignment="Top"/>
+        <Button x:Name="button" HorizontalAlignment="Left" Margin="291,62,0,0" VerticalAlignment="Top" Height="30" Width="35" >
+            <Button.Background>
+                <ImageBrush ImageSource="/Assets/info_icon.png" />
+            </Button.Background>
+        </Button>
+        <Button x:Name="send_mail_button" HorizontalAlignment="Left" Margin="300,505,0,0" VerticalAlignment="Top" Width="40" Height="35" Click="send_mail_button_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/Assets/true.png" />
+            </Button.Background>
+        </Button>
+        <TextBlock x:Name="textBox2" HorizontalAlignment="Left" Margin="30,65,0,0" TextWrapping="Wrap" Text="To:" VerticalAlignment="Top" Width="26"/>
+        <TextBox x:Name="message_text_box" HorizontalAlignment="Left" Margin="25,144,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Height="250" Width="306" MaxLength="300"/>
+        <TextBlock x:Name="status_text_block" HorizontalAlignment="Left" Margin="35,512,0,0" TextWrapping="Wrap" Text="Click button to send" VerticalAlignment="Top" Height="30" Width="220"/>
+
+    </Grid>
+</Page>

@@ -15,7 +15,7 @@ namespace PlannerServer.Server
 
         public ServerStorage(): base("server.pln", typeof(ServerDataContainer))
         {
-            Debug.WriteLine(this.SaveLocation.Path);
+            //Debug.WriteLine(this.SaveLocation.Path);
 
         }
         

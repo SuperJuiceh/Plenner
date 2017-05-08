@@ -61,7 +61,15 @@ namespace DataLab.Data.Users
         public User getUser(string name)
         {
             return Users.First(user => user.UserName == name);
+
         }
-                
+
+        public User getUserLinq()
+        {
+            return (from u in Users
+                    where u.UserName == "Bilel"
+                    select u).First();
+
+        }
     }
 }

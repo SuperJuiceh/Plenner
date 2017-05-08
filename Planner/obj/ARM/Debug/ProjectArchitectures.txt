@@ -1,2 +1,2 @@
-C:\Users\Bilel\documents\visual studio 15\Projects\Planner\DataLab\DataLab.csproj;arm
-C:\Users\Bilel\documents\visual studio 15\Projects\Planner\Planner\Planner.csproj;arm
+C:\Users\Bilel\Documents\Plenner\DataLab\DataLab.csproj;neutral
+C:\Users\Bilel\Documents\Plenner\Planner\Planner.csproj;arm

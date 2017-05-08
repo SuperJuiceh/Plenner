@@ -1,0 +1,2 @@
+C:\Users\Bilel\Documents\Plenner\DataLab\DataLab.csproj;neutral
+C:\Users\Bilel\Documents\Plenner\PlennerServerConsole\PlennerServer.csproj;x86

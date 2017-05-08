@@ -1,0 +1,4 @@
+C:\Users\Bilel\Documents\Visual Studio 2017\Projects\Plenner\RuntimeComponent1\obj\ARM\Debug\RuntimeComponent1.csprojResolveAssemblyReference.cache
+C:\Users\Bilel\Documents\Visual Studio 2017\Projects\Plenner\RuntimeComponent1\obj\ARM\Debug\RuntimeComponent1.winmd
+C:\Users\Bilel\Documents\Visual Studio 2017\Projects\Plenner\RuntimeComponent1\obj\ARM\Debug\RuntimeComponent1.winmdobj
+C:\Users\Bilel\Documents\Visual Studio 2017\Projects\Plenner\RuntimeComponent1\obj\ARM\Debug\RuntimeComponent1.compile.pdb

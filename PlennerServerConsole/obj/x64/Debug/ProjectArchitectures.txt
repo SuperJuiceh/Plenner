@@ -1,0 +1,2 @@
+C:\Users\Bilel\Documents\Visual Studio 2015\Projects\Plenner\ClassLibrary1\DataLab.csproj;neutral
+C:\Users\Bilel\Documents\Visual Studio 2015\Projects\Plenner\PlennerServerConsole\PlennerServer.csproj;x64

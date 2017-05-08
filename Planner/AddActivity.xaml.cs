@@ -22,6 +22,8 @@ using Windows.UI.Xaml.Controls.Maps;
 using Planner.Data.Converters;
 using Planner.Data.Notify;
 using DataLab.Data.Planning;
+using System.ComponentModel;
+using System.Threading.Tasks;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -49,6 +51,10 @@ namespace Planner
 
         private Activity EditableActivity;
 
+        private bool proximityTrackingOn, gpsFlyoutIsOpened;
+
+        private BackgroundWorker ProximityTrackerWorker = new BackgroundWorker();
+
         public AddActivity()
         {
             this.InitializeComponent();
@@ -58,6 +64,24 @@ namespace Planner
 
             listBoxMinutes.SelectedIndex = 0;
 
+
+            // Set thread
+            ProximityTrackerWorker.WorkerSupportsCancellation = true;
+            ProximityTrackerWorker.WorkerReportsProgress = true;
+
+            ProximityTrackerWorker.DoWork += ProximityTrackerWorker_DoWork;
+
+        }
+
+        private void ProximityTrackerWorker_DoWork(Object sender, DoWorkEventArgs e)
+        {
+            // Proximity holder
+            while (!e.Cancel)
+            {
+                // Check if in range every 3 seconds
+                setmaptogps(0);
+                Task.Delay(3000);
+            }
         }
 
         public void setActivity(Activity a)
@@ -142,7 +166,7 @@ namespace Planner
             
             if (EditableActivity != null)
             {
-                Debug.WriteLine(EditableActivity.Name);
+                //Debug.WriteLine(EditableActivity.Name);
                 Storage.removePlanningItem(EditableActivity);
 
 
@@ -214,16 +238,16 @@ namespace Planner
             //setmaptogps(map, await _geo.GetGeopositionAsync());
         }
 
-        private async void setmaptogps(MapControl map, Geoposition pos)
+        private async void setmaptogps(int zoom)
         {
-            Debug.WriteLine("In setmaptogps()");
             // Set location to our current gps
             _lastSelectedLocation = ClassConverters.geopositiontobgp(await _geo.GetGeopositionAsync());
-            Debug.WriteLine("lsl changed "+ _lastSelectedLocation.Altitude);
+            await mainMap.TrySetViewAsync(new Geopoint(_lastSelectedLocation));
 
-            
-            Debug.WriteLine("Tried setview async "+ await map.TrySetViewAsync(new Geopoint(_lastSelectedLocation), 10D));
-
+            if (zoom > 0 && 20 > zoom)
+            {
+                await mainMap.TryZoomToAsync(zoom);
+            }
             //while (map.ZoomLevel < 18)
             //{
             //    await map.TryZoomInAsync();
@@ -248,7 +272,7 @@ namespace Planner
 
         private async void button4_Click(object sender, RoutedEventArgs e)
         {
-            setmaptogps(mainMap, await _geo.GetGeopositionAsync());
+            setmaptogps(5);
         }
 
         private void MapControl_MapTapped(MapControl sender, MapInputEventArgs args)
@@ -349,11 +373,49 @@ namespace Planner
             }
         }
 
+        private void proximityNotification_Click(Object sender, RoutedEventArgs e)
+        {
+            // Turn on tracker
+            if ((sender as CheckBox).IsChecked.Value)
+                enableProximityTracker();
+            else
+                disableProximityTracker();
+
+
+        }
+
         private void standardTimePicker_Loaded(Object sender, RoutedEventArgs e)
         {
             (sender as TimePicker).Visibility = Visibility.Collapsed;
         }
-        
+
+        private void enableProximityTracker()
+        {
+            ProximityTrackerWorker.RunWorkerAsync();
+
+        }
+
+        private void addLocationFlyout_Opened(Object sender, Object e)
+        {
+            //(sender as Flyout).FlyoutPresenterStyle.
+
+            gpsFlyoutIsOpened = true;
+            
+        }
+
+        private void addLocationFlyout_Closed(Object sender, Object e)
+        {
+            //(sender as Flyout).FlyoutPresenterStyle.
+
+            gpsFlyoutIsOpened = false;
+
+        }
+
+        private void disableProximityTracker()
+        {
+            ProximityTrackerWorker.CancelAsync();
+
+        }
 
     }
 }

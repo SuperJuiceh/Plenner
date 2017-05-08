@@ -1,0 +1,3 @@
+C:\Users\Bilel\Documents\Visual Studio 2017\Projects\Plenner\ClassLibrary1\DataLab.csproj;neutral
+C:\Users\Bilel\Documents\Visual Studio 2017\Projects\Plenner\Plenner\Plenner.csproj;x86
+C:\Users\Bilel\Documents\Visual Studio 2017\Projects\Plenner\RuntimeComponent1\RuntimeComponent1.csproj;neutral

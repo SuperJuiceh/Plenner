@@ -1,2 +1,2 @@
-C:\Users\Bilel\Source\Repos\Plenner\DataLab\DataLab.csproj;neutral
-C:\Users\Bilel\Source\Repos\Plenner\Planner\Planner.csproj;x64
+C:\Users\Bilel\Documents\Plenner\DataLab\DataLab.csproj;x64
+C:\Users\Bilel\Documents\Plenner\Planner\Planner.csproj;x64

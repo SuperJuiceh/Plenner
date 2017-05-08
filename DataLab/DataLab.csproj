@@ -109,6 +109,7 @@
   <ItemGroup>
     <Compile Include="Data\Planning\Activity.cs" />
     <Compile Include="Data\Planning\Diary.cs" />
+    <Compile Include="Data\Planning\FenceItem.cs" />
     <Compile Include="Data\Planning\Plan.cs" />
     <Compile Include="Data\Planning\PlanningItem.cs" />
     <Compile Include="Data\Planning\PlanningItemSet.cs" />

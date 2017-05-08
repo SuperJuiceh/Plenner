@@ -1,0 +1,7 @@
+"/t:PlennerServer.Server.ServerDataContainer,DataLab,xml"
+"/t:DataLab.Data.Planning.Plan,DataLab,xml"
+"/t:DataLab.Storage.PlannerSettings,DataLab,xml"
+"/t:System.Object,System.Runtime,xml"
+"/t:Datalab.Server.Packets.QuestionPacket,DataLab,xml"
+"/t:Datalab.Server.Packets.Packet,DataLab,xml"
+"/t:DataLab.Data.Users.User,DataLab,xml"

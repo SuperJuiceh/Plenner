@@ -87,14 +87,11 @@ namespace DataLab.Storage
             }
             catch (Exception ex)
             {
-                Debug.WriteLine(ex.Message);
                 StorageObject = Activator.CreateInstance(StorageObjectType);
                 saveStorage();
             }
 
             
-
-
             striem.Dispose();
 
             return StorageObject;

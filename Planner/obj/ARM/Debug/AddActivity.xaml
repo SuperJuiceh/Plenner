@@ -41,13 +41,13 @@
             <Button.Flyout>
                 <Flyout>
                     <StackPanel Height="220" Width="150" >
-                        <CheckBox x:ConnectionId='33' x:Name="mondayEnabledCheckedBox" Content="Monday"                                                                                       />
-                        <CheckBox x:ConnectionId='34' x:Name="tuesdayEnabledCheckedBox" Content="Tuesday"                                                                                        />
-                        <CheckBox x:ConnectionId='35' x:Name="wednesdayEnabledCheckedBox" Content="Wednesday"                                                                                        />
-                        <CheckBox x:ConnectionId='36' x:Name="thursdayEnabledCheckedBox" Content="Thursday"                                                                                       />
-                        <CheckBox x:ConnectionId='37' x:Name="fridayEnabledCheckedBox" Content="Friday"                                                                                       />
-                        <CheckBox x:ConnectionId='38' x:Name="saturdayEnabledCheckedBox" Content="Saturday"                                                                                       />
-                        <CheckBox x:ConnectionId='39' x:Name="sundayEnabledCheckedBox" Content="Sunday"                                                                                       />
+                        <CheckBox x:ConnectionId='35' x:Name="mondayEnabledCheckedBox" Content="Monday"                                                                                       />
+                        <CheckBox x:ConnectionId='36' x:Name="tuesdayEnabledCheckedBox" Content="Tuesday"                                                                                        />
+                        <CheckBox x:ConnectionId='37' x:Name="wednesdayEnabledCheckedBox" Content="Wednesday"                                                                                        />
+                        <CheckBox x:ConnectionId='38' x:Name="thursdayEnabledCheckedBox" Content="Thursday"                                                                                       />
+                        <CheckBox x:ConnectionId='39' x:Name="fridayEnabledCheckedBox" Content="Friday"                                                                                       />
+                        <CheckBox x:ConnectionId='40' x:Name="saturdayEnabledCheckedBox" Content="Saturday"                                                                                       />
+                        <CheckBox x:ConnectionId='41' x:Name="sundayEnabledCheckedBox" Content="Sunday"                                                                                       />
                     </StackPanel>
                 </Flyout>
             </Button.Flyout>
@@ -58,20 +58,20 @@
                 <ImageBrush ImageSource="/Assets/GPS.png" />
             </Button.Background>
             <Button.Flyout>
-                <Flyout>
+                <Flyout x:ConnectionId='30' x:Name="addLocationFlyout"                                                                    >
                     <RelativePanel Height="396">
-                        <Maps:MapControl x:ConnectionId='30' HorizontalAlignment="Left"                                                             VerticalAlignment="Top"                                              MapServiceToken="UWDI1l1XbwkriqZEGETA~MAYOBVQMdUrmOkYYK_sS1g~AoV9cm2Qr83ZnEaIlrcNUwYRTxmA-84sWvikuDFviTbzlIQfBeEto177CiI5jBqc" Height="342" Width="316" />
-                        <Button x:ConnectionId='31' x:Name="button3" VerticalAlignment="Stretch" Margin="0,358,0,-358"                       Width="30" Height="30">
+                        <Maps:MapControl x:ConnectionId='31' HorizontalAlignment="Left"                                                             VerticalAlignment="Top"                                              MapServiceToken="UWDI1l1XbwkriqZEGETA~MAYOBVQMdUrmOkYYK_sS1g~AoV9cm2Qr83ZnEaIlrcNUwYRTxmA-84sWvikuDFviTbzlIQfBeEto177CiI5jBqc" Height="342" Width="316" />
+                        <Button x:ConnectionId='32' x:Name="button3" VerticalAlignment="Stretch" Margin="0,358,0,-358"                       Width="30" Height="30">
                             <Button.Background>
                                 <ImageBrush ImageSource="/Assets/true.png"/>
                             </Button.Background>
                         </Button>
-                        <Button x:ConnectionId='32' x:Name="button4" Height="32" VerticalAlignment="Top" Margin="50,360,0,-351" Width="39"                      >
+                        <Button x:ConnectionId='33' x:Name="button4" Height="32" VerticalAlignment="Top" Margin="50,360,0,-351" Width="39"                      >
                             <Button.Background>
                                 <ImageBrush ImageSource="/Assets/pinpoint_gps.png" />
                             </Button.Background>
                         </Button>
-                    </RelativePanel>
+                    <CheckBox x:ConnectionId='34' x:Name="proximityNotification" Margin="150,360,0,-351"  Content="Proximity notification" HorizontalAlignment="Left" VerticalAlignment="Top" Width="194" RenderTransformOrigin="-0.167,0.625"                                      /></RelativePanel>
                 </Flyout>
             </Button.Flyout>
         </Button>

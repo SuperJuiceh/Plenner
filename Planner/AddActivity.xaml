@@ -58,7 +58,7 @@
                 <ImageBrush ImageSource="/Assets/GPS.png" />
             </Button.Background>
             <Button.Flyout>
-                <Flyout>
+                <Flyout x:Name="addLocationFlyout" Opened="addLocationFlyout_Opened" Closed="addLocationFlyout_Closed">
                     <RelativePanel Height="396">
                         <Maps:MapControl HorizontalAlignment="Left" MapTapped="MapControl_MapTapped" Loaded="MapControl_Loaded" VerticalAlignment="Top" MapElementClick="MapControl_MapElementClick" MapServiceToken="UWDI1l1XbwkriqZEGETA~MAYOBVQMdUrmOkYYK_sS1g~AoV9cm2Qr83ZnEaIlrcNUwYRTxmA-84sWvikuDFviTbzlIQfBeEto177CiI5jBqc" Height="342" Width="316" />
                         <Button x:Name="button3" VerticalAlignment="Stretch" Margin="0,358,0,-358" Click="button3_Click" Width="30" Height="30">
@@ -71,7 +71,7 @@
                                 <ImageBrush ImageSource="/Assets/pinpoint_gps.png" />
                             </Button.Background>
                         </Button>
-                    </RelativePanel>
+                    <CheckBox x:Name="proximityNotification" Margin="150,360,0,-351"  Content="Proximity notification" HorizontalAlignment="Left" VerticalAlignment="Top" Width="194" RenderTransformOrigin="-0.167,0.625" Checked="proximityNotification_Click"/></RelativePanel>
                 </Flyout>
             </Button.Flyout>
         </Button>
@@ -107,7 +107,6 @@
         </CheckBox>
         
         <TimePicker x:Name="standardTimePicker" HorizontalAlignment="Left" Margin="37,191,0,0" VerticalAlignment="Top" Loaded="standardTimePicker_Loaded"/>
-        <CheckBox x:Name="proximityNotification" Content="Proximity notification" HorizontalAlignment="Left" Margin="40,557,0,0" VerticalAlignment="Top" Width="20" RenderTransformOrigin="-0.167,0.625"/>
 
         <!-- end checkbox2 is checked -->
     </Grid>
