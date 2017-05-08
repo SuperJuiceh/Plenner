@@ -19,6 +19,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using DataLab.NetworkPackaging;
 using Datalab.Server.Packets;
+using Planner.Data.Styling;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -31,9 +32,15 @@ namespace Planner
     {
 
         public DynamicPlanningItemStorage plan { get; set; }
+        public SettingsStorage Settings { get; set; }
 
         public UserPage()
         {
+            plan = GeneralApplicationData.DynamicPlanning;
+            Settings = GeneralApplicationData.Settings;
+
+            UserStyleFactory.addStyles(this.Resources, this.Settings.Settings);
+
             this.InitializeComponent();
         }
 
@@ -57,7 +64,7 @@ namespace Planner
 
         private void Grid_DoubleTapped(object sender, DoubleTappedRoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(SettingsPage), plan);
+            this.Frame.Navigate(typeof(SettingsPage));
         }
 
 
@@ -79,22 +86,22 @@ namespace Planner
 
         private void user_button_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(LoginPage), plan);
+            this.Frame.Navigate(typeof(LoginPage));
         }
 
         private void registration_button_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(RegistrationPage), plan);
+            this.Frame.Navigate(typeof(RegistrationPage));
         }
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(MailPage), plan);
+            this.Frame.Navigate(typeof(MailPage));
         }
 
         private void show_friends_button_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(FriendsPage), plan);
+            this.Frame.Navigate(typeof(FriendsPage));
         }
 
         private void sync_button_Click_1(object sender, RoutedEventArgs e)

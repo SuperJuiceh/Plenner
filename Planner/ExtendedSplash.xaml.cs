@@ -35,6 +35,8 @@ namespace Planner
 
         private Frame rootFrame;
 
+        private SettingsStorage _settings;
+
         public ExtendedSplash()
         {
             this.InitializeComponent();
@@ -42,6 +44,7 @@ namespace Planner
 
         public ExtendedSplash(SplashScreen splashscreen, Frame root)
         {
+            this._settings = GeneralApplicationData.Settings;
             this.InitializeComponent();
 
             sb1.Begin();
@@ -75,12 +78,12 @@ namespace Planner
 
                 // Place the frame in the current Window
                 loadingStatusTextBlock.Text = "Loading Planner XML Data";
-                var planning = new PlanningItemStorage();
+                GeneralApplicationData.Planning = new PlanningItemStorage();
                 
-                if (planning.waitToLoad(5)) // Wait until the plan is loaded 
+                if (GeneralApplicationData.Planning.waitToLoad(5)) // Wait until the plan is loaded 
                 {
-                    planning.plan.archiveToDoItems(); // Archive old items
-                    this.rootFrame.Navigate(typeof(ActivitiesPage), planning);
+                    GeneralApplicationData.Planning.plan.archiveToDoItems(); // Archive old items
+                    this.rootFrame.Navigate(typeof(ActivitiesPage));
                     Window.Current.Content = rootFrame;
                 }
 

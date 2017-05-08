@@ -1,5 +1,7 @@
 ﻿using DataLab.Data.Planning;
 using DataLab.Storage;
+using Planner.Data;
+using Planner.Data.Styling;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -28,31 +30,28 @@ namespace Planner
         public Diary Journal { get; set; }
 
         public PlanningItemStorage plan { get; set; }
+        public SettingsStorage Settings { get; set; }
 
         public ShowDiaryPage()
         {
+            plan = GeneralApplicationData.Planning;
+            Settings = GeneralApplicationData.Settings;
+
+            UserStyleFactory.addStyles(this.Resources, this.Settings.Settings);
+
             this.InitializeComponent();
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-
-            PlanningItemStorage piStorage = e.Parameter as PlanningItemStorage;
-
-            if (piStorage != null)
-            {
-                plan = piStorage;
-
-                return;
-            }
+            
             // Navigated from diary creation
-            Tuple<PlanningItemStorage, Diary> sdTuple = e.Parameter as Tuple<PlanningItemStorage, Diary>;
+            Diary diary = e.Parameter as Diary;
 
             if (plan != null)
             {
-                plan = sdTuple.Item1;
-                Journal = sdTuple.Item2;
+                Journal = diary;
 
                 return;
             }
@@ -61,7 +60,7 @@ namespace Planner
 
         private void Grid_DoubleTapped(object sender, DoubleTappedRoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(DiariesPage), plan);
+            this.Frame.Navigate(typeof(DiariesPage));
         }
 
         private void button_Click(object sender, RoutedEventArgs e)

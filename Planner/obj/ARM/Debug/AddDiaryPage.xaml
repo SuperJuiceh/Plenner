@@ -15,7 +15,7 @@
         <TextBlock x:ConnectionId='3' x:Name="planningItemTypetextBlock" HorizontalAlignment="Left" Margin="28,310,0,0" TextWrapping="Wrap" Text="Types" VerticalAlignment="Top"/>
         <DatePicker x:ConnectionId='4' x:Name="startDatePicker" HorizontalAlignment="Left" Margin="49,105,0,0" VerticalAlignment="Top" Height="35" Width="175"/>
         <DatePicker x:ConnectionId='5' x:Name="endDatePicker"  HorizontalAlignment="Left" Margin="49,205,0,0" VerticalAlignment="Top" />
-        <TimePicker x:ConnectionId='6'  x:Name="startTimePicker" HorizontalAlignment="Left" Margin="50,138,0,0" VerticalAlignment="Top"/>
+        <TimePicker x:ConnectionId='6'  x:Name="startTimePicker" HorizontalAlignment="Left" Margin="50,146,0,0" VerticalAlignment="Top"/>
         <TimePicker x:ConnectionId='7'  x:Name="endTimePicker"  HorizontalAlignment="Left" Margin="53,248,0,0" VerticalAlignment="Top"/>
         <TextBlock x:ConnectionId='8' x:Name="textBlock2" HorizontalAlignment="Left" Margin="35,80,0,0" TextWrapping="Wrap" Text="Start" VerticalAlignment="Top"/>
         <TextBlock x:ConnectionId='9' x:Name="textBlock1" HorizontalAlignment="Left" Margin="45,180,0,0" TextWrapping="Wrap" Text="End" VerticalAlignment="Top" RenderTransformOrigin="-0.4,-2.25"/>

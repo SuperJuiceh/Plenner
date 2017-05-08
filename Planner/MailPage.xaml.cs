@@ -15,6 +15,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Planner.Data;
+using Planner.Data.Styling;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -27,9 +29,15 @@ namespace Planner
     {
 
         public DynamicPlanningItemStorage plan { get; set; }
+        public SettingsStorage Settings { get; set; }
 
         public MailPage()
         {
+            plan = GeneralApplicationData.DynamicPlanning;
+            Settings = GeneralApplicationData.Settings;
+
+            UserStyleFactory.addStyles(this.Resources, this.Settings.Settings);
+
             this.InitializeComponent();
 
             //    
@@ -50,7 +58,7 @@ namespace Planner
 
         private void Grid_DoubleTapped(object sender, DoubleTappedRoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(UserPage), plan);
+            this.Frame.Navigate(typeof(UserPage));
         }
 
         private void button_Click(object sender, RoutedEventArgs e)

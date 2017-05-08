@@ -1,6 +1,4 @@
 ﻿using DataLab.Storage;
-using DataLab.Data.Planning;
-using Planner.Data.Converters;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -16,6 +14,11 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Planner.Data.Converters;
+using Planner;
+using Planner.Data;
+using Planner.Data.Styling;
+using DataLab.Data.Planning;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -26,30 +29,32 @@ namespace Planner
     /// </summary>
     public sealed partial class AddDiaryPage : Page
     {
+        
+        public PlanningItemStorage Planning { get; set; }
 
-        public PlanningItemStorage plan { get; set; }
+        public SettingsStorage Settings { get; set; }
+        
 
         public AddDiaryPage()
         {
+
+            Planning = GeneralApplicationData.Planning;
+            Settings = GeneralApplicationData.Settings;
+
+            UserStyleFactory.addStyles(this.Resources, this.Settings.Settings);
+            
             this.InitializeComponent();
         }
 
         private void mainGrid_DoubleTapped(object sender, DoubleTappedRoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(ReflectionsPage), plan);
+            this.Frame.Navigate(typeof(ReflectionsPage));
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-
-            PlanningItemStorage tempPlan = e.Parameter as PlanningItemStorage;
-
-            if (tempPlan != null)
-            {
-
-                plan = tempPlan;
-            }   
+            
         }
 
         private void generateDiaryButton_Click(object sender, RoutedEventArgs e)
@@ -73,15 +78,15 @@ namespace Planner
                 }
             });
             
-            Diary diary = Diary.CreateDiary(plan.plan, 
+            Diary diary = Diary.CreateDiary(Planning.plan, 
                                             "haha",  
                                             ClassConverters.DateAndTimeToDateTime(startDatePicker.Date, startTimePicker.Time),
                                             ClassConverters.DateAndTimeToDateTime(startDatePicker.Date, startTimePicker.Time),
                                             types.ToArray());
 
-            plan.addDiary(diary);
+            Planning.addDiary(diary);
 
-            this.Frame.Navigate(typeof(ShowDiaryPage), new Tuple<PlanningItemStorage, Diary>(plan, diary));
+            this.Frame.Navigate(typeof(ShowDiaryPage), diary);
 
 
         }

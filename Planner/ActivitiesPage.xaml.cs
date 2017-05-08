@@ -27,6 +27,10 @@ using Windows.Security.ExchangeActiveSyncProvisioning;
 using Windows.System.Profile;
 using System.Threading.Tasks;
 using Planner;
+using Windows.Devices.Geolocation.Geofencing;
+using Windows.Devices.Geolocation;
+using Windows.UI.Core;
+using Planner.Data.Styling;
 
 
 
@@ -44,7 +48,7 @@ namespace Planner
          
         public PlanningItemStorage Planning { get; set; }
 
-        public SettingsStorage Storage { get; set; }
+        public SettingsStorage Settings { get; set; }
 
         private bool singleActivityNameSortedAscending, singleActivityTimeSortedAscending, repeatingActivityNameSortedAscending, repeatingActivityTimeSortedAscending;
 
@@ -52,40 +56,25 @@ namespace Planner
 
         public ActivitiesPage()
         {
-            
-            // Connect the client to the server
-            //plan.plan.cleanOldItems(new SettingsStorage().Settings.PlanningItemExperation);
-            
+            // Get copies of our 
+            Planning = GeneralApplicationData.Planning;
+            Settings = GeneralApplicationData.Settings;
+
+            UserStyleFactory.addStyles(this.Resources, this.Settings.Settings);
+
             this.InitializeComponent();
-
-            this.FontFamily = new FontFamily("Times New Roman");
-            this.FontSize = 11;
-
+            
         }
         
 
         private void Grid_DoubleTapped(object sender, DoubleTappedRoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(AddToDoItemPage), Planning);
+            this.Frame.Navigate(typeof(AddToDoItemPage));
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-
-            PlanningItemStorage p = e.Parameter as PlanningItemStorage;
-
-            if (p != null)
-            {
-                Planning = p;
-            } else
-            {
-                Planning = new PlanningItemStorage();
-                Storage = new SettingsStorage();                
-            }
-
-            //Planning.plan.Activities.Add(null);
-            //Planning.plan.Activities.RemoveAt(Planning.plan.Activities.Count - 1);
         }
 
         private void textBlock_SelectionChanged(object sender, RoutedEventArgs e)
@@ -113,7 +102,7 @@ namespace Planner
 
         private void button_Click_1(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(AddActivity), Planning);
+            this.Frame.Navigate(typeof(AddActivity));
         }
 
         private async void MapControl_Loaded(object sender, RoutedEventArgs e)
@@ -126,6 +115,15 @@ namespace Planner
             while (map.ZoomLevel < 19) {
                 await map.TryZoomInAsync();
             }
+
+            // Geofence setup
+            
+            Geocircle geo = new Geocircle(activity.basicgeoloc, 10);
+            Geofence geofence = new Geofence(new Random().Next(1000).ToString(), geo,
+                                            MonitoredGeofenceStates.Entered, true, TimeSpan.FromMilliseconds(20),
+                                            DateTime.Now, TimeSpan.FromHours(1));
+
+
         }
 
         private void button3_Click(object sender, RoutedEventArgs e)
@@ -165,7 +163,7 @@ namespace Planner
                 if (e.Position.X > manipulationStartingPoint.X)
                     this.Frame.Navigate(typeof(ToDoPage), Planning);
                 else // Left 
-                    this.Frame.Navigate(typeof(SettingsPage), Planning);
+                    this.Frame.Navigate(typeof(SettingsPage), Settings);
             }
         }
 
@@ -232,7 +230,7 @@ namespace Planner
 
             Debug.WriteLine(but.DataContext is Activity);
 
-            this.Frame.Navigate(typeof(AddActivity), new Tuple<PlanningItemStorage, Activity>(Planning, but.DataContext as Activity));
+            this.Frame.Navigate(typeof(AddActivity), but.DataContext as Activity);
         }
 
         private void listBoxSingleItems_PointerPressed(object sender, PointerRoutedEventArgs e)
@@ -311,6 +309,44 @@ namespace Planner
             }
 
             singleActivityNameSortedAscending = false;
+        }
+
+
+        public async void OnGeofenceStateChanged(GeofenceMonitor sender, object e)
+        {
+            var reports = sender.ReadReports();
+
+            await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+            {
+                foreach (GeofenceStateChangeReport report in reports)
+                {
+                    GeofenceState state = report.NewState;
+
+                    Geofence geofence = report.Geofence;
+
+                    if (state == GeofenceState.Removed)
+                    {
+                        // Remove the geofence from the geofences collection.
+                        GeofenceMonitor.Current.Geofences.Remove(geofence);
+                    }
+                    else if (state == GeofenceState.Entered)
+                    {
+                        // Your app takes action based on the entered event.
+
+                        // NOTE: You might want to write your app to take a particular
+                        // action based on whether the app has internet connectivity.
+
+                    }
+                    else if (state == GeofenceState.Exited)
+                    {
+                        // Your app takes action based on the exited event.
+
+                        // NOTE: You might want to write your app to take a particular
+                        // action based on whether the app has internet connectivity.
+
+                    }
+                }
+            });
         }
     }
 }

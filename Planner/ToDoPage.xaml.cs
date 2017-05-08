@@ -17,6 +17,8 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using Planner.Data.Styling;
+using Planner.Data;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -30,15 +32,17 @@ namespace Planner
 
         private Point manipulationStartingPoint;
 
-        public PlanningItemStorage plan { get; set; }
+        public PlanningItemStorage  Planning { get; private set; }
+        public SettingsStorage      Settings { get; private set; }
 
         public bool nameSortAscending, timeSortAscending;
 
         public ToDoPage()
         {
+            Planning = GeneralApplicationData.Planning;
+            Settings = GeneralApplicationData.Settings;
 
-            this.FontFamily = new FontFamily("Times New Roman");
-            this.FontSize = 10;
+            UserStyleFactory.addStyles(this.Resources, this.Settings.Settings);
 
             this.InitializeComponent();
         }
@@ -46,9 +50,7 @@ namespace Planner
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-
-            if (e.Parameter is PlanningItemStorage)
-                plan = e.Parameter as PlanningItemStorage;
+            
         }
 
         private void Grid_DoubleTapped(object sender, DoubleTappedRoutedEventArgs e)
@@ -58,7 +60,7 @@ namespace Planner
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            plan.clear(Plan.Clear_Options.TODO);
+            Planning.clear(Plan.Clear_Options.TODO);
         }
         private void RelativePanel_ManipulationStarted(object sender, ManipulationStartedRoutedEventArgs e)
         {
@@ -70,25 +72,25 @@ namespace Planner
             if (Math.Abs(e.Position.X - manipulationStartingPoint.X) >= 75)
             {
                 if (e.Position.X > manipulationStartingPoint.X)
-                    this.Frame.Navigate(typeof(ReflectionsPage), plan);
+                    this.Frame.Navigate(typeof(ReflectionsPage));
                 else
-                    this.Frame.Navigate(typeof(ActivitiesPage), plan);
+                    this.Frame.Navigate(typeof(ActivitiesPage));
             }
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(AddToDoItemPage), plan);
+            this.Frame.Navigate(typeof(AddToDoItemPage));
         }
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
-            this.plan.clear(Plan.Clear_Options.TODO);
+            this.Planning.clear(Plan.Clear_Options.TODO);
         }
 
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
         {
-            this.plan.saveStorage();
+            this.Planning.saveStorage();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -97,10 +99,10 @@ namespace Planner
             
             if (tdi != null)
             {
-                if (plan.plan.ToDoItems.Contains(tdi))
-                    plan.removePlanningItem(tdi);
+                if (Planning.plan.ToDoItems.Contains(tdi))
+                    Planning.removePlanningItem(tdi);
                 else
-                    plan.plan.tdiSets.ToList().ForEach(tds =>
+                    Planning.plan.tdiSets.ToList().ForEach(tds =>
                     {
                         if (tds.Children.Contains(tdi))
                             tds.Children.Remove(tdi);
@@ -120,11 +122,11 @@ namespace Planner
                 {
                     if ((string)lbi.Content == "Single")
                     {
-                        this.Frame.Navigate(typeof(AddToDoItemPage), new Tuple<PlanningItemStorage, string>(plan, "single"));
+                        this.Frame.Navigate(typeof(AddToDoItemPage), "single");
                     }
                     else if ((string)lbi.Content == "Set")
                     {
-                        this.Frame.Navigate(typeof(AddToDoItemPage), new Tuple<PlanningItemStorage, string>(plan, "set"));
+                        this.Frame.Navigate(typeof(AddToDoItemPage), "set");
                     }
                 }
             }
@@ -137,7 +139,7 @@ namespace Planner
 
             if (set != null)
             {
-                plan.removePlanningItem(set);
+                Planning.removePlanningItem(set);
             }
         }
 
@@ -147,9 +149,9 @@ namespace Planner
             IOrderedEnumerable<ToDoItem> ok;
             // How will we sort the data? (Asc/Desc)
             if (nameSortAscending)
-                ok = plan.plan.ToDoItems.OrderBy(item => item.Name);
+                ok = Planning.plan.ToDoItems.OrderBy(item => item.Name);
             else
-                ok = plan.plan.ToDoItems.OrderByDescending(item => item.Name);
+                ok = Planning.plan.ToDoItems.OrderByDescending(item => item.Name);
 
             // Flip state
             nameSortAscending = !nameSortAscending;
@@ -158,11 +160,11 @@ namespace Planner
 
             if (ok.Count() > 0)
             {
-                plan.plan.ToDoItems.Clear();
+                Planning.plan.ToDoItems.Clear();
                 // Add all items from the list
                 items.ForEach(item =>
                 {
-                    plan.plan.ToDoItems.Add(item);
+                    Planning.plan.ToDoItems.Add(item);
                 });
             }
 
@@ -175,9 +177,9 @@ namespace Planner
             IOrderedEnumerable<ToDoItem> ok;
             // How will we sort the data? (Asc/Desc)
             if (timeSortAscending)
-                ok = plan.plan.ToDoItems.OrderBy(item => item.Deadline);
+                ok = Planning.plan.ToDoItems.OrderBy(item => item.Deadline);
             else
-                ok = plan.plan.ToDoItems.OrderByDescending(item => item.Deadline);
+                ok = Planning.plan.ToDoItems.OrderByDescending(item => item.Deadline);
 
             // Flip state
             timeSortAscending = !timeSortAscending;
@@ -186,11 +188,11 @@ namespace Planner
 
             if (ok.Count() > 0)
             {
-                plan.plan.ToDoItems.Clear();
+                Planning.plan.ToDoItems.Clear();
                 // Add all items from the list
                 items.ForEach(item =>
                 {
-                    plan.plan.ToDoItems.Add(item);
+                    Planning.plan.ToDoItems.Add(item);
                 });
             }
 

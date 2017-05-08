@@ -24,6 +24,8 @@ using Planner.Data.Notify;
 using DataLab.Data.Planning;
 using System.ComponentModel;
 using System.Threading.Tasks;
+using Planner.Data.Styling;
+using Planner.Data;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -55,8 +57,16 @@ namespace Planner
 
         private BackgroundWorker ProximityTrackerWorker = new BackgroundWorker();
 
+        public SettingsStorage Settings { get; set; }
+
         public AddActivity()
         {
+            Storage  = GeneralApplicationData.Planning;
+            Settings = GeneralApplicationData.Settings;
+
+            UserStyleFactory.addStyles(this.Resources, this.Settings.Settings);
+
+
             this.InitializeComponent();
 
             for (int i = 0; i < 60; i++)
@@ -154,7 +164,7 @@ namespace Planner
                         ToastNotifier.setuptoasts(Storage.plan);
                         // To ActivitiesPage
                     }
-                    this.Frame.Navigate(typeof(ActivitiesPage), Storage);
+                    this.Frame.Navigate(typeof(ActivitiesPage));
                 }
             } else
             {
@@ -175,7 +185,7 @@ namespace Planner
 
                 Storage.addPlanningItem(EditableActivity);
 
-                this.Frame.Navigate(typeof(ActivitiesPage), Storage);
+                this.Frame.Navigate(typeof(ActivitiesPage));
             }
             
         }
@@ -200,20 +210,11 @@ namespace Planner
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
+            
+            Activity t = e.Parameter as Activity;
 
-            PlanningItemStorage p = e.Parameter as PlanningItemStorage;
-
-            if (p != null)
-            {
-                Storage = p;
-            } else
-            {
-                Tuple<PlanningItemStorage, Activity> t = e.Parameter as Tuple<PlanningItemStorage, Activity>;
-
-                if (t != null) {
-                    Storage = t.Item1;
-                    setActivity(t.Item2);
-                }
+            if (t != null) {
+                setActivity(t);
             }
         }
 

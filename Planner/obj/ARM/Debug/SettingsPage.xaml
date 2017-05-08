@@ -6,14 +6,16 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:conv="using:Planner.Data.Converters"
+    xmlns:tools="using:DataLab.Tools"
     mc:Ignorable="d"
     Width="350" Height="635"
     >
     <Page.Resources>
         <conv:UserNullStatusToBoolConverter x:Key="booltoeleconv" />
         <conv:BoolToElementVisibility x:Key="boolToVisibilityConv" />
+
     </Page.Resources>
-    <Grid>
+    <Grid >
 
         <Grid.Background>
             <ImageBrush ImageSource="/Assets/Background_black.png" />
@@ -24,37 +26,35 @@
                     <ImageBrush ImageSource="/Assets/Swipe_right_or_left.png" />
                 </Button.Background>
             </Button>
-            <TextBlock x:ConnectionId='20' x:Name="textBlock" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" Text="Journal" VerticalAlignment="Top" Width="65" Margin="80,60,-83.333,-65"/>
-            <TextBlock x:ConnectionId='21' x:Name="textBlock1" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Text="ActivitiesPage" VerticalAlignment="Top" Width="80" Margin="205,60,-223.333,-75"/>
+            <TextBlock x:ConnectionId='21' x:Name="textBlock" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" Text="Journal" VerticalAlignment="Top" Width="65" Margin="80,60,-83.333,-65"/>
+            <TextBlock x:ConnectionId='22' x:Name="textBlock1" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Text="ActivitiesPage" VerticalAlignment="Top" Width="115" Margin="205,60,-258.333,-75"/>
         </RelativePanel>
         <TextBlock x:ConnectionId='2' x:Name="textBlock2" HorizontalAlignment="Left" Margin="25,25,0,0" TextWrapping="Wrap" Text="Settings" VerticalAlignment="Top" Height="25" Width="75"/>
-        <RelativePanel x:ConnectionId='3' x:Name="settingsPanel" DataContext="{Binding Settings.Settings, UpdateSourceTrigger=PropertyChanged}">
-            <CheckBox x:ConnectionId='9' x:Name="soundEnabledCheckBox" IsChecked="{Binding Settings.Settings.SoundEnabled, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Content="Enable Sound" HorizontalAlignment="Left" Margin="50,70,0,0" VerticalAlignment="Top" Width="145"                                       />
-            <CheckBox x:ConnectionId='10' x:Name="notificationsEnabledCheckBox" IsChecked="{Binding Settings.Settings.EnableNotifications, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Content="Enable Notifications" HorizontalAlignment="Left" Margin="50,108,0,0" VerticalAlignment="Top"/>
+        <RelativePanel x:ConnectionId='3' x:Name="settingsPanel" DataContext="{Binding Settings, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+            <CheckBox x:ConnectionId='9' x:Name="soundEnabledCheckBox" IsChecked="{Binding Settings.SoundEnabled, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Content="Enable Sound" HorizontalAlignment="Left" Margin="50,70,0,0" VerticalAlignment="Top" Width="145"                                       />
+            <CheckBox x:ConnectionId='10' x:Name="notificationsEnabledCheckBox" IsChecked="{Binding Settings.EnableNotifications, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Content="Enable Notifications" HorizontalAlignment="Left" Margin="50,108,0,0" VerticalAlignment="Top"/>
             <RelativePanel x:ConnectionId='11' Margin="50,207,20,333" x:Name="planningItemExperationPanel">
-                <CheckBox x:ConnectionId='15' x:Name="planningItemExperationCheckBox" Content="PlanningItem Expiration" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200"                             />
+                <CheckBox x:ConnectionId='17' x:Name="planningItemExperationCheckBox" Content="PlanningItem Expiration" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200"                             />
                 <StackPanel Margin="5,30,-60,-15" HorizontalAlignment="Left" VerticalAlignment="Top" Width="275" Height="60" Visibility="{Binding ElementName=planningItemExperationCheckBox, Path=IsChecked, Converter={StaticResource boolToVisibilityConv}}">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="Days" />
                         <TextBlock Margin="32, 0, 0, 0" Text="Hours" />
                         <TextBlock Margin="28, 0, 0, 0" Text="Minutes" Width="56" />
-                        <TextBlock Margin="10, 0, 0, 0" Text="Seconds" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <ComboBox x:ConnectionId='16' Name="DaysComboBox"                              RenderTransformOrigin="0.5,0.5" Width="5">
+                        <ComboBox x:ConnectionId='18' Name="DaysComboBox"                              RenderTransformOrigin="0.5,0.5" Width="5">
                             <ComboBox.RenderTransform>
                                 <CompositeTransform ScaleX="-1"/>
                             </ComboBox.RenderTransform>
                         </ComboBox>
-                        <ComboBox x:ConnectionId='17' Margin="0, 0, 0, 0" Name="HoursComboBox"                               />
-                        <ComboBox x:ConnectionId='18' Margin="0, 0, 0, 0" Name="MinutesComboBox"                                />
-                        <ComboBox x:ConnectionId='19' Margin="0, 0, 0, 0" Name="SecondsComboBox"                                />
+                        <ComboBox x:ConnectionId='19' Margin="0, 0, 0, 0" Name="HoursComboBox"                               />
+                        <ComboBox x:ConnectionId='20' Margin="0, 0, 0, 0" Name="MinutesComboBox"                                />
                     </StackPanel>
                 </StackPanel>
             </RelativePanel>
             <RelativePanel Margin="50,145,-305,-199" Visibility="{Binding ElementName=notificationsEnabledCheckBox, Path=IsChecked, Converter={StaticResource boolToVisibilityConv}}">
-                <TextBlock x:ConnectionId='13' x:Name="textBlock3" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="Notification Icon" VerticalAlignment="Top" Width="124" Margin="10,0,-72.333,0"/>
-                <Button x:ConnectionId='14' x:Name="image" Margin="150, 0, 0, 0"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30">
+                <TextBlock x:ConnectionId='15' x:Name="textBlock3" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="Notification Icon" VerticalAlignment="Top" Width="124" Margin="10,0,-72.333,0"/>
+                <Button x:ConnectionId='16' x:Name="image" Margin="150, 0, 0, 0"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" >
                     <Button.Flyout>
                         <Flyout >
                             <RelativePanel Width="203" Height="163">
@@ -67,7 +67,11 @@
                     </Button.Background>
                 </Button>
             </RelativePanel>
-            <Button x:ConnectionId='12' x:Name="button" Content="User" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="64.6666641235352" Margin="50,340,-50.333,-340"                     />
+            <Button x:ConnectionId='12' x:Name="button" Content="User" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="64.6666641235352" Margin="50,388,-55.667,-388"                     />
+            <TextBlock Margin="28,300,-16.333,0" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Font" Width="61.6666679382324"  />
+            <TextBlock HorizontalAlignment="Left" Height="32" TextWrapping="Wrap" Text="Font Size" VerticalAlignment="Top" Width="71" Margin="28,333,-28,-333"  />
+            <ComboBox x:ConnectionId='13' x:Name="selectedFont" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="150" Margin="104,292,-190,-292" ItemsSource="{Binding Source={StaticResource staticTools}, Path=getFontNames}"                                                                                        />
+            <ComboBox x:ConnectionId='14' x:Name="selectedFontSize" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="150" Margin="104,328,-190,-328" ItemsSource="{Binding Source={StaticResource staticTools}, Path=getIntArrayFrom0To100}"                                                     />
 
         </RelativePanel>
         <Button x:ConnectionId='4' x:Name="save_button" HorizontalAlignment="Left" Margin="275,384,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.692,5.031" Width="40" Height="37"                          >

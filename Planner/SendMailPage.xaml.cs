@@ -17,6 +17,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using DataLab.NetworkPackaging;
+using Planner.Data.Styling;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -28,10 +29,17 @@ namespace Planner
     public sealed partial class SendMailPage : Page
     {
 
-        public DynamicPlanningItemStorage plan { get; set; }
+        public DynamicPlanningItemStorage   plan     { get; set; }
+        public SettingsStorage              Settings { get; set; }
+
 
         public SendMailPage()
         {
+            plan     = GeneralApplicationData.DynamicPlanning;
+            Settings = GeneralApplicationData.Settings;
+
+            UserStyleFactory.addStyles(this.Resources, this.Settings.Settings);
+
             this.InitializeComponent();
         }
 
@@ -47,7 +55,7 @@ namespace Planner
                 MessagePacket mPacket = new MessagePacket(new Mail(plan.CurrentUser.UserName, new List<string>() { recepients_textbox.Text }, message_text_box.Text));
                 PacketClient.sendPacket(mPacket);
 
-                this.Frame.Navigate(typeof(MailPage), plan);
+                this.Frame.Navigate(typeof(MailPage));
             }
         }
 

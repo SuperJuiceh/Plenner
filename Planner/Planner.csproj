@@ -127,7 +127,9 @@
     <Compile Include="Data\Converters\StringListToOneStringConverter.cs" />
     <Compile Include="Data\Converters\TimeToTimeStringConverter.cs" />
     <Compile Include="Data\Converters\UserNullStatusToBoolConverter.cs" />
+    <Compile Include="Data\GeneralApplicationData.cs" />
     <Compile Include="Data\Notify\ToastNotifier.cs" />
+    <Compile Include="Data\Styling\UserStyleFactory.cs" />
     <Compile Include="DiariesPage.xaml.cs">
       <DependentUpon>DiariesPage.xaml</DependentUpon>
     </Compile>

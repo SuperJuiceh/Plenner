@@ -18,7 +18,6 @@ C:\Users\Bilel\Source\Repos\Plenner\DataLab\obj\Debug\MultipleQualifiersPerDimen
 C:\Users\Bilel\Documents\Plenner\DataLab\bin\Debug\DataLab.dll
 C:\Users\Bilel\Documents\Plenner\DataLab\bin\Debug\DataLab.pdb
 C:\Users\Bilel\Documents\Plenner\DataLab\bin\Debug\DataLab.pri
-C:\Users\Bilel\Documents\Plenner\DataLab\obj\Debug\DataLab.csprojResolveAssemblyReference.cache
 C:\Users\Bilel\Documents\Plenner\DataLab\obj\Debug\DataLab.dll
 C:\Users\Bilel\Documents\Plenner\DataLab\obj\Debug\DataLab.pdb
 C:\Users\Bilel\Documents\Plenner\DataLab\obj\Debug\priconfig.xml

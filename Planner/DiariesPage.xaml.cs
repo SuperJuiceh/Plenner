@@ -14,6 +14,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Planner.Data.Styling;
+using Planner.Data;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -26,22 +28,22 @@ namespace Planner
     {
 
         public PlanningItemStorage plan { get; set; }
+        public SettingsStorage Settings { get; set; }
 
         public DiariesPage()
         {
+            plan =     GeneralApplicationData.Planning;
+            Settings = GeneralApplicationData.Settings;
+
+            UserStyleFactory.addStyles(this.Resources, this.Settings.Settings);
+
             this.InitializeComponent();
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-
-            PlanningItemStorage p = e.Parameter as PlanningItemStorage;
-
-            if (p != null)
-            {
-                plan = p;
-            }
+            
         }
 
         private void removeDiaryButton_Click(object sender, RoutedEventArgs e)
@@ -56,12 +58,12 @@ namespace Planner
 
         private void Grid_DoubleTapped(object sender, DoubleTappedRoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(ReflectionsPage), plan);
+            this.Frame.Navigate(typeof(ReflectionsPage));
         }
 
         private void addDiaryButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(AddDiaryPage), plan);
+            this.Frame.Navigate(typeof(AddDiaryPage));
         }
 
         private void show_history_button_Click(object sender, RoutedEventArgs e)

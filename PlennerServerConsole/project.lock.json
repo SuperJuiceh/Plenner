@@ -2194,13 +2194,6 @@
             "rid": "aot"
           }
         }
-      },
-      "DataLab/1.0.0": {
-        "type": "project",
-        "framework": "UAP,Version=v10.0",
-        "dependencies": {
-          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2"
-        }
       }
     },
     "UAP,Version=v10.0/win10-arm": {
@@ -4503,13 +4496,6 @@
         },
         "runtime": {
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
-        }
-      },
-      "DataLab/1.0.0": {
-        "type": "project",
-        "framework": "UAP,Version=v10.0",
-        "dependencies": {
-          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2"
         }
       }
     },
@@ -6853,13 +6839,6 @@
         "runtime": {
           "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
-      },
-      "DataLab/1.0.0": {
-        "type": "project",
-        "framework": "UAP,Version=v10.0",
-        "dependencies": {
-          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2"
-        }
       }
     },
     "UAP,Version=v10.0/win10-x64": {
@@ -9171,13 +9150,6 @@
         },
         "runtime": {
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
-        }
-      },
-      "DataLab/1.0.0": {
-        "type": "project",
-        "framework": "UAP,Version=v10.0",
-        "dependencies": {
-          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2"
         }
       }
     },
@@ -11530,13 +11502,6 @@
         "runtime": {
           "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
-      },
-      "DataLab/1.0.0": {
-        "type": "project",
-        "framework": "UAP,Version=v10.0",
-        "dependencies": {
-          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2"
-        }
       }
     },
     "UAP,Version=v10.0/win10-x86": {
@@ -13848,13 +13813,6 @@
         },
         "runtime": {
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
-        }
-      },
-      "DataLab/1.0.0": {
-        "type": "project",
-        "framework": "UAP,Version=v10.0",
-        "dependencies": {
-          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2"
         }
       }
     },
@@ -16206,13 +16164,6 @@
         },
         "runtime": {
           "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
-        }
-      },
-      "DataLab/1.0.0": {
-        "type": "project",
-        "framework": "UAP,Version=v10.0",
-        "dependencies": {
-          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2"
         }
       }
     }
@@ -22435,11 +22386,6 @@
         "system.xml.xmlserializer.4.0.11.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
-    },
-    "DataLab/1.0.0": {
-      "type": "project",
-      "path": "../ClassLibrary1/project.json",
-      "msbuildProject": "../ClassLibrary1/DataLab.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -22456,20 +22402,11 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\Users\\Bilel\\Documents\\Visual Studio 2017\\Projects\\Plenner\\PlennerServerConsole\\PlennerServer.csproj",
+      "projectUniqueName": "C:\\Users\\Bilel\\Documents\\Plenner\\PlennerServerConsole\\PlennerServer.csproj",
       "projectName": "PlennerServer",
-      "projectPath": "C:\\Users\\Bilel\\Documents\\Visual Studio 2017\\Projects\\Plenner\\PlennerServerConsole\\PlennerServer.csproj",
-      "projectJsonPath": "C:\\Users\\Bilel\\Documents\\Visual Studio 2017\\Projects\\Plenner\\PlennerServerConsole\\project.json",
-      "projectStyle": "ProjectJson",
-      "frameworks": {
-        "uap10.0": {
-          "projectReferences": {
-            "C:\\Users\\Bilel\\Documents\\Visual Studio 2017\\Projects\\Plenner\\ClassLibrary1\\DataLab.csproj": {
-              "projectPath": "C:\\Users\\Bilel\\Documents\\Visual Studio 2017\\Projects\\Plenner\\ClassLibrary1\\DataLab.csproj"
-            }
-          }
-        }
-      }
+      "projectPath": "C:\\Users\\Bilel\\Documents\\Plenner\\PlennerServerConsole\\PlennerServer.csproj",
+      "projectJsonPath": "C:\\Users\\Bilel\\Documents\\Plenner\\PlennerServerConsole\\project.json",
+      "projectStyle": "ProjectJson"
     },
     "dependencies": {
       "Microsoft.ApplicationInsights": "2.1.0",

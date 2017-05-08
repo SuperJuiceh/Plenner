@@ -18,6 +18,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using DataLab.NetworkPackaging;
+using Windows.Globalization.Fonts;
+using Planner.Data.Styling;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -37,26 +39,21 @@ namespace Planner
 
         public SettingsPage()
         {
-            try
-            {
-                this.InitializeComponent();
-                this.Settings.Settings.PropertyChanged += Settings_PropertyChanged;
-                
-            }
-            catch (Exception ex)
-            {
-                // Log error (including InnerExceptions!)
-                // Handle exception
-                Debug.WriteLine(ex.Message);
-            }
+            this.plan = GeneralApplicationData.Planning;
+            this.Settings = GeneralApplicationData.Settings;
 
-            //setSettingsFromFile();
+            this.Settings.Settings.PropertyChanged += Settings_PropertyChanged;
+
+            UserStyleFactory.addStyles(this.Resources, Settings.Settings);
+            
+            this.InitializeComponent();
+
+            setSettingsFromFile();
 
         }
 
         private void Settings_PropertyChanged(Object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
-            Debug.WriteLine("Saved");
             this.Settings.saveStorage();
         }
 
@@ -79,31 +76,30 @@ namespace Planner
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-
-            PlanningItemStorage planning = e.Parameter as PlanningItemStorage;
-
-            if (planning != null)
-            {
-                this.plan = planning;
-            }
-
-            if (Settings == null)
-                Settings = new SettingsStorage();
             
+
         }
 
         private void setSettingsFromFile()
         {
             // Load settings file
-            Settings = new SettingsStorage();
+            //Settings = new SettingsStorage();
 
             if (Settings.Settings.PlanningItemExperation != null)
             {
-                Debug.Write("Found PIe: with hours: " + Settings.Settings.PlanningItemExperation.Hours);
-                //DaysComboBox.SelectedItem = DaysComboBox.Items.Where(cbb => (cbb 
+                
+                if (Settings.Settings.PlanningItemExperation.Days + Settings.Settings.PlanningItemExperation.Hours + Settings.Settings.PlanningItemExperation.Minutes > 0)
+                {
+                    planningItemExperationCheckBox.IsChecked = true;
+
+                    DaysComboBox.SelectedItem = Settings.Settings.PlanningItemExperation.Days;
+                    DaysComboBox.SelectedItem = Settings.Settings.PlanningItemExperation.Hours;
+                    DaysComboBox.SelectedItem = Settings.Settings.PlanningItemExperation.Minutes;
+                    
+                }
+
             }
-
-
+            
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
@@ -112,6 +108,7 @@ namespace Planner
                 this.Frame.Navigate(typeof(UserPage), plan);
             else
                 setPopup("Cannot navigate to userpage", "You have no connection to the server.");
+            
         }
 
         private void checkBox2_Checked(object sender, RoutedEventArgs e)
@@ -175,19 +172,17 @@ namespace Planner
             //    );
             //}
 
-            if (planningItemExperationCheckBox.IsChecked.Value)
+            if (planningItemExperationCheckBox.IsChecked.Value && DaysComboBox.SelectedIndex > -1 && HoursComboBox.SelectedIndex > -1 && MinutesComboBox.SelectedIndex > -1)
             {
                 Settings.Settings.PlanningItemExperation = new TimeSpan(
                      (int)(DaysComboBox.SelectedItem),
                      (int)((HoursComboBox.SelectedItem)),
                      (int)((MinutesComboBox.SelectedItem)),
-                     (int)((SecondsComboBox.SelectedItem))
+                     0
                 );
             }
 
             Settings.saveStorage();
-
-            Debug.WriteLine("Saved Settings");
 
         }
 
@@ -211,6 +206,40 @@ namespace Planner
         {
             popup.IsOpen = false;
             //popup.UpdateLayout();
+        }
+
+
+
+        private void selectedFont_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            string text = (string)(sender as ComboBox).SelectedValue;
+            try
+            {
+                FontFamily font = new FontFamily(text);
+                Settings.Settings.FontTypeUser = text;
+
+                UpdateLayout();
+                InvalidateArrange();
+            } catch (Exception)
+            {
+                Debug.WriteLine("font " + text + " does not exist");
+            }
+            
+        }
+
+        private void selectedFontSize_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            int fontSize = (sender as ComboBox).SelectedIndex + 1;
+            
+            Settings.Settings.FontSizeUser = fontSize;
+            
+        }
+
+        
+
+        private void selectedFont_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+
         }
     }
 }

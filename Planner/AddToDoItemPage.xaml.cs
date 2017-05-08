@@ -1,6 +1,4 @@
-﻿using Planner.Data.Converters;
-using Planner.Data.Notify;
-using DataLab.Storage;
+﻿using DataLab.Storage;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -17,6 +15,11 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using DataLab.Data.Planning;
+using Planner.Data.Converters;
+using Planner.Data.Notify;
+using Planner;
+using Planner.Data;
+using Planner.Data.Styling;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -27,9 +30,9 @@ namespace Planner
     /// </summary>
     public sealed partial class AddToDoItemPage : Page
     {
-
-
-        public PlanningItemStorage plan { get; set; }
+        
+        public PlanningItemStorage Planning { get; set; }
+        public SettingsStorage Settings { get; set; }
 
         public bool MultipleItems { get; set; }
 
@@ -37,6 +40,12 @@ namespace Planner
 
         public AddToDoItemPage()
         {
+
+            Planning = GeneralApplicationData.Planning;
+            Settings = GeneralApplicationData.Settings;
+
+            UserStyleFactory.addStyles(this.Resources, this.Settings.Settings);
+
             this.InitializeComponent();
 
             this.Loaded += AddToDoItemPage_Loaded;
@@ -46,12 +55,10 @@ namespace Planner
         {
             base.OnNavigatedTo(e);
             
-            Tuple<PlanningItemStorage, string> tup = e.Parameter as Tuple<PlanningItemStorage, string>;
-            if (tup != null)
+            string s = e.Parameter as string;
+            if (s != null)
             {
-                plan = tup.Item1 as PlanningItemStorage;
-
-                if (tup.Item2 == "single")
+                if (s == "single")
                 {
                     MultipleItems = false;
                 }
@@ -84,16 +91,16 @@ namespace Planner
 
                     if (!MultipleItems)
                     {
-                        plan.addPlanningItem(tdItem);
-                        this.Frame.Navigate(typeof(ToDoPage), plan);
+                        Planning.addPlanningItem(tdItem);
+                        this.Frame.Navigate(typeof(ToDoPage));
                     }
                     else {
                         ToDoItemSet curtdi = CurrentTdi as ToDoItemSet;
                         curtdi.Children.Add(tdItem);
 
-                        ToastNotifier.setuptoasts(plan.plan);
+                        ToastNotifier.setuptoasts(Planning.plan);
 
-                        this.Frame.Navigate(typeof(AddToDoSetPage), new Tuple<PlanningItemStorage, ToDoItemSet>(plan, curtdi));
+                        this.Frame.Navigate(typeof(AddToDoSetPage), new Tuple<PlanningItemStorage, ToDoItemSet>(Planning, curtdi));
 
                     }
 
@@ -104,13 +111,13 @@ namespace Planner
 
                 if (!MultipleItems)
                 {
-                    plan.addPlanningItem(tdItem);
-                    this.Frame.Navigate(typeof(ToDoPage), plan);
+                    Planning.addPlanningItem(tdItem);
+                    this.Frame.Navigate(typeof(ToDoPage));
                 }
                 else {
                     ToDoItemSet curtdi = CurrentTdi as ToDoItemSet;
                     curtdi.Children.Add(tdItem);
-                    this.Frame.Navigate(typeof(AddToDoSetPage), new Tuple<PlanningItemStorage, ToDoItemSet>(plan, curtdi));
+                    this.Frame.Navigate(typeof(AddToDoSetPage), curtdi);
                 }
 
                 

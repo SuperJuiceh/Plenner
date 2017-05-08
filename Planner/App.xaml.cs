@@ -1,4 +1,7 @@
-﻿using System;
+﻿using DataLab.Storage;
+using Planner.Data;
+using Planner.Data.Styling;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -27,12 +30,30 @@ namespace Planner
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
         /// </summary>
+        /// 
+        public SettingsStorage Settings { get; set; }
+
         public App()
         {
             this.InitializeComponent();
+
             this.Suspending += OnSuspending;
 
             this.UnhandledException += App_UnhandledException;
+
+            GeneralApplicationData.Settings = new SettingsStorage();
+
+            Settings = GeneralApplicationData.Settings;
+            
+            try
+            {
+                UserStyleFactory.addStyles(this.Resources, this.Settings.Settings);
+            } catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+            }
+            
+
         }
 
         private void App_UnhandledException(Object sender, UnhandledExceptionEventArgs e)
@@ -63,6 +84,7 @@ namespace Planner
                     //TODO: Load state from previously suspended application
                 }
 
+                
                 // Place the frame in the current Window
                 Window.Current.Content = rootFrame;
             }

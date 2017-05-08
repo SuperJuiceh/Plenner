@@ -160,5 +160,10 @@ namespace DataLab.Storage
                 PropertyChanged.GetInvocationList().ToList().ForEach(del => PropertyChanged -= (PropertyChangedEventHandler)del);
 
         }
+
+        public virtual bool isDynamic()
+        {
+            return false;
+        }
     }
 }

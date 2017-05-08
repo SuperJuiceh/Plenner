@@ -17,6 +17,8 @@ using System.ComponentModel;
 using System.Diagnostics;
 using DataLab.Data.Planning;
 using DataLab.Storage;
+using Planner.Data.Styling;
+using Planner.Data;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -31,10 +33,18 @@ namespace Planner
         public event PropertyChangedEventHandler PropertyChanged;
 
         public PlanningItemStorage plan { get; set; }
+        public SettingsStorage Settings { get; set; }
+
         public ToDoItemSet tdiSet { get; set; }
 
         public AddToDoSetPage()
         {
+
+            plan = GeneralApplicationData.Planning;
+            Settings = GeneralApplicationData.Settings;
+
+            UserStyleFactory.addStyles(this.Resources, this.Settings.Settings);
+
             this.InitializeComponent();
         }
 
@@ -44,7 +54,7 @@ namespace Planner
 
             plan.addPlanningItem(tdiSet);
 
-            this.Frame.Navigate(typeof(ToDoPage), plan);
+            this.Frame.Navigate(typeof(ToDoPage));
 
         }
 
@@ -52,12 +62,11 @@ namespace Planner
         {
             base.OnNavigatedTo(e);
 
-            Tuple<PlanningItemStorage, ToDoItemSet> tp = e.Parameter as Tuple<PlanningItemStorage, ToDoItemSet>;
+            ToDoItemSet tp = e.Parameter as ToDoItemSet;
 
             if (tp != null)
             {
-                plan = tp.Item1;
-                tdiSet = tp.Item2;
+                tdiSet = tp;
             }
         }
 
@@ -71,7 +80,7 @@ namespace Planner
 
                 // All items removed, go back a page
                 if (tdiSet.Children.Count == 0)
-                    this.Frame.Navigate(typeof(ToDoPage), plan);
+                    this.Frame.Navigate(typeof(ToDoPage));
             }
         }
 
@@ -85,7 +94,7 @@ namespace Planner
 
         private void delete_button_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(ToDoPage), plan);
+            this.Frame.Navigate(typeof(ToDoPage));
         }
     }
 }

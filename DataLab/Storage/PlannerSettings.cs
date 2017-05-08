@@ -21,24 +21,24 @@ namespace DataLab.Storage
         [XmlIgnore]
         private bool _autoLogIn;
         public bool AutoLogIn { get { return _autoLogIn; } set { _autoLogIn = value; Changed("AutoLogIn"); } }
-
+        
         [XmlIgnore]
-        public TimeSpan PlanningItemExperation { get; set; }
-        // Convertable array for the unserializable 'TimeSpan' class (int[4]-array of Days, Hours, Minutes and Seconds
-        public int[] PlanningItemExperationTimeSpanAsIntArray {
-            get {
-                return new int[] { PlanningItemExperation.Days, PlanningItemExperation.Hours, PlanningItemExperation.Minutes,
-                                                                                         PlanningItemExperation.Seconds };
-            }
-            set
-            {
-                PlanningItemExperation = new TimeSpan(value[0], value[1], value[2], value[3]);
-            }
-        }
+        public TimeSpan PlanningItemExperation { get { return new TimeSpan(PlanningItemExperationLong); } set { this.PlanningItemExperationLong = value.Ticks; Changed("PlanningItemExperation"); } }
+
+        public long PlanningItemExperationLong { get; set; }
 
         [XmlIgnore]
         private bool _enableNotifications;
         public bool EnableNotifications { get { return _enableNotifications; } set { _enableNotifications = value; Changed("EnableNotifications"); } }
+
+        [XmlIgnore]
+        private string _fontTypeUser;
+        public string FontTypeUser { get { return _fontTypeUser; } set { _fontTypeUser = value; Changed("FontTypeUser"); } }
+
+        [XmlIgnore]
+        private int _fontSizeUser;
+        public int FontSizeUser { get {  return _fontSizeUser; } set { _fontSizeUser = value; Changed("FontSizeUser"); } }
+
         public PlannerSettings()
         {
 
@@ -46,7 +46,6 @@ namespace DataLab.Storage
 
         public void Changed(string name)
         {
-            Debug.WriteLine("Settings changed");
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
 

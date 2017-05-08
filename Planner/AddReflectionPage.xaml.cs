@@ -1,6 +1,4 @@
-﻿using Planner.Data.Converters;
-using Planner.Data.Notify;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -24,8 +22,16 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
-using DataLab.Data.Planning;
 using DataLab.Storage;
+using DataLab.Data.Planning;
+using Planner;
+using Planner.Data.Notify;
+using Planner.Data.Converters;
+using Planner.Data.Styling;
+using Planner.Data;
+
+
+
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -36,12 +42,14 @@ namespace Planner
     /// </summary>
     public sealed partial class AddReflectionPage : Page, INotifyPropertyChanged
     {
+
         public SoftwareBitmapSource _poto;
         public SoftwareBitmapSource Poto { get { return _poto; } set { _poto = value; Changed("Poto"); } }
 
         public StorageFile Photo { get; set; }
 
-        public PlanningItemStorage plan { get; set; }
+        public PlanningItemStorage  Planning { get; set; }
+        public SettingsStorage      Settings { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -57,6 +65,13 @@ namespace Planner
 
         public AddReflectionPage()
         {
+
+            Planning = GeneralApplicationData.Planning;
+            Settings = GeneralApplicationData.Settings;
+
+            UserStyleFactory.addStyles(this.Resources, this.Settings.Settings);
+
+
             this.InitializeComponent();
         }
 
@@ -141,17 +156,17 @@ namespace Planner
                 }
 
                 newReflection.Feeling = SelectedFeeling;
-                plan.addPlanningItem(newReflection);
+                Planning.addPlanningItem(newReflection);
 
-                ToastNotifier.setuptoasts(plan.plan);
+                ToastNotifier.setuptoasts(Planning.plan);
 
-                this.Frame.Navigate(typeof(ReflectionsPage), plan);
+                this.Frame.Navigate(typeof(ReflectionsPage), Planning);
             }
         }
 
         private void Grid_DoubleTapped(object sender, DoubleTappedRoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(ReflectionsPage), plan);
+            this.Frame.Navigate(typeof(ReflectionsPage), Planning);
         }
 
         public void Changed(string name)
@@ -232,13 +247,7 @@ namespace Planner
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-
-            PlanningItemStorage p = e.Parameter as PlanningItemStorage;
-
-            if (p != null)
-            {
-                plan = p;
-            }
+            
         }
 
         private void happyEmoticonButton_Click(object sender, RoutedEventArgs e)

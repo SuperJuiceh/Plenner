@@ -19,6 +19,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Datalab.Server.Packets;
+using Planner.Data.Styling;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -31,11 +32,17 @@ namespace Planner
     {
 
         public DynamicPlanningItemStorage plan { get; set; }
+        public SettingsStorage Settings { get; set; }
 
         public string Filter { get { return username_text_box.Text; } }
 
         public FriendsPage()
         {
+            plan = GeneralApplicationData.DynamicPlanning;
+            Settings = GeneralApplicationData.Settings;
+
+            UserStyleFactory.addStyles(this.Resources, this.Settings.Settings);
+
             this.InitializeComponent();
         }
 
@@ -107,7 +114,7 @@ namespace Planner
 
         private void Grid_DoubleTapped(object sender, DoubleTappedRoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(UserPage), plan);
+            this.Frame.Navigate(typeof(UserPage));
             
 
         }
@@ -123,7 +130,7 @@ namespace Planner
 
             if (username != null)
             {
-                this.Frame.Navigate(typeof(GrantPermissionsPage), new Tuple<PlanningItemStorage, string>(plan, username));
+                this.Frame.Navigate(typeof(GrantPermissionsPage), username);
             }
 
         }

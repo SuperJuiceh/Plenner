@@ -22,7 +22,7 @@ namespace DataLab.Storage
         public Object        StorageObject;
         public Type          StorageObjectType;
 
-        public    XmlSerializer    Serializer;
+        public XmlSerializer    Serializer;
 
         public Storage(string filename, Type objectType)
         {
@@ -42,7 +42,6 @@ namespace DataLab.Storage
 
         public async void initStorage(string filename)
         {
-            Debug.WriteLine("initStorage launched");
             try {
                 // File Exists
                 SaveLocation = await ApplicationData.Current.LocalFolder.GetFileAsync(filename);
@@ -76,7 +75,6 @@ namespace DataLab.Storage
 
             Stream striem = await SaveLocation.OpenStreamForReadAsync();
             
-
             try
             {
                 
@@ -85,7 +83,7 @@ namespace DataLab.Storage
 
                 StorageObject = Serializer.Deserialize(reader);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 StorageObject = Activator.CreateInstance(StorageObjectType);
                 saveStorage();

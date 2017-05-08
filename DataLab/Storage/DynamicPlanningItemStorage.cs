@@ -78,7 +78,12 @@ namespace DataLab.Storage
 
             OneWayPacket.addItemToUser("REMOVE "+ a.Name);
         }
-        
+
+        public override bool isDynamic()
+        {
+            return true;
+        }
+
 
     }
 }

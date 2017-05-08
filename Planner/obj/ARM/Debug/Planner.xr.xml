@@ -26,6 +26,8 @@
     <RootPropertyPathName Name="Poto" />
     <RootPropertyPathName Name="Photo" />
     <RootPropertyPathName Name="Settings" />
+    <RootPropertyPathName Name="getIntArrayFrom0To100" />
+    <RootPropertyPathName Name="getFontNames" />
     <RootPropertyPathName Name="EnableNotifications" />
     <RootPropertyPathName Name="SoundEnabled" />
     <RootPropertyPathName Name="Diary" />
@@ -39,7 +41,10 @@
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
       <RootProperty Name="RequestedTheme" />
+      <RootProperty Name="Resources" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.ResourceDictionary" />
+    <RootType FullName="DataLab.Tools.StaticTools" />
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
@@ -150,6 +155,7 @@
       <RootProperty Name="Path" />
       <RootProperty Name="Mode" />
       <RootProperty Name="UpdateSourceTrigger" />
+      <RootProperty Name="Source" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.Flyout">
@@ -318,11 +324,17 @@
       <RootProperty Name="Child" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="ItemsSource" />
       <RootProperty Name="Name" />
       <RootProperty Name="RenderTransformOrigin" />
-      <RootProperty Name="Width" />
       <RootProperty Name="RenderTransform" />
-      <RootProperty Name="Margin" />
+      <RootEvent Name="SizeChanged" />
+      <RootEvent Name="SelectionChanged" />
       <RootEvent Name="Loaded" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.CompositeTransform">
