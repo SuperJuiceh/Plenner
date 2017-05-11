@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataLab.Server.Controller.Login;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -18,9 +19,12 @@ namespace DataLab.Storage
         [XmlIgnore]
         private bool _autoSyncAccount;
         public bool AutoSyncAccount { get { return _autoSyncAccount; } set { _autoSyncAccount = value; Changed("AutoSyncAccount"); } }
+
+        public LoginToken LognToken { get; set; }
+
+
         [XmlIgnore]
-        private bool _autoLogIn;
-        public bool AutoLogIn { get { return _autoLogIn; } set { _autoLogIn = value; Changed("AutoLogIn"); } }
+        public bool AutoLogIn { get { return LognToken != null; } }
         
         [XmlIgnore]
         public TimeSpan PlanningItemExperation { get { return new TimeSpan(PlanningItemExperationLong); } set { this.PlanningItemExperationLong = value.Ticks; Changed("PlanningItemExperation"); } }

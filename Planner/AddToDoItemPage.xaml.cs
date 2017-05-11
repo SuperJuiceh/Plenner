@@ -61,6 +61,7 @@ namespace Planner
                 if (s == "single")
                 {
                     MultipleItems = false;
+                    button1.Visibility = Visibility.Collapsed;
                 }
                 else {
                     MultipleItems = true;

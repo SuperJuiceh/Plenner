@@ -22,6 +22,7 @@ using DataLab.Tools;
 using DataLab.NetworkPackaging;
 using Datalab.Server.Packets;
 using Planner.Data.Styling;
+using DataLab.Server.Controller.Login;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -52,14 +53,24 @@ namespace Planner
             if (username_textBox.Text != "" && password_textBox.Text != "")
             {
                 // Try login
-                QuestionPacket qPacket = QuestionPacket.AskIfPasswordIsValid(username_textBox.Text, PasswordHasher.hashPassword(password_textBox.Text));
+                QuestionPacket qPacket = QuestionPacket.AskIfPasswordIsValid(username_textBox.Text, PasswordHasher.hashPassword(password_textBox.Text), rememberLoginCheckbox.IsChecked.GetValueOrDefault());
                 QuestionPacket packet = PacketClient.SendAndReceive(qPacket) as QuestionPacket;
 
                 if (packet.A)
                 {
                     DynamicPlanningItemStorage p = new DynamicPlanningItemStorage(plan, (User)packet.Question_data[2]);
                     plan.plan = p.CurrentUser.plan;
-                    this.Frame.Navigate(typeof(UserPage), plan);
+
+                    GeneralApplicationData.Planning = p;
+
+                    if ((bool)packet.Question_data[3])
+                    {
+                        LoginToken token = (LoginToken)packet.Question_data[4];
+                        // Add to settings
+                        Settings.Settings.LognToken = token;
+                    }
+
+                    this.Frame.Navigate(typeof(UserPage));
                 }
             }
         }
@@ -74,6 +85,40 @@ namespace Planner
             base.OnNavigatedTo(e);
             
 
+        }
+
+        private void withoutLoginButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(ActivitiesPage));
+        }
+
+        private void connectLogin()
+        {
+            PacketClient.Connect();
+
+            if (PacketClient.Connected)
+            {
+                loginInformationPanel.Visibility = Visibility.Visible;
+                connectToServerButton.Visibility = Visibility.Collapsed;
+            }
+
+        }
+
+        private void Grid_Loaded(object sender, RoutedEventArgs e)
+        {
+            
+
+
+        }
+
+        private void connectToServer_Click(object sender, RoutedEventArgs e)
+        {
+            connectLogin();
+        }
+
+        private void newAccountButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(RegistrationPage));
         }
     }
 }

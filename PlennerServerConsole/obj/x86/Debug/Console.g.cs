@@ -60,10 +60,10 @@ namespace PlennerServerConsole
             {
                 switch(connectionId)
                 {
-                    case 2:
+                    case 2: // Console.xaml line 24
                         this.obj2 = (global::Windows.UI.Xaml.Controls.RelativePanel)target;
                         break;
-                    case 4:
+                    case 4: // Console.xaml line 36
                         this.obj4 = (global::Windows.UI.Xaml.Controls.ListView)target;
                         break;
                     default:
@@ -89,6 +89,11 @@ namespace PlennerServerConsole
 
             public void StopTracking()
             {
+            }
+
+            public void DisconnectUnloadedObject(int connectionId)
+            {
+                throw new global::System.ArgumentException("No unloadable elements to disconnect.");
             }
 
             public bool SetDataRoot(global::System.Object newDataRoot)
@@ -128,6 +133,7 @@ namespace PlennerServerConsole
                 }
                 if ((phase & ((1 << 0) | NOT_PHASED )) != 0)
                 {
+                    // Console.xaml line 24
                     XamlBindingSetters.Set_Windows_UI_Xaml_FrameworkElement_DataContext(this.obj2, obj, null);
                 }
             }
@@ -165,6 +171,7 @@ namespace PlennerServerConsole
             {
                 if ((phase & ((1 << 0) | NOT_PHASED )) != 0)
                 {
+                    // Console.xaml line 36
                     XamlBindingSetters.Set_Windows_UI_Xaml_Controls_ItemsControl_ItemsSource(this.obj4, obj, null);
                 }
             }
@@ -178,71 +185,65 @@ namespace PlennerServerConsole
         {
             switch(connectionId)
             {
-            case 2:
+            case 2: // Console.xaml line 24
                 {
                     this.relPanel1 = (global::Windows.UI.Xaml.Controls.RelativePanel)(target);
                 }
                 break;
-            case 3:
+            case 3: // Console.xaml line 35
                 {
                     this.send_command_button = (global::Windows.UI.Xaml.Controls.Button)(target);
-                    #line 35 "..\..\..\Console.xaml"
                     ((global::Windows.UI.Xaml.Controls.Button)this.send_command_button).Click += this.send_command_button_Click;
-                    #line default
                 }
                 break;
-            case 4:
+            case 4: // Console.xaml line 36
                 {
                     this.listView = (global::Windows.UI.Xaml.Controls.ListView)(target);
-                    #line 36 "..\..\..\Console.xaml"
                     ((global::Windows.UI.Xaml.Controls.ListView)this.listView).DataContextChanged += this.listView_DataContextChanged;
-                    #line default
                 }
                 break;
-            case 5:
+            case 5: // Console.xaml line 25
                 {
                     this.textBlock = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 6:
+            case 6: // Console.xaml line 26
                 {
                     this.textBlock1 = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 7:
+            case 7: // Console.xaml line 27
                 {
                     this.textBlock2 = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 8:
+            case 8: // Console.xaml line 28
                 {
                     this.textBlock3 = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 9:
+            case 9: // Console.xaml line 29
                 {
                     this.runningSinceTextBlock = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 10:
+            case 10: // Console.xaml line 30
                 {
                     this.runningSinceOutputTextBlock = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 11:
+            case 11: // Console.xaml line 31
                 {
                     this.commandTextBox = (global::Windows.UI.Xaml.Controls.TextBox)(target);
-                    #line 31 "..\..\..\Console.xaml"
                     ((global::Windows.UI.Xaml.Controls.TextBox)this.commandTextBox).KeyDown += this.commandTextBox_KeyDown;
-                    #line default
                 }
                 break;
-            case 12:
+            case 12: // Console.xaml line 32
                 {
                     this.textBlock4 = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 13:
+            case 13: // Console.xaml line 33
                 {
                     this.users_online_textblock = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
@@ -253,6 +254,9 @@ namespace PlennerServerConsole
             this._contentLoaded = true;
         }
 
+        /// <summary>
+        /// GetBindingConnector(int connectionId, object target)
+        /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 14.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::Windows.UI.Xaml.Markup.IComponentConnector GetBindingConnector(int connectionId, object target)
@@ -260,8 +264,8 @@ namespace PlennerServerConsole
             global::Windows.UI.Xaml.Markup.IComponentConnector returnValue = null;
             switch(connectionId)
             {
-            case 1:
-                {
+            case 1: // Console.xaml line 1
+                {                    
                     global::Windows.UI.Xaml.Controls.Page element1 = (global::Windows.UI.Xaml.Controls.Page)target;
                     Console_obj1_Bindings bindings = new Console_obj1_Bindings();
                     returnValue = bindings;

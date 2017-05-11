@@ -2,6 +2,7 @@
 using DataLab.Data.Users.Message;
 using DataLab.Server.Controller;
 using DataLab.Server.Controller.Logging;
+using DataLab.Server.Controller.Login;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,5 +20,6 @@ namespace PlannerServer.Server
         public ServerLog Log { get; set; }   = new ServerLog();
         public UserManager Uman { get; set; } = new UserManager();
         public MessageManager MsgMan { get; set; } = new MessageManager();
+        public LoginTokenManager TokenMan { get; set; } = new LoginTokenManager();
     }
 }

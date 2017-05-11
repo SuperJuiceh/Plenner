@@ -28,13 +28,13 @@
     <AppXManifest Include="C:\Users\Bilel\Documents\Plenner\Planner\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-07T23:03:04.390</Modified>
+      <Modified>2017-05-08T23:16:10.425</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Bilel\Documents\Plenner\Planner\bin\x86\Debug\Planner.exe">
       <PackagePath>entrypoint\Planner.exe</PackagePath>
-      <Modified>2017-05-07T23:02:58.768</Modified>
+      <Modified>2017-05-08T23:16:07.149</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Bilel\.nuget\packages\Microsoft.CSharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -498,7 +498,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Bilel\Documents\Plenner\DataLab\bin\x86\Debug\DataLab.dll">
       <PackagePath>DataLab.dll</PackagePath>
-      <Modified>2017-05-07T23:02:52.226</Modified>
+      <Modified>2017-05-08T23:15:56.810</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Bilel\Documents\Plenner\Planner\Assets\13-512.png">
       <PackagePath>Assets\13-512.png</PackagePath>
@@ -693,11 +693,11 @@
     <AppxPackagedFile Include="C:\Users\Bilel\Documents\Plenner\Planner\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-07T18:54:07.578</Modified>
+      <Modified>2017-05-08T22:06:56.945</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Bilel\Documents\Plenner\Planner\bin\x86\Debug\Core\Planner.exe">
       <PackagePath>Planner.exe</PackagePath>
-      <Modified>2017-05-07T23:03:04.335</Modified>
+      <Modified>2017-05-08T23:16:10.408</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

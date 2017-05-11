@@ -20,6 +20,7 @@ using Windows.Networking.Sockets;
 using static DataLab.Data.Users.Contracts.PlanningContract;
 using static DataLab.Data.Users.UserManager;
 using Datalab.Server.Packets;
+using DataLab.Server.Controller.Login;
 
 namespace DataLab.Server.Controller
 {
@@ -136,6 +137,41 @@ namespace DataLab.Server.Controller
                         q.Question_data[2] = foundUser;
 
                         CurrentUser = foundUser;
+                        //public static QuestionPacket AskIfPasswordIsValid(string username, string password, bool withToken)
+                        //{
+                        //    // object: username, password, user, token? , token (optional:)
+                        //    return new QuestionPacket(Questions.Valid_password, new object[] { username, password, null, withToken, null });
+                        //}
+                        
+                        // Remember password functionality
+                        if ((bool)q.Question_data[3])
+                        {
+                            q.Question_data[4] = createLoginToken((string)q.Question_data[1], (string)q.Question_data[0]);
+                        }
+                        
+                    } 
+                    return q;
+                }
+                else if (q.Q == QuestionPacket.Questions.Valid_token)
+                {
+                    //public static QuestionPacket AskIfTokenIsValid(string username, int token, string deviceID)
+                    //{
+                    //    // object: username, password, deviceID, user
+                    //    return new QuestionPacket(Questions.Valid_token, new object[] { username, token, deviceID, null });
+                    //}
+                    q.A = Storage.ServerData.TokenMan.isValid((string)q.Question_data[0], (int)q.Question_data[1], (string)q.Question_data[2]);
+                    //q.A = Storage.ServerData.Uman.Users.Exists(u => u.UserName == (string)q.Question_data[0] && u.Password == (string)q.Question_data[1]);
+
+                    if (q.A)
+                    {
+                        User foundUser = Storage.ServerData.Uman.Users.First(u => u.UserName == (string)q.Question_data[0] && u.Password == (string)q.Question_data[1]);
+                        foundUser.Mails = new ObservableCollection<Mail>(Storage.ServerData.MsgMan.MailMan.getMailFrom(foundUser.UserName).Item2);
+                        q.Question_data[3] = foundUser;
+
+                        CurrentUser = foundUser;
+
+                        // Remember password functionality
+
                     }
                     return q;
                 }
@@ -147,6 +183,8 @@ namespace DataLab.Server.Controller
                     q.Question_data[1] = answer;
                     _mainServ.Storage.ServerData.Log.addLog("User registered: " + user.ToString());
                     CurrentUser = user;
+                    q.Question_data[3] = createLoginToken((string)q.Question_data[2], user.UserName);
+
                     return q;
                 }
                 else if (q.Q == QuestionPacket.Questions.Is_username_available)
@@ -228,6 +266,11 @@ namespace DataLab.Server.Controller
             }
 
 
+        }
+
+        private LoginToken createLoginToken(string deviceID, string username)
+        {
+            return Storage.ServerData.TokenMan.createToken(deviceID, username);
         }
 
         public Type xmlStringToType(string xml)

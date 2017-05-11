@@ -38,8 +38,6 @@ namespace DataLab.Data.Planning
         public SoftwareBitmapSource _poto;
         [XmlIgnore]
         public SoftwareBitmapSource Poto { get { return _poto; } set { this._poto = value; Changed("Poto"); }  }
-        [XmlAttribute("Description")]
-        public string Description { get; set; }
         [XmlAttribute("Time")]
         public DateTime Time { get; set; }
 

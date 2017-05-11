@@ -24,68 +24,64 @@ namespace Planner
         {
             switch(connectionId)
             {
-            case 1:
+            case 1: // AddDiaryPage.xaml line 10
                 {
                     this.mainGrid = (global::Windows.UI.Xaml.Controls.Grid)(target);
-                    #line 10 "..\..\..\AddDiaryPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.Grid)this.mainGrid).DoubleTapped += this.mainGrid_DoubleTapped;
-                    #line default
                 }
                 break;
-            case 2:
+            case 2: // AddDiaryPage.xaml line 14
                 {
                     this.textBlock = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 3:
+            case 3: // AddDiaryPage.xaml line 15
                 {
                     this.planningItemTypetextBlock = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 4:
+            case 4: // AddDiaryPage.xaml line 16
                 {
                     this.startDatePicker = (global::Windows.UI.Xaml.Controls.DatePicker)(target);
                 }
                 break;
-            case 5:
+            case 5: // AddDiaryPage.xaml line 17
                 {
                     this.endDatePicker = (global::Windows.UI.Xaml.Controls.DatePicker)(target);
                 }
                 break;
-            case 6:
+            case 6: // AddDiaryPage.xaml line 18
                 {
                     this.startTimePicker = (global::Windows.UI.Xaml.Controls.TimePicker)(target);
                 }
                 break;
-            case 7:
+            case 7: // AddDiaryPage.xaml line 19
                 {
                     this.endTimePicker = (global::Windows.UI.Xaml.Controls.TimePicker)(target);
                 }
                 break;
-            case 8:
+            case 8: // AddDiaryPage.xaml line 20
                 {
                     this.textBlock2 = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 9:
+            case 9: // AddDiaryPage.xaml line 21
                 {
                     this.textBlock1 = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 10:
+            case 10: // AddDiaryPage.xaml line 22
                 {
                     this.typesListBox = (global::Windows.UI.Xaml.Controls.ListBox)(target);
                 }
                 break;
-            case 11:
+            case 11: // AddDiaryPage.xaml line 29
                 {
                     this.generateDiaryButton = (global::Windows.UI.Xaml.Controls.Button)(target);
-                    #line 29 "..\..\..\AddDiaryPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.Button)this.generateDiaryButton).Click += this.generateDiaryButton_Click;
-                    #line default
                 }
                 break;
-            case 12:
+            case 12: // AddDiaryPage.xaml line 30
                 {
                     this.image = (global::Windows.UI.Xaml.Controls.Image)(target);
                 }
@@ -96,6 +92,9 @@ namespace Planner
             this._contentLoaded = true;
         }
 
+        /// <summary>
+        /// GetBindingConnector(int connectionId, object target)
+        /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 14.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::Windows.UI.Xaml.Markup.IComponentConnector GetBindingConnector(int connectionId, object target)

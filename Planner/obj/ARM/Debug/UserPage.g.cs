@@ -57,7 +57,7 @@ namespace Planner
             {
                 switch(connectionId)
                 {
-                    case 3:
+                    case 3: // UserPage.xaml line 17
                         this.obj3 = (global::Windows.UI.Xaml.Controls.RelativePanel)target;
                         break;
                     default:
@@ -83,6 +83,11 @@ namespace Planner
 
             public void StopTracking()
             {
+            }
+
+            public void DisconnectUnloadedObject(int connectionId)
+            {
+                throw new global::System.ArgumentException("No unloadable elements to disconnect.");
             }
 
             public bool SetDataRoot(global::System.Object newDataRoot)
@@ -138,6 +143,7 @@ namespace Planner
                 }
                 if ((phase & ((1 << 0) | NOT_PHASED )) != 0)
                 {
+                    // UserPage.xaml line 17
                     XamlBindingSetters.Set_Windows_UI_Xaml_FrameworkElement_DataContext(this.obj3, obj, null);
                 }
             }
@@ -145,6 +151,7 @@ namespace Planner
             {
                 if ((phase & ((1 << 0) | NOT_PHASED )) != 0)
                 {
+                    // UserPage.xaml line 17
                     XamlBindingSetters.Set_Windows_UI_Xaml_UIElement_Visibility(this.obj3, (global::Windows.UI.Xaml.Visibility)this.LookupConverter("booltoeleconv").Convert(obj, typeof(global::Windows.UI.Xaml.Visibility), "true", null));
                 }
             }
@@ -158,102 +165,90 @@ namespace Planner
         {
             switch(connectionId)
             {
-            case 2:
+            case 2: // UserPage.xaml line 13
                 {
                     global::Windows.UI.Xaml.Controls.Grid element2 = (global::Windows.UI.Xaml.Controls.Grid)(target);
-                    #line 13 "..\..\..\UserPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.Grid)element2).DoubleTapped += this.Grid_DoubleTapped;
-                    #line default
                 }
                 break;
-            case 3:
+            case 3: // UserPage.xaml line 17
                 {
                     this.loggedinpanel = (global::Windows.UI.Xaml.Controls.RelativePanel)(target);
                 }
                 break;
-            case 4:
+            case 4: // UserPage.xaml line 43
                 {
                     this.button = (global::Windows.UI.Xaml.Controls.Button)(target);
-                    #line 43 "..\..\..\UserPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.Button)this.button).Click += this.user_button_Click;
-                    #line default
                 }
                 break;
-            case 5:
+            case 5: // UserPage.xaml line 48
                 {
                     this.button1 = (global::Windows.UI.Xaml.Controls.Button)(target);
-                    #line 48 "..\..\..\UserPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.Button)this.button1).Click += this.registration_button_Click;
-                    #line default
                 }
                 break;
-            case 6:
+            case 6: // UserPage.xaml line 18
                 {
                     this.textBlock3 = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 7:
+            case 7: // UserPage.xaml line 19
                 {
                     this.textBlock4 = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 8:
+            case 8: // UserPage.xaml line 20
                 {
                     this.name_text_box = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 9:
+            case 9: // UserPage.xaml line 21
                 {
                     this.user_lcountry_textblock = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 10:
+            case 10: // UserPage.xaml line 22
                 {
                     this.textBlock6 = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 11:
+            case 11: // UserPage.xaml line 23
                 {
                     this.textBlock7 = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 12:
+            case 12: // UserPage.xaml line 24
                 {
                     this.sync_button = (global::Windows.UI.Xaml.Controls.Button)(target);
-                    #line 24 "..\..\..\UserPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.Button)this.sync_button).Click += this.sync_button_Click_1;
-                    #line default
                 }
                 break;
-            case 13:
+            case 13: // UserPage.xaml line 29
                 {
                     this.checkBox3 = (global::Windows.UI.Xaml.Controls.CheckBox)(target);
                 }
                 break;
-            case 14:
+            case 14: // UserPage.xaml line 30
                 {
                     this.hobbiesTextBlock = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 15:
+            case 15: // UserPage.xaml line 31
                 {
                     this.textBlock1 = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 16:
+            case 16: // UserPage.xaml line 32
                 {
                     this.show_mail_button = (global::Windows.UI.Xaml.Controls.Button)(target);
-                    #line 32 "..\..\..\UserPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.Button)this.show_mail_button).Click += this.button2_Click;
-                    #line default
                 }
                 break;
-            case 17:
+            case 17: // UserPage.xaml line 37
                 {
                     this.show_friends_button = (global::Windows.UI.Xaml.Controls.Button)(target);
-                    #line 37 "..\..\..\UserPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.Button)this.show_friends_button).Click += this.show_friends_button_Click;
-                    #line default
                 }
                 break;
             default:
@@ -262,6 +257,9 @@ namespace Planner
             this._contentLoaded = true;
         }
 
+        /// <summary>
+        /// GetBindingConnector(int connectionId, object target)
+        /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 14.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::Windows.UI.Xaml.Markup.IComponentConnector GetBindingConnector(int connectionId, object target)
@@ -269,8 +267,8 @@ namespace Planner
             global::Windows.UI.Xaml.Markup.IComponentConnector returnValue = null;
             switch(connectionId)
             {
-            case 1:
-                {
+            case 1: // UserPage.xaml line 1
+                {                    
                     global::Windows.UI.Xaml.Controls.Page element1 = (global::Windows.UI.Xaml.Controls.Page)target;
                     UserPage_obj1_Bindings bindings = new UserPage_obj1_Bindings();
                     returnValue = bindings;

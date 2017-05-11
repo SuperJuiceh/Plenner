@@ -52,10 +52,10 @@ namespace Planner
             {
                 switch(connectionId)
                 {
-                    case 3:
+                    case 3: // ToDoPage.xaml line 26
                         this.obj3 = (global::Windows.UI.Xaml.Controls.ListView)target;
                         break;
-                    case 4:
+                    case 4: // ToDoPage.xaml line 50
                         this.obj4 = (global::Windows.UI.Xaml.Controls.ListView)target;
                         break;
                     default:
@@ -81,6 +81,11 @@ namespace Planner
 
             public void StopTracking()
             {
+            }
+
+            public void DisconnectUnloadedObject(int connectionId)
+            {
+                throw new global::System.ArgumentException("No unloadable elements to disconnect.");
             }
 
             public bool SetDataRoot(global::System.Object newDataRoot)
@@ -134,6 +139,7 @@ namespace Planner
             {
                 if ((phase & ((1 << 0) | NOT_PHASED )) != 0)
                 {
+                    // ToDoPage.xaml line 26
                     XamlBindingSetters.Set_Windows_UI_Xaml_Controls_ItemsControl_ItemsSource(this.obj3, obj, null);
                 }
             }
@@ -141,6 +147,7 @@ namespace Planner
             {
                 if ((phase & ((1 << 0) | NOT_PHASED )) != 0)
                 {
+                    // ToDoPage.xaml line 50
                     XamlBindingSetters.Set_Windows_UI_Xaml_Controls_ItemsControl_ItemsSource(this.obj4, obj, null);
                 }
             }
@@ -154,127 +161,102 @@ namespace Planner
         {
             switch(connectionId)
             {
-            case 2:
+            case 2: // ToDoPage.xaml line 13
                 {
                     global::Windows.UI.Xaml.Controls.Grid element2 = (global::Windows.UI.Xaml.Controls.Grid)(target);
-                    #line 13 "..\..\..\ToDoPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.Grid)element2).DoubleTapped += this.Grid_DoubleTapped;
-                    #line default
                 }
                 break;
-            case 3:
+            case 3: // ToDoPage.xaml line 26
                 {
                     this.listView = (global::Windows.UI.Xaml.Controls.ListView)(target);
                 }
                 break;
-            case 4:
+            case 4: // ToDoPage.xaml line 50
                 {
                     this.listViewtdiSets = (global::Windows.UI.Xaml.Controls.ListView)(target);
                 }
                 break;
-            case 5:
+            case 5: // ToDoPage.xaml line 94
                 {
                     this.textBlock = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 6:
+            case 6: // ToDoPage.xaml line 95
                 {
                     global::Windows.UI.Xaml.Controls.RelativePanel element6 = (global::Windows.UI.Xaml.Controls.RelativePanel)(target);
-                    #line 95 "..\..\..\ToDoPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.RelativePanel)element6).ManipulationStarted += this.RelativePanel_ManipulationStarted;
-                    #line 95 "..\..\..\ToDoPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.RelativePanel)element6).ManipulationCompleted += this.RelativePanel_ManipulationCompleted;
-                    #line default
                 }
                 break;
-            case 7:
+            case 7: // ToDoPage.xaml line 104
                 {
                     this.button1 = (global::Windows.UI.Xaml.Controls.Button)(target);
                 }
                 break;
-            case 8:
+            case 8: // ToDoPage.xaml line 117
                 {
                     this.button2 = (global::Windows.UI.Xaml.Controls.Button)(target);
-                    #line 117 "..\..\..\ToDoPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.Button)this.button2).Click += this.button2_Click;
-                    #line default
                 }
                 break;
-            case 9:
+            case 9: // ToDoPage.xaml line 110
                 {
                     this.listBoxItemChildren = (global::Windows.UI.Xaml.Controls.ListBox)(target);
-                    #line 110 "..\..\..\ToDoPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.ListBox)this.listBoxItemChildren).SelectionChanged += this.ListBox_SelectionChanged;
-                    #line default
                 }
                 break;
-            case 10:
+            case 10: // ToDoPage.xaml line 98
                 {
                     this.button = (global::Windows.UI.Xaml.Controls.Button)(target);
                 }
                 break;
-            case 11:
+            case 11: // ToDoPage.xaml line 79
                 {
                     global::Windows.UI.Xaml.Controls.CheckBox element11 = (global::Windows.UI.Xaml.Controls.CheckBox)(target);
-                    #line 79 "..\..\..\ToDoPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.CheckBox)element11).Checked += this.CheckBox_Checked;
-                    #line default
                 }
                 break;
-            case 12:
+            case 12: // ToDoPage.xaml line 80
                 {
                     global::Windows.UI.Xaml.Controls.Button element12 = (global::Windows.UI.Xaml.Controls.Button)(target);
-                    #line 80 "..\..\..\ToDoPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.Button)element12).Click += this.Button_Click_1;
-                    #line default
                 }
                 break;
-            case 13:
+            case 13: // ToDoPage.xaml line 65
                 {
                     global::Windows.UI.Xaml.Controls.CheckBox element13 = (global::Windows.UI.Xaml.Controls.CheckBox)(target);
-                    #line 65 "..\..\..\ToDoPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.CheckBox)element13).Checked += this.CheckBox_Checked;
-                    #line default
                 }
                 break;
-            case 14:
+            case 14: // ToDoPage.xaml line 66
                 {
                     global::Windows.UI.Xaml.Controls.Button element14 = (global::Windows.UI.Xaml.Controls.Button)(target);
-                    #line 66 "..\..\..\ToDoPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.Button)element14).Click += this.tdiset_remove_button_Click;
-                    #line default
                 }
                 break;
-            case 15:
+            case 15: // ToDoPage.xaml line 29
                 {
                     this.toDoItemNameHeaderTextBlock = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
-                    #line 29 "..\..\..\ToDoPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.TextBlock)this.toDoItemNameHeaderTextBlock).Tapped += this.toDoItemNameHeaderTextBlock_Tapped;
-                    #line default
                 }
                 break;
-            case 16:
+            case 16: // ToDoPage.xaml line 30
                 {
                     this.toDoItemTimeHeaderTextBlock = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
-                    #line 30 "..\..\..\ToDoPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.TextBlock)this.toDoItemTimeHeaderTextBlock).Tapped += this.toDoItemTimeHeaderTextBlock_Tapped;
-                    #line default
                 }
                 break;
-            case 17:
+            case 17: // ToDoPage.xaml line 40
                 {
                     global::Windows.UI.Xaml.Controls.CheckBox element17 = (global::Windows.UI.Xaml.Controls.CheckBox)(target);
-                    #line 40 "..\..\..\ToDoPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.CheckBox)element17).Checked += this.CheckBox_Checked;
-                    #line default
                 }
                 break;
-            case 18:
+            case 18: // ToDoPage.xaml line 41
                 {
                     global::Windows.UI.Xaml.Controls.Button element18 = (global::Windows.UI.Xaml.Controls.Button)(target);
-                    #line 41 "..\..\..\ToDoPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.Button)element18).Click += this.Button_Click_1;
-                    #line default
                 }
                 break;
             default:
@@ -283,6 +265,9 @@ namespace Planner
             this._contentLoaded = true;
         }
 
+        /// <summary>
+        /// GetBindingConnector(int connectionId, object target)
+        /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 14.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::Windows.UI.Xaml.Markup.IComponentConnector GetBindingConnector(int connectionId, object target)
@@ -290,8 +275,8 @@ namespace Planner
             global::Windows.UI.Xaml.Markup.IComponentConnector returnValue = null;
             switch(connectionId)
             {
-            case 1:
-                {
+            case 1: // ToDoPage.xaml line 1
+                {                    
                     global::Windows.UI.Xaml.Controls.Page element1 = (global::Windows.UI.Xaml.Controls.Page)target;
                     ToDoPage_obj1_Bindings bindings = new ToDoPage_obj1_Bindings();
                     returnValue = bindings;

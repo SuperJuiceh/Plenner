@@ -25,6 +25,7 @@ namespace Planner.Data.Styling
                 resources.Add(typeof(TextBlock), StijlTextBlock);
                 resources.Add(typeof(TextBox), StijlTextBox);
                 resources.Add(typeof(CheckBox), StijlCheckBox);
+                resources.Add(typeof(ListView), StijlListView);
             } catch (Exception e)
             {
                 Debug.WriteLine(e.Message);
@@ -122,5 +123,24 @@ namespace Planner.Data.Styling
             }
         }
 
+        public static Style StijlListView
+        {
+            get
+            {
+                Style style = new Style();
+
+                new List<Setter>() {
+                    new Setter() { Property = ListView.FontStyleProperty, Value = Settings.FontTypeUser },
+                    new Setter() { Property = ListView.FontSizeProperty,  Value = Settings.FontSizeUser }
+                }.ForEach(set =>
+                {
+                    style.Setters.Add(set);
+                });
+
+                style.TargetType = typeof(ListView);
+
+                return style;
+            }
+        }
     }
 }

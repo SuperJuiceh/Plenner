@@ -413,3 +413,5 @@ C:\Users\Bilel\Documents\Plenner\PlennerServerConsole\obj\x86\Debug\pri.resfiles
 C:\Users\Bilel\Documents\Plenner\PlennerServerConsole\obj\x86\Debug\qualifiers.txt
 C:\Users\Bilel\Documents\Plenner\PlennerServerConsole\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\Bilel\Documents\Plenner\PlennerServerConsole\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Bilel\Documents\Plenner\PlennerServerConsole\bin\x86\Debug\System.ValueTuple.dll
+C:\Users\Bilel\Documents\Plenner\PlennerServerConsole\obj\x86\Debug\FxResources.System.ValueTuple.SR.resw

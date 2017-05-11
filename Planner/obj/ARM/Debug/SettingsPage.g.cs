@@ -24,149 +24,125 @@ namespace Planner
         {
             switch(connectionId)
             {
-            case 1:
+            case 1: // SettingsPage.xaml line 23
                 {
                     global::Windows.UI.Xaml.Controls.RelativePanel element1 = (global::Windows.UI.Xaml.Controls.RelativePanel)(target);
-                    #line 23 "..\..\..\SettingsPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.RelativePanel)element1).ManipulationStarted += this.RelativePanel_ManipulationStarted;
-                    #line 23 "..\..\..\SettingsPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.RelativePanel)element1).ManipulationCompleted += this.RelativePanel_ManipulationCompleted;
-                    #line default
                 }
                 break;
-            case 2:
+            case 2: // SettingsPage.xaml line 32
                 {
                     this.textBlock2 = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 3:
+            case 3: // SettingsPage.xaml line 33
                 {
                     this.settingsPanel = (global::Windows.UI.Xaml.Controls.RelativePanel)(target);
                 }
                 break;
-            case 4:
+            case 4: // SettingsPage.xaml line 77
                 {
                     this.save_button = (global::Windows.UI.Xaml.Controls.Button)(target);
-                    #line 77 "..\..\..\SettingsPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.Button)this.save_button).Click += this.save_button_Click;
-                    #line default
                 }
                 break;
-            case 5:
+            case 5: // SettingsPage.xaml line 82
                 {
                     this.popup = (global::Windows.UI.Xaml.Controls.Primitives.Popup)(target);
                 }
                 break;
-            case 6:
+            case 6: // SettingsPage.xaml line 84
                 {
                     this.popupTitle = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 7:
+            case 7: // SettingsPage.xaml line 85
                 {
                     this.popupMessage = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 8:
+            case 8: // SettingsPage.xaml line 86
                 {
                     global::Windows.UI.Xaml.Controls.Button element8 = (global::Windows.UI.Xaml.Controls.Button)(target);
-                    #line 86 "..\..\..\SettingsPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.Button)element8).Click += this.Button_Click_1;
-                    #line default
                 }
                 break;
-            case 9:
+            case 9: // SettingsPage.xaml line 34
                 {
                     this.soundEnabledCheckBox = (global::Windows.UI.Xaml.Controls.CheckBox)(target);
-                    #line 34 "..\..\..\SettingsPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.CheckBox)this.soundEnabledCheckBox).Checked += this.soundEnabledCheckBox_Checked;
-                    #line default
                 }
                 break;
-            case 10:
+            case 10: // SettingsPage.xaml line 35
                 {
                     this.notificationsEnabledCheckBox = (global::Windows.UI.Xaml.Controls.CheckBox)(target);
                 }
                 break;
-            case 11:
+            case 11: // SettingsPage.xaml line 36
                 {
                     this.planningItemExperationPanel = (global::Windows.UI.Xaml.Controls.RelativePanel)(target);
                 }
                 break;
-            case 12:
+            case 12: // SettingsPage.xaml line 70
                 {
                     this.button = (global::Windows.UI.Xaml.Controls.Button)(target);
-                    #line 70 "..\..\..\SettingsPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.Button)this.button).Click += this.button_Click;
-                    #line default
                 }
                 break;
-            case 13:
+            case 13: // SettingsPage.xaml line 73
                 {
                     this.selectedFont = (global::Windows.UI.Xaml.Controls.ComboBox)(target);
-                    #line 73 "..\..\..\SettingsPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.ComboBox)this.selectedFont).SizeChanged += this.selectedFont_SizeChanged;
-                    #line 73 "..\..\..\SettingsPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.ComboBox)this.selectedFont).SelectionChanged += this.selectedFont_SelectionChanged;
-                    #line default
                 }
                 break;
-            case 14:
+            case 14: // SettingsPage.xaml line 74
                 {
                     this.selectedFontSize = (global::Windows.UI.Xaml.Controls.ComboBox)(target);
-                    #line 74 "..\..\..\SettingsPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.ComboBox)this.selectedFontSize).SelectionChanged += this.selectedFontSize_SelectionChanged;
-                    #line default
                 }
                 break;
-            case 15:
+            case 15: // SettingsPage.xaml line 56
                 {
                     this.textBlock3 = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 16:
+            case 16: // SettingsPage.xaml line 57
                 {
                     this.image = (global::Windows.UI.Xaml.Controls.Button)(target);
                 }
                 break;
-            case 17:
+            case 17: // SettingsPage.xaml line 37
                 {
                     this.planningItemExperationCheckBox = (global::Windows.UI.Xaml.Controls.CheckBox)(target);
-                    #line 37 "..\..\..\SettingsPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.CheckBox)this.planningItemExperationCheckBox).Checked += this.checkBox2_Checked;
-                    #line default
                 }
                 break;
-            case 18:
+            case 18: // SettingsPage.xaml line 45
                 {
                     this.DaysComboBox = (global::Windows.UI.Xaml.Controls.ComboBox)(target);
-                    #line 45 "..\..\..\SettingsPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.ComboBox)this.DaysComboBox).Loaded += this.DaysComboBox_Loaded;
-                    #line default
                 }
                 break;
-            case 19:
+            case 19: // SettingsPage.xaml line 50
                 {
                     this.HoursComboBox = (global::Windows.UI.Xaml.Controls.ComboBox)(target);
-                    #line 50 "..\..\..\SettingsPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.ComboBox)this.HoursComboBox).Loaded += this.HoursComboBox_Loaded;
-                    #line default
                 }
                 break;
-            case 20:
+            case 20: // SettingsPage.xaml line 51
                 {
                     this.MinutesComboBox = (global::Windows.UI.Xaml.Controls.ComboBox)(target);
-                    #line 51 "..\..\..\SettingsPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.ComboBox)this.MinutesComboBox).Loaded += this.MinutesComboBox_Loaded;
-                    #line default
                 }
                 break;
-            case 21:
+            case 21: // SettingsPage.xaml line 29
                 {
                     this.textBlock = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 22:
+            case 22: // SettingsPage.xaml line 30
                 {
                     this.textBlock1 = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
@@ -177,6 +153,9 @@ namespace Planner
             this._contentLoaded = true;
         }
 
+        /// <summary>
+        /// GetBindingConnector(int connectionId, object target)
+        /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 14.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::Windows.UI.Xaml.Markup.IComponentConnector GetBindingConnector(int connectionId, object target)

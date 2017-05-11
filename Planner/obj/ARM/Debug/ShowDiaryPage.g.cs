@@ -51,7 +51,7 @@ namespace Planner
             {
                 switch(connectionId)
                 {
-                    case 6:
+                    case 6: // ShowDiaryPage.xaml line 17
                         this.obj6 = (global::Windows.UI.Xaml.Controls.ListView)target;
                         break;
                     default:
@@ -77,6 +77,11 @@ namespace Planner
 
             public void StopTracking()
             {
+            }
+
+            public void DisconnectUnloadedObject(int connectionId)
+            {
+                throw new global::System.ArgumentException("No unloadable elements to disconnect.");
             }
 
             public bool SetDataRoot(global::System.Object newDataRoot)
@@ -119,6 +124,7 @@ namespace Planner
             {
                 if ((phase & ((1 << 0) | NOT_PHASED )) != 0)
                 {
+                    // ShowDiaryPage.xaml line 17
                     XamlBindingSetters.Set_Windows_UI_Xaml_Controls_ItemsControl_ItemsSource(this.obj6, obj, null);
                 }
             }
@@ -132,68 +138,64 @@ namespace Planner
         {
             switch(connectionId)
             {
-            case 2:
+            case 2: // ShowDiaryPage.xaml line 10
                 {
                     global::Windows.UI.Xaml.Controls.Grid element2 = (global::Windows.UI.Xaml.Controls.Grid)(target);
-                    #line 10 "..\..\..\ShowDiaryPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.Grid)element2).DoubleTapped += this.Grid_DoubleTapped;
-                    #line default
                 }
                 break;
-            case 3:
+            case 3: // ShowDiaryPage.xaml line 14
                 {
                     this.textBlock = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 4:
+            case 4: // ShowDiaryPage.xaml line 15
                 {
                     this.textBlock1 = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 5:
+            case 5: // ShowDiaryPage.xaml line 16
                 {
                     this.diaryNameTextBlock = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 6:
+            case 6: // ShowDiaryPage.xaml line 17
                 {
                     this.listView = (global::Windows.UI.Xaml.Controls.ListView)(target);
                 }
                 break;
-            case 7:
+            case 7: // ShowDiaryPage.xaml line 29
                 {
                     this.button = (global::Windows.UI.Xaml.Controls.Button)(target);
-                    #line 29 "..\..\..\ShowDiaryPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.Button)this.button).Click += this.button_Click;
-                    #line default
                 }
                 break;
-            case 8:
+            case 8: // ShowDiaryPage.xaml line 42
                 {
                     this.textBlock3 = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 9:
+            case 9: // ShowDiaryPage.xaml line 43
                 {
                     this.textBox = (global::Windows.UI.Xaml.Controls.TextBox)(target);
                 }
                 break;
-            case 10:
+            case 10: // ShowDiaryPage.xaml line 33
                 {
                     this.textBlock2 = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 11:
+            case 11: // ShowDiaryPage.xaml line 34
                 {
                     this.checkBox = (global::Windows.UI.Xaml.Controls.CheckBox)(target);
                 }
                 break;
-            case 12:
+            case 12: // ShowDiaryPage.xaml line 35
                 {
                     this.checkBox1 = (global::Windows.UI.Xaml.Controls.CheckBox)(target);
                 }
                 break;
-            case 13:
+            case 13: // ShowDiaryPage.xaml line 36
                 {
                     this.checkBox2 = (global::Windows.UI.Xaml.Controls.CheckBox)(target);
                 }
@@ -204,6 +206,9 @@ namespace Planner
             this._contentLoaded = true;
         }
 
+        /// <summary>
+        /// GetBindingConnector(int connectionId, object target)
+        /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 14.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::Windows.UI.Xaml.Markup.IComponentConnector GetBindingConnector(int connectionId, object target)
@@ -211,8 +216,8 @@ namespace Planner
             global::Windows.UI.Xaml.Markup.IComponentConnector returnValue = null;
             switch(connectionId)
             {
-            case 1:
-                {
+            case 1: // ShowDiaryPage.xaml line 1
+                {                    
                     global::Windows.UI.Xaml.Controls.Page element1 = (global::Windows.UI.Xaml.Controls.Page)target;
                     ShowDiaryPage_obj1_Bindings bindings = new ShowDiaryPage_obj1_Bindings();
                     returnValue = bindings;

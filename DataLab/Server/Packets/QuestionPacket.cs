@@ -23,7 +23,8 @@ namespace Datalab.Server.Packets
             Registration,
             Is_username_available,
             Get_user,
-            Sync_user
+            Sync_user,
+            Valid_token
         }
         
         // Ask a question
@@ -43,14 +44,21 @@ namespace Datalab.Server.Packets
             return new QuestionPacket(Questions.Valid_username, new object[] { username });
         }
 
-        public static QuestionPacket AskIfPasswordIsValid(string username, string password)
+        public static QuestionPacket AskIfPasswordIsValid(string username, string password, bool withToken)
         {
-            return new QuestionPacket(Questions.Valid_password, new object[] { username, password, null });
+            // object: username, password, user, token? , token (optional:)
+            return new QuestionPacket(Questions.Valid_password, new object[] { username, password, null, withToken, null });
         }
-        
+
+        public static QuestionPacket AskIfTokenIsValid(string username, int token, string deviceID)
+        {
+            // object: username, password, deviceID, user
+            return new QuestionPacket(Questions.Valid_token, new object[] { username, token, deviceID, null });
+        }
+
         public static QuestionPacket TryRegistration(User user)
         {
-            return new QuestionPacket(Questions.Registration, new object[] { user, null });
+            return new QuestionPacket(Questions.Registration, new object[] { user, null, null });
         }
 
         public static QuestionPacket IsUserNameAvailable(string username)

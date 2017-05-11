@@ -24,30 +24,28 @@ namespace Planner
         {
             switch(connectionId)
             {
-            case 1:
+            case 1: // ExtendedSplash.xaml line 10
                 {
                     global::Windows.UI.Xaml.Controls.Grid element1 = (global::Windows.UI.Xaml.Controls.Grid)(target);
-                    #line 10 "..\..\..\ExtendedSplash.xaml"
                     ((global::Windows.UI.Xaml.Controls.Grid)element1).DoubleTapped += this.Grid_DoubleTapped;
-                    #line default
                 }
                 break;
-            case 2:
+            case 2: // ExtendedSplash.xaml line 11
                 {
                     this.image = (global::Windows.UI.Xaml.Controls.Image)(target);
                 }
                 break;
-            case 3:
+            case 3: // ExtendedSplash.xaml line 12
                 {
                     this.rect = (global::Windows.UI.Xaml.Shapes.Ellipse)(target);
                 }
                 break;
-            case 4:
+            case 4: // ExtendedSplash.xaml line 44
                 {
                     this.loadingStatusTextBlock = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 5:
+            case 5: // ExtendedSplash.xaml line 16
                 {
                     this.sb1 = (global::Windows.UI.Xaml.Media.Animation.Storyboard)(target);
                 }
@@ -58,6 +56,9 @@ namespace Planner
             this._contentLoaded = true;
         }
 
+        /// <summary>
+        /// GetBindingConnector(int connectionId, object target)
+        /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 14.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::Windows.UI.Xaml.Markup.IComponentConnector GetBindingConnector(int connectionId, object target)

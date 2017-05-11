@@ -29,8 +29,9 @@
                     <TextBlock x:Name="singleActivityNameTextBlock" Text="Name" Tapped="singleActivityNameTextBlock_Tapped"/>
                     <TextBlock x:Name="singleActivityTimeTextBlock"  Text="Time" Margin="100, 0, 0, 0" Tapped="singleActivityTimeTextBlock_Tapped"/>
                     <TextBlock Text="" Margin="170, 0, 0, 0" />
-                    <TextBlock Text="" Margin="240, 0, 0, 0" />
-                    <TextBlock Text="" Margin="270, 0, 0, 0" />
+                    <TextBlock Text="" Margin="220, 0, 0, 0" />
+                    <TextBlock Text="" Margin="250, 0, 0, 0" />
+                    <TextBlock Text="" Margin="280, 0, 0, 0" />
                 </RelativePanel>
             </ListView.Header>
             <ListView.ItemTemplate>
@@ -56,12 +57,17 @@
                                 </Flyout>
                             </Button.Flyout>
                         </Button>
-                        <Button x:Name="editButton" Click="editButton_Click" Height="25" Width="25" FontSize="10" Margin="240, 0, 0, 0">
+                        <Button x:Name="editButton" Click="editButton_Click" Height="25" Width="25" FontSize="10" Margin="220, 0, 0, 0">
                             <Button.Background>
                                 <ImageBrush ImageSource="/Assets/edit.png" />
                             </Button.Background>
                         </Button>
-                        <Button Click="Button_Click" Height="25" Width="25" FontSize="10" Margin="270, 0, 0, 0" >
+                        <Button x:Name="mailActivityButton" Height="25" Width="25" FontSize="10" Margin="250, 0, 0, 0" Click="mailActivityButton_Click" Tag="{Binding }" >
+                            <Button.Background>
+                                <ImageBrush ImageSource="/Assets/mail.png" />
+                            </Button.Background>
+                        </Button>
+                        <Button Click="Button_Click" Height="25" Width="25" FontSize="10" Margin="280, 0, 0, 0" >
                             <Button.Background>
                                 <ImageBrush ImageSource="/Assets/delete.png" />
                             </Button.Background>

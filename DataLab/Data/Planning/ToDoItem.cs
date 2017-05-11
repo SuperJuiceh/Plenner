@@ -20,8 +20,7 @@ namespace DataLab.Data.Planning
         public virtual DateTime CompletedAt { get; set; }
         [XmlAttribute("NotifySpanBeforeDeadline")]
         public virtual TimeSpan NotifySpanBeforeDeadline { get; set; }
-        [XmlAttribute("Description")]
-        public string Description { get; set; }
+
 
         public virtual bool HasDeadline { get { return hasDeadline(); } }
 

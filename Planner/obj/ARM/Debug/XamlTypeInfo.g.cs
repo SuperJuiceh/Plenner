@@ -673,6 +673,7 @@ namespace Planner.Planner_XamlTypeInfo
                 userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_47_RegistrationPage;
                 userType.AddMemberName("plan");
+                userType.AddMemberName("Settings");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -1095,102 +1096,112 @@ namespace Planner.Planner_XamlTypeInfo
             var that = (global::Planner.RegistrationPage)instance;
             that.plan = (global::DataLab.Storage.PlanningItemStorage)Value;
         }
-        private object get_37_SendMailPage_plan(object instance)
+        private object get_37_RegistrationPage_Settings(object instance)
+        {
+            var that = (global::Planner.RegistrationPage)instance;
+            return that.Settings;
+        }
+        private void set_37_RegistrationPage_Settings(object instance, object Value)
+        {
+            var that = (global::Planner.RegistrationPage)instance;
+            that.Settings = (global::DataLab.Storage.SettingsStorage)Value;
+        }
+        private object get_38_SendMailPage_plan(object instance)
         {
             var that = (global::Planner.SendMailPage)instance;
             return that.plan;
         }
-        private void set_37_SendMailPage_plan(object instance, object Value)
+        private void set_38_SendMailPage_plan(object instance, object Value)
         {
             var that = (global::Planner.SendMailPage)instance;
             that.plan = (global::DataLab.Storage.DynamicPlanningItemStorage)Value;
         }
-        private object get_38_SendMailPage_Settings(object instance)
+        private object get_39_SendMailPage_Settings(object instance)
         {
             var that = (global::Planner.SendMailPage)instance;
             return that.Settings;
         }
-        private void set_38_SendMailPage_Settings(object instance, object Value)
+        private void set_39_SendMailPage_Settings(object instance, object Value)
         {
             var that = (global::Planner.SendMailPage)instance;
             that.Settings = (global::DataLab.Storage.SettingsStorage)Value;
         }
-        private object get_39_SettingsPage_plan(object instance)
+        private object get_40_SettingsPage_plan(object instance)
         {
             var that = (global::Planner.SettingsPage)instance;
             return that.plan;
         }
-        private void set_39_SettingsPage_plan(object instance, object Value)
+        private void set_40_SettingsPage_plan(object instance, object Value)
         {
             var that = (global::Planner.SettingsPage)instance;
             that.plan = (global::DataLab.Storage.PlanningItemStorage)Value;
         }
-        private object get_40_SettingsPage_Settings(object instance)
+        private object get_41_SettingsPage_Settings(object instance)
         {
             var that = (global::Planner.SettingsPage)instance;
             return that.Settings;
         }
-        private void set_40_SettingsPage_Settings(object instance, object Value)
+        private void set_41_SettingsPage_Settings(object instance, object Value)
         {
             var that = (global::Planner.SettingsPage)instance;
             that.Settings = (global::DataLab.Storage.SettingsStorage)Value;
         }
-        private object get_41_ShowDiaryPage_Journal(object instance)
+        private object get_42_ShowDiaryPage_Journal(object instance)
         {
             var that = (global::Planner.ShowDiaryPage)instance;
             return that.Journal;
         }
-        private void set_41_ShowDiaryPage_Journal(object instance, object Value)
+        private void set_42_ShowDiaryPage_Journal(object instance, object Value)
         {
             var that = (global::Planner.ShowDiaryPage)instance;
             that.Journal = (global::DataLab.Data.Planning.Diary)Value;
         }
-        private object get_42_ShowDiaryPage_plan(object instance)
+        private object get_43_ShowDiaryPage_plan(object instance)
         {
             var that = (global::Planner.ShowDiaryPage)instance;
             return that.plan;
         }
-        private void set_42_ShowDiaryPage_plan(object instance, object Value)
+        private void set_43_ShowDiaryPage_plan(object instance, object Value)
         {
             var that = (global::Planner.ShowDiaryPage)instance;
             that.plan = (global::DataLab.Storage.PlanningItemStorage)Value;
         }
-        private object get_43_ShowDiaryPage_Settings(object instance)
+        private object get_44_ShowDiaryPage_Settings(object instance)
         {
             var that = (global::Planner.ShowDiaryPage)instance;
             return that.Settings;
         }
-        private void set_43_ShowDiaryPage_Settings(object instance, object Value)
+        private void set_44_ShowDiaryPage_Settings(object instance, object Value)
         {
             var that = (global::Planner.ShowDiaryPage)instance;
             that.Settings = (global::DataLab.Storage.SettingsStorage)Value;
         }
-        private object get_44_ToDoPage_Planning(object instance)
+        private object get_45_ToDoPage_Planning(object instance)
         {
             var that = (global::Planner.ToDoPage)instance;
             return that.Planning;
         }
-        private object get_45_ToDoPage_Settings(object instance)
+        private object get_46_ToDoPage_Settings(object instance)
         {
             var that = (global::Planner.ToDoPage)instance;
             return that.Settings;
         }
-        private object get_46_UserPage_plan(object instance)
+        private object get_47_UserPage_plan(object instance)
         {
             var that = (global::Planner.UserPage)instance;
             return that.plan;
         }
-        private void set_46_UserPage_plan(object instance, object Value)
+        private void set_47_UserPage_plan(object instance, object Value)
         {
             var that = (global::Planner.UserPage)instance;
             that.plan = (global::DataLab.Storage.DynamicPlanningItemStorage)Value;
         }
-        private object get_47_UserPage_Settings(object instance)
+        private object get_48_UserPage_Settings(object instance)
         {
             var that = (global::Planner.UserPage)instance;
             return that.Settings;
         }
-        private void set_47_UserPage_Settings(object instance, object Value)
+        private void set_48_UserPage_Settings(object instance, object Value)
         {
             var that = (global::Planner.UserPage)instance;
             that.Settings = (global::DataLab.Storage.SettingsStorage)Value;
@@ -1425,71 +1436,77 @@ namespace Planner.Planner_XamlTypeInfo
                 xamlMember.Getter = get_36_RegistrationPage_plan;
                 xamlMember.Setter = set_36_RegistrationPage_plan;
                 break;
+            case "Planner.RegistrationPage.Settings":
+                userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.RegistrationPage");
+                xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "Settings", "DataLab.Storage.SettingsStorage");
+                xamlMember.Getter = get_37_RegistrationPage_Settings;
+                xamlMember.Setter = set_37_RegistrationPage_Settings;
+                break;
             case "Planner.SendMailPage.plan":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.SendMailPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "plan", "DataLab.Storage.DynamicPlanningItemStorage");
-                xamlMember.Getter = get_37_SendMailPage_plan;
-                xamlMember.Setter = set_37_SendMailPage_plan;
+                xamlMember.Getter = get_38_SendMailPage_plan;
+                xamlMember.Setter = set_38_SendMailPage_plan;
                 break;
             case "Planner.SendMailPage.Settings":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.SendMailPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "Settings", "DataLab.Storage.SettingsStorage");
-                xamlMember.Getter = get_38_SendMailPage_Settings;
-                xamlMember.Setter = set_38_SendMailPage_Settings;
+                xamlMember.Getter = get_39_SendMailPage_Settings;
+                xamlMember.Setter = set_39_SendMailPage_Settings;
                 break;
             case "Planner.SettingsPage.plan":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.SettingsPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "plan", "DataLab.Storage.PlanningItemStorage");
-                xamlMember.Getter = get_39_SettingsPage_plan;
-                xamlMember.Setter = set_39_SettingsPage_plan;
+                xamlMember.Getter = get_40_SettingsPage_plan;
+                xamlMember.Setter = set_40_SettingsPage_plan;
                 break;
             case "Planner.SettingsPage.Settings":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.SettingsPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "Settings", "DataLab.Storage.SettingsStorage");
-                xamlMember.Getter = get_40_SettingsPage_Settings;
-                xamlMember.Setter = set_40_SettingsPage_Settings;
+                xamlMember.Getter = get_41_SettingsPage_Settings;
+                xamlMember.Setter = set_41_SettingsPage_Settings;
                 break;
             case "Planner.ShowDiaryPage.Journal":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.ShowDiaryPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "Journal", "DataLab.Data.Planning.Diary");
-                xamlMember.Getter = get_41_ShowDiaryPage_Journal;
-                xamlMember.Setter = set_41_ShowDiaryPage_Journal;
+                xamlMember.Getter = get_42_ShowDiaryPage_Journal;
+                xamlMember.Setter = set_42_ShowDiaryPage_Journal;
                 break;
             case "Planner.ShowDiaryPage.plan":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.ShowDiaryPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "plan", "DataLab.Storage.PlanningItemStorage");
-                xamlMember.Getter = get_42_ShowDiaryPage_plan;
-                xamlMember.Setter = set_42_ShowDiaryPage_plan;
+                xamlMember.Getter = get_43_ShowDiaryPage_plan;
+                xamlMember.Setter = set_43_ShowDiaryPage_plan;
                 break;
             case "Planner.ShowDiaryPage.Settings":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.ShowDiaryPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "Settings", "DataLab.Storage.SettingsStorage");
-                xamlMember.Getter = get_43_ShowDiaryPage_Settings;
-                xamlMember.Setter = set_43_ShowDiaryPage_Settings;
+                xamlMember.Getter = get_44_ShowDiaryPage_Settings;
+                xamlMember.Setter = set_44_ShowDiaryPage_Settings;
                 break;
             case "Planner.ToDoPage.Planning":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.ToDoPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "Planning", "DataLab.Storage.PlanningItemStorage");
-                xamlMember.Getter = get_44_ToDoPage_Planning;
+                xamlMember.Getter = get_45_ToDoPage_Planning;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Planner.ToDoPage.Settings":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.ToDoPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "Settings", "DataLab.Storage.SettingsStorage");
-                xamlMember.Getter = get_45_ToDoPage_Settings;
+                xamlMember.Getter = get_46_ToDoPage_Settings;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Planner.UserPage.plan":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.UserPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "plan", "DataLab.Storage.DynamicPlanningItemStorage");
-                xamlMember.Getter = get_46_UserPage_plan;
-                xamlMember.Setter = set_46_UserPage_plan;
+                xamlMember.Getter = get_47_UserPage_plan;
+                xamlMember.Setter = set_47_UserPage_plan;
                 break;
             case "Planner.UserPage.Settings":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.UserPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "Settings", "DataLab.Storage.SettingsStorage");
-                xamlMember.Getter = get_47_UserPage_Settings;
-                xamlMember.Setter = set_47_UserPage_Settings;
+                xamlMember.Getter = get_48_UserPage_Settings;
+                xamlMember.Setter = set_48_UserPage_Settings;
                 break;
             }
             return xamlMember;
@@ -1542,6 +1559,7 @@ namespace Planner.Planner_XamlTypeInfo
     internal delegate object Activator();
     internal delegate void AddToCollection(object instance, object item);
     internal delegate void AddToDictionary(object instance, object key, object item);
+    internal delegate object CreateFromStringMethod(string args);
 
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 14.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1626,12 +1644,16 @@ namespace Planner.Planner_XamlTypeInfo
 
         override public void RunInitializer() 
         {
-            System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(UnderlyingType.TypeHandle);
+            global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(UnderlyingType.TypeHandle);
         }
 
         override public object CreateFromString(string input)
         {
-            if (_enumValues != null)
+            if (CreateFromStringMethod != null)
+            {
+                return this.CreateFromStringMethod(input);
+            }
+            else if (_enumValues != null)
             {
                 int value = 0;
 
@@ -1686,6 +1708,7 @@ namespace Planner.Planner_XamlTypeInfo
         public Activator Activator { get; set; }
         public AddToCollection CollectionAdd { get; set; }
         public AddToDictionary DictionaryAdd { get; set; }
+        public CreateFromStringMethod CreateFromStringMethod {get; set; }
 
         public void SetContentPropertyName(string contentPropertyName)
         {

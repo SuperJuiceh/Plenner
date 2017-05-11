@@ -51,11 +51,14 @@ namespace Planner
             global::Windows.UI.Xaml.Application.LoadComponent(this, resourceLocator, global::Windows.UI.Xaml.Controls.Primitives.ComponentResourceLocation.Application);
         }
 
+        partial void UnloadObject(global::Windows.UI.Xaml.DependencyObject unloadableObject);
+
         private interface IToDoPage_Bindings
         {
             void Initialize();
             void Update();
             void StopTracking();
+            void DisconnectUnloadedObject(int connectionId);
         }
 #pragma warning disable 0169    //  Proactively suppress unused field warning in case Bindings is not used.
         private IToDoPage_Bindings Bindings;

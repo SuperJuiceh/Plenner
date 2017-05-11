@@ -11,11 +11,12 @@
     <AssemblyName>DataLab</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion>10.0.14393.0</TargetPlatformVersion>
-    <TargetPlatformMinVersion>10.0.14393.0</TargetPlatformMinVersion>
+    <TargetPlatformVersion>10.0.15063.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.15063.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <RuntimeIdentifiers>win10-arm;win10-arm-aot;win10-x86;win10-x86-aot;win10-x64;win10-x64-aot</RuntimeIdentifiers>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -103,10 +104,6 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
-    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-    <None Include="project.json" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Data\Planning\Activity.cs" />
     <Compile Include="Data\Planning\Diary.cs" />
     <Compile Include="Data\Planning\FenceItem.cs" />
@@ -138,6 +135,10 @@
     <Compile Include="Server\Controller\ConnectedClient.cs" />
     <Compile Include="Server\Controller\Logging\Log.cs" />
     <Compile Include="Server\Controller\Logging\ServerLog.cs" />
+    <Compile Include="Server\Controller\Login\LoginToken.cs" />
+    <Compile Include="Server\Controller\Login\LoginTokenManager.cs" />
+    <Compile Include="Server\Controller\Login\Token.cs" />
+    <Compile Include="Server\Controller\Login\TokenManager.cs" />
     <Compile Include="Server\Controller\PacketServer.cs" />
     <Compile Include="Server\Controller\ServerInfo.cs" />
     <Compile Include="Server\Packets\HasPermissionPacket.cs" />
@@ -154,13 +155,22 @@
     <Compile Include="Storage\SettingsStorage.cs" />
     <Compile Include="Storage\Storage.cs" />
     <Compile Include="Tools\ClassConverters.cs" />
+    <Compile Include="Tools\Connectivity\MailClient.cs" />
+    <Compile Include="Tools\Connectivity\MessageFactory.cs" />
     <Compile Include="Tools\GeoTools.cs" />
     <Compile Include="Tools\PasswordHasher.cs" />
     <Compile Include="Tools\StaticTools.cs" />
     <Compile Include="Tools\ThreadTools.cs" />
     <EmbeddedResource Include="Properties\DataLab.rd.xml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>5.3.3</Version>
+    </PackageReference>
+    <PackageReference Include="System.ValueTuple">
+      <Version>4.3.1</Version>
+    </PackageReference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '15.0' ">
     <VisualStudioVersion>15.0</VisualStudioVersion>
   </PropertyGroup>

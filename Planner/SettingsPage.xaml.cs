@@ -20,6 +20,8 @@ using Windows.UI.Xaml.Navigation;
 using DataLab.NetworkPackaging;
 using Windows.Globalization.Fonts;
 using Planner.Data.Styling;
+using DataLab.Tools.Connectivity;
+using DataLab.Data.Planning;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 

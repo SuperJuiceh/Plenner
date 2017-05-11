@@ -51,7 +51,7 @@ namespace Planner
             {
                 switch(connectionId)
                 {
-                    case 4:
+                    case 4: // MailPage.xaml line 19
                         this.obj4 = (global::Windows.UI.Xaml.Controls.ListView)target;
                         break;
                     default:
@@ -77,6 +77,11 @@ namespace Planner
 
             public void StopTracking()
             {
+            }
+
+            public void DisconnectUnloadedObject(int connectionId)
+            {
+                throw new global::System.ArgumentException("No unloadable elements to disconnect.");
             }
 
             public bool SetDataRoot(global::System.Object newDataRoot)
@@ -129,6 +134,7 @@ namespace Planner
             {
                 if ((phase & ((1 << 0) | NOT_PHASED )) != 0)
                 {
+                    // MailPage.xaml line 19
                     XamlBindingSetters.Set_Windows_UI_Xaml_Controls_ItemsControl_ItemsSource(this.obj4, obj, null);
                 }
             }
@@ -142,33 +148,27 @@ namespace Planner
         {
             switch(connectionId)
             {
-            case 2:
+            case 2: // MailPage.xaml line 14
                 {
                     global::Windows.UI.Xaml.Controls.Grid element2 = (global::Windows.UI.Xaml.Controls.Grid)(target);
-                    #line 14 "..\..\..\MailPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.Grid)element2).DoubleTapped += this.Grid_DoubleTapped;
-                    #line default
                 }
                 break;
-            case 3:
+            case 3: // MailPage.xaml line 18
                 {
                     this.textBlock = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 5:
+            case 5: // MailPage.xaml line 44
                 {
                     this.button = (global::Windows.UI.Xaml.Controls.Button)(target);
-                    #line 44 "..\..\..\MailPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.Button)this.button).Click += this.button_Click;
-                    #line default
                 }
                 break;
-            case 6:
+            case 6: // MailPage.xaml line 34
                 {
                     global::Windows.UI.Xaml.Controls.Button element6 = (global::Windows.UI.Xaml.Controls.Button)(target);
-                    #line 34 "..\..\..\MailPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.Button)element6).Click += this.delete_mail_button_Click;
-                    #line default
                 }
                 break;
             default:
@@ -177,6 +177,9 @@ namespace Planner
             this._contentLoaded = true;
         }
 
+        /// <summary>
+        /// GetBindingConnector(int connectionId, object target)
+        /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 14.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::Windows.UI.Xaml.Markup.IComponentConnector GetBindingConnector(int connectionId, object target)
@@ -184,8 +187,8 @@ namespace Planner
             global::Windows.UI.Xaml.Markup.IComponentConnector returnValue = null;
             switch(connectionId)
             {
-            case 1:
-                {
+            case 1: // MailPage.xaml line 1
+                {                    
                     global::Windows.UI.Xaml.Controls.Page element1 = (global::Windows.UI.Xaml.Controls.Page)target;
                     MailPage_obj1_Bindings bindings = new MailPage_obj1_Bindings();
                     returnValue = bindings;

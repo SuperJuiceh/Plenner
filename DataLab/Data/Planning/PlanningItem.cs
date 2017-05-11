@@ -26,6 +26,11 @@ namespace DataLab.Data.Planning
         [XmlAttribute("MinutesToAlertBeforeActualAlarm")]
         public int MinutesToAlertBeforeActualAlarm { get; set; }
 
+        [XmlIgnore]
+        private string description;
+
+        public string Description { get { return description; } set { description = value; Changed("Description"); } }
+
         public PlanningItem(string name)
         {
             this.Name = name;

@@ -36,24 +36,20 @@ namespace DataLab.NetworkPackaging
             {
                 Locked = true;
                 
-                connect_start:
                 try
                 {
                     _client = new StreamSocket();
 
+                    // Timeout functionality
                     CancellationTokenSource cancelToken = new CancellationTokenSource(5000);
-
-                    await _client.ConnectAsync(new HostName("192.168.1.132"), "8882").AsTask(cancelToken.Token);
-
-                    Connected = true;
+                    // Try connecting to server
+                    var a = _client.ConnectAsync(new HostName("192.168.1.132"), "8882").AsTask(cancelToken.Token);
+                    await a;
+                    
                 }
-                catch (Exception e)
+                catch (TaskCanceledException e)
                 {
-                    if (e is TaskCanceledException)
-                        return;
-
-                    await Task.Delay(1000);
-                    goto connect_start;
+                    Connected = true;
                 }
 
                 Locked = false;

@@ -51,7 +51,7 @@ namespace Planner
             {
                 switch(connectionId)
                 {
-                    case 3:
+                    case 3: // DiariesPage.xaml line 14
                         this.obj3 = (global::Windows.UI.Xaml.Controls.ListView)target;
                         break;
                     default:
@@ -77,6 +77,11 @@ namespace Planner
 
             public void StopTracking()
             {
+            }
+
+            public void DisconnectUnloadedObject(int connectionId)
+            {
+                throw new global::System.ArgumentException("No unloadable elements to disconnect.");
             }
 
             public bool SetDataRoot(global::System.Object newDataRoot)
@@ -129,6 +134,7 @@ namespace Planner
             {
                 if ((phase & ((1 << 0) | NOT_PHASED )) != 0)
                 {
+                    // DiariesPage.xaml line 14
                     XamlBindingSetters.Set_Windows_UI_Xaml_Controls_ItemsControl_ItemsSource(this.obj3, obj, null);
                 }
             }
@@ -142,46 +148,38 @@ namespace Planner
         {
             switch(connectionId)
             {
-            case 2:
+            case 2: // DiariesPage.xaml line 10
                 {
                     global::Windows.UI.Xaml.Controls.Grid element2 = (global::Windows.UI.Xaml.Controls.Grid)(target);
-                    #line 10 "..\..\..\DiariesPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.Grid)element2).DoubleTapped += this.Grid_DoubleTapped;
-                    #line default
                 }
                 break;
-            case 3:
+            case 3: // DiariesPage.xaml line 14
                 {
                     this.listView = (global::Windows.UI.Xaml.Controls.ListView)(target);
                 }
                 break;
-            case 4:
+            case 4: // DiariesPage.xaml line 38
                 {
                     this.textBlock = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 5:
+            case 5: // DiariesPage.xaml line 39
                 {
                     this.addDiaryButton = (global::Windows.UI.Xaml.Controls.Button)(target);
-                    #line 39 "..\..\..\DiariesPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.Button)this.addDiaryButton).Click += this.addDiaryButton_Click;
-                    #line default
                 }
                 break;
-            case 6:
+            case 6: // DiariesPage.xaml line 44
                 {
                     this.show_history_button = (global::Windows.UI.Xaml.Controls.Button)(target);
-                    #line 44 "..\..\..\DiariesPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.Button)this.show_history_button).Click += this.show_history_button_Click;
-                    #line default
                 }
                 break;
-            case 7:
+            case 7: // DiariesPage.xaml line 29
                 {
                     global::Windows.UI.Xaml.Controls.Button element7 = (global::Windows.UI.Xaml.Controls.Button)(target);
-                    #line 29 "..\..\..\DiariesPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.Button)element7).Click += this.removeDiaryButton_Click;
-                    #line default
                 }
                 break;
             default:
@@ -190,6 +188,9 @@ namespace Planner
             this._contentLoaded = true;
         }
 
+        /// <summary>
+        /// GetBindingConnector(int connectionId, object target)
+        /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 14.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::Windows.UI.Xaml.Markup.IComponentConnector GetBindingConnector(int connectionId, object target)
@@ -197,8 +198,8 @@ namespace Planner
             global::Windows.UI.Xaml.Markup.IComponentConnector returnValue = null;
             switch(connectionId)
             {
-            case 1:
-                {
+            case 1: // DiariesPage.xaml line 1
+                {                    
                     global::Windows.UI.Xaml.Controls.Page element1 = (global::Windows.UI.Xaml.Controls.Page)target;
                     DiariesPage_obj1_Bindings bindings = new DiariesPage_obj1_Bindings();
                     returnValue = bindings;

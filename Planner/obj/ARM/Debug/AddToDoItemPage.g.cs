@@ -24,91 +24,85 @@ namespace Planner
         {
             switch(connectionId)
             {
-            case 1:
+            case 1: // AddToDoItemPage.xaml line 11
                 {
                     global::Windows.UI.Xaml.Controls.Grid element1 = (global::Windows.UI.Xaml.Controls.Grid)(target);
-                    #line 11 "..\..\..\AddToDoItemPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.Grid)element1).DoubleTapped += this.Grid_DoubleTapped;
-                    #line default
                 }
                 break;
-            case 2:
+            case 2: // AddToDoItemPage.xaml line 13
                 {
                     this.boolToElementConv = (global::Planner.Data.Converters.BoolToElementVisibility)(target);
                 }
                 break;
-            case 3:
+            case 3: // AddToDoItemPage.xaml line 16
                 {
                     this.textBox = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 4:
+            case 4: // AddToDoItemPage.xaml line 17
                 {
                     this.textBlock = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 5:
+            case 5: // AddToDoItemPage.xaml line 18
                 {
                     this.textBoxName = (global::Windows.UI.Xaml.Controls.TextBox)(target);
                 }
                 break;
-            case 6:
+            case 6: // AddToDoItemPage.xaml line 19
                 {
                     this.textBlock1 = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 7:
+            case 7: // AddToDoItemPage.xaml line 20
                 {
                     this.textBoxDescription = (global::Windows.UI.Xaml.Controls.TextBox)(target);
                 }
                 break;
-            case 8:
+            case 8: // AddToDoItemPage.xaml line 21
                 {
                     this.deadLineCheckbox = (global::Windows.UI.Xaml.Controls.CheckBox)(target);
                 }
                 break;
-            case 9:
+            case 9: // AddToDoItemPage.xaml line 37
                 {
                     this.button1 = (global::Windows.UI.Xaml.Controls.Button)(target);
-                    #line 37 "..\..\..\AddToDoItemPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.Button)this.button1).Click += this.button1_Click;
-                    #line default
                 }
                 break;
-            case 10:
+            case 10: // AddToDoItemPage.xaml line 39
                 {
                     this.checkBox1 = (global::Windows.UI.Xaml.Controls.CheckBox)(target);
                 }
                 break;
-            case 11:
+            case 11: // AddToDoItemPage.xaml line 40
                 {
                     this.button = (global::Windows.UI.Xaml.Controls.Button)(target);
-                    #line 40 "..\..\..\AddToDoItemPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.Button)this.button).Click += this.button_Click;
-                    #line default
                 }
                 break;
-            case 12:
+            case 12: // AddToDoItemPage.xaml line 32
                 {
                     this.datePicker = (global::Windows.UI.Xaml.Controls.DatePicker)(target);
                 }
                 break;
-            case 13:
+            case 13: // AddToDoItemPage.xaml line 33
                 {
                     this.textBlock2 = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 14:
+            case 14: // AddToDoItemPage.xaml line 34
                 {
                     this.textBlock3 = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 15:
+            case 15: // AddToDoItemPage.xaml line 35
                 {
                     this.timePicker = (global::Windows.UI.Xaml.Controls.TimePicker)(target);
                 }
                 break;
-            case 16:
+            case 16: // AddToDoItemPage.xaml line 26
                 {
                     this.notifyMinutesBeforeListBox = (global::Windows.UI.Xaml.Controls.ListBox)(target);
                 }
@@ -119,6 +113,9 @@ namespace Planner
             this._contentLoaded = true;
         }
 
+        /// <summary>
+        /// GetBindingConnector(int connectionId, object target)
+        /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 14.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::Windows.UI.Xaml.Markup.IComponentConnector GetBindingConnector(int connectionId, object target)

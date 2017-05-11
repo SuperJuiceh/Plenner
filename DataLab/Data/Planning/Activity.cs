@@ -23,10 +23,7 @@ namespace DataLab.Data.Planning
         private DateTime _start;
 
         public DateTime Start { get { return _start; } set { _start = value; Changed("Start"); } }
-        [XmlElement("Description")]
-        private string description;
-        [XmlIgnore]
-        public string Description { get { return description; } set { description = value; Changed("Description"); } }
+
         [XmlIgnore]
         public Geopoint Location { get { return new Geopoint(basicgeoloc); } }
         public BasicGeoposition basicgeoloc { get; set; }

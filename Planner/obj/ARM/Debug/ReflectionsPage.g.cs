@@ -51,7 +51,7 @@ namespace Planner
             {
                 switch(connectionId)
                 {
-                    case 4:
+                    case 4: // ReflectionsPage.xaml line 37
                         this.obj4 = (global::Windows.UI.Xaml.Controls.ListView)target;
                         break;
                     default:
@@ -77,6 +77,11 @@ namespace Planner
 
             public void StopTracking()
             {
+            }
+
+            public void DisconnectUnloadedObject(int connectionId)
+            {
+                throw new global::System.ArgumentException("No unloadable elements to disconnect.");
             }
 
             public bool SetDataRoot(global::System.Object newDataRoot)
@@ -129,6 +134,7 @@ namespace Planner
             {
                 if ((phase & ((1 << 0) | NOT_PHASED )) != 0)
                 {
+                    // ReflectionsPage.xaml line 37
                     XamlBindingSetters.Set_Windows_UI_Xaml_Controls_ItemsControl_ItemsSource(this.obj4, obj, null);
                 }
             }
@@ -142,127 +148,101 @@ namespace Planner
         {
             switch(connectionId)
             {
-            case 2:
+            case 2: // ReflectionsPage.xaml line 22
                 {
                     global::Windows.UI.Xaml.Controls.RelativePanel element2 = (global::Windows.UI.Xaml.Controls.RelativePanel)(target);
-                    #line 22 "..\..\..\ReflectionsPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.RelativePanel)element2).ManipulationCompleted += this.RelativePanel_ManipulationCompleted;
-                    #line default
                 }
                 break;
-            case 3:
+            case 3: // ReflectionsPage.xaml line 32
                 {
                     this.button1 = (global::Windows.UI.Xaml.Controls.Button)(target);
-                    #line 32 "..\..\..\ReflectionsPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.Button)this.button1).Click += this.button1_Click;
-                    #line default
                 }
                 break;
-            case 4:
+            case 4: // ReflectionsPage.xaml line 37
                 {
                     this.listView = (global::Windows.UI.Xaml.Controls.ListView)(target);
                 }
                 break;
-            case 5:
+            case 5: // ReflectionsPage.xaml line 102
                 {
                     this.textBlock3 = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 6:
+            case 6: // ReflectionsPage.xaml line 103
                 {
                     this.addReflectionButton = (global::Windows.UI.Xaml.Controls.Button)(target);
-                    #line 103 "..\..\..\ReflectionsPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.Button)this.addReflectionButton).Click += this.addReflectionButton_Click;
-                    #line default
                 }
                 break;
-            case 7:
+            case 7: // ReflectionsPage.xaml line 108
                 {
                     this.showJournalButton = (global::Windows.UI.Xaml.Controls.Button)(target);
-                    #line 108 "..\..\..\ReflectionsPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.Button)this.showJournalButton).Click += this.showJournalButton_Click;
-                    #line default
                 }
                 break;
-            case 8:
+            case 8: // ReflectionsPage.xaml line 40
                 {
                     this.nameHeaderTextBlock = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
-                    #line 40 "..\..\..\ReflectionsPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.TextBlock)this.nameHeaderTextBlock).Tapped += this.nameHeaderTextBlock_Tapped;
-                    #line default
                 }
                 break;
-            case 9:
+            case 9: // ReflectionsPage.xaml line 43
                 {
                     this.feelingHeaderTextBlock = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
-                    #line 43 "..\..\..\ReflectionsPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.TextBlock)this.feelingHeaderTextBlock).Tapped += this.feelingHeaderTextBlock_Tapped;
-                    #line default
                 }
                 break;
-            case 10:
+            case 10: // ReflectionsPage.xaml line 48
                 {
                     global::Windows.UI.Xaml.Controls.RelativePanel element10 = (global::Windows.UI.Xaml.Controls.RelativePanel)(target);
-                    #line 48 "..\..\..\ReflectionsPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.RelativePanel)element10).PointerPressed += this.listViewRelativePanel_PointerPressed;
-                    #line default
                 }
                 break;
-            case 11:
+            case 11: // ReflectionsPage.xaml line 91
                 {
                     global::Windows.UI.Xaml.Controls.Button element11 = (global::Windows.UI.Xaml.Controls.Button)(target);
-                    #line 91 "..\..\..\ReflectionsPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.Button)element11).Click += this.deleteReflectionButton_Click;
-                    #line default
                 }
                 break;
-            case 12:
+            case 12: // ReflectionsPage.xaml line 70
                 {
                     global::Windows.UI.Xaml.Controls.Maps.MapControl element12 = (global::Windows.UI.Xaml.Controls.Maps.MapControl)(target);
-                    #line 70 "..\..\..\ReflectionsPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.Maps.MapControl)element12).MapTapped += this.MapControl_MapTapped;
-                    #line 70 "..\..\..\ReflectionsPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.Maps.MapControl)element12).Loaded += this.MapControl_Loaded;
-                    #line 70 "..\..\..\ReflectionsPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.Maps.MapControl)element12).MapElementClick += this.MapControl_MapElementClick;
-                    #line default
                 }
                 break;
-            case 13:
+            case 13: // ReflectionsPage.xaml line 71
                 {
                     global::Windows.UI.Xaml.Controls.Button element13 = (global::Windows.UI.Xaml.Controls.Button)(target);
-                    #line 71 "..\..\..\ReflectionsPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.Button)element13).Click += this.button3_Click;
-                    #line default
                 }
                 break;
-            case 14:
+            case 14: // ReflectionsPage.xaml line 76
                 {
                     global::Windows.UI.Xaml.Controls.Button element14 = (global::Windows.UI.Xaml.Controls.Button)(target);
-                    #line 76 "..\..\..\ReflectionsPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.Button)element14).Click += this.button4_Click;
-                    #line default
                 }
                 break;
-            case 15:
+            case 15: // ReflectionsPage.xaml line 56
                 {
                     global::Windows.UI.Xaml.Controls.Flyout element15 = (global::Windows.UI.Xaml.Controls.Flyout)(target);
-                    #line 56 "..\..\..\ReflectionsPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.Flyout)element15).Opened += this.Flyout_Opened;
-                    #line default
                 }
                 break;
-            case 16:
+            case 16: // ReflectionsPage.xaml line 24
                 {
                     this.button = (global::Windows.UI.Xaml.Controls.Button)(target);
                 }
                 break;
-            case 17:
+            case 17: // ReflectionsPage.xaml line 29
                 {
                     this.textBlock = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 18:
+            case 18: // ReflectionsPage.xaml line 30
                 {
                     this.textBlock1 = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
@@ -273,6 +253,9 @@ namespace Planner
             this._contentLoaded = true;
         }
 
+        /// <summary>
+        /// GetBindingConnector(int connectionId, object target)
+        /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 14.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::Windows.UI.Xaml.Markup.IComponentConnector GetBindingConnector(int connectionId, object target)
@@ -280,8 +263,8 @@ namespace Planner
             global::Windows.UI.Xaml.Markup.IComponentConnector returnValue = null;
             switch(connectionId)
             {
-            case 1:
-                {
+            case 1: // ReflectionsPage.xaml line 1
+                {                    
                     global::Windows.UI.Xaml.Controls.Page element1 = (global::Windows.UI.Xaml.Controls.Page)target;
                     ReflectionsPage_obj1_Bindings bindings = new ReflectionsPage_obj1_Bindings();
                     returnValue = bindings;

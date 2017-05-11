@@ -65,8 +65,7 @@ namespace Planner
             Settings = GeneralApplicationData.Settings;
 
             UserStyleFactory.addStyles(this.Resources, this.Settings.Settings);
-
-
+            
             this.InitializeComponent();
 
             for (int i = 0; i < 60; i++)

@@ -36,6 +36,11 @@ namespace PlennerServerConsole
         {
             this.InitializeComponent();
             
+            while (!Server.Storage.waitToLoad(1))
+            {
+
+            }
+
             Server.Storage.ServerData.Log.clearLogs(DataLab.Server.Controller.Logging.ServerLog.LogClearingOptions.CLEAR_AND_STORE);
 
         }

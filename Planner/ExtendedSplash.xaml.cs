@@ -20,6 +20,9 @@ using Planner.Data;
 using DataLab.NetworkPackaging;
 using DataLab.Storage;
 using System.Threading.Tasks;
+using Datalab.Server.Packets;
+using Windows.Security.ExchangeActiveSyncProvisioning;
+using DataLab.Data.Users;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -78,14 +81,35 @@ namespace Planner
 
                 // Place the frame in the current Window
                 loadingStatusTextBlock.Text = "Loading Planner XML Data";
-                GeneralApplicationData.Planning = new PlanningItemStorage();
                 
-                if (GeneralApplicationData.Planning.waitToLoad(5)) // Wait until the plan is loaded 
+                // Check auto-login feature, auto login if present
+                if (GeneralApplicationData.Settings.Settings.AutoLogIn)
                 {
-                    GeneralApplicationData.Planning.plan.archiveToDoItems(); // Archive old items
-                    this.rootFrame.Navigate(typeof(ActivitiesPage));
-                    Window.Current.Content = rootFrame;
+                    PacketClient.Connect();
+                    string deviceID = new EasClientDeviceInformation().Id.ToString();
+                    QuestionPacket qPacket = QuestionPacket.AskIfTokenIsValid(GeneralApplicationData.Settings.Settings.LognToken.UserName, GeneralApplicationData.Settings.Settings.LognToken.ID, deviceID);
+                    
+                    QuestionPacket packet = PacketClient.SendAndReceive(qPacket) as QuestionPacket;
+
+                    if (packet.A)
+                    {
+                        DynamicPlanningItemStorage p = new DynamicPlanningItemStorage(new PlanningItemStorage(), (User)packet.Question_data[3]);
+                        GeneralApplicationData.Planning.plan = p.CurrentUser.plan;
+                        this.Frame.Navigate(typeof(ActivitiesPage));
+                    } else
+                    {
+                        this.rootFrame.Navigate(typeof(LoginPage));
+                    }
+                } else
+                {
+                    this.rootFrame.Navigate(typeof(LoginPage));
                 }
+
+                
+                //GeneralApplicationData.Planning.plan.archiveToDoItems(); // Archive old items
+                
+                Window.Current.Content = rootFrame;
+             
 
             });
         }

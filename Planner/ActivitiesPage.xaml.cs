@@ -1,36 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using Windows.Management;
 using System.Diagnostics;
 
 using DataLab.Storage;
-
-using Planner.Data.Notify;
 using Windows.UI.Xaml.Controls.Maps;
-using Planner.Data.Converters;
 using Planner.Data;
 using DataLab.Data.Planning;
-using System.Collections.ObjectModel;
-using Windows.Security.ExchangeActiveSyncProvisioning;
-using Windows.System.Profile;
-using System.Threading.Tasks;
-using Planner;
 using Windows.Devices.Geolocation.Geofencing;
 using Windows.Devices.Geolocation;
 using Windows.UI.Core;
 using Planner.Data.Styling;
+using DataLab.Tools.Connectivity;
 
 
 
@@ -43,9 +30,9 @@ namespace Planner
     /// </summary>
     public sealed partial class ActivitiesPage : Page
     {
-        
+
         private Point manipulationStartingPoint;
-         
+
         public PlanningItemStorage Planning { get; set; }
 
         public SettingsStorage Settings { get; set; }
@@ -63,9 +50,9 @@ namespace Planner
             UserStyleFactory.addStyles(this.Resources, this.Settings.Settings);
 
             this.InitializeComponent();
-            
+
         }
-        
+
 
         private void Grid_DoubleTapped(object sender, DoubleTappedRoutedEventArgs e)
         {
@@ -92,7 +79,7 @@ namespace Planner
             {
                 Planning.removePlanningItem(act);
             }
-            
+
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
@@ -107,7 +94,7 @@ namespace Planner
 
         private async void MapControl_Loaded(object sender, RoutedEventArgs e)
         {
-            MapControl map  = (MapControl)sender;
+            MapControl map = (MapControl)sender;
             Activity activity = map.DataContext as Activity;
 
             await map.TrySetViewAsync(activity.Location, 10D);
@@ -117,7 +104,7 @@ namespace Planner
             }
 
             // Geofence setup
-            
+
             Geocircle geo = new Geocircle(activity.basicgeoloc, 10);
             Geofence geofence = new Geofence(new Random().Next(1000).ToString(), geo,
                                             MonitoredGeofenceStates.Entered, true, TimeSpan.FromMilliseconds(20),
@@ -252,7 +239,20 @@ namespace Planner
                 }
             }
         }
+
+        private void mailActivityButton_Click(object sender, RoutedEventArgs e)
+        {
+            Activity activity = (sender as Button).Tag as Activity;
             
+            if (activity != null && Planning.isDynamic())
+            {
+                DynamicPlanningItemStorage dp = Planning as DynamicPlanningItemStorage;
+                MailClient mClient = new MailClient(dp.CurrentUser.UserName, new string[] { "bilel@live.nl" }, new string[] { "Bilel Bghiel" });
+                mClient.sendMail(dp.CurrentUser, activity);
+            }
+
+        }
+
         private void singleActivityNameTextBlock_Tapped(object sender, TappedRoutedEventArgs e)
         {
             // Orderedlist placeholder

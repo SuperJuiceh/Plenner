@@ -51,7 +51,7 @@ namespace Planner
             {
                 switch(connectionId)
                 {
-                    case 8:
+                    case 8: // GrantPermissionsPage.xaml line 25
                         this.obj8 = (global::Windows.UI.Xaml.Controls.ListView)target;
                         break;
                     default:
@@ -77,6 +77,11 @@ namespace Planner
 
             public void StopTracking()
             {
+            }
+
+            public void DisconnectUnloadedObject(int connectionId)
+            {
+                throw new global::System.ArgumentException("No unloadable elements to disconnect.");
             }
 
             public bool SetDataRoot(global::System.Object newDataRoot)
@@ -109,6 +114,7 @@ namespace Planner
             {
                 if ((phase & ((1 << 0) | NOT_PHASED )) != 0)
                 {
+                    // GrantPermissionsPage.xaml line 25
                     XamlBindingSetters.Set_Windows_UI_Xaml_Controls_ItemsControl_ItemsSource(this.obj8, obj, null);
                 }
             }
@@ -122,43 +128,39 @@ namespace Planner
         {
             switch(connectionId)
             {
-            case 2:
+            case 2: // GrantPermissionsPage.xaml line 14
                 {
                     this.grant_perms_button = (global::Windows.UI.Xaml.Controls.Button)(target);
-                    #line 14 "..\..\..\GrantPermissionsPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.Button)this.grant_perms_button).Click += this.grant_perms_button_Click;
-                    #line default
                 }
                 break;
-            case 3:
+            case 3: // GrantPermissionsPage.xaml line 15
                 {
                     this.to_textblock = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 4:
+            case 4: // GrantPermissionsPage.xaml line 16
                 {
                     this.to_textbox = (global::Windows.UI.Xaml.Controls.TextBox)(target);
                 }
                 break;
-            case 5:
+            case 5: // GrantPermissionsPage.xaml line 17
                 {
                     this.textBlock = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 6:
+            case 6: // GrantPermissionsPage.xaml line 18
                 {
                     this.permissionTypeList = (global::Windows.UI.Xaml.Controls.ListView)(target);
-                    #line 18 "..\..\..\GrantPermissionsPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.ListView)this.permissionTypeList).SelectionChanged += this.permissionTypeList_SelectionChanged;
-                    #line default
                 }
                 break;
-            case 7:
+            case 7: // GrantPermissionsPage.xaml line 24
                 {
                     this.textBlock1 = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 8:
+            case 8: // GrantPermissionsPage.xaml line 25
                 {
                     this.permissionsListView = (global::Windows.UI.Xaml.Controls.ListView)(target);
                 }
@@ -169,6 +171,9 @@ namespace Planner
             this._contentLoaded = true;
         }
 
+        /// <summary>
+        /// GetBindingConnector(int connectionId, object target)
+        /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 14.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::Windows.UI.Xaml.Markup.IComponentConnector GetBindingConnector(int connectionId, object target)
@@ -176,8 +181,8 @@ namespace Planner
             global::Windows.UI.Xaml.Markup.IComponentConnector returnValue = null;
             switch(connectionId)
             {
-            case 1:
-                {
+            case 1: // GrantPermissionsPage.xaml line 1
+                {                    
                     global::Windows.UI.Xaml.Controls.Page element1 = (global::Windows.UI.Xaml.Controls.Page)target;
                     GrantPermissionsPage_obj1_Bindings bindings = new GrantPermissionsPage_obj1_Bindings();
                     returnValue = bindings;

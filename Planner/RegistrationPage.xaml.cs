@@ -24,6 +24,7 @@ using static DataLab.Data.Users.UserManager;
 using System.Collections.ObjectModel;
 using DataLab.NetworkPackaging;
 using Datalab.Server.Packets;
+using Planner.Data.Styling;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -34,10 +35,18 @@ namespace Planner
     /// </summary>
     public sealed partial class RegistrationPage : Page
     {
+
         public PlanningItemStorage plan { get; set; }
+        public SettingsStorage Settings { get; set; }
 
         public RegistrationPage()
         {
+            // Get copies of our 
+            plan = GeneralApplicationData.Planning;
+            Settings = GeneralApplicationData.Settings;
+
+            UserStyleFactory.addStyles(this.Resources, this.Settings.Settings);
+
             this.InitializeComponent();
             this.initCountriesInList();
         }
@@ -109,13 +118,7 @@ namespace Planner
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-
-            PlanningItemStorage planning = e.Parameter as PlanningItemStorage;
-
-            if (planning != null)
-            {
-                plan = planning;
-            }
+            
         }
         
         private void initCountriesInList()

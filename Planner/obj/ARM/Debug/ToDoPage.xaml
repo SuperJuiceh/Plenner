@@ -23,7 +23,7 @@
         <Grid.Resources>
             <conv:DateTimeFormatConverter x:Key="dtConv" />
         </Grid.Resources>
-        <ListView x:ConnectionId='3' x:Name="listView" HorizontalAlignment="Left" Height="463" Margin="25.333,19.667,0,0" VerticalAlignment="Top" Width="300" Grid.Row="2" Grid.Column="1"                                            ScrollViewer.VerticalScrollBarVisibility="Auto" MaxHeight="200" FontSize="10">
+        <ListView x:ConnectionId='3' x:Name="listView" HorizontalAlignment="Left" Height="463" Margin="25.333,19.667,0,0" VerticalAlignment="Top" Width="300" Grid.Row="2" Grid.Column="1"                                                ScrollViewer.VerticalScrollBarVisibility="Auto" MaxHeight="200" FontSize="10">
             <ListView.Header>
                 <RelativePanel>
                     <TextBlock x:ConnectionId='15' x:Name="toDoItemNameHeaderTextBlock"  Text="Name" Margin="0, 0, 0, 0"                                            />
@@ -47,7 +47,7 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <ListView x:ConnectionId='4' x:Name="listViewtdiSets" HorizontalAlignment="Left" Height="280" Margin="30.333,212.667,0,0" VerticalAlignment="Top" Width="300" Grid.Row="2" Grid.Column="1"                                          FontSize="10">
+        <ListView x:ConnectionId='4' x:Name="listViewtdiSets" HorizontalAlignment="Left" Height="280" Margin="30.333,212.667,0,0" VerticalAlignment="Top" Width="300" Grid.Row="2" Grid.Column="1"                                              FontSize="10">
             <ListView.Header>
                 <RelativePanel>
                     <TextBlock Text="Name" Margin="0, 0, 0, 0"/>
