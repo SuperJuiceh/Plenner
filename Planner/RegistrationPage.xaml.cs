@@ -119,6 +119,13 @@ namespace Planner
         {
             base.OnNavigatedTo(e);
             
+            if (!PacketClient.Connected)
+            {
+                PacketClient.Connect();
+
+                if (!PacketClient.Connected)
+                    this.Frame.GoBack();
+            }
         }
         
         private void initCountriesInList()

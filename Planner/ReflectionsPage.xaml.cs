@@ -18,6 +18,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using DataLab.Tools.Connectivity;
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace Planner
@@ -110,11 +111,7 @@ namespace Planner
         {
             //setmaptogps(mainMap, await _geo.GetGeopositionAsync());
         }
-
-        private void button3_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+        
 
         private async void setmaptogps(MapControl map, BasicGeoposition pos)
         {
@@ -212,9 +209,24 @@ namespace Planner
             }
         }
 
+        private void mailActivityButton_Click(object sender, RoutedEventArgs e)
+        {
+            Reflection reflection = (sender as Button).Tag as Reflection;
+
+            if (reflection != null)
+            {
+                MailClient.sendMailWithPlanning(plan, reflection);
+            }
+        }
+
         private void button1_Click(object sender, RoutedEventArgs e)
         {
             plan.clear(Plan.Clear_Options.REFLECTIONS);
+        }
+
+        private void button3_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

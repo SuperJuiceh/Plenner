@@ -1,2 +1,0 @@
-C:\Users\Bilel\documents\visual studio 2015\Projects\Plenner\PlennerServer\obj\Debug\PlennerServer.csprojResolveAssemblyReference.cache
-C:\Users\Bilel\Documents\Visual Studio 2015\Projects\Plenner\PlennerServer\bin\Debug\PlennerServer.exe.config

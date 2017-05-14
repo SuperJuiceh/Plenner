@@ -34,10 +34,11 @@
                 <ImageBrush ImageSource="/Assets/Broom_icon.svg.png" />
             </Button.Background>
         </Button>
-        <ListView x:Name="listView" HorizontalAlignment="Left" Height="370" Margin="30,60,0,0" VerticalAlignment="Top" Width="310" ItemsSource="{x:Bind plan.plan.Reflections}" FontSize="10"  ScrollViewer.VerticalScrollBarVisibility="Auto" MaxHeight="370">
+        <ListView x:Name="listView" HorizontalAlignment="Left" Height="370" Margin="30,60,0,0" VerticalAlignment="Top" Width="307" ItemsSource="{x:Bind plan.plan.Reflections}" FontSize="10"  ScrollViewer.VerticalScrollBarVisibility="Auto" MaxHeight="370">
             <ListView.Header>
                 <RelativePanel>
                     <TextBlock x:Name="nameHeaderTextBlock"  Text="Name" Tapped="nameHeaderTextBlock_Tapped"/>
+                    <TextBlock Text="Mail" Margin="100, 0, 0, 0"/>
                     <TextBlock Text="Photo" Margin="150, 0, 0, 0"/>
                     <TextBlock Text="Location" Margin="190, 0, 0, 0"/>
                     <TextBlock x:Name="feelingHeaderTextBlock"  Text="Feeling" Margin="235, 0, 0, 0" Tapped="feelingHeaderTextBlock_Tapped"/>
@@ -47,6 +48,11 @@
                 <DataTemplate>
                     <RelativePanel x:Name="listViewRelativePanel" Width="298" Height="35" ManipulationMode="All" PointerPressed="listViewRelativePanel_PointerPressed">
                         <TextBlock Text="{Binding Name}"/>
+                        <Button x:Name="mailReflctionButton" Height="25" Width="25" FontSize="10" Margin="100, 0, 0, 0" Click="mailActivityButton_Click" Tag="{Binding }" >
+                            <Button.Background>
+                                <ImageBrush ImageSource="/Assets/mail.png" />
+                            </Button.Background>
+                        </Button>
                         <Button Margin="140, 0, 0, 0" Height="32" Width="33" Visibility="Visible">
                             <Button.Background>
                                 <ImageBrush ImageSource="/Assets/Camera-con.png" />

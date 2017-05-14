@@ -58,7 +58,7 @@ namespace DataLab.NetworkPackaging
 
         public static async Task Disconnect()
         {
-            if (!Locked)
+            if (Connected && !Locked)
             {
                 Locked = true;
                 await _client.CancelIOAsync();

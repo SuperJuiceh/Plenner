@@ -55,7 +55,7 @@ namespace Planner
                 // Try login
                 QuestionPacket qPacket = QuestionPacket.AskIfPasswordIsValid(username_textBox.Text, PasswordHasher.hashPassword(password_textBox.Text), rememberLoginCheckbox.IsChecked.GetValueOrDefault());
                 QuestionPacket packet = PacketClient.SendAndReceive(qPacket) as QuestionPacket;
-
+                Debug.WriteLine((string)packet.Question_data[0]);
                 if (packet.A)
                 {
                     DynamicPlanningItemStorage p = new DynamicPlanningItemStorage(plan, (User)packet.Question_data[2]);
@@ -89,12 +89,17 @@ namespace Planner
 
         private void withoutLoginButton_Click(object sender, RoutedEventArgs e)
         {
+            GeneralApplicationData.Planning = new PlanningItemStorage();
+
+            while (GeneralApplicationData.Planning.waitToLoad(1)) { }
+
             this.Frame.Navigate(typeof(ActivitiesPage));
         }
 
         private void connectLogin()
         {
-            PacketClient.Connect();
+            if (!PacketClient.Connected)
+                PacketClient.Connect();
 
             if (PacketClient.Connected)
             {

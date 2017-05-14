@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Windows.ApplicationModel.Email;
 using DataLab.Data.Planning;
 using DataLab.Data.Users;
+using DataLab.Storage;
 
 namespace DataLab.Tools.Connectivity
 {
@@ -41,10 +42,34 @@ namespace DataLab.Tools.Connectivity
             
         }
 
+
+
         public async void sendMail(User user, PlanningItem item)
         {
             EmailMessage mail = MessageFactory.AsMessage(user, item);
             sendMail(mail.Subject, mail.Body);
+        }
+
+        public static async void sendMailWithPlanning(PlanningItemStorage Planning, PlanningItem pItem)
+        {
+            
+
+            User user;
+            if (Planning.isDynamic())
+            {
+                DynamicPlanningItemStorage dp = Planning as DynamicPlanningItemStorage;
+                user = dp.CurrentUser;
+
+            }
+            else
+            {
+                user = new User();
+                user.UserName = "Bilel Bghiel";
+
+            }
+
+            MailClient mClient = new MailClient(user.UserName, new string[] { "bilel@live.nl" }, new string[] { "Bilel Bghiel" });
+            mClient.sendMail(user, pItem);
         }
 
     }

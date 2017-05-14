@@ -11,7 +11,6 @@ namespace DataLab.Storage
 {
     public class DynamicPlanningItemStorage: PlanningItemStorage
     {
-
         
         private User _currentUser = null;
 
@@ -19,11 +18,12 @@ namespace DataLab.Storage
 
         public bool LoggedIn { get { return _currentUser != null; } }
 
+        public override Plan plan { get { return CurrentUser.plan; } set { CurrentUser.plan = value; setChanged("plan"); } }
+
+
         public DynamicPlanningItemStorage(PlanningItemStorage item, User user): base()
         {
             CurrentUser = user;
-
-            this.plan = user.plan;
         }
 
         private void setCurrentPlan(Plan value)
@@ -46,23 +46,50 @@ namespace DataLab.Storage
 
         protected override void addActivity(Activity a)
         {
-            base.addActivity(a);
+            plan.Activities.Add(a);
 
             OneWayPacket.addItemToUser(a);
         }
 
         public override void addDiary(Diary d)
         {
-            base.addDiary(d);
+            plan.Diaries.Add(d);
 
             OneWayPacket.addItemToUser(d);
         }
 
         public override void addPlanningItem(PlanningItem pi)
         {
-            base.addPlanningItem(pi);
+            Type piType = pi.GetType();
 
-            OneWayPacket.addItemToUser(pi);
+            //Debug.WriteLine("Tring to add and size is now {0}", plan.Activities.Count);
+
+            if (piType == typeof(RepeatingPlanningItem))
+            {
+                plan.rpi.Add((RepeatingPlanningItem)pi);
+            }
+            else if (piType == typeof(ToDoItem))
+            {
+                plan.ToDoItems.Add((ToDoItem)pi);
+            }
+            else if (piType == typeof(ToDoItemSet))
+            {
+                plan.tdiSets.Add((ToDoItemSet)pi);
+            }
+            else if (piType == typeof(Reflection))
+            {
+                plan.Reflections.Add((Reflection)pi);
+            }
+            else if (piType == typeof(Activity))
+            {
+                plan.Activities.Add((Activity)pi);
+            }
+            
+        }
+
+        public override void removeDiary(Diary d)
+        {
+            plan.Diaries.Add(d);
         }
 
         public override void clear(Plan.Clear_Options options)

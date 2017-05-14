@@ -27,7 +27,7 @@
             <ListView.Header>
                 <RelativePanel>
                     <TextBlock x:Name="toDoItemNameHeaderTextBlock"  Text="Name" Margin="0, 0, 0, 0" Tapped="toDoItemNameHeaderTextBlock_Tapped"/>
-                    <TextBlock x:Name="toDoItemTimeHeaderTextBlock" Text="Deadline" Margin="150, 0, 0, 0" Tapped="toDoItemTimeHeaderTextBlock_Tapped"/>
+                    <TextBlock x:Name="toDoItemTimeHeaderTextBlock" Text="Mail" Margin="150, 0, 0, 0" Tapped="toDoItemTimeHeaderTextBlock_Tapped"/>
                     <TextBlock Text="Done" Margin="220, 0, 0, 0"/>
                     <TextBlock Text="..." Margin="265, 0, 0, 0" />
                 </RelativePanel>
@@ -36,7 +36,11 @@
                 <DataTemplate>
                     <RelativePanel Margin="-10, 0, 0, 0">
                         <TextBlock Text="{Binding Name}" Margin="0, 0, 0, 0" FontSize="10"/>
-                        <TextBlock Text="{Binding Deadline, Converter={StaticResource dtConv}}" Margin="150, 0, 0, 0" FontSize="10" />
+                        <Button x:Name="mailToDoItemButton" Height="25" Width="25" FontSize="10" Margin="150, 0, 0, 0" Click="mailToDoItemButton_Click" Tag="{Binding }" >
+                            <Button.Background>
+                                <ImageBrush ImageSource="/Assets/mail.png" />
+                            </Button.Background>
+                        </Button>
                         <CheckBox IsChecked="{Binding IsDone, Mode=TwoWay}" Margin="220, 0, 0, 0" Checked="CheckBox_Checked" Width="20" Height="20" />
                         <Button Margin="265, 0, 0, 0" Click="Button_Click_1" Height="20" Width="20" >
                             <Button.Background>
@@ -51,7 +55,7 @@
             <ListView.Header>
                 <RelativePanel>
                     <TextBlock Text="Name" Margin="0, 0, 0, 0"/>
-                    <TextBlock Text="Deadline" Margin="150, 0, 0, 0" />
+                    <TextBlock Text="Mail" Margin="150, 0, 0, 0" />
                     <TextBlock Text="Done" Margin="220, 0, 0, 0"/>
                     <TextBlock Text="..." Margin="265, 0, 0, 0" />
                 </RelativePanel>
@@ -61,7 +65,11 @@
                     <StackPanel>
                         <RelativePanel Margin="-10, 0, 0, 0">
                             <TextBlock Text="{Binding Name}" Margin="0, 0, 0, 0" FontSize="10"/>
-                            <TextBlock Text="{Binding Deadline, Converter={StaticResource dtConv}}" Margin="150, 0, 0, 0" FontSize="10" />
+                            <Button x:Name="mailToDoItemSetButton" Height="25" Width="25" FontSize="10" Margin="150, 0, 0, 0" Click="mailToDoItemSetButton_Click" Tag="{Binding }" >
+                                <Button.Background>
+                                    <ImageBrush ImageSource="/Assets/mail.png" />
+                                </Button.Background>
+                            </Button>
                             <CheckBox IsChecked="{Binding IsDone, Mode=TwoWay}" Margin="220, 0, 0, 0" Checked="CheckBox_Checked" FontSize="10" />
                             <Button x:Name="tdiset_remove_button" Margin="265, 0, 0, 0" Click="tdiset_remove_button_Click"  Width="25" Height="25" FontSize="10" >
                                 <Button.Background>

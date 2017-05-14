@@ -128,6 +128,7 @@ namespace DataLab.Server.Controller
                 QuestionPacket q = p as QuestionPacket;
                 if (q.Q == QuestionPacket.Questions.Valid_password)
                 {
+                    Debug.WriteLine("q");
                     q.A = Storage.ServerData.Uman.Users.Exists(u => u.UserName == (string)q.Question_data[0] && u.Password == (string)q.Question_data[1]);
 
                     if (q.A)

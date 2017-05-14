@@ -18,6 +18,7 @@ using Windows.Devices.Geolocation;
 using Windows.UI.Core;
 using Planner.Data.Styling;
 using DataLab.Tools.Connectivity;
+using DataLab.Data.Users;
 
 
 
@@ -244,11 +245,9 @@ namespace Planner
         {
             Activity activity = (sender as Button).Tag as Activity;
             
-            if (activity != null && Planning.isDynamic())
+            if (activity != null)
             {
-                DynamicPlanningItemStorage dp = Planning as DynamicPlanningItemStorage;
-                MailClient mClient = new MailClient(dp.CurrentUser.UserName, new string[] { "bilel@live.nl" }, new string[] { "Bilel Bghiel" });
-                mClient.sendMail(dp.CurrentUser, activity);
+                MailClient.sendMailWithPlanning(Planning, activity);
             }
 
         }

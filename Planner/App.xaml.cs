@@ -41,9 +41,8 @@ namespace Planner
 
             this.UnhandledException += App_UnhandledException;
 
-            GeneralApplicationData.Settings = new SettingsStorage();
-
-            Settings = GeneralApplicationData.Settings;
+            GeneralApplicationData.Settings = Settings = new SettingsStorage();
+            
             
             try
             {

@@ -19,6 +19,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using Planner.Data.Styling;
 using Planner.Data;
+using DataLab.Tools.Connectivity;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -169,6 +170,26 @@ namespace Planner
             }
 
             timeSortAscending = false;
+        }
+
+        private void mailToDoItemSetButton_Click(object sender, RoutedEventArgs e)
+        {
+            ToDoItemSet tdiSet = (sender as Button).Tag as ToDoItemSet;
+
+            if (tdiSet != null)
+            {
+                MailClient.sendMailWithPlanning(Planning, tdiSet);
+            }
+        }
+
+        private void mailToDoItemButton_Click(object sender, RoutedEventArgs e)
+        {
+            ToDoItem tdi = (sender as Button).Tag as ToDoItem;
+
+            if (tdi != null)
+            {
+                MailClient.sendMailWithPlanning(Planning, tdi);
+            }
         }
 
         private void toDoItemTimeHeaderTextBlock_Tapped(object sender, TappedRoutedEventArgs e)

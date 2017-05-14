@@ -31,4 +31,3 @@ C:\Users\Bilel\Documents\Plenner\DataLab\obj\Debug\pri.resfiles.intermediate
 C:\Users\Bilel\Documents\Plenner\DataLab\obj\Debug\qualifiers.txt
 C:\Users\Bilel\Documents\Plenner\DataLab\obj\Debug\qualifiers.txt.intermediate
 C:\Users\Bilel\Documents\Plenner\DataLab\obj\Debug\MultipleQualifiersPerDimensionFound.txt
-C:\Users\Bilel\Documents\Plenner\DataLab\obj\Debug\DataLab.csprojResolveAssemblyReference.cache

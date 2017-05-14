@@ -20,7 +20,7 @@ namespace DataLab.Storage
     {
         public event PropertyChangedEventHandler PropertyChanged;
         
-        public Plan plan { get { return (Plan)StorageObject; } set { StorageObject = value; setChanged("plan"); } }
+        public virtual Plan plan { get { return (Plan)StorageObject; } set { StorageObject = value; setChanged("plan"); } }
         
         public PlanningItemStorage() : base("planning.pln", typeof(Plan))
         {
@@ -34,30 +34,25 @@ namespace DataLab.Storage
 
             //Debug.WriteLine("Tring to add and size is now {0}", plan.Activities.Count);
 
-            if (piType == typeof(RepeatingPlanningItem))
-            {
-                plan.rpi.Add((RepeatingPlanningItem)pi);
-            }
-            else if (piType == typeof(ToDoItem))
-            {
-                plan.ToDoItems.Add((ToDoItem)pi);
-            }
-            else if (piType == typeof(ToDoItemSet))
-            {
-                plan.tdiSets.Add((ToDoItemSet)pi);
-            }
+            if (piType == typeof(Activity))
+                addActivity((Activity)pi);
             else if (piType == typeof(Reflection))
-            {
-                plan.Reflections.Add((Reflection)pi);
-            }
-            else if (piType == typeof(Activity))
-            {
-                Debug.WriteLine("Adding activity");
-                plan.Activities.Add((Activity)pi);
-            }
-            
+                addReflection((Reflection)pi);
+            else if (piType == typeof(RepeatingPlanningItem))
+                plan.rpi.Remove((RepeatingPlanningItem)pi);
+            else if (piType == typeof(ToDoItem))
+                addToDoItem((ToDoItem)pi);
+            else if (piType == typeof(ToDoItemSet))
+                addToDoItemSet((ToDoItemSet)pi);
+
             saveStorage();
             
+        }
+
+        private void addReflection(Reflection r)
+        {
+            plan.Reflections.Add(r);
+            saveStorage();
         }
 
         public virtual void removePlanningItem(PlanningItem pi)
@@ -109,6 +104,13 @@ namespace DataLab.Storage
             saveStorage();
         }
 
+        protected virtual void addToDoItem(ToDoItem tdi)
+        {
+            plan.ToDoItems.Add(tdi);
+            saveStorage();
+        }
+
+
         protected virtual void removeToDoItem(ToDoItem tdi)
         {
             plan.ToDoItems.Remove(tdi);
@@ -126,6 +128,12 @@ namespace DataLab.Storage
         protected virtual void removeToDoItemSet(ToDoItemSet set)
         {
             plan.tdiSets.Remove(set);
+            saveStorage();
+        }
+
+        protected virtual void addToDoItemSet(ToDoItemSet set)
+        {
+            plan.tdiSets.Add(set);
             saveStorage();
         }
 
