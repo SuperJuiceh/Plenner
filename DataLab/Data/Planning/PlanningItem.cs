@@ -36,7 +36,7 @@ namespace DataLab.Data.Planning
             this.Name = name;
         }
 
-        public PlanningItem()
+        protected PlanningItem()
         {
 
         }

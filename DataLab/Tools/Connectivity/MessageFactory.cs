@@ -32,7 +32,7 @@ namespace DataLab.Tools.Connectivity
         {
             EmailMessage email =    new EmailMessage();
             email.Subject = String.Format("{0} sends you it's activity: {1}", user.UserName, act.Name);
-            email.Body    = String.Format("'{0}: {1}' at {2} \r\n\r\nYour sincerely {3}", act.Name, act.Description, act.Start.ToString("R"), user.UserName);
+            email.Body    = String.Format("'{0}: {1}' at {2} {whiteline}{whiteline} Your sincerely, {whiteline} {3}", act.Name, act.Description, act.Start.ToString("R"), user.UserName);
 
 
             return email;  
@@ -42,7 +42,7 @@ namespace DataLab.Tools.Connectivity
         {
             EmailMessage email = new EmailMessage();
             email.Subject = String.Format("{0} sends you it's reflection: {1}", user.UserName, reflect.Name);
-            email.Body = String.Format("'{0}: {1}' at {2} \r\n\r\nYour sincerely {3}", reflect.Name, reflect.Description, reflect.Time.ToString("R"), user.UserName);
+            email.Body = String.Format("'{0}: {1}' at {2} {whiteline}{whiteline} Your sincerely, {whiteline} {3}", reflect.Name, reflect.Description, reflect.Time.ToString("R"), user.UserName);
 
             EmailAttachment attachment = new EmailAttachment();
 

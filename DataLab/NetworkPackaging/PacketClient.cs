@@ -47,7 +47,7 @@ namespace DataLab.NetworkPackaging
                     await a;
                     
                 }
-                catch (TaskCanceledException e)
+                catch (TaskCanceledException)
                 {
                     Connected = true;
                 }

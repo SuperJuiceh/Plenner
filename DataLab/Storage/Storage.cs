@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿
+using System;
+using System.Diagnostics;
+using System.IO;
 using System.Threading.Tasks;
-
-using Windows.Storage;
-
 using System.Xml;
 using System.Xml.Serialization;
-using System.IO;
-
-using System.Diagnostics;
+using Windows.Storage;
 
 namespace DataLab.Storage
 {
@@ -54,20 +49,30 @@ namespace DataLab.Storage
 
                     StorageObject = await loadStorage();
                 }
-                catch (UnauthorizedAccessException)
+                catch (Exception e)
                 {
+                    if (e is UnauthorizedAccessException)
+                    {
+                        await Task.Delay(1250);
+                        goto loadStorageStartLoop;
+                    } 
 
-                    await Task.Delay(1250);
-                    goto loadStorageStartLoop;
                 }
-            } catch (FileNotFoundException) {
+            } catch (Exception e) {
 
-                // File doesnt exist yet
-                StorageObject = Activator.CreateInstance(StorageObjectType);
-                SaveLocation = await ApplicationData.Current.LocalFolder.CreateFileAsync(filename, CreationCollisionOption.ReplaceExisting);
-                saveStorage();
+                if (e is FileNotFoundException)
+                {
+                    // File doesnt exist yet
+                    StorageObject = Activator.CreateInstance(StorageObjectType);
+                    SaveLocation = await ApplicationData.Current.LocalFolder.CreateFileAsync(filename, CreationCollisionOption.ReplaceExisting);
+                    saveStorage();
+                }
+
+                Debug.WriteLine(e.Message);
             }
 
+            
+            Debug.WriteLine("Done");
         }
 
         public async Task<object> loadStorage()
@@ -89,7 +94,8 @@ namespace DataLab.Storage
                 saveStorage();
             }
 
-            
+
+            striem.Flush();
             striem.Dispose();
 
             return StorageObject;
@@ -103,13 +109,19 @@ namespace DataLab.Storage
             {
                 Stream striem = await SaveLocation.OpenStreamForWriteAsync();
                 striem.SetLength(0);
+                Debug.WriteLine("!");
                 Serializer.Serialize(striem, StorageObject);
+                
+
+                striem.Flush();
                 striem.Dispose();
-            } catch (UnauthorizedAccessException)
+            } catch (Exception)
             {
                 await Task.Delay(1000);
                 goto goback;
             }
+
+            Debug.WriteLine("A");
         }
 
         public bool waitToLoad(int timeout)

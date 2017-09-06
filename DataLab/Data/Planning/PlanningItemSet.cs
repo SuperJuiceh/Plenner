@@ -18,7 +18,7 @@ namespace DataLab.Data.Planning
 
         public DateTime End { get; set; }
 
-        public PlanningItemSet(): base()
+        private PlanningItemSet(): base()
         {
 
         }

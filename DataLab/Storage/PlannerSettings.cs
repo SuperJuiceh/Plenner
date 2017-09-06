@@ -43,6 +43,10 @@ namespace DataLab.Storage
         private int _fontSizeUser;
         public int FontSizeUser { get {  return _fontSizeUser; } set { _fontSizeUser = value; Changed("FontSizeUser"); } }
 
+        [XmlIgnore]
+        private string _notificationIconString;
+        public string NotificationIconString { get { return _notificationIconString; } set { _notificationIconString = value; Changed("NotificationIconNumber"); } }
+
         public PlannerSettings()
         {
 

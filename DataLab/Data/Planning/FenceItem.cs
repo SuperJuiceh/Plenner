@@ -87,7 +87,7 @@ namespace DataLab.Data.Planning
             var access = await BackgroundExecutionManager.RequestAccessAsync();
             
 
-            if (access == BackgroundAccessStatus.Denied)
+            if (access == BackgroundAccessStatus.DeniedByUser || access == BackgroundAccessStatus.DeniedBySystemPolicy)
             {
                 ShowToast("Backgrounda access ", "denied");
             }

@@ -7,11 +7,18 @@ using Windows.ApplicationModel.Email;
 using DataLab.Data.Planning;
 using DataLab.Data.Users;
 using DataLab.Storage;
+using System.Dynamic;
+
 
 namespace DataLab.Tools.Connectivity
 {
     public class MailClient
     {
+
+        public void run()
+        {
+
+        }
 
         private string _senderUsernamé;
         private string _senderMailAddress;
@@ -44,13 +51,13 @@ namespace DataLab.Tools.Connectivity
 
 
 
-        public async void sendMail(User user, PlanningItem item)
+        public void sendMail(User user, PlanningItem item)
         {
             EmailMessage mail = MessageFactory.AsMessage(user, item);
             sendMail(mail.Subject, mail.Body);
         }
 
-        public static async void sendMailWithPlanning(PlanningItemStorage Planning, PlanningItem pItem)
+        public static void sendMailWithPlanning(PlanningItemStorage Planning, PlanningItem pItem)
         {
             
 

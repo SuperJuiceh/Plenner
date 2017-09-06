@@ -192,6 +192,11 @@ namespace Planner
             }
         }
 
+        private void activitiesButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(ActivitiesPage));
+        }
+
         private void toDoItemTimeHeaderTextBlock_Tapped(object sender, TappedRoutedEventArgs e)
         {
             // Orderedlist placeholder
@@ -219,5 +224,23 @@ namespace Planner
 
             nameSortAscending = false;
         }
+        
+
+        private void reflectionsButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Reflection));
+        }
+
+        private void settingsButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(SettingsPage));
+        }
+        
+        private void splitViewOpenCloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            mainSplitView.IsPaneOpen = !mainSplitView.IsPaneOpen;
+        }
     }
+
+
 }

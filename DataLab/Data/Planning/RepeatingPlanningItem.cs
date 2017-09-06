@@ -29,7 +29,7 @@ namespace DataLab.Data.Planning
             this.Time = DayTime;
         }
 
-        public RepeatingPlanningItem()
+        private RepeatingPlanningItem()
         {
             
         }

@@ -26,6 +26,10 @@ Assets\LockScreenLogo.scale-200.png
 Assets\login_icon.png
 Assets\mail.png
 Assets\minus.png
+Assets\NotificationIcons\notif_icon_1.png
+Assets\NotificationIcons\notif_icon_2.png
+Assets\NotificationIcons\notif_icon_3.png
+Assets\NotificationIcons\notif_icon_4.png
 Assets\pinpoint_gps.png
 Assets\Planner_logo.png
 Assets\Plus.png
@@ -33,6 +37,7 @@ Assets\Plus__Orange.png
 Assets\plus_green.png
 Assets\refresh.png
 Assets\register_icon.png
+Assets\settings_icon.png
 Assets\SplashScreen.scale-200.png
 Assets\Square150x150Logo.scale-200.png
 Assets\Square44x44Logo.scale-200.png
@@ -40,6 +45,7 @@ Assets\Square44x44Logo.targetsize-24_altform-unplated.png
 Assets\StoreLogo.png
 Assets\Swipe_right_or_left.png
 Assets\sync.png
+Assets\ToDo_icon.png
 Assets\true.png
 Assets\Wide310x150Logo.scale-200.png
 Planner.xr.xml

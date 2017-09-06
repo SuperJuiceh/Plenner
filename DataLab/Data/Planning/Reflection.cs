@@ -121,7 +121,7 @@ namespace DataLab.Data.Planning
             }
         }
 
-        public Reflection() : base()
+        private Reflection() : base()
         {
 
         }

@@ -57,7 +57,7 @@ namespace DataLab.Data.Planning
 
         }
 
-        public ToDoItemSet(): base()
+        private ToDoItemSet(): base()
         {
 
         }

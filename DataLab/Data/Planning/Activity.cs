@@ -50,7 +50,7 @@ namespace DataLab.Data.Planning
             this.basicgeoloc = bgp;
         }
 
-        public Activity() {
+        private Activity() {
             
         }
 

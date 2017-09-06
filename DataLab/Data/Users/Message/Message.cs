@@ -24,7 +24,7 @@ namespace DataLab.Data.Users.Message
 
         }
 
-        public Message()
+        private Message()
         {
         }
     }

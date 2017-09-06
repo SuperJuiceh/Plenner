@@ -228,5 +228,25 @@ namespace Planner
         {
 
         }
+
+        private void todoitemsButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(ToDoPage));
+        }
+
+        private void activitiesButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(ActivitiesPage));
+        }
+
+        private void splitViewOpenCloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            mainSplitView.IsPaneOpen = !mainSplitView.IsPaneOpen;
+        }
+
+        private void settingsButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(SettingsPage));
+        }
     }
 }

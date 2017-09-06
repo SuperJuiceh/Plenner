@@ -37,7 +37,9 @@ namespace Planner
     public sealed partial class AddActivity : Page
     {
 
-        public PlanningItemStorage Storage { get; set; }
+        public PlanningItemStorage Planning { get { return GeneralApplicationData.Planning; } set { GeneralApplicationData.Planning = value; } }
+
+        public SettingsStorage Settings { get { return GeneralApplicationData.Settings; } set { GeneralApplicationData.Settings = value; } }
 
         private Geolocator _geo;
 
@@ -57,12 +59,8 @@ namespace Planner
 
         private BackgroundWorker ProximityTrackerWorker = new BackgroundWorker();
 
-        public SettingsStorage Settings { get; set; }
-
         public AddActivity()
         {
-            Storage  = GeneralApplicationData.Planning;
-            Settings = GeneralApplicationData.Settings;
 
             UserStyleFactory.addStyles(this.Resources, this.Settings.Settings);
             
@@ -145,8 +143,8 @@ namespace Planner
                         repPlanItem.Silent = checkBox1.IsChecked.GetValueOrDefault();
                         repPlanItem.MinutesToAlertBeforeActualAlarm = listBoxMinutes.SelectedIndex;
 
-                        Storage.addPlanningItem(repPlanItem);
-                        ToastNotifier.setuptoasts(Storage.plan);
+                        Planning.addPlanningItem(repPlanItem);
+                        ToastNotifier.setuptoasts(Planning.plan);
                     }
                     else
                     {
@@ -157,10 +155,10 @@ namespace Planner
                         {
                             activity.setGeoFence();
                         }
-                        Storage.addPlanningItem(activity);
+                        Planning.addPlanningItem(activity);
 
 
-                        ToastNotifier.setuptoasts(Storage.plan);
+                        ToastNotifier.setuptoasts(Planning.plan);
                         // To ActivitiesPage
                     }
                     this.Frame.Navigate(typeof(ActivitiesPage));
@@ -176,13 +174,13 @@ namespace Planner
             if (EditableActivity != null)
             {
                 //Debug.WriteLine(EditableActivity.Name);
-                Storage.removePlanningItem(EditableActivity);
+                Planning.removePlanningItem(EditableActivity);
 
 
                 EditableActivity.Name = nameTextBox.Text;
                 EditableActivity.Description = descriptionTextBox.Text;
 
-                Storage.addPlanningItem(EditableActivity);
+                Planning.addPlanningItem(EditableActivity);
 
                 this.Frame.Navigate(typeof(ActivitiesPage));
             }

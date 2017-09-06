@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.4
+VisualStudioVersion = 15.0.26730.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Planner", "Planner\Planner.csproj", "{837D501A-395A-4D83-A822-09263F02E9BC}"
 EndProject
@@ -34,6 +34,7 @@ Global
 		{837D501A-395A-4D83-A822-09263F02E9BC}.Debug|Any CPU.Deploy.0 = Debug|ARM
 		{837D501A-395A-4D83-A822-09263F02E9BC}.Debug|ARM.ActiveCfg = Debug|ARM
 		{837D501A-395A-4D83-A822-09263F02E9BC}.Debug|ARM.Build.0 = Debug|ARM
+		{837D501A-395A-4D83-A822-09263F02E9BC}.Debug|ARM.Deploy.0 = Debug|ARM
 		{837D501A-395A-4D83-A822-09263F02E9BC}.Debug|x64.ActiveCfg = Debug|x64
 		{837D501A-395A-4D83-A822-09263F02E9BC}.Debug|x64.Build.0 = Debug|x64
 		{837D501A-395A-4D83-A822-09263F02E9BC}.Debug|x64.Deploy.0 = Debug|x64
@@ -147,5 +148,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E15866B6-FE27-4BDA-840E-474FCF96B5C2}
 	EndGlobalSection
 EndGlobal

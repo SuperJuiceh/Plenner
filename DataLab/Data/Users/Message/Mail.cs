@@ -22,7 +22,7 @@ namespace DataLab.Data.Users.Message
             this.Msg    =   message;
         }
 
-        public Mail()
+        private Mail()
         {
             
         }

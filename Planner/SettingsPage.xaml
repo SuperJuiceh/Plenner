@@ -15,76 +15,117 @@
         <conv:BoolToElementVisibility x:Key="boolToVisibilityConv" />
 
     </Page.Resources>
-    <Grid >
+    <SplitView x:Name="mainSplitView" DisplayMode="CompactOverlay" OpenPaneLength="50" CompactPaneLength="20" >
+        <Grid >
 
-        <Grid.Background>
-            <ImageBrush ImageSource="/Assets/Background_black.png" />
-        </Grid.Background>
-        <RelativePanel HorizontalAlignment="Left" Height="100" Margin="10,485,0,0" VerticalAlignment="Top" Width="330" ManipulationMode="All" ManipulationStarted="RelativePanel_ManipulationStarted" ManipulationCompleted="RelativePanel_ManipulationCompleted">
-            <Button Width="40" Height="45" VerticalAlignment="Bottom" RenderTransformOrigin="3,1.2" Margin="150,0,-150,-90">
+    <Grid.Background>
+        <ImageBrush ImageSource="/Assets/Background_black.png" />
+    </Grid.Background>
+
+    <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="25,25,0,0" TextWrapping="Wrap" Text="Settings" VerticalAlignment="Top" Height="25" Width="75"/>
+    <RelativePanel x:Name="settingsPanel" DataContext="{Binding Settings, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+        <CheckBox x:Name="soundEnabledCheckBox" IsChecked="{Binding Settings.SoundEnabled, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Content="Enable Sound" HorizontalAlignment="Left" Margin="50,70,0,0" VerticalAlignment="Top" Width="145" Checked="soundEnabledCheckBox_Checked"/>
+        <CheckBox x:Name="notificationsEnabledCheckBox" IsChecked="{Binding Settings.EnableNotifications, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Content="Enable Notifications" HorizontalAlignment="Left" Margin="50,108,0,0" VerticalAlignment="Top"/>
+        <RelativePanel Margin="50,207,20,333" x:Name="planningItemExperationPanel">
+            <CheckBox x:Name="planningItemExperationCheckBox" Content="PlanningItem Expiration" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Checked="checkBox2_Checked" />
+            <StackPanel Margin="5,30,-60,-15" HorizontalAlignment="Left" VerticalAlignment="Top" Width="275" Height="60" Visibility="{Binding ElementName=planningItemExperationCheckBox, Path=IsChecked, Converter={StaticResource boolToVisibilityConv}}">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Days" />
+                    <TextBlock Margin="32, 0, 0, 0" Text="Hours" />
+                    <TextBlock Margin="28, 0, 0, 0" Text="Minutes" Width="56" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <ComboBox Name="DaysComboBox" Loaded="DaysComboBox_Loaded" RenderTransformOrigin="0.5,0.5" Width="5">
+                        <ComboBox.RenderTransform>
+                            <CompositeTransform ScaleX="-1"/>
+                        </ComboBox.RenderTransform>
+                    </ComboBox>
+                    <ComboBox Margin="0, 0, 0, 0" Name="HoursComboBox" Loaded="HoursComboBox_Loaded" />
+                    <ComboBox Margin="0, 0, 0, 0" Name="MinutesComboBox" Loaded="MinutesComboBox_Loaded"/>
+                </StackPanel>
+            </StackPanel>
+        </RelativePanel>
+        <RelativePanel Margin="50,145,-305,-199" Visibility="{Binding ElementName=notificationsEnabledCheckBox, Path=IsChecked, Converter={StaticResource boolToVisibilityConv}}">
+            <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="Notification Icon" VerticalAlignment="Top" Width="124" Margin="10,0,-72.333,0"/>
+            <Button x:Name="image" Margin="150, 0, 0, 0"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" >
+                <Button.Flyout>
+                    <Flyout>
+                        <StackPanel Width="204" Height="50" Orientation="Horizontal" VerticalAlignment="Top">
+                            <Button Width="40" Height="40" Tag="1" Click="Button_Click_2">
+                                <Button.Background>
+                                    <ImageBrush ImageSource="/Assets/NotificationIcons/Notif_icon_1.png"/>
+                                </Button.Background>
+                            </Button>
+                            <Button Width="40" Height="40"  Tag="2" Click="Button_Click_2">
+                                <Button.Background>
+                                    <ImageBrush ImageSource="/Assets/NotificationIcons/Notif_icon_2.png"/>
+                                </Button.Background>
+                            </Button>
+                            <Button Width="40" Height="40" Tag="3" Click="Button_Click_2">
+                                <Button.Background>
+                                    <ImageBrush ImageSource="/Assets/NotificationIcons/Notif_icon_3.png"/>
+                                </Button.Background>
+                            </Button>
+                            <Button Width="40" Height="40" Tag="4" Click="Button_Click_2">
+                                <Button.Background>
+                                    <ImageBrush ImageSource="/Assets/NotificationIcons/Notif_icon_4.png"/>
+                                </Button.Background>
+                            </Button>
+                        </StackPanel>
+                    </Flyout>
+                </Button.Flyout>
                 <Button.Background>
-                    <ImageBrush ImageSource="/Assets/Swipe_right_or_left.png" />
+                    <ImageBrush ImageSource="{Binding Settings.Settings.NotificationIconString}" />
                 </Button.Background>
             </Button>
-            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" Text="Journal" VerticalAlignment="Top" Width="65" Margin="80,60,-83.333,-65"/>
-            <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Text="ActivitiesPage" VerticalAlignment="Top" Width="115" Margin="205,60,-258.333,-75"/>
         </RelativePanel>
-        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="25,25,0,0" TextWrapping="Wrap" Text="Settings" VerticalAlignment="Top" Height="25" Width="75"/>
-        <RelativePanel x:Name="settingsPanel" DataContext="{Binding Settings, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
-            <CheckBox x:Name="soundEnabledCheckBox" IsChecked="{Binding Settings.SoundEnabled, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Content="Enable Sound" HorizontalAlignment="Left" Margin="50,70,0,0" VerticalAlignment="Top" Width="145" Checked="soundEnabledCheckBox_Checked"/>
-            <CheckBox x:Name="notificationsEnabledCheckBox" IsChecked="{Binding Settings.EnableNotifications, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Content="Enable Notifications" HorizontalAlignment="Left" Margin="50,108,0,0" VerticalAlignment="Top"/>
-            <RelativePanel Margin="50,207,20,333" x:Name="planningItemExperationPanel">
-                <CheckBox x:Name="planningItemExperationCheckBox" Content="PlanningItem Expiration" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Checked="checkBox2_Checked" />
-                <StackPanel Margin="5,30,-60,-15" HorizontalAlignment="Left" VerticalAlignment="Top" Width="275" Height="60" Visibility="{Binding ElementName=planningItemExperationCheckBox, Path=IsChecked, Converter={StaticResource boolToVisibilityConv}}">
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Days" />
-                        <TextBlock Margin="32, 0, 0, 0" Text="Hours" />
-                        <TextBlock Margin="28, 0, 0, 0" Text="Minutes" Width="56" />
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <ComboBox Name="DaysComboBox" Loaded="DaysComboBox_Loaded" RenderTransformOrigin="0.5,0.5" Width="5">
-                            <ComboBox.RenderTransform>
-                                <CompositeTransform ScaleX="-1"/>
-                            </ComboBox.RenderTransform>
-                        </ComboBox>
-                        <ComboBox Margin="0, 0, 0, 0" Name="HoursComboBox" Loaded="HoursComboBox_Loaded" />
-                        <ComboBox Margin="0, 0, 0, 0" Name="MinutesComboBox" Loaded="MinutesComboBox_Loaded"/>
-                    </StackPanel>
-                </StackPanel>
-            </RelativePanel>
-            <RelativePanel Margin="50,145,-305,-199" Visibility="{Binding ElementName=notificationsEnabledCheckBox, Path=IsChecked, Converter={StaticResource boolToVisibilityConv}}">
-                <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="Notification Icon" VerticalAlignment="Top" Width="124" Margin="10,0,-72.333,0"/>
-                <Button x:Name="image" Margin="150, 0, 0, 0"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" >
-                    <Button.Flyout>
-                        <Flyout >
-                            <RelativePanel Width="203" Height="163">
+        <Button x:Name="button" Content="User" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="64.6666641235352" Margin="50,388,-55.667,-388" Click="button_Click"/>
+        <TextBlock Margin="28,300,-16.333,0" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Font" Width="61.6666679382324"  />
+        <TextBlock HorizontalAlignment="Left" Height="32" TextWrapping="Wrap" Text="Font Size" VerticalAlignment="Top" Width="71" Margin="28,333,-28,-333"  />
+        <ComboBox x:Name="selectedFont" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="150" Margin="104,292,-190,-292" ItemsSource="{Binding Source={StaticResource staticTools}, Path=getFontNames}" SizeChanged="selectedFont_SizeChanged" SelectionChanged="selectedFont_SelectionChanged"/>
+        <ComboBox x:Name="selectedFontSize" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="150" Margin="104,328,-190,-328" ItemsSource="{Binding Source={StaticResource staticTools}, Path=getIntArrayFrom0To100}" SelectionChanged="selectedFontSize_SelectionChanged"/>
 
-                            </RelativePanel>
-                        </Flyout>
-                    </Button.Flyout>
+    </RelativePanel>
+    <Button x:Name="save_button" HorizontalAlignment="Left" Margin="275,384,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.692,5.031" Width="40" Height="37" Click="save_button_Click">
+        <Button.Background>
+            <ImageBrush ImageSource="/Assets/true.png" />
+        </Button.Background>
+    </Button>
+    <Popup x:Name="popup" Visibility="Visible" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <StackPanel Width="280" Height="150" Margin="-140, -140, -40, -40" Orientation="Vertical" Background="Cyan">
+            <TextBlock x:Name="popupTitle" Height="50"/>
+            <TextBlock x:Name="popupMessage" Height="50"/>
+            <Button Click="Button_Click_1" Margin="194,0,0,0" Content="Okay, I've read it" Width="86" />
+        </StackPanel>
+    </Popup>
+</Grid>
+        <SplitView.Pane>
+
+            <StackPanel HorizontalAlignment="Left" Orientation="Vertical" Width="{Binding ElementName=mainSplitView, Path=Width}">
+                <Button x:Name="splitViewOpenCloseButton" Content="&#xE700;" Click="splitViewOpenCloseButton_Click" Width="30" Height="30" />
+                <!--<Button x:Name="appointmentsButton" Width="50" Height="50" Click="appointmentsButton_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Assets/appointment_new2.png"/>
+                </Button.Background>
+            </Button>-->
+                <Button x:Name="activitiesButton" Width="50" Height="50" Click="activitiesButton_Click">
                     <Button.Background>
-                        <ImageBrush ImageSource="/Assets/delete.png" />
+                        <ImageBrush ImageSource="/Assets/appointment_new2.png"/>
+                    </Button.Background>
+
+                </Button>
+                <Button x:Name="todoitemsButton" Width="50" Height="50" Click="todoitemsButton_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Assets/ToDo_icon.png"/>
                     </Button.Background>
                 </Button>
-            </RelativePanel>
-            <Button x:Name="button" Content="User" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="64.6666641235352" Margin="50,388,-55.667,-388" Click="button_Click"/>
-            <TextBlock Margin="28,300,-16.333,0" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Font" Width="61.6666679382324"  />
-            <TextBlock HorizontalAlignment="Left" Height="32" TextWrapping="Wrap" Text="Font Size" VerticalAlignment="Top" Width="71" Margin="28,333,-28,-333"  />
-            <ComboBox x:Name="selectedFont" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="150" Margin="104,292,-190,-292" ItemsSource="{Binding Source={StaticResource staticTools}, Path=getFontNames}" SizeChanged="selectedFont_SizeChanged" SelectionChanged="selectedFont_SelectionChanged"/>
-            <ComboBox x:Name="selectedFontSize" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="150" Margin="104,328,-190,-328" ItemsSource="{Binding Source={StaticResource staticTools}, Path=getIntArrayFrom0To100}" SelectionChanged="selectedFontSize_SelectionChanged"/>
 
-        </RelativePanel>
-        <Button x:Name="save_button" HorizontalAlignment="Left" Margin="275,384,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.692,5.031" Width="40" Height="37" Click="save_button_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="/Assets/true.png" />
-            </Button.Background>
-        </Button>
-        <Popup x:Name="popup" Visibility="Visible" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <StackPanel Width="280" Height="150" Margin="-140, -140, -40, -40" Orientation="Vertical" Background="Cyan">
-                <TextBlock x:Name="popupTitle" Height="50"/>
-                <TextBlock x:Name="popupMessage" Height="50"/>
-                <Button Click="Button_Click_1" Margin="194,0,0,0" Content="Okay, I've read it" Width="86" />
+                <Button x:Name="reflectionsButton" Width="50" Height="50" Click="reflectionsButton_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Assets/journal.png"/>
+                    </Button.Background>
+                </Button>
             </StackPanel>
-        </Popup>
-    </Grid>
+        </SplitView.Pane>
+    </SplitView>
 </Page>

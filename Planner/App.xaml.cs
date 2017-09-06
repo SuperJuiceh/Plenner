@@ -7,10 +7,12 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -41,7 +43,14 @@ namespace Planner
 
             this.UnhandledException += App_UnhandledException;
 
+            //Task.Run(async () =>
+            //{
+            //    (await StorageFile.GetFileFromPathAsync(@"C:\Data\Users\DefApps\AppData\Local\Packages\7929409e-934f-4fd9-a1d4-b9e0a63adaf9_f0sg4s7mn64ym\LocalState\planning.pln")).DeleteAsync();
+            //});
+
             GeneralApplicationData.Settings = Settings = new SettingsStorage();
+
+
             
             
             try

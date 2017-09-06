@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "targets": {
     "UAP,Version=v10.0.15063": {
       "Microsoft.CSharp/4.0.1": {
@@ -5120,9 +5120,6 @@
       },
       "runtime.win10-arm-aot.runtime.native.System.IO.Compression/4.0.1": {
         "type": "package",
-        "compile": {
-          "runtimes/win10-arm-aot/lib/netcore50/_._": {}
-        },
         "runtime": {
           "runtimes/win10-arm-aot/lib/netcore50/clrcompression.dll": {}
         }
@@ -9761,9 +9758,6 @@
       },
       "runtime.win10-x64-aot.runtime.native.System.IO.Compression/4.0.1": {
         "type": "package",
-        "compile": {
-          "runtimes/win10-x64-aot/lib/netcore50/_._": {}
-        },
         "runtime": {
           "runtimes/win10-x64-aot/lib/netcore50/clrcompression.dll": {}
         }
@@ -14408,9 +14402,6 @@
       },
       "runtime.win10-x86-aot.runtime.native.System.IO.Compression/4.0.1": {
         "type": "package",
-        "compile": {
-          "runtimes/win10-x86-aot/lib/netcore50/_._": {}
-        },
         "runtime": {
           "runtimes/win10-x86-aot/lib/netcore50/clrcompression.dll": {}
         }
@@ -24438,14 +24429,24 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Bilel\\Documents\\Plenner\\DataLab\\DataLab.csproj",
+      "projectUniqueName": "C:\\Users\\Bilel\\source\\repos\\Plenner\\DataLab\\DataLab.csproj",
       "projectName": "DataLab",
-      "projectPath": "C:\\Users\\Bilel\\Documents\\Plenner\\DataLab\\DataLab.csproj",
-      "outputPath": "C:\\Users\\Bilel\\Documents\\Plenner\\DataLab\\obj\\",
+      "projectPath": "C:\\Users\\Bilel\\source\\repos\\Plenner\\DataLab\\DataLab.csproj",
+      "packagesPath": "C:\\Users\\Bilel\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Bilel\\source\\repos\\Plenner\\DataLab\\obj\\",
       "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
+      "configFilePaths": [
+        "C:\\Users\\Bilel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
       "originalTargetFrameworks": [
         "uap10.0.15063"
       ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
       "frameworks": {
         "uap10.0.15063": {
           "projectReferences": {}
@@ -24459,7 +24460,7 @@
       },
       "System.ValueTuple": {
         "target": "Package",
-        "version": "[4.3.1, )"
+        "version": "4.3.1"
       }
     },
     "frameworks": {
@@ -24471,7 +24472,7 @@
           },
           "System.ValueTuple": {
             "target": "Package",
-            "version": "[4.3.1, )"
+            "version": "4.3.1"
           }
         }
       }

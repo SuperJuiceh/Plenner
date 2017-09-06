@@ -292,10 +292,7 @@ namespace Planner.Planner_XamlTypeInfo
         private object Activate_19_AddDiaryPage() { return new global::Planner.AddDiaryPage(); }
         private object Activate_20_AddReflectionPage() { return new global::Planner.AddReflectionPage(); }
         private object Activate_23_AddToDoItemPage() { return new global::Planner.AddToDoItemPage(); }
-        private object Activate_25_ToDoItem() { return new global::DataLab.Data.Planning.ToDoItem(); }
-        private object Activate_26_PlanningItem() { return new global::DataLab.Data.Planning.PlanningItem(); }
         private object Activate_27_AddToDoSetPage() { return new global::Planner.AddToDoSetPage(); }
-        private object Activate_28_ToDoItemSet() { return new global::DataLab.Data.Planning.ToDoItemSet(); }
         private object Activate_29_DiariesPage() { return new global::Planner.DiariesPage(); }
         private object Activate_30_ExtendedSplash() { return new global::Planner.ExtendedSplash(); }
         private object Activate_31_NameToOnlineStatusConverter() { return new global::Planner.Data.Converters.NameToOnlineStatusConverter(); }
@@ -317,7 +314,6 @@ namespace Planner.Planner_XamlTypeInfo
         private object Activate_49_UserNullStatusToBoolConverter() { return new global::Planner.Data.Converters.UserNullStatusToBoolConverter(); }
         private object Activate_50_SettingsPage() { return new global::Planner.SettingsPage(); }
         private object Activate_51_ShowDiaryPage() { return new global::Planner.ShowDiaryPage(); }
-        private object Activate_52_Diary() { return new global::DataLab.Data.Planning.Diary(); }
         private object Activate_53_ToDoPage() { return new global::Planner.ToDoPage(); }
         private object Activate_54_UserPage() { return new global::Planner.UserPage(); }
         private void VectorAdd_36_ObservableCollection(object instance, object item)
@@ -452,7 +448,7 @@ namespace Planner.Planner_XamlTypeInfo
             case 18:   //  Planner.AddActivity
                 userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_18_AddActivity;
-                userType.AddMemberName("Storage");
+                userType.AddMemberName("Planning");
                 userType.AddMemberName("Settings");
                 userType.SetIsLocalType();
                 xamlType = userType;
@@ -505,13 +501,11 @@ namespace Planner.Planner_XamlTypeInfo
 
             case 25:   //  DataLab.Data.Planning.ToDoItem
                 userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DataLab.Data.Planning.PlanningItem"));
-                userType.Activator = Activate_25_ToDoItem;
                 xamlType = userType;
                 break;
 
             case 26:   //  DataLab.Data.Planning.PlanningItem
                 userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_26_PlanningItem;
                 xamlType = userType;
                 break;
 
@@ -771,15 +765,15 @@ namespace Planner.Planner_XamlTypeInfo
             var that = (global::Planner.ActivitiesPage)instance;
             that.Settings = (global::DataLab.Storage.SettingsStorage)Value;
         }
-        private object get_4_AddActivity_Storage(object instance)
+        private object get_4_AddActivity_Planning(object instance)
         {
             var that = (global::Planner.AddActivity)instance;
-            return that.Storage;
+            return that.Planning;
         }
-        private void set_4_AddActivity_Storage(object instance, object Value)
+        private void set_4_AddActivity_Planning(object instance, object Value)
         {
             var that = (global::Planner.AddActivity)instance;
-            that.Storage = (global::DataLab.Storage.PlanningItemStorage)Value;
+            that.Planning = (global::DataLab.Storage.PlanningItemStorage)Value;
         }
         private object get_5_AddActivity_Settings(object instance)
         {
@@ -1238,11 +1232,11 @@ namespace Planner.Planner_XamlTypeInfo
                 xamlMember.Getter = get_3_ActivitiesPage_Settings;
                 xamlMember.Setter = set_3_ActivitiesPage_Settings;
                 break;
-            case "Planner.AddActivity.Storage":
+            case "Planner.AddActivity.Planning":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.AddActivity");
-                xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "Storage", "DataLab.Storage.PlanningItemStorage");
-                xamlMember.Getter = get_4_AddActivity_Storage;
-                xamlMember.Setter = set_4_AddActivity_Storage;
+                xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "Planning", "DataLab.Storage.PlanningItemStorage");
+                xamlMember.Getter = get_4_AddActivity_Planning;
+                xamlMember.Setter = set_4_AddActivity_Planning;
                 break;
             case "Planner.AddActivity.Settings":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.AddActivity");

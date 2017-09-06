@@ -937,3 +937,4 @@ C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\qualifiers.txt
 C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\qualifiers.txt.intermediate
 C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\ProjectArchitectures.txt
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\Planner.csproj.CoreCompileInputs.cache

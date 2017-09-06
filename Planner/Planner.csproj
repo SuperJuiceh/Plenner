@@ -205,6 +205,10 @@
     <Content Include="Assets\login_icon.png" />
     <Content Include="Assets\mail.png" />
     <Content Include="Assets\minus.png" />
+    <Content Include="Assets\NotificationIcons\notif_icon_1.png" />
+    <Content Include="Assets\NotificationIcons\notif_icon_2.png" />
+    <Content Include="Assets\NotificationIcons\notif_icon_3.png" />
+    <Content Include="Assets\NotificationIcons\notif_icon_4.png" />
     <Content Include="Assets\pinpoint_gps.png" />
     <Content Include="Assets\Planner_logo.png" />
     <Content Include="Assets\Plus.png" />
@@ -212,8 +216,10 @@
     <Content Include="Assets\Plus__Orange.png" />
     <Content Include="Assets\refresh.png" />
     <Content Include="Assets\register_icon.png" />
+    <Content Include="Assets\settings_icon.png" />
     <Content Include="Assets\Swipe_right_or_left.png" />
     <Content Include="Assets\sync.png" />
+    <Content Include="Assets\ToDo_icon.png" />
     <Content Include="Assets\true.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />

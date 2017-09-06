@@ -37,7 +37,6 @@ namespace Planner.Data.Notify
                 {
                     foreach (DayOfWeek day in Enum.GetValues(typeof(DayOfWeek)))
                     {
-                    Debug.WriteLine("Trying a day");
                         if (rpItem.Days.Contains(day))
                         {
                             DateTime setTime = DateTime.Now;
@@ -81,7 +80,7 @@ namespace Planner.Data.Notify
                     xmlNodes[0].AppendChild(xml.CreateTextNode(a.Name));
                     xmlNodes[1].AppendChild(xml.CreateTextNode(a.Description));
 
-                    ((XmlElement)xmlNode2[0]).SetAttribute("src", "ms-appx:///Assets/delete.png");
+                    ((XmlElement)xmlNode2[0]).SetAttribute("src", "ms-appx:/" + GeneralApplicationData.Settings.Settings.NotificationIconString);
 
                     ScheduledToastNotification toast = new ScheduledToastNotification(xml, a.Start);
                     toast.Tag = "Planner";
@@ -105,7 +104,7 @@ namespace Planner.Data.Notify
                         xmlNodes[0].AppendChild(xml.CreateTextNode(tdi.Name));
                         xmlNodes[1].AppendChild(xml.CreateTextNode(tdi.Description));
 
-                        ((XmlElement)xmlNode2[0]).SetAttribute("src", "ms-appx:///Assets/delete.png");
+                        ((XmlElement)xmlNode2[0]).SetAttribute("src", "ms-appx:/"+GeneralApplicationData.Settings.Settings.NotificationIconString);
 
                         ScheduledToastNotification toast = new ScheduledToastNotification(xml, tdi.Deadline - TimeSpan.FromMinutes(15));
                         toast.Tag = "Planner";
@@ -114,7 +113,19 @@ namespace Planner.Data.Notify
                         ToastNotificationManager.CreateToastNotifier().AddToSchedule(toast);
                     }
                 //}
-            }
+                }
+
+                foreach (ToDoItemSet tdis in p.tdiSets)
+                {
+                    foreach (ToDoItem tdi in tdis.Children)
+                    {
+                        if (tdi.HasDeadline && !tdi.IsDone && tdi.Deadline.Subtract(TimeSpan.FromMinutes(15)) > DateTime.Now)
+                        {
+                            
+                        }
+                    }
+                }
+
         }
 
     }

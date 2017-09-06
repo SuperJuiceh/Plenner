@@ -10,6 +10,7 @@
     <RootPropertyPathName Name="Description" />
     <RootPropertyPathName Name="Start" />
     <RootPropertyPathName Name="End" />
+    <RootPropertyPathName Name="Width" />
     <RootPropertyPathName Name="IsChecked" />
     <RootPropertyPathName Name="MultipleItems" />
     <RootPropertyPathName Name="IsDone" />
@@ -26,6 +27,9 @@
     <RootPropertyPathName Name="Poto" />
     <RootPropertyPathName Name="Photo" />
     <RootPropertyPathName Name="Settings" />
+    <RootPropertyPathName Name="getIntArrayFrom0To100" />
+    <RootPropertyPathName Name="getFontNames" />
+    <RootPropertyPathName Name="NotificationIconString" />
     <RootPropertyPathName Name="EnableNotifications" />
     <RootPropertyPathName Name="SoundEnabled" />
     <RootPropertyPathName Name="Diary" />
@@ -39,7 +43,10 @@
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
       <RootProperty Name="RequestedTheme" />
+      <RootProperty Name="Resources" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.ResourceDictionary" />
+    <RootType FullName="DataLab.Tools.StaticTools" />
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
@@ -49,24 +56,35 @@
     <RootType FullName="Planner.Data.Converters.DateTimeFormatConverter" />
     <RootType FullName="Planner.Data.Converters.RandomColorGenerator" />
     <RootType FullName="Planner.Data.Converters.DaysListToStringConverter" />
+    <RootType FullName="Windows.UI.Xaml.Controls.SplitView">
+      <RootProperty Name="DisplayMode" />
+      <RootProperty Name="OpenPaneLength" />
+      <RootProperty Name="CompactPaneLength" />
+      <RootProperty Name="Content" />
+      <RootProperty Name="Pane" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
       <RootProperty Name="Margin" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Width" />
+      <RootProperty Name="RowDefinitions" />
       <RootProperty Name="ColumnDefinitions" />
       <RootProperty Name="Background" />
       <RootProperty Name="Children" />
       <RootProperty Name="Resources" />
-      <RootProperty Name="RowDefinitions" />
       <RootEvent Name="DoubleTapped" />
-      <RootMethod Name="GetColumn" />
-      <RootMethod Name="SetColumn" />
-      <RootMethod Name="GetColumnSpan" />
-      <RootMethod Name="SetColumnSpan" />
+      <RootEvent Name="Loaded" />
       <RootMethod Name="GetRow" />
       <RootMethod Name="SetRow" />
+      <RootMethod Name="GetColumnSpan" />
+      <RootMethod Name="SetColumnSpan" />
       <RootMethod Name="GetRowSpan" />
       <RootMethod Name="SetRowSpan" />
+      <RootMethod Name="GetColumn" />
+      <RootMethod Name="SetColumn" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
+      <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
       <RootProperty Name="Width" />
@@ -114,31 +132,32 @@
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
       <RootProperty Name="Background" />
-      <RootProperty Name="RenderTransformOrigin" />
       <RootProperty Name="FontSize" />
+      <RootProperty Name="RenderTransformOrigin" />
       <RootProperty Name="Flyout" />
+      <RootProperty Name="Tag" />
       <RootProperty Name="Content" />
       <RootProperty Name="Visibility" />
       <RootEvent Name="Click" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.RelativePanel">
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Height" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Width" />
-      <RootProperty Name="ManipulationMode" />
-      <RootProperty Name="Children" />
-      <RootProperty Name="Visibility" />
-      <RootProperty Name="DataContext" />
-      <RootProperty Name="RenderTransformOrigin" />
-      <RootEvent Name="ManipulationStarted" />
-      <RootEvent Name="ManipulationCompleted" />
-      <RootEvent Name="PointerPressed" />
-    </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension">
       <RootProperty Name="Converter" />
       <RootProperty Name="ConverterParameter" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.RelativePanel">
+      <RootProperty Name="Children" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Visibility" />
+      <RootProperty Name="DataContext" />
+      <RootProperty Name="ManipulationMode" />
+      <RootProperty Name="RenderTransformOrigin" />
+      <RootEvent Name="PointerPressed" />
+      <RootEvent Name="ManipulationCompleted" />
+      <RootEvent Name="ManipulationStarted" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
@@ -150,6 +169,7 @@
       <RootProperty Name="Path" />
       <RootProperty Name="Mode" />
       <RootProperty Name="UpdateSourceTrigger" />
+      <RootProperty Name="Source" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.Flyout">
@@ -167,6 +187,17 @@
       <RootEvent Name="Loaded" />
       <RootEvent Name="MapTapped" />
       <RootEvent Name="MapElementClick" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Orientation" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Children" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Visibility" />
     </RootType>
     <RootType FullName="Planner.ActivitiesPage" />
     <RootType FullName="Planner.Data.Converters.BoolToStackPanelVisibility" />
@@ -224,17 +255,6 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
-      <RootProperty Name="Height" />
-      <RootProperty Name="Width" />
-      <RootProperty Name="Children" />
-      <RootProperty Name="Orientation" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Background" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Visibility" />
     </RootType>
     <RootType FullName="Planner.AddActivity" />
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
@@ -318,11 +338,17 @@
       <RootProperty Name="Child" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="ItemsSource" />
       <RootProperty Name="Name" />
       <RootProperty Name="RenderTransformOrigin" />
-      <RootProperty Name="Width" />
       <RootProperty Name="RenderTransform" />
-      <RootProperty Name="Margin" />
+      <RootEvent Name="SizeChanged" />
+      <RootEvent Name="SelectionChanged" />
       <RootEvent Name="Loaded" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.CompositeTransform">
@@ -330,9 +356,6 @@
     </RootType>
     <RootType FullName="Planner.SettingsPage" />
     <RootType FullName="Planner.ShowDiaryPage" />
-    <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
-      <RootProperty Name="Height" />
-    </RootType>
     <RootType FullName="Planner.ToDoPage" />
     <RootType FullName="Planner.UserPage" />
   </Roots.RootTypes>

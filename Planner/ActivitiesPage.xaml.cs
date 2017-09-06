@@ -31,12 +31,12 @@ namespace Planner
     /// </summary>
     public sealed partial class ActivitiesPage : Page
     {
+        
+        private int num;
 
-        private Point manipulationStartingPoint;
+        public PlanningItemStorage Planning { get { return GeneralApplicationData.Planning; } set { GeneralApplicationData.Planning = value; } }
 
-        public PlanningItemStorage Planning { get; set; }
-
-        public SettingsStorage Settings { get; set; }
+        public SettingsStorage Settings { get { return GeneralApplicationData.Settings; } set { GeneralApplicationData.Settings = value; } }
 
         private bool singleActivityNameSortedAscending, singleActivityTimeSortedAscending, repeatingActivityNameSortedAscending, repeatingActivityTimeSortedAscending;
 
@@ -44,10 +44,6 @@ namespace Planner
 
         public ActivitiesPage()
         {
-            // Get copies of our 
-            Planning = GeneralApplicationData.Planning;
-            Settings = GeneralApplicationData.Settings;
-
             UserStyleFactory.addStyles(this.Resources, this.Settings.Settings);
 
             this.InitializeComponent();
@@ -137,23 +133,7 @@ namespace Planner
                 Planning.removePlanningItem(rpi);
             }
         }
-
-        private void Grid_ManipulationStarted(object sender, ManipulationStartedRoutedEventArgs e)
-        {
-            manipulationStartingPoint = e.Position;
-        }
-
-        private void Grid_ManipulationCompleted(object sender, ManipulationCompletedRoutedEventArgs e)
-        {
-            if (Math.Abs(e.Position.X - manipulationStartingPoint.X) >= 75)
-            {
-                // Right
-                if (e.Position.X > manipulationStartingPoint.X)
-                    this.Frame.Navigate(typeof(ToDoPage), Planning);
-                else // Left 
-                    this.Frame.Navigate(typeof(SettingsPage), Settings);
-            }
-        }
+        
 
         private void repeatingNameHeader_Tapped(object sender, TappedRoutedEventArgs e)
         {
@@ -252,6 +232,26 @@ namespace Planner
 
         }
 
+        private void todoitemsButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(ToDoPage));
+        }
+
+        private void reflectionsButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Reflection));
+        }
+
+        private void settingsButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(SettingsPage));
+        }
+
+        private void splitViewOpenCloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.mainSplitView.IsPaneOpen = !this.mainSplitView.IsPaneOpen;
+        }
+
         private void singleActivityNameTextBlock_Tapped(object sender, TappedRoutedEventArgs e)
         {
             // Orderedlist placeholder
@@ -347,5 +347,6 @@ namespace Planner
                 }
             });
         }
+        
     }
 }

@@ -85,7 +85,7 @@ namespace DataLab.Storage
                 Activity act = plan.Activities[position] = a;
                 act.ChangedAll();
             }
-            catch (Exception e)
+            catch (Exception)
             { 
                 Debug.WriteLine("Doesnt exist");
             }

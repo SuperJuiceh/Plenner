@@ -19,7 +19,7 @@ namespace DataLab.Data.Planning
 
         public List<PlanningItem> PlanningItems { get; private set; } = new List<PlanningItem>();
 
-        public Diary()
+        private Diary()
         {
         }
 

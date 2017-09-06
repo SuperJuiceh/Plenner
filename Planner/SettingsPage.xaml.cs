@@ -243,5 +243,43 @@ namespace Planner
         {
 
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            int iconNum = int.Parse((string)(sender as Button).Tag);
+
+            // We have 4 icons
+            if (iconNum != 0 && iconNum < 5)
+            {
+                Settings.Settings.NotificationIconString = "//Assets/NotificationIcons/Notif_icon_"+iconNum.ToString()+".png";
+
+                Settings.saveStorage();
+            }
+
+            Debug.WriteLine("End button Click 2()");
+
+        }
+
+        private void todoitemsButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(ToDoPage));
+        }
+
+        private void activitiesButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(ActivitiesPage));
+        }
+
+
+        private void reflectionsButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(ReflectionsPage));
+        }
+
+
+        private void splitViewOpenCloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            mainSplitView.IsPaneOpen = !mainSplitView.IsPaneOpen;
+        }
     }
 }

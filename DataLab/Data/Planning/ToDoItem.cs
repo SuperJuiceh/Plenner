@@ -43,7 +43,7 @@ namespace DataLab.Data.Planning
         }
 
 
-        public ToDoItem(): base()
+        protected ToDoItem(): base()
         {
 
         }

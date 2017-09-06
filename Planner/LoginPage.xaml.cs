@@ -77,7 +77,7 @@ namespace Planner
 
         private void Grid_DoubleTapped(object sender, DoubleTappedRoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(UserPage));
+            this.Frame.Navigate(typeof(ActivitiesPage));
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -91,7 +91,7 @@ namespace Planner
         {
             GeneralApplicationData.Planning = new PlanningItemStorage();
 
-            while (GeneralApplicationData.Planning.waitToLoad(1)) { }
+            while (!GeneralApplicationData.Planning.waitToLoad(1)) { }
 
             this.Frame.Navigate(typeof(ActivitiesPage));
         }

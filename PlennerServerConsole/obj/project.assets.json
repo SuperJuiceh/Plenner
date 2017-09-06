@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "targets": {
     "UAP,Version=v10.0.15063": {
       "Microsoft.ApplicationInsights/2.1.0": {
@@ -2273,6 +2273,12 @@
         "dependencies": {
           "Microsoft.NETCore.UniversalWindowsPlatform": "5.3.3",
           "System.ValueTuple": "4.3.1"
+        },
+        "compile": {
+          "bin/placeholder/DataLab.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataLab.dll": {}
         }
       }
     },
@@ -4631,6 +4637,12 @@
         "dependencies": {
           "Microsoft.NETCore.UniversalWindowsPlatform": "5.3.3",
           "System.ValueTuple": "4.3.1"
+        },
+        "compile": {
+          "bin/placeholder/DataLab.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataLab.dll": {}
         }
       }
     },
@@ -5301,9 +5313,6 @@
       },
       "runtime.win10-arm-aot.runtime.native.System.IO.Compression/4.0.1": {
         "type": "package",
-        "compile": {
-          "runtimes/win10-arm-aot/lib/netcore50/_._": {}
-        },
         "runtime": {
           "runtimes/win10-arm-aot/lib/netcore50/clrcompression.dll": {}
         }
@@ -7028,6 +7037,12 @@
         "dependencies": {
           "Microsoft.NETCore.UniversalWindowsPlatform": "5.3.3",
           "System.ValueTuple": "4.3.1"
+        },
+        "compile": {
+          "bin/placeholder/DataLab.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataLab.dll": {}
         }
       }
     },
@@ -9395,6 +9410,12 @@
         "dependencies": {
           "Microsoft.NETCore.UniversalWindowsPlatform": "5.3.3",
           "System.ValueTuple": "4.3.1"
+        },
+        "compile": {
+          "bin/placeholder/DataLab.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataLab.dll": {}
         }
       }
     },
@@ -10068,9 +10089,6 @@
       },
       "runtime.win10-x64-aot.runtime.native.System.IO.Compression/4.0.1": {
         "type": "package",
-        "compile": {
-          "runtimes/win10-x64-aot/lib/netcore50/_._": {}
-        },
         "runtime": {
           "runtimes/win10-x64-aot/lib/netcore50/clrcompression.dll": {}
         }
@@ -11801,6 +11819,12 @@
         "dependencies": {
           "Microsoft.NETCore.UniversalWindowsPlatform": "5.3.3",
           "System.ValueTuple": "4.3.1"
+        },
+        "compile": {
+          "bin/placeholder/DataLab.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataLab.dll": {}
         }
       }
     },
@@ -14168,6 +14192,12 @@
         "dependencies": {
           "Microsoft.NETCore.UniversalWindowsPlatform": "5.3.3",
           "System.ValueTuple": "4.3.1"
+        },
+        "compile": {
+          "bin/placeholder/DataLab.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataLab.dll": {}
         }
       }
     },
@@ -14841,9 +14871,6 @@
       },
       "runtime.win10-x86-aot.runtime.native.System.IO.Compression/4.0.1": {
         "type": "package",
-        "compile": {
-          "runtimes/win10-x86-aot/lib/netcore50/_._": {}
-        },
         "runtime": {
           "runtimes/win10-x86-aot/lib/netcore50/clrcompression.dll": {}
         }
@@ -16574,6 +16601,12 @@
         "dependencies": {
           "Microsoft.NETCore.UniversalWindowsPlatform": "5.3.3",
           "System.ValueTuple": "4.3.1"
+        },
+        "compile": {
+          "bin/placeholder/DataLab.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataLab.dll": {}
         }
       }
     }
@@ -24940,19 +24973,29 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Bilel\\Documents\\Plenner\\PlennerServerConsole\\PlennerServer.csproj",
+      "projectUniqueName": "C:\\Users\\Bilel\\source\\repos\\Plenner\\PlennerServerConsole\\PlennerServer.csproj",
       "projectName": "PlennerServer",
-      "projectPath": "C:\\Users\\Bilel\\Documents\\Plenner\\PlennerServerConsole\\PlennerServer.csproj",
-      "outputPath": "C:\\Users\\Bilel\\Documents\\Plenner\\PlennerServerConsole\\obj\\",
+      "projectPath": "C:\\Users\\Bilel\\source\\repos\\Plenner\\PlennerServerConsole\\PlennerServer.csproj",
+      "packagesPath": "C:\\Users\\Bilel\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Bilel\\source\\repos\\Plenner\\PlennerServerConsole\\obj\\",
       "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
+      "configFilePaths": [
+        "C:\\Users\\Bilel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
       "originalTargetFrameworks": [
         "uap10.0.15063"
       ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
       "frameworks": {
         "uap10.0.15063": {
           "projectReferences": {
-            "C:\\Users\\Bilel\\Documents\\Plenner\\DataLab\\DataLab.csproj": {
-              "projectPath": "C:\\Users\\Bilel\\Documents\\Plenner\\DataLab\\DataLab.csproj"
+            "C:\\Users\\Bilel\\source\\repos\\Plenner\\DataLab\\DataLab.csproj": {
+              "projectPath": "C:\\Users\\Bilel\\source\\repos\\Plenner\\DataLab\\DataLab.csproj"
             }
           }
         }
