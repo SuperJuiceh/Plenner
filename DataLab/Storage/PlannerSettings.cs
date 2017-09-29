@@ -16,6 +16,7 @@ namespace DataLab.Storage
         private bool _soundEnabled;
         // Settings
         public bool SoundEnabled { get { return _soundEnabled; } set { _soundEnabled = value; Changed("SoundEnabled"); } }
+        // Online User activity
         [XmlIgnore]
         private bool _autoSyncAccount;
         public bool AutoSyncAccount { get { return _autoSyncAccount; } set { _autoSyncAccount = value; Changed("AutoSyncAccount"); } }
@@ -31,8 +32,9 @@ namespace DataLab.Storage
 
         public long PlanningItemExperationLong { get; set; }
 
+        // Global
         [XmlIgnore]
-        private bool _enableNotifications;
+        private bool _enableNotifications = true;
         public bool EnableNotifications { get { return _enableNotifications; } set { _enableNotifications = value; Changed("EnableNotifications"); } }
 
         [XmlIgnore]
@@ -45,7 +47,21 @@ namespace DataLab.Storage
 
         [XmlIgnore]
         private string _notificationIconString;
-        public string NotificationIconString { get { return _notificationIconString; } set { _notificationIconString = value; Changed("NotificationIconNumber"); } }
+        public string NotificationIconString { get { return _notificationIconString != null ? _notificationIconString : "/Assets/NotificationIcons/Notif_icon_1.png"; } set { _notificationIconString = value; Changed("NotificationIconNumber"); } }
+
+        // ActivityPage
+        private bool _activitiesSingleListVisible;
+        public bool ActivitiesSingleListVisible { get { return _activitiesSingleListVisible; } set { _activitiesSingleListVisible = value; Changed("ActivitiesSingleListVisible"); } }
+
+        private bool _activitiesRepeatingListVisible;
+        public bool ActivitiesRepeatingListVisible { get { return _activitiesRepeatingListVisible; } set { _activitiesRepeatingListVisible = value; Changed("ActivitiesRepeatingListVisible"); } }
+
+        // ToDoPage
+        private bool _toDoItemsSingleListVisible;
+        public bool ToDoItemsSingleListVisible { get { return _toDoItemsSingleListVisible; } set { _toDoItemsSingleListVisible = value; Changed("ToDoItemsSingleListVisible"); } }
+
+        private bool _toDoItemsSetListVisible;
+        public bool ToDoItemsSetListVisible { get { return _toDoItemsSetListVisible; } set { _toDoItemsSetListVisible = value; Changed("ToDoItemsSetListVisible"); } }
 
         public PlannerSettings()
         {
@@ -54,6 +70,7 @@ namespace DataLab.Storage
 
         public void Changed(string name)
         {
+            Debug.WriteLine("Changed {0}", name);
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,6 +27,8 @@ namespace Planner.Data.Converters
 
         public static BasicGeoposition geopositiontobgp(Geoposition pos)
         {
+            Debug.WriteLine("Returning geopostobgp");
+
             BasicGeoposition bgpos = new BasicGeoposition()
             {
 
@@ -34,7 +37,7 @@ namespace Planner.Data.Converters
                 Longitude = pos.Coordinate.Point.Position.Longitude
 
             };
-
+            Debug.WriteLine("Returning geopostobgp");
 
             //Debug.WriteLine(pos.VenueData.ToString());
             return bgpos;

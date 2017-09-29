@@ -35,7 +35,6 @@ C:\Users\Bilel\Documents\Plenner\DataLab\obj\ARM\Debug\MultipleQualifiersPerDime
 C:\Users\Bilel\source\repos\Plenner\DataLab\bin\ARM\Debug\DataLab.dll
 C:\Users\Bilel\source\repos\Plenner\DataLab\bin\ARM\Debug\DataLab.pdb
 C:\Users\Bilel\source\repos\Plenner\DataLab\bin\ARM\Debug\DataLab.pri
-C:\Users\Bilel\source\repos\Plenner\DataLab\obj\ARM\Debug\DataLab.csprojResolveAssemblyReference.cache
 C:\Users\Bilel\source\repos\Plenner\DataLab\obj\ARM\Debug\DataLab.csproj.CoreCompileInputs.cache
 C:\Users\Bilel\source\repos\Plenner\DataLab\obj\ARM\Debug\DataLab.dll
 C:\Users\Bilel\source\repos\Plenner\DataLab\obj\ARM\Debug\DataLab.pdb
@@ -50,3 +49,4 @@ C:\Users\Bilel\source\repos\Plenner\DataLab\obj\ARM\Debug\pri.resfiles.intermedi
 C:\Users\Bilel\source\repos\Plenner\DataLab\obj\ARM\Debug\qualifiers.txt
 C:\Users\Bilel\source\repos\Plenner\DataLab\obj\ARM\Debug\qualifiers.txt.intermediate
 C:\Users\Bilel\source\repos\Plenner\DataLab\obj\ARM\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Bilel\source\repos\Plenner\DataLab\obj\ARM\Debug\DataLab.csprojResolveAssemblyReference.cache

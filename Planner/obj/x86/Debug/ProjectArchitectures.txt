@@ -1,2 +1,0 @@
-C:\Users\Bilel\Documents\Plenner\DataLab\DataLab.csproj;x86
-C:\Users\Bilel\Documents\Plenner\Planner\Planner.csproj;x86

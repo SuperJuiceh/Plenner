@@ -1,940 +1,324 @@
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\App.g.i.cs
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\App.g.cs
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\ActivitiesPage.g.i.cs
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\ActivitiesPage.g.cs
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\AddActivity.g.i.cs
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\AddActivity.g.cs
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\AddDiaryPage.g.i.cs
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\AddDiaryPage.g.cs
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\AddToDoSetPage.g.i.cs
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\AddToDoSetPage.g.cs
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\DiariesPage.g.i.cs
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\DiariesPage.g.cs
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\ExtendedSplash.g.i.cs
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\ExtendedSplash.g.cs
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FriendsPage.g.i.cs
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FriendsPage.g.cs
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\GrantPermissionsPage.g.i.cs
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\GrantPermissionsPage.g.cs
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\LoginPage.g.i.cs
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\LoginPage.g.cs
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\MailPage.g.i.cs
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\MailPage.g.cs
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\MainPage.g.i.cs
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\MainPage.g.cs
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\ReflectionsPage.g.i.cs
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\ReflectionsPage.g.cs
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\RegistrationPage.g.i.cs
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\RegistrationPage.g.cs
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\SendMailPage.g.i.cs
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\SendMailPage.g.cs
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\SettingsPage.g.i.cs
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\SettingsPage.g.cs
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\ShowDiaryPage.g.i.cs
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\ShowDiaryPage.g.cs
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\ToDoPage.g.i.cs
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\ToDoPage.g.cs
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\UserPage.g.i.cs
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\UserPage.g.cs
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\XamlTypeInfo.g.cs
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\App.xaml
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\MainPage.xaml
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\ActivitiesPage.xaml
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\AddActivity.xaml
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\AddDiaryPage.xaml
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\AddToDoSetPage.xaml
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\DiariesPage.xaml
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\ExtendedSplash.xaml
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FriendsPage.xaml
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\GrantPermissionsPage.xaml
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\LoginPage.xaml
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\MailPage.xaml
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\ReflectionsPage.xaml
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\RegistrationPage.xaml
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\SendMailPage.xaml
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\SettingsPage.xaml
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\ShowDiaryPage.xaml
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\ToDoPage.xaml
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\UserPage.xaml
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\App.xbf
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\MainPage.xbf
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\ActivitiesPage.xbf
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\AddActivity.xbf
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\AddDiaryPage.xbf
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\AddToDoSetPage.xbf
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\DiariesPage.xbf
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\ExtendedSplash.xbf
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FriendsPage.xbf
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\GrantPermissionsPage.xbf
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\LoginPage.xbf
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\MailPage.xbf
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\ReflectionsPage.xbf
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\RegistrationPage.xbf
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\SendMailPage.xbf
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\SettingsPage.xbf
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\ShowDiaryPage.xbf
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\ToDoPage.xbf
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\UserPage.xbf
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\XamlSaveStateFile.xml
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\AddToDoItemPage.g.i.cs
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\AddToDoItemPage.g.cs
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\AddToDoItemPage.xaml
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\AddToDoItemPage.xbf
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\AddReflectionPage.g.i.cs
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\AddReflectionPage.g.cs
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\AddReflectionPage.xaml
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\AddReflectionPage.xbf
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\App.xbf
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\ActivitiesPage.xbf
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\AddActivity.xbf
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\AddDiaryPage.xbf
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\AddReflectionPage.xbf
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\AddToDoItemPage.xbf
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\AddToDoSetPage.xbf
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\DiariesPage.xbf
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\ExtendedSplash.xbf
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\FriendsPage.xbf
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\GrantPermissionsPage.xbf
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\LoginPage.xbf
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\MailPage.xbf
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\MainPage.xbf
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\ReflectionsPage.xbf
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\RegistrationPage.xbf
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\SendMailPage.xbf
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\SettingsPage.xbf
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\ShowDiaryPage.xbf
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\ToDoPage.xbf
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\UserPage.xbf
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\Planner.xr.xml
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\Planner.exe
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\Planner.pdb
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\resources.pri
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\AppxManifest.xml
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\Core\AppxManifest.xml
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\Core\Planner.exe
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\Planner.build.appxrecipe
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\Microsoft.CSharp.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.ComponentModel.DataAnnotations.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Core.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Net.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Numerics.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Runtime.Serialization.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.ServiceModel.Web.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.ServiceModel.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Windows.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Xml.Linq.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Xml.Serialization.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Xml.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\Microsoft.VisualBasic.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\Microsoft.Win32.Primitives.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Private.DataContractSerialization.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.AppContext.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Collections.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Collections.Concurrent.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Collections.Immutable.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Collections.NonGeneric.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Collections.Specialized.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.ComponentModel.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.ComponentModel.Annotations.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.ComponentModel.EventBasedAsync.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Data.Common.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Diagnostics.Contracts.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Diagnostics.Debug.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Diagnostics.StackTrace.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Diagnostics.Tools.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Diagnostics.Tracing.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Dynamic.Runtime.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Globalization.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Globalization.Calendars.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Globalization.Extensions.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.IO.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.IO.Compression.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\ClrCompression.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.IO.Compression.ZipFile.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.IO.FileSystem.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.IO.FileSystem.Primitives.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.IO.IsolatedStorage.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.IO.UnmanagedMemoryStream.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Linq.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Linq.Expressions.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Linq.Parallel.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Linq.Queryable.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Net.Http.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Net.Http.Rtc.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Net.NetworkInformation.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Net.Primitives.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Net.Requests.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Net.Sockets.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Net.WebHeaderCollection.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Numerics.Vectors.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Numerics.Vectors.WindowsRuntime.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.ObjectModel.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Private.ServiceModel.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Private.Uri.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Reflection.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Reflection.Context.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Reflection.DispatchProxy.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Reflection.Emit.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Reflection.Emit.ILGeneration.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Reflection.Emit.Lightweight.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Reflection.Extensions.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Reflection.Metadata.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Reflection.Primitives.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Reflection.TypeExtensions.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Resources.ResourceManager.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Runtime.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Runtime.Extensions.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Runtime.Handles.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Runtime.InteropServices.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Runtime.InteropServices.WindowsRuntime.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Runtime.Numerics.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Runtime.Serialization.Json.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Runtime.Serialization.Primitives.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Runtime.Serialization.Xml.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Runtime.WindowsRuntime.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Runtime.WindowsRuntime.UI.Xaml.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Security.Claims.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Security.Principal.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.ServiceModel.Duplex.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.ServiceModel.Http.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.ServiceModel.NetTcp.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.ServiceModel.Primitives.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.ServiceModel.Security.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Text.Encoding.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Text.Encoding.CodePages.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Text.Encoding.Extensions.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Text.RegularExpressions.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Threading.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Threading.Overlapped.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Threading.Tasks.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Threading.Tasks.Dataflow.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Threading.Tasks.Parallel.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Threading.Timer.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Xml.ReaderWriter.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Xml.XDocument.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Xml.XmlDocument.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Xml.XmlSerializer.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\DataLab.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\DataLab.pdb
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\DataLab.pri
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\Planner.csprojResolveAssemblyReference.cache
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\Planner.exe
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\Planner.pdb
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\ResourceHandlingTask.state
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.Microsoft.CSharp.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.Microsoft.VisualBasic.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Private.DataContractSerialization.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Collections.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Collections.Concurrent.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Collections.Immutable.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Collections.NonGeneric.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Collections.Specialized.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.ComponentModel.Annotations.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.ComponentModel.EventBasedAsync.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Data.Common.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Diagnostics.Debug.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Dynamic.Runtime.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Globalization.Extensions.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.IO.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.IO.Compression.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.IO.Compression.ZipFile.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.IO.FileSystem.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.IO.IsolatedStorage.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.IO.UnmanagedMemoryStream.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Linq.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Linq.Expressions.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Linq.Parallel.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Linq.Queryable.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Net.Http.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Net.Requests.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Net.WebHeaderCollection.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Numerics.Vectors.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.ObjectModel.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Private.ServiceModel.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Private.Uri.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Reflection.DispatchProxy.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Reflection.Metadata.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Runtime.Extensions.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Runtime.InteropServices.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Runtime.Numerics.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Runtime.Serialization.Primitives.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Runtime.WindowsRuntime.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Runtime.WindowsRuntime.UI.Xaml.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Security.Claims.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Text.Encoding.CodePages.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Text.RegularExpressions.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Threading.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Threading.Overlapped.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Threading.Tasks.Dataflow.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Threading.Tasks.Parallel.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Xml.ReaderWriter.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Xml.XDocument.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Xml.XmlDocument.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Xml.XmlSerializer.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\Planner.csproj.GenerateResource.Cache
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\priconfig.xml
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\priconfig.xml.intermediate
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\layout.resfiles
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\layout.resfiles.intermediate
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\resources.resfiles
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\resources.resfiles.intermediate
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\pri.resfiles
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\pri.resfiles.intermediate
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\qualifiers.txt
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\qualifiers.txt.intermediate
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\MultipleQualifiersPerDimensionFound.txt
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\ProjectArchitectures.txt
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\clrjit.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Buffers.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Diagnostics.DiagnosticSource.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Net.NameResolution.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Net.WebSockets.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Net.WebSockets.Client.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Security.Cryptography.Algorithms.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Security.Cryptography.Cng.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Security.Cryptography.Encoding.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Security.Cryptography.Primitives.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Security.Cryptography.X509Certificates.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.Threading.Tasks.Extensions.dll
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Net.Primitives.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Net.Sockets.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Buffers.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Net.NameResolution.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Net.NetworkInformation.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Net.WebSockets.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Net.WebSockets.Client.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Security.Cryptography.Algorithms.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Security.Cryptography.Cng.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Security.Cryptography.Encoding.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Security.Cryptography.Primitives.SR.resw
-c:\users\bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.Security.Cryptography.X509Certificates.SR.resw
-C:\Users\Bilel\documents\visual studio 15\Projects\Planner\Planner\bin\x64\Debug\System.ValueTuple.dll
-C:\Users\Bilel\documents\visual studio 15\Projects\Planner\Planner\obj\x64\Debug\FxResources.System.ValueTuple.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\App.xbf
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\ActivitiesPage.xbf
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\AddActivity.xbf
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\AddDiaryPage.xbf
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\AddReflectionPage.xbf
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\AddToDoItemPage.xbf
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\AddToDoSetPage.xbf
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\DiariesPage.xbf
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\ExtendedSplash.xbf
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\FriendsPage.xbf
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\GrantPermissionsPage.xbf
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\LoginPage.xbf
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\MailPage.xbf
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\MainPage.xbf
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\ReflectionsPage.xbf
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\RegistrationPage.xbf
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\SendMailPage.xbf
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\SettingsPage.xbf
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\ShowDiaryPage.xbf
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\ToDoPage.xbf
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\UserPage.xbf
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\Planner.xr.xml
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\Planner.exe
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\Planner.pdb
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\resources.pri
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\AppxManifest.xml
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\Core\AppxManifest.xml
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\Core\Planner.exe
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\Planner.build.appxrecipe
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\Microsoft.CSharp.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.ComponentModel.DataAnnotations.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Core.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Net.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Numerics.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Runtime.Serialization.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.ServiceModel.Web.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.ServiceModel.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Windows.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Xml.Linq.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Xml.Serialization.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Xml.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\Microsoft.VisualBasic.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Collections.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Diagnostics.Tools.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Diagnostics.Tracing.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Globalization.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Globalization.Calendars.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.IO.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Reflection.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Reflection.Extensions.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Reflection.Primitives.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Resources.ResourceManager.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Runtime.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Runtime.Handles.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Runtime.InteropServices.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Text.Encoding.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Text.Encoding.Extensions.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Threading.Tasks.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Threading.Timer.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\Microsoft.Win32.Primitives.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Diagnostics.Debug.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.IO.FileSystem.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Net.Primitives.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Net.Sockets.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Runtime.Extensions.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\clrjit.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\clrcompression.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Private.Uri.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.AppContext.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Buffers.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Collections.Concurrent.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Collections.Immutable.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Collections.NonGeneric.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Collections.Specialized.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.ComponentModel.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.ComponentModel.Annotations.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.ComponentModel.EventBasedAsync.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Data.Common.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Diagnostics.Contracts.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Diagnostics.DiagnosticSource.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Diagnostics.StackTrace.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Dynamic.Runtime.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Globalization.Extensions.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.IO.Compression.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.IO.Compression.ZipFile.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.IO.FileSystem.Primitives.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.IO.IsolatedStorage.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.IO.UnmanagedMemoryStream.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Linq.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Linq.Expressions.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Linq.Parallel.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Linq.Queryable.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Net.Http.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Net.Http.Rtc.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Net.NameResolution.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Net.NetworkInformation.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Net.Requests.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Net.WebHeaderCollection.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Net.WebSockets.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Net.WebSockets.Client.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Numerics.Vectors.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Numerics.Vectors.WindowsRuntime.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.ObjectModel.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Private.DataContractSerialization.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Private.ServiceModel.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Reflection.Context.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Reflection.DispatchProxy.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Reflection.Emit.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Reflection.Emit.ILGeneration.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Reflection.Emit.Lightweight.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Reflection.Metadata.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Reflection.TypeExtensions.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Runtime.InteropServices.WindowsRuntime.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Runtime.Numerics.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Runtime.Serialization.Json.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Runtime.Serialization.Primitives.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Runtime.Serialization.Xml.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Runtime.WindowsRuntime.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Runtime.WindowsRuntime.UI.Xaml.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Security.Claims.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Security.Cryptography.Algorithms.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Security.Cryptography.Cng.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Security.Cryptography.Encoding.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Security.Cryptography.Primitives.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Security.Cryptography.X509Certificates.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Security.Principal.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.ServiceModel.Duplex.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.ServiceModel.Http.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.ServiceModel.NetTcp.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.ServiceModel.Primitives.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.ServiceModel.Security.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Text.Encoding.CodePages.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Text.RegularExpressions.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Threading.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Threading.Overlapped.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Threading.Tasks.Dataflow.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Threading.Tasks.Extensions.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Threading.Tasks.Parallel.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.ValueTuple.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Xml.ReaderWriter.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Xml.XDocument.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Xml.XmlDocument.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\System.Xml.XmlSerializer.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\DataLab.dll
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\DataLab.pdb
-C:\Users\Bilel\Source\Repos\Plenner\Planner\bin\x64\Debug\DataLab.pri
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\Planner.csprojResolveAssemblyReference.cache
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\App.g.i.cs
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\App.g.cs
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\ActivitiesPage.g.i.cs
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\ActivitiesPage.g.cs
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\AddActivity.g.i.cs
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\AddActivity.g.cs
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\AddDiaryPage.g.i.cs
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\AddDiaryPage.g.cs
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\AddReflectionPage.g.i.cs
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\AddReflectionPage.g.cs
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\AddToDoItemPage.g.i.cs
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\AddToDoItemPage.g.cs
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\AddToDoSetPage.g.i.cs
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\AddToDoSetPage.g.cs
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\DiariesPage.g.i.cs
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\DiariesPage.g.cs
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\ExtendedSplash.g.i.cs
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\ExtendedSplash.g.cs
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FriendsPage.g.i.cs
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FriendsPage.g.cs
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\GrantPermissionsPage.g.i.cs
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\GrantPermissionsPage.g.cs
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\LoginPage.g.i.cs
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\LoginPage.g.cs
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\MailPage.g.i.cs
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\MailPage.g.cs
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\MainPage.g.i.cs
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\MainPage.g.cs
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\ReflectionsPage.g.i.cs
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\ReflectionsPage.g.cs
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\RegistrationPage.g.i.cs
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\RegistrationPage.g.cs
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\SendMailPage.g.i.cs
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\SendMailPage.g.cs
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\SettingsPage.g.i.cs
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\SettingsPage.g.cs
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\ShowDiaryPage.g.i.cs
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\ShowDiaryPage.g.cs
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\ToDoPage.g.i.cs
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\ToDoPage.g.cs
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\UserPage.g.i.cs
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\UserPage.g.cs
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\XamlTypeInfo.g.cs
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\App.xaml
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\ActivitiesPage.xaml
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\AddActivity.xaml
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\AddDiaryPage.xaml
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\AddReflectionPage.xaml
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\AddToDoItemPage.xaml
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\AddToDoSetPage.xaml
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\DiariesPage.xaml
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\ExtendedSplash.xaml
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FriendsPage.xaml
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\GrantPermissionsPage.xaml
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\LoginPage.xaml
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\MailPage.xaml
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\MainPage.xaml
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\ReflectionsPage.xaml
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\RegistrationPage.xaml
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\SendMailPage.xaml
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\SettingsPage.xaml
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\ShowDiaryPage.xaml
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\ToDoPage.xaml
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\UserPage.xaml
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\App.xbf
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\ActivitiesPage.xbf
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\AddActivity.xbf
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\AddDiaryPage.xbf
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\AddReflectionPage.xbf
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\AddToDoItemPage.xbf
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\AddToDoSetPage.xbf
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\DiariesPage.xbf
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\ExtendedSplash.xbf
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FriendsPage.xbf
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\GrantPermissionsPage.xbf
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\LoginPage.xbf
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\MailPage.xbf
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\MainPage.xbf
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\ReflectionsPage.xbf
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\RegistrationPage.xbf
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\SendMailPage.xbf
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\SettingsPage.xbf
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\ShowDiaryPage.xbf
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\ToDoPage.xbf
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\UserPage.xbf
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\XamlSaveStateFile.xml
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\Planner.exe
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\Planner.pdb
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\ResourceHandlingTask.state
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.Microsoft.CSharp.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.Microsoft.VisualBasic.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Collections.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.IO.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Runtime.InteropServices.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Diagnostics.Debug.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.IO.FileSystem.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Net.Primitives.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Net.Sockets.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Runtime.Extensions.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Private.Uri.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Buffers.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Collections.Concurrent.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Collections.Immutable.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Collections.NonGeneric.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Collections.Specialized.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.ComponentModel.Annotations.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.ComponentModel.EventBasedAsync.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Data.Common.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Dynamic.Runtime.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Globalization.Extensions.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.IO.Compression.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.IO.Compression.ZipFile.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.IO.IsolatedStorage.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.IO.UnmanagedMemoryStream.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Linq.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Linq.Expressions.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Linq.Parallel.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Linq.Queryable.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Net.Http.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Net.NameResolution.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Net.NetworkInformation.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Net.Requests.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Net.WebHeaderCollection.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Net.WebSockets.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Net.WebSockets.Client.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Numerics.Vectors.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.ObjectModel.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Private.DataContractSerialization.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Private.ServiceModel.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Reflection.DispatchProxy.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Reflection.Metadata.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Runtime.Numerics.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Runtime.Serialization.Primitives.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Runtime.WindowsRuntime.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Runtime.WindowsRuntime.UI.Xaml.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Security.Claims.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Security.Cryptography.Algorithms.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Security.Cryptography.Cng.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Security.Cryptography.Encoding.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Security.Cryptography.Primitives.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Security.Cryptography.X509Certificates.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Text.Encoding.CodePages.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Text.RegularExpressions.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Threading.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Threading.Overlapped.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Threading.Tasks.Dataflow.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Threading.Tasks.Parallel.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.ValueTuple.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Xml.ReaderWriter.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Xml.XDocument.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Xml.XmlDocument.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Xml.XmlSerializer.SR.resw
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\Planner.csproj.GenerateResource.Cache
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\priconfig.xml
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\priconfig.xml.intermediate
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\layout.resfiles
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\layout.resfiles.intermediate
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\resources.resfiles
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\resources.resfiles.intermediate
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\pri.resfiles
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\pri.resfiles.intermediate
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\qualifiers.txt
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\qualifiers.txt.intermediate
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\MultipleQualifiersPerDimensionFound.txt
-C:\Users\Bilel\Source\Repos\Plenner\Planner\obj\x64\Debug\ProjectArchitectures.txt
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\App.xbf
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\ActivitiesPage.xbf
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\AddActivity.xbf
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\AddDiaryPage.xbf
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\AddReflectionPage.xbf
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\AddToDoItemPage.xbf
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\AddToDoSetPage.xbf
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\DiariesPage.xbf
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\ExtendedSplash.xbf
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\FriendsPage.xbf
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\GrantPermissionsPage.xbf
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\LoginPage.xbf
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\MailPage.xbf
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\MainPage.xbf
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\ReflectionsPage.xbf
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\RegistrationPage.xbf
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\SendMailPage.xbf
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\SettingsPage.xbf
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\ShowDiaryPage.xbf
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\ToDoPage.xbf
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\UserPage.xbf
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\Planner.xr.xml
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\Planner.exe
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\Planner.pdb
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\resources.pri
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\AppxManifest.xml
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\Core\AppxManifest.xml
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\Core\Planner.exe
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\Planner.build.appxrecipe
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\Microsoft.CSharp.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.ComponentModel.DataAnnotations.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Core.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Net.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Numerics.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Runtime.Serialization.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.ServiceModel.Web.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.ServiceModel.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Windows.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Xml.Linq.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Xml.Serialization.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Xml.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\Microsoft.VisualBasic.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Collections.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Diagnostics.Tools.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Diagnostics.Tracing.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Globalization.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Globalization.Calendars.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.IO.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Reflection.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Reflection.Extensions.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Reflection.Primitives.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Resources.ResourceManager.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Runtime.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Runtime.Handles.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Runtime.InteropServices.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Text.Encoding.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Text.Encoding.Extensions.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Threading.Tasks.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Threading.Timer.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\Microsoft.Win32.Primitives.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Diagnostics.Debug.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.IO.FileSystem.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Net.Primitives.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Net.Sockets.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Runtime.Extensions.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\clrjit.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\clrcompression.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Private.Uri.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.AppContext.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Buffers.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Collections.Concurrent.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Collections.Immutable.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Collections.NonGeneric.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Collections.Specialized.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.ComponentModel.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.ComponentModel.Annotations.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.ComponentModel.EventBasedAsync.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Data.Common.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Diagnostics.Contracts.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Diagnostics.DiagnosticSource.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Diagnostics.StackTrace.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Dynamic.Runtime.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Globalization.Extensions.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.IO.Compression.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.IO.Compression.ZipFile.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.IO.FileSystem.Primitives.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.IO.IsolatedStorage.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.IO.UnmanagedMemoryStream.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Linq.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Linq.Expressions.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Linq.Parallel.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Linq.Queryable.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Net.Http.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Net.Http.Rtc.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Net.NameResolution.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Net.NetworkInformation.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Net.Requests.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Net.WebHeaderCollection.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Net.WebSockets.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Net.WebSockets.Client.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Numerics.Vectors.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Numerics.Vectors.WindowsRuntime.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.ObjectModel.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Private.DataContractSerialization.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Private.ServiceModel.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Reflection.Context.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Reflection.DispatchProxy.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Reflection.Emit.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Reflection.Emit.ILGeneration.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Reflection.Emit.Lightweight.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Reflection.Metadata.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Reflection.TypeExtensions.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Runtime.InteropServices.WindowsRuntime.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Runtime.Numerics.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Runtime.Serialization.Json.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Runtime.Serialization.Primitives.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Runtime.Serialization.Xml.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Runtime.WindowsRuntime.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Runtime.WindowsRuntime.UI.Xaml.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Security.Claims.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Security.Cryptography.Algorithms.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Security.Cryptography.Cng.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Security.Cryptography.Encoding.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Security.Cryptography.Primitives.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Security.Cryptography.X509Certificates.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Security.Principal.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.ServiceModel.Duplex.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.ServiceModel.Http.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.ServiceModel.NetTcp.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.ServiceModel.Primitives.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.ServiceModel.Security.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Text.Encoding.CodePages.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Text.RegularExpressions.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Threading.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Threading.Overlapped.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Threading.Tasks.Dataflow.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Threading.Tasks.Extensions.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Threading.Tasks.Parallel.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.ValueTuple.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Xml.ReaderWriter.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Xml.XDocument.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Xml.XmlDocument.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\System.Xml.XmlSerializer.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\DataLab.dll
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\DataLab.pdb
-C:\Users\Bilel\Documents\Plenner\Planner\bin\x64\Debug\DataLab.pri
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\Planner.csprojResolveAssemblyReference.cache
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\App.g.i.cs
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\App.g.cs
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\ActivitiesPage.g.i.cs
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\ActivitiesPage.g.cs
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\AddActivity.g.i.cs
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\AddActivity.g.cs
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\AddDiaryPage.g.i.cs
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\AddDiaryPage.g.cs
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\AddReflectionPage.g.i.cs
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\AddReflectionPage.g.cs
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\AddToDoItemPage.g.i.cs
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\AddToDoItemPage.g.cs
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\AddToDoSetPage.g.i.cs
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\AddToDoSetPage.g.cs
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\DiariesPage.g.i.cs
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\DiariesPage.g.cs
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\ExtendedSplash.g.i.cs
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\ExtendedSplash.g.cs
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FriendsPage.g.i.cs
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FriendsPage.g.cs
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\GrantPermissionsPage.g.i.cs
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\GrantPermissionsPage.g.cs
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\LoginPage.g.i.cs
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\LoginPage.g.cs
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\MailPage.g.i.cs
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\MailPage.g.cs
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\MainPage.g.i.cs
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\MainPage.g.cs
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\ReflectionsPage.g.i.cs
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\ReflectionsPage.g.cs
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\RegistrationPage.g.i.cs
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\RegistrationPage.g.cs
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\SendMailPage.g.i.cs
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\SendMailPage.g.cs
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\SettingsPage.g.i.cs
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\SettingsPage.g.cs
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\ShowDiaryPage.g.i.cs
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\ShowDiaryPage.g.cs
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\ToDoPage.g.i.cs
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\ToDoPage.g.cs
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\UserPage.g.i.cs
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\UserPage.g.cs
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\XamlTypeInfo.g.cs
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\App.xaml
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\ActivitiesPage.xaml
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\AddActivity.xaml
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\AddDiaryPage.xaml
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\AddReflectionPage.xaml
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\AddToDoItemPage.xaml
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\AddToDoSetPage.xaml
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\DiariesPage.xaml
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\ExtendedSplash.xaml
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FriendsPage.xaml
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\GrantPermissionsPage.xaml
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\LoginPage.xaml
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\MailPage.xaml
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\MainPage.xaml
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\ReflectionsPage.xaml
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\RegistrationPage.xaml
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\SendMailPage.xaml
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\SettingsPage.xaml
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\ShowDiaryPage.xaml
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\ToDoPage.xaml
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\UserPage.xaml
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\App.xbf
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\ActivitiesPage.xbf
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\AddActivity.xbf
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\AddDiaryPage.xbf
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\AddReflectionPage.xbf
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\AddToDoItemPage.xbf
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\AddToDoSetPage.xbf
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\DiariesPage.xbf
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\ExtendedSplash.xbf
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FriendsPage.xbf
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\GrantPermissionsPage.xbf
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\LoginPage.xbf
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\MailPage.xbf
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\MainPage.xbf
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\ReflectionsPage.xbf
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\RegistrationPage.xbf
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\SendMailPage.xbf
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\SettingsPage.xbf
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\ShowDiaryPage.xbf
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\ToDoPage.xbf
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\UserPage.xbf
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\XamlSaveStateFile.xml
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\Planner.exe
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\Planner.pdb
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\ResourceHandlingTask.state
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.Microsoft.CSharp.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.Microsoft.VisualBasic.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Collections.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.IO.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Runtime.InteropServices.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Diagnostics.Debug.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.IO.FileSystem.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Net.Primitives.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Net.Sockets.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Runtime.Extensions.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Private.Uri.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Buffers.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Collections.Concurrent.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Collections.Immutable.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Collections.NonGeneric.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Collections.Specialized.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.ComponentModel.Annotations.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.ComponentModel.EventBasedAsync.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Data.Common.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Dynamic.Runtime.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Globalization.Extensions.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.IO.Compression.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.IO.Compression.ZipFile.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.IO.IsolatedStorage.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.IO.UnmanagedMemoryStream.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Linq.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Linq.Expressions.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Linq.Parallel.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Linq.Queryable.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Net.Http.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Net.NameResolution.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Net.NetworkInformation.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Net.Requests.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Net.WebHeaderCollection.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Net.WebSockets.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Net.WebSockets.Client.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Numerics.Vectors.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.ObjectModel.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Private.DataContractSerialization.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Private.ServiceModel.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Reflection.DispatchProxy.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Reflection.Metadata.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Runtime.Numerics.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Runtime.Serialization.Primitives.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Runtime.WindowsRuntime.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Runtime.WindowsRuntime.UI.Xaml.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Security.Claims.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Security.Cryptography.Algorithms.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Security.Cryptography.Cng.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Security.Cryptography.Encoding.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Security.Cryptography.Primitives.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Security.Cryptography.X509Certificates.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Text.Encoding.CodePages.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Text.RegularExpressions.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Threading.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Threading.Overlapped.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Threading.Tasks.Dataflow.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Threading.Tasks.Parallel.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.ValueTuple.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Xml.ReaderWriter.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Xml.XDocument.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Xml.XmlDocument.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\FxResources.System.Xml.XmlSerializer.SR.resw
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\Planner.csproj.GenerateResource.Cache
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\priconfig.xml
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\priconfig.xml.intermediate
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\layout.resfiles
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\layout.resfiles.intermediate
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\resources.resfiles
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\resources.resfiles.intermediate
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\pri.resfiles
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\pri.resfiles.intermediate
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\qualifiers.txt
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\qualifiers.txt.intermediate
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\MultipleQualifiersPerDimensionFound.txt
-C:\Users\Bilel\Documents\Plenner\Planner\obj\x64\Debug\ProjectArchitectures.txt
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\Planner.csprojResolveAssemblyReference.cache
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\App.g.i.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\App.g.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\ActivitiesPage.g.i.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\ActivitiesPage.g.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\AddActivity.g.i.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\AddActivity.g.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\AddDiaryPage.g.i.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\AddDiaryPage.g.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\AddReflectionPage.g.i.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\AddReflectionPage.g.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\AddToDoItemPage.g.i.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\AddToDoItemPage.g.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\AddToDoSetPage.g.i.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\AddToDoSetPage.g.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\DiariesPage.g.i.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\DiariesPage.g.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\ExtendedSplash.g.i.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\ExtendedSplash.g.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FriendsPage.g.i.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FriendsPage.g.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\GrantPermissionsPage.g.i.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\GrantPermissionsPage.g.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\LoginPage.g.i.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\LoginPage.g.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\MailPage.g.i.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\MailPage.g.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\PlannerMapControl.g.i.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\PlannerMapControl.g.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\ReflectionsPage.g.i.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\ReflectionsPage.g.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\RegistrationPage.g.i.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\RegistrationPage.g.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\SendMailPage.g.i.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\SendMailPage.g.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\SettingsPage.g.i.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\SettingsPage.g.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\ShowDiaryPage.g.i.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\ShowDiaryPage.g.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\TimeFlowPage.g.i.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\TimeFlowPage.g.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\ToDoPage.g.i.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\ToDoPage.g.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\UserPage.g.i.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\UserPage.g.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\App.xaml
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\ActivitiesPage.xaml
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\AddActivity.xaml
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\AddDiaryPage.xaml
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\AddReflectionPage.xaml
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\AddToDoItemPage.xaml
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\AddToDoSetPage.xaml
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\DiariesPage.xaml
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\ExtendedSplash.xaml
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FriendsPage.xaml
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\GrantPermissionsPage.xaml
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\LoginPage.xaml
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\MailPage.xaml
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\PlannerMapControl.xaml
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\ReflectionsPage.xaml
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\RegistrationPage.xaml
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\SendMailPage.xaml
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\SettingsPage.xaml
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\ShowDiaryPage.xaml
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\TimeFlowPage.xaml
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\ToDoPage.xaml
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\UserPage.xaml
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\App.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\ActivitiesPage.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\AddActivity.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\AddDiaryPage.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\AddReflectionPage.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\AddToDoItemPage.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\AddToDoSetPage.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\DiariesPage.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\ExtendedSplash.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FriendsPage.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\GrantPermissionsPage.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\LoginPage.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\MailPage.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\PlannerMapControl.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\ReflectionsPage.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\RegistrationPage.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\SendMailPage.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\SettingsPage.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\ShowDiaryPage.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\TimeFlowPage.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\ToDoPage.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\UserPage.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\XamlTypeInfo.g.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\XamlSaveStateFile.xml
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\App.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\ActivitiesPage.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\AddActivity.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\AddDiaryPage.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\AddReflectionPage.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\AddToDoItemPage.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\AddToDoSetPage.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\DiariesPage.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\ExtendedSplash.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\FriendsPage.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\GrantPermissionsPage.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\LoginPage.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\MailPage.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\PlannerMapControl.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\ReflectionsPage.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\RegistrationPage.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\SendMailPage.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\SettingsPage.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\ShowDiaryPage.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\TimeFlowPage.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\ToDoPage.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\UserPage.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\Planner.xr.xml
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\Planner.exe
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\Planner.pdb
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\resources.pri
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\AppxManifest.xml
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\Core\AppxManifest.xml
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\Core\Planner.exe
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\Planner.build.appxrecipe
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\Microsoft.CSharp.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.ComponentModel.DataAnnotations.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Core.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Net.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Numerics.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Runtime.Serialization.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.ServiceModel.Web.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.ServiceModel.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Windows.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Xml.Linq.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Xml.Serialization.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Xml.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\Microsoft.VisualBasic.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Collections.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Diagnostics.Tools.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Diagnostics.Tracing.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Globalization.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Globalization.Calendars.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.IO.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Reflection.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Reflection.Extensions.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Reflection.Primitives.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Resources.ResourceManager.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Runtime.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Runtime.Handles.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Runtime.InteropServices.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Text.Encoding.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Text.Encoding.Extensions.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Threading.Tasks.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Threading.Timer.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\Microsoft.Win32.Primitives.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Diagnostics.Debug.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.IO.FileSystem.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Net.Primitives.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Net.Sockets.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Runtime.Extensions.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\clrjit.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\clrcompression.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Private.Uri.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.AppContext.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Buffers.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Collections.Concurrent.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Collections.Immutable.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Collections.NonGeneric.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Collections.Specialized.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.ComponentModel.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.ComponentModel.Annotations.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.ComponentModel.EventBasedAsync.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Data.Common.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Diagnostics.Contracts.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Diagnostics.StackTrace.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Dynamic.Runtime.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Globalization.Extensions.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.IO.Compression.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.IO.Compression.ZipFile.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.IO.FileSystem.Primitives.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.IO.IsolatedStorage.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.IO.UnmanagedMemoryStream.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Linq.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Linq.Expressions.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Linq.Parallel.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Linq.Queryable.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Net.Http.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Net.Http.Rtc.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Net.NameResolution.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Net.NetworkInformation.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Net.Requests.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Net.WebHeaderCollection.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Net.WebSockets.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Net.WebSockets.Client.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Numerics.Vectors.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Numerics.Vectors.WindowsRuntime.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.ObjectModel.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Private.DataContractSerialization.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Private.ServiceModel.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Reflection.Context.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Reflection.DispatchProxy.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Reflection.Emit.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Reflection.Emit.ILGeneration.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Reflection.Emit.Lightweight.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Reflection.Metadata.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Reflection.TypeExtensions.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Runtime.InteropServices.WindowsRuntime.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Runtime.Numerics.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Runtime.Serialization.Json.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Runtime.Serialization.Primitives.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Runtime.Serialization.Xml.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Runtime.WindowsRuntime.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Runtime.WindowsRuntime.UI.Xaml.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Security.Claims.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Security.Cryptography.Algorithms.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Security.Cryptography.Cng.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Security.Cryptography.Encoding.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Security.Cryptography.Primitives.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Security.Principal.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.ServiceModel.Duplex.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.ServiceModel.Http.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.ServiceModel.NetTcp.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.ServiceModel.Primitives.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.ServiceModel.Security.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Text.Encoding.CodePages.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Text.RegularExpressions.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Threading.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Threading.Overlapped.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Threading.Tasks.Dataflow.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Threading.Tasks.Parallel.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.ValueTuple.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Xml.ReaderWriter.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Xml.XDocument.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Xml.XmlDocument.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\System.Xml.XmlSerializer.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\DataLab.dll
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\DataLab.pdb
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\DataLab.pri
 C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\Planner.csproj.CoreCompileInputs.cache
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\Planner.exe
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\Planner.pdb
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\ResourceHandlingTask.state
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.Microsoft.CSharp.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.Microsoft.VisualBasic.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Collections.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.IO.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Runtime.InteropServices.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Diagnostics.Debug.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.IO.FileSystem.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Net.Primitives.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Net.Sockets.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Runtime.Extensions.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Private.Uri.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Buffers.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Collections.Concurrent.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Collections.Immutable.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Collections.NonGeneric.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Collections.Specialized.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.ComponentModel.Annotations.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.ComponentModel.EventBasedAsync.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Data.Common.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Dynamic.Runtime.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Globalization.Extensions.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.IO.Compression.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.IO.Compression.ZipFile.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.IO.IsolatedStorage.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.IO.UnmanagedMemoryStream.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Linq.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Linq.Expressions.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Linq.Parallel.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Linq.Queryable.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Net.Http.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Net.NameResolution.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Net.NetworkInformation.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Net.Requests.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Net.WebHeaderCollection.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Net.WebSockets.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Net.WebSockets.Client.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Numerics.Vectors.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.ObjectModel.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Private.DataContractSerialization.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Private.ServiceModel.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Reflection.DispatchProxy.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Reflection.Metadata.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Runtime.Numerics.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Runtime.Serialization.Primitives.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Runtime.WindowsRuntime.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Runtime.WindowsRuntime.UI.Xaml.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Security.Claims.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Security.Cryptography.Algorithms.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Security.Cryptography.Cng.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Security.Cryptography.Encoding.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Security.Cryptography.Primitives.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Security.Cryptography.X509Certificates.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Text.Encoding.CodePages.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Text.RegularExpressions.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Threading.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Threading.Overlapped.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Threading.Tasks.Dataflow.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Threading.Tasks.Parallel.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.ValueTuple.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Xml.ReaderWriter.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Xml.XDocument.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Xml.XmlDocument.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\FxResources.System.Xml.XmlSerializer.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\Planner.csproj.GenerateResource.Cache
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\priconfig.xml
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\priconfig.xml.intermediate
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\layout.resfiles
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\layout.resfiles.intermediate
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\resources.resfiles
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\resources.resfiles.intermediate
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\pri.resfiles
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\pri.resfiles.intermediate
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\qualifiers.txt
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\qualifiers.txt.intermediate
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\ProjectArchitectures.txt
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\Modules\NavigationPanel.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\Modules\NavigationPanel.g.i.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\Modules\NavigationPanel.g.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\Modules\NavigationPanel.xaml
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\Modules\NavigationPanel.xbf

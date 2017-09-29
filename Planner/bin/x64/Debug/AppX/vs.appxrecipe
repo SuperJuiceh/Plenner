@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-09-06T08:13:24.124</Modified>
+      <Modified>2017-09-29T09:38:55.927</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\Planner.exe">
       <PackagePath>entrypoint\Planner.exe</PackagePath>
-      <Modified>2017-09-06T08:13:22.836</Modified>
+      <Modified>2017-09-29T09:38:54.789</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Bilel\.nuget\packages\Microsoft.CSharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -501,7 +501,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Bilel\source\repos\Plenner\DataLab\bin\x64\Debug\DataLab.dll">
       <PackagePath>DataLab.dll</PackagePath>
-      <Modified>2017-09-06T05:59:25.023</Modified>
+      <Modified>2017-09-29T09:29:53.901</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Bilel\source\repos\Plenner\Planner\Assets\13-512.png">
       <PackagePath>Assets\13-512.png</PackagePath>
@@ -567,6 +567,14 @@
       <PackagePath>Assets\emoticons\neutral.png</PackagePath>
       <Modified>2016-08-10T17:36:35.674</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bilel\source\repos\Plenner\Planner\Assets\eye.png">
+      <PackagePath>Assets\eye.png</PackagePath>
+      <Modified>2017-09-08T14:21:51.559</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bilel\source\repos\Plenner\Planner\Assets\FilterIcon.png">
+      <PackagePath>Assets\FilterIcon.png</PackagePath>
+      <Modified>2017-09-25T07:42:22.742</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Bilel\source\repos\Plenner\Planner\Assets\Friends.png">
       <PackagePath>Assets\Friends.png</PackagePath>
       <Modified>2016-10-02T16:31:53.868</Modified>
@@ -618,6 +626,10 @@
     <AppxPackagedFile Include="C:\Users\Bilel\source\repos\Plenner\Planner\Assets\Planner_logo.png">
       <PackagePath>Assets\Planner_logo.png</PackagePath>
       <Modified>2016-09-05T00:32:14.709</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bilel\source\repos\Plenner\Planner\Assets\Planning_Icon.png">
+      <PackagePath>Assets\Planning_Icon.png</PackagePath>
+      <Modified>2017-09-26T12:10:49.275</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Bilel\source\repos\Plenner\Planner\Assets\Plus.png">
       <PackagePath>Assets\Plus.png</PackagePath>
@@ -711,7 +723,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\Planner.xr.xml">
       <PackagePath>Planner.xr.xml</PackagePath>
-      <Modified>2017-09-06T08:12:26.970</Modified>
+      <Modified>2017-09-29T09:06:41.582</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.15063.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -720,11 +732,11 @@
     <AppxPackagedFile Include="C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-09-06T08:13:23.745</Modified>
+      <Modified>2017-09-29T09:38:55.648</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\Core\Planner.exe">
       <PackagePath>Planner.exe</PackagePath>
-      <Modified>2017-09-06T08:13:24.117</Modified>
+      <Modified>2017-09-29T09:38:55.922</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -7,119 +7,143 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     xmlns:conv="using:Planner.Data.Converters"
+    xmlns:modules="using:Planner.Modules"
     Width="350" Height="640"
     >
     <SplitView x:Name="mainSplitView" DisplayMode="CompactOverlay" OpenPaneLength="50" CompactPaneLength="20" >
         <Grid DoubleTapped="Grid_DoubleTapped" Margin="0,0,0,40">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition Width="35*"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition Height="3*"/>
-                <RowDefinition Height="60*"/>
-            </Grid.RowDefinitions>
             <Grid.Resources>
                 <conv:DateTimeFormatConverter x:Key="dtConv" />
+                <conv:BoolToElementVisibility x:Key="boolToVisibilityConverter"/>
             </Grid.Resources>
+            <StackPanel x:Name="mainPanel" Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="7,4,0,0" TextWrapping="Wrap" Text="ToDoItems" VerticalAlignment="Top"/>
+                    <Button Grid.Column="1" HorizontalAlignment="Left" Margin="140,0,0,0" VerticalAlignment="Top" Height="31" Width="41">
+                        <Button.Flyout>
+                            <Flyout>
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock Text="Enabled Modules"/>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Single ToDo's"/>
+                                        <CheckBox x:Name="showToDosSingleCheckbox" DataContext="{x:Bind Settings.Settings}" IsChecked="{Binding ToDoItemsSingleListVisible, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Checked="showToDosSingleCheckbox_Checked"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Set ToDo's"/>
+                                        <CheckBox x:Name="showToDosSetCheckbox" DataContext="{x:Bind Settings.Settings}"  IsChecked="{Binding ToDoItemsSetListVisible, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Checked="showToDosSetCheckbox_Checked"/>
 
-            <ListView x:Name="listView" HorizontalAlignment="Left" Height="218" Margin="3,19.667,-4,0" VerticalAlignment="Top" Width="322" Grid.Row="2" Grid.Column="1" ItemsSource="{x:Bind Planning.plan.ToDoItems}" ScrollViewer.VerticalScrollBarVisibility="Auto" MaxHeight="200" FontSize="10">
-                <ListView.Header>
-                    <RelativePanel>
-                        <TextBlock x:Name="toDoItemNameHeaderTextBlock"  Text="Name" Margin="0, 0, 0, 0" Tapped="toDoItemNameHeaderTextBlock_Tapped"/>
-                        <TextBlock x:Name="toDoItemTimeHeaderTextBlock" Text="Mail" Margin="150, 0, 0, 0" Tapped="toDoItemTimeHeaderTextBlock_Tapped"/>
-                        <TextBlock Text="Done" Margin="220, 0, 0, 0"/>
-                        <TextBlock Text="..." Margin="265, 0, 0, 0" />
-                    </RelativePanel>
-                </ListView.Header>
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <RelativePanel Margin="-10, 0, 0, 0">
-                            <TextBlock Text="{Binding Name}" Margin="0, 0, 0, 0" FontSize="10"/>
-                            <Button x:Name="mailToDoItemButton" Height="25" Width="25" FontSize="10" Margin="150, 0, 0, 0" Click="mailToDoItemButton_Click" Tag="{Binding }" >
-                                <Button.Background>
-                                    <ImageBrush ImageSource="/Assets/mail.png" />
-                                </Button.Background>
-                            </Button>
-                            <CheckBox IsChecked="{Binding IsDone, Mode=TwoWay}" Margin="220, 0, 0, 0" Checked="CheckBox_Checked" Width="20" Height="20" />
-                            <Button Margin="265, 0, 0, 0" Click="Button_Click_1" Height="20" Width="20" >
-                                <Button.Background>
-                                    <ImageBrush ImageSource="/Assets/delete.png" />
-                                </Button.Background>
-                            </Button>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Flyout>
+                        </Button.Flyout>
+                        <Button.Background>
+                            <ImageBrush ImageSource="/Assets/eye.png"/>
+                        </Button.Background>
+                    </Button>
+                    <Button x:Name="button1" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Top" Height="30" Width="30" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="/Assets/Plus.png" />
+                        </Button.Background>
+                        <Button.Flyout>
+                            <Flyout>
+                                <ListBox x:Name="listBoxItemChildren" Width="151" SelectionChanged="ListBox_SelectionChanged">
+                                    <ListBoxItem Content="Single" />
+                                    <ListBoxItem Content="Set"/>
+                                </ListBox>
+                            </Flyout>
+                        </Button.Flyout>
+                    </Button>
+                    <Button x:Name="button2" Grid.Column="1" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Height="35" Width="35" Click="button2_Click">
+                        <Button.Background>
+                            <ImageBrush ImageSource="/Assets/Broom_icon.svg.png" />
+                        </Button.Background>
+                    </Button>
+                </StackPanel>
+                <ListView x:Name="listView" DataContext="{x:Bind Settings.Settings}" HorizontalAlignment="Left" Margin="3,10,-4,0" VerticalAlignment="Top" Width="322" ItemsSource="{x:Bind Planning.plan.ToDoItems}" ScrollViewer.VerticalScrollBarVisibility="Auto" FontSize="10" Visibility="{Binding ToDoItemsSingleListVisible, Converter={StaticResource boolToVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}" >
+                    <ListView.Header>
+                        <RelativePanel>
+                            <TextBlock Text="Single To Do's" HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="68"/>
+
+                            <TextBlock x:Name="toDoItemNameHeaderTextBlock"  Text="Name" Margin="0, 20, 0, 0" Tapped="toDoItemNameHeaderTextBlock_Tapped"/>
+                            <TextBlock x:Name="toDoItemTimeHeaderTextBlock" Text="Mail" Margin="150, 20, 0, 0" Tapped="toDoItemTimeHeaderTextBlock_Tapped"/>
+                            <TextBlock Text="Done" Margin="220, 20, 0, 0"/>
+                            <TextBlock Text="..." Margin="265, 20, 0, 0" />
                         </RelativePanel>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-            <ListView x:Name="listViewtdiSets" HorizontalAlignment="Left" Height="254" Margin="5,256.667,-9,0" VerticalAlignment="Top" Width="325" Grid.Row="2" Grid.Column="1" ItemsSource="{x:Bind Planning.plan.tdiSets}" FontSize="10">
-                <ListView.Header>
-                    <RelativePanel>
-                        <TextBlock Text="Name" Margin="0, 0, 0, 0"/>
-                        <TextBlock Text="Mail" Margin="150, 0, 0, 0" />
-                        <TextBlock Text="Done" Margin="220, 0, 0, 0"/>
-                        <TextBlock Text="..." Margin="265, 0, 0, 0" />
-                    </RelativePanel>
-                </ListView.Header>
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel>
+                    </ListView.Header>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
                             <RelativePanel Margin="-10, 0, 0, 0">
                                 <TextBlock Text="{Binding Name}" Margin="0, 0, 0, 0" FontSize="10"/>
-                                <Button x:Name="mailToDoItemSetButton" Height="25" Width="25" FontSize="10" Margin="150, 0, 0, 0" Click="mailToDoItemSetButton_Click" Tag="{Binding }" >
+                                <Button x:Name="mailToDoItemButton" Height="25" Width="25" FontSize="10" Margin="150, 0, 0, 0" Click="mailToDoItemButton_Click" Tag="{Binding }" >
                                     <Button.Background>
                                         <ImageBrush ImageSource="/Assets/mail.png" />
                                     </Button.Background>
                                 </Button>
-                                <CheckBox IsChecked="{Binding IsDone, Mode=TwoWay}" Margin="220, 0, 0, 0" Checked="CheckBox_Checked" FontSize="10" />
-                                <Button x:Name="tdiset_remove_button" Margin="265, 0, 0, 0" Click="tdiset_remove_button_Click"  Width="25" Height="25" FontSize="10" >
+                                <CheckBox IsChecked="{Binding IsDone, Mode=TwoWay}" Margin="220, 0, 0, 0" Checked="CheckBox_Checked" Width="20" Height="20" />
+                                <Button Margin="265, 0, 0, 0" Click="Button_Click_1" Height="20" Width="20" >
                                     <Button.Background>
                                         <ImageBrush ImageSource="/Assets/delete.png" />
                                     </Button.Background>
                                 </Button>
                             </RelativePanel>
-                            <RelativePanel Margin="0, 0, 0, 0">
-                                <ListView ItemsSource="{Binding Children}">
-                                    <ListView.ItemTemplate>
-                                        <DataTemplate>
-                                            <RelativePanel Margin="-10, 0, 0, 0">
-                                                <TextBlock Text="{Binding Name}" Margin="0, 0, 0, 0" FontSize="10"/>
-                                                <TextBlock Text="{Binding Deadline, Converter={StaticResource dtConv}}" Margin="150, 0, 0, 0" FontSize="10" />
-                                                <CheckBox IsChecked="{Binding IsDone, Mode=TwoWay}" Margin="220, 0, 0, 0" Checked="CheckBox_Checked" Width="10" Height="10"/>
-                                                <Button Margin="265, 0, 0, 0" Click="Button_Click_1" FontSize="10" >
-                                                    <Button.Background>
-                                                        <ImageBrush ImageSource="/Assets/delete.png" />
-                                                    </Button.Background>
-                                                </Button>
-                                            </RelativePanel>
-                                        </DataTemplate>
-                                    </ListView.ItemTemplate>
-                                </ListView>
-                            </RelativePanel>
-                        </StackPanel>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="7,4.667,0,0" TextWrapping="Wrap" Text="ToDoItems" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1"/>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <ListView x:Name="listViewtdiSets" DataContext="{x:Bind Settings.Settings}" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="325" ItemsSource="{x:Bind Planning.plan.tdiSets}" FontSize="10" Visibility="{Binding ToDoItemsSetListVisible, Converter={StaticResource boolToVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
+                    <ListView.Header>
+                        <RelativePanel>
+                            <TextBlock Text="To Do Sets" HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="53"/>
 
-            <Button x:Name="button1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="237,5.667,54,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Grid.RowSpan="2">
-                <Button.Background>
-                    <ImageBrush ImageSource="/Assets/Plus.png" />
-                </Button.Background>
-                <Button.Flyout>
-                    <Flyout>
-                        <ListBox x:Name="listBoxItemChildren" Width="151" SelectionChanged="ListBox_SelectionChanged">
-                            <ListBoxItem Content="Single" />
-                            <ListBoxItem Content="Set"/>
-                        </ListBox>
-                    </Flyout>
-                </Button.Flyout>
-            </Button>
-            <Button x:Name="button2" Grid.Column="1" HorizontalAlignment="Left" Margin="272,9,0,0" VerticalAlignment="Top" Height="35" Grid.RowSpan="3" Width="35" Click="button2_Click">
-                <Button.Background>
-                    <ImageBrush ImageSource="/Assets/Broom_icon.svg.png" />
-                </Button.Background>
-            </Button>
+                            <TextBlock Text="Name" Margin="0, 20, 0, 0"/>
+                            <TextBlock Text="Mail" Margin="150, 20, 0, 0" />
+                            <TextBlock Text="Done" Margin="220, 20, 0, 0"/>
+                            <TextBlock Text="..." Margin="265, 20, 0, 0" />
+                        </RelativePanel>
+                    </ListView.Header>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <RelativePanel Margin="-10, 0, 0, 0">
+                                    <TextBlock Text="{Binding Name}" Margin="0, 0, 0, 0" FontSize="10"/>
+                                    <Button x:Name="mailToDoItemSetButton" Height="25" Width="25" FontSize="10" Margin="150, 0, 0, 0" Click="mailToDoItemSetButton_Click" Tag="{Binding }" >
+                                        <Button.Background>
+                                            <ImageBrush ImageSource="/Assets/mail.png" />
+                                        </Button.Background>
+                                    </Button>
+                                    <CheckBox IsChecked="{Binding IsDone, Mode=TwoWay}" Margin="220, 0, 0, 0" Checked="CheckBox_Checked" FontSize="10" />
+                                    <Button x:Name="tdiset_remove_button" Margin="265, 0, 0, 0" Click="tdiset_remove_button_Click"  Width="25" Height="25" FontSize="10" >
+                                        <Button.Background>
+                                            <ImageBrush ImageSource="/Assets/delete.png" />
+                                        </Button.Background>
+                                    </Button>
+                                </RelativePanel>
+                                <RelativePanel Margin="0, 0, 0, 0">
+                                    <ListView ItemsSource="{Binding Children}">
+                                        <ListView.ItemTemplate>
+                                            <DataTemplate>
+                                                <RelativePanel Margin="-10, 0, 0, 0">
+                                                    <TextBlock Text="{Binding Name}" Margin="0, 0, 0, 0" FontSize="10"/>
+                                                    <TextBlock Text="{Binding Deadline, Converter={StaticResource dtConv}}" Margin="150, 0, 0, 0" FontSize="10" />
+                                                    <CheckBox IsChecked="{Binding IsDone, Mode=TwoWay}" Margin="220, 0, 0, 0" Checked="CheckBox_Checked" Width="10" Height="10"/>
+                                                    <Button Margin="265, 0, 0, 0" Click="Button_Click_1" FontSize="10" >
+                                                        <Button.Background>
+                                                            <ImageBrush ImageSource="/Assets/delete.png" />
+                                                        </Button.Background>
+                                                    </Button>
+                                                </RelativePanel>
+                                            </DataTemplate>
+                                        </ListView.ItemTemplate>
+                                    </ListView>
+                                </RelativePanel>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackPanel>
+
+
+
+
 
             <Grid.Background>
                 <ImageBrush ImageSource="/Assets/Background_redlight.png" />
@@ -128,29 +152,7 @@
         </Grid>
         <SplitView.Pane>
 
-            <StackPanel HorizontalAlignment="Left" Orientation="Vertical" Width="{Binding ElementName=mainSplitView, Path=Width}">
-                <Button x:Name="splitViewOpenCloseButton" Content="&#xE700;" Click="splitViewOpenCloseButton_Click" Width="30" Height="30" />
-                <!--<Button x:Name="appointmentsButton" Width="50" Height="50" Click="appointmentsButton_Click">
-                        <Button.Background>
-                            <ImageBrush ImageSource="/Assets/appointment_new2.png"/>
-                        </Button.Background>
-                    </Button>-->
-                <Button x:Name="activitiesButton" Width="50" Height="50" Click="activitiesButton_Click">
-                    <Button.Background>
-                        <ImageBrush ImageSource="/Assets/appointment_new2.png"/>
-                    </Button.Background>
-                </Button>
-                <Button x:Name="reflectionsButton" Width="50" Height="50" Click="reflectionsButton_Click">
-                    <Button.Background>
-                        <ImageBrush ImageSource="/Assets/journal.png"/>
-                    </Button.Background>
-                </Button>
-                <Button x:Name="settingsButton" Width="50" Height="50" Click="settingsButton_Click">
-                    <Button.Background>
-                        <ImageBrush ImageSource="/Assets/settings_icon.png"/>
-                    </Button.Background>
-                </Button>
-            </StackPanel>
+            <modules:NavigationPanel ToDoButtonEnabled="False"/>
         </SplitView.Pane>
     </SplitView>
 </Page>

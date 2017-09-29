@@ -8,6 +8,7 @@
     xmlns:conv="using:Planner.Data.Converters"
     xmlns:Maps="using:Windows.UI.Xaml.Controls.Maps"
     xmlns:cs="using:System.Diagnostics.Tracing"
+    xmlns:modules="using:Planner.Modules"
     mc:Ignorable="d" Height="595">
     <SplitView x:Name="mainSplitView" DisplayMode="CompactOverlay" OpenPaneLength="50" CompactPaneLength="20" >
         <Grid>
@@ -64,7 +65,7 @@
                                 <Button.Flyout>
                                     <Flyout>
                                         <RelativePanel Height="396">
-                                            <Maps:MapControl DataContext="{Binding basicgeoloc}" HorizontalAlignment="Left" MapTapped="MapControl_MapTapped" Loaded="MapControl_Loaded" VerticalAlignment="Top" MapElementClick="MapControl_MapElementClick" MapServiceToken="UWDI1l1XbwkriqZEGETA~MAYOBVQMdUrmOkYYK_sS1g~AoV9cm2Qr83ZnEaIlrcNUwYRTxmA-84sWvikuDFviTbzlIQfBeEto177CiI5jBqc" Height="342" Width="316" />
+                                            <local:PlannerMapControl DataContext="{Binding basicgeoloc}" HorizontalAlignment="Left" Loaded="MapControl_Loaded" VerticalAlignment="Top" Height="342" Width="316" />
                                             <Button x:Name="button3" VerticalAlignment="Stretch" Margin="0,358,0,-358" Click="button3_Click" Width="30" Height="30">
                                                 <Button.Background>
                                                     <ImageBrush ImageSource="/Assets/true.png"/>
@@ -110,31 +111,7 @@
         </Grid>
         <SplitView.Pane>
 
-            <StackPanel HorizontalAlignment="Left" Orientation="Vertical" Width="{Binding ElementName=mainSplitView, Path=Width}">
-                <Button x:Name="splitViewOpenCloseButton" Content="&#xE700;" Click="splitViewOpenCloseButton_Click" Width="30" Height="30" />
-                <!--<Button x:Name="appointmentsButton" Width="50" Height="50" Click="appointmentsButton_Click">
-                    <Button.Background>
-                        <ImageBrush ImageSource="/Assets/appointment_new2.png"/>
-                    </Button.Background>
-                </Button>-->
-                <Button x:Name="activitiesButton" Width="50" Height="50" Click="activitiesButton_Click">
-                    <Button.Background>
-                        <ImageBrush ImageSource="/Assets/appointment_new2.png"/>
-                    </Button.Background>
-
-                </Button>
-                <Button x:Name="todoitemsButton" Width="50" Height="50" Click="todoitemsButton_Click">
-                    <Button.Background>
-                        <ImageBrush ImageSource="/Assets/ToDo_icon.png"/>
-                    </Button.Background>
-                </Button>
-
-                <Button x:Name="settingsButton" Width="50" Height="50" Click="settingsButton_Click">
-                    <Button.Background>
-                        <ImageBrush ImageSource="/Assets/settings_icon.png"/>
-                    </Button.Background>
-                </Button>
-            </StackPanel>
+            <modules:NavigationPanel ReflectionsButtonEnabled="False"/>
         </SplitView.Pane>
     </SplitView>
 </Page>

@@ -13,9 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.Services.Maps;
-
 using DataLab.Storage;
-
 using System.Diagnostics;
 using Windows.Devices.Geolocation;
 using Windows.UI.Xaml.Controls.Maps;
@@ -41,13 +39,7 @@ namespace Planner
 
         public SettingsStorage Settings { get { return GeneralApplicationData.Settings; } set { GeneralApplicationData.Settings = value; } }
 
-        private Geolocator _geo;
 
-        private BasicGeoposition _lastSelectedLocation;
-
-        private MapControl mainMap;
-
-        private MapIcon activeIcon = new MapIcon();
 
         private DateTime? CurrentStartTime, CurrentEndTime;
 
@@ -57,13 +49,12 @@ namespace Planner
 
         private bool proximityTrackingOn, gpsFlyoutIsOpened;
 
-        private BackgroundWorker ProximityTrackerWorker = new BackgroundWorker();
 
         public AddActivity()
         {
 
             UserStyleFactory.addStyles(this.Resources, this.Settings.Settings);
-            
+
             this.InitializeComponent();
 
             for (int i = 0; i < 60; i++)
@@ -72,23 +63,6 @@ namespace Planner
             listBoxMinutes.SelectedIndex = 0;
 
 
-            // Set thread
-            ProximityTrackerWorker.WorkerSupportsCancellation = true;
-            ProximityTrackerWorker.WorkerReportsProgress = true;
-
-            ProximityTrackerWorker.DoWork += ProximityTrackerWorker_DoWork;
-
-        }
-
-        private void ProximityTrackerWorker_DoWork(Object sender, DoWorkEventArgs e)
-        {
-            // Proximity holder
-            while (!e.Cancel)
-            {
-                // Check if in range every 3 seconds
-                setmaptogps(0);
-                Task.Delay(3000);
-            }
         }
 
         public void setActivity(Activity a)
@@ -97,7 +71,7 @@ namespace Planner
             editMode = true;
             EditableActivity = a;
             // Set visual data to class repre
-            _lastSelectedLocation = a.basicgeoloc;
+            mapControl.LastSelectedLocation = a.Location;
             CurrentStartTime = a.Start;
             CurrentEndTime = a.End;
             nameTextBox.Text = a.Name;
@@ -148,13 +122,13 @@ namespace Planner
                     }
                     else
                     {
-                        Activity activity = new Activity(nameTextBox.Text, descriptionTextBox.Text, getStartTime(), getEndTime(), _lastSelectedLocation);
+                        Activity activity = new Activity(nameTextBox.Text, descriptionTextBox.Text, getStartTime(), getEndTime(), mapControl.LastSelectedLocation);
                         activity.Silent = checkBox1.IsChecked.GetValueOrDefault();
                         activity.MinutesToAlertBeforeActualAlarm = listBoxMinutes.SelectedIndex;
-                        if (proximityNotification.IsChecked.GetValueOrDefault())
-                        {
-                            activity.setGeoFence();
-                        }
+                        //if (proximityNotification.IsChecked.GetValueOrDefault())
+                        //{
+                        //    activity.setGeoFence();
+                        //}
                         Planning.addPlanningItem(activity);
 
 
@@ -214,10 +188,6 @@ namespace Planner
                 setActivity(t);
             }
         }
-
-        private void MapControl_MapElementClick(Windows.UI.Xaml.Controls.Maps.MapControl sender, Windows.UI.Xaml.Controls.Maps.MapElementClickEventArgs args)
-        {
-        }
         
 
         private void Grid_DoubleTapped(object sender, DoubleTappedRoutedEventArgs e)
@@ -225,63 +195,6 @@ namespace Planner
             this.Frame.Navigate(typeof(ActivitiesPage));
         }
 
-        private async void MapControl_Loaded(object sender, RoutedEventArgs e)
-        {
-            MapControl map = sender as MapControl;
-
-            this.mainMap = map;
-
-            Debug.WriteLine(await Geolocator.RequestAccessAsync());
-            _geo = new Geolocator() { DesiredAccuracyInMeters = 10 };
-            //setmaptogps(map, await _geo.GetGeopositionAsync());
-        }
-
-        private async void setmaptogps(int zoom)
-        {
-            // Set location to our current gps
-            _lastSelectedLocation = ClassConverters.geopositiontobgp(await _geo.GetGeopositionAsync());
-            await mainMap.TrySetViewAsync(new Geopoint(_lastSelectedLocation));
-
-            if (zoom > 0 && 20 > zoom)
-            {
-                await mainMap.TryZoomToAsync(zoom);
-            }
-            //while (map.ZoomLevel < 18)
-            //{
-            //    await map.TryZoomInAsync();
-            //};
-        }
-
-        private async void button3_Click(object sender, RoutedEventArgs e)
-        {
-            
-            MapLocationFinderResult result = await MapLocationFinder.FindLocationsAtAsync(new Geopoint(_lastSelectedLocation));
-
-            if (result.Status == MapLocationFinderStatus.Success)
-            {
-                if (result.Locations[0].Description != "")
-                    selectedLocationTextBlock.Text = result.Locations[0].Description;
-                else
-                    selectedLocationTextBlock.Text = result.Locations[0].Address.FormattedAddress;
-            }
-            
-        }
-        
-
-        private async void button4_Click(object sender, RoutedEventArgs e)
-        {
-            setmaptogps(5);
-        }
-
-        private void MapControl_MapTapped(MapControl sender, MapInputEventArgs args)
-        {
-            sender.MapElements.Remove(activeIcon);
-
-            _lastSelectedLocation = args.Location.Position;
-            activeIcon.Location = args.Location;
-
-            sender.MapElements.Add(activeIcon);
-        }
 
         private void mondayEnabledCheckedBox_Checked(object sender, RoutedEventArgs e)
         {
@@ -371,35 +284,12 @@ namespace Planner
             }
         }
 
-        private void proximityNotification_Click(Object sender, RoutedEventArgs e)
-        {
-            // Turn on tracker
-            if ((sender as CheckBox).IsChecked.Value)
-                enableProximityTracker();
-            else
-                disableProximityTracker();
-
-
-        }
 
         private void standardTimePicker_Loaded(Object sender, RoutedEventArgs e)
         {
             (sender as TimePicker).Visibility = Visibility.Collapsed;
         }
 
-        private void enableProximityTracker()
-        {
-            ProximityTrackerWorker.RunWorkerAsync();
-
-        }
-
-        private void addLocationFlyout_Opened(Object sender, Object e)
-        {
-            //(sender as Flyout).FlyoutPresenterStyle.
-
-            gpsFlyoutIsOpened = true;
-            
-        }
 
         private void addLocationFlyout_Closed(Object sender, Object e)
         {
@@ -409,10 +299,12 @@ namespace Planner
 
         }
 
-        private void disableProximityTracker()
+        private void addLocationFlyout_Opened(Object sender, Object e)
         {
-            ProximityTrackerWorker.CancelAsync();
+            //(sender as Flyout).FlyoutPresenterStyle.
 
+            gpsFlyoutIsOpened = true;
+            
         }
 
     }

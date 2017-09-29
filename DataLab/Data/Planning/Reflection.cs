@@ -63,6 +63,16 @@ namespace DataLab.Data.Planning
             this.Time = DateTime.Now;
         }
 
+        public Reflection(string name, string description, DateTime start, DateTime end) : base(name)
+        {
+            this.Description = description;
+
+            this.Time = DateTime.Now;
+
+            this.Start = start;
+            this.End = end;
+        }
+
         public Reflection(string name, string description, StorageFile photofile, BasicGeoposition bgp) : this(name, description)
         {
             this.basicgeoloc = bgp;

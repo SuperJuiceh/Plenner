@@ -5,37 +5,95 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:conv="using:Planner.Data.Converters" xmlns:Maps="using:Windows.UI.Xaml.Controls.Maps"
+    xmlns:modules="using:Planner.Modules"
     x:Class="Planner.ActivitiesPage"
     mc:Ignorable="d"
     Width="350" Height="635"
     >
+    
     <Page.Resources>
         <conv:DateTimeFormatConverter x:Key="DTFormatConv" />
         <conv:RandomColorGenerator  x:Key="RandomColor" />
         <conv:DaysListToStringConverter x:Key="daysToStringConv" />
+        <conv:BoolToElementVisibility x:Key="boolToVisibilityConverter"/>
+
     </Page.Resources>
-    <SplitView x:Name="mainSplitView" DisplayMode="CompactOverlay" OpenPaneLength="50" CompactPaneLength="20" >
-        <Grid DoubleTapped="Grid_DoubleTapped" Margin="0,0,0,35" HorizontalAlignment="Left" Width="350">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="7*"/>
-                <RowDefinition Height="143*"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition Width="17*"/>
-            </Grid.ColumnDefinitions>
-            <Grid.Background>
-                <ImageBrush ImageSource="/Assets/Background_cyanlight.png" />
-            </Grid.Background>
-            <ListView x:Name="listBoxSingleItems" FontSize="10" HorizontalAlignment="Left" Height="245" Margin="16,47,0,0" VerticalAlignment="Top" Width="314" ItemsSource="{x:Bind Planning.plan.Activities}"  ScrollViewer.VerticalScrollBarVisibility="Auto" MaxHeight="160" Grid.Row="1" Grid.ColumnSpan="2">
+    <SplitView x:Name="mainSplitView" DisplayMode="CompactOverlay" OpenPaneLength="50" CompactPaneLength="20" DoubleTapped="Grid_DoubleTapped" >
+        <StackPanel Orientation="Vertical">
+
+            <StackPanel Orientation="Horizontal" Height="39">
+                <Button HorizontalAlignment="Left" Margin="200,0,0,0" VerticalAlignment="Top" Height="31" Width="41">
+                    <Button.Flyout>
+                        <Flyout>
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock Text="Enabled Modules"/>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Single Activities"/>
+                                    <CheckBox x:Name="showActivitiesSingleCheckbox" DataContext="{x:Bind Settings.Settings}" IsChecked="{Binding ActivitiesSingleListVisible, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Checked="showActivitiesSingleCheckbox_Checked"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Set Activities"/>
+                                    <CheckBox x:Name="showRepeatingActivitiesCheckbox" DataContext="{x:Bind Settings.Settings}"  IsChecked="{Binding ActivitiesRepeatingListVisible, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Checked="showRepeatingActivitiesCheckbox_Checked"/>
+
+                                </StackPanel>
+                            </StackPanel>
+                        </Flyout>
+                    </Button.Flyout>
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Assets/eye.png"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="button" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Height="32" Width="36" Click="button_Click_1" >
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Assets/plus.png" />
+                    </Button.Background>
+                </Button>
+                <Button x:Name="button1" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Height="35" Width="42" Click="button1_Click" >
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Assets/Broom_icon.svg.png" />
+                    </Button.Background>
+                </Button>
+            </StackPanel>
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="0,15,0,0" TextWrapping="Wrap" Text="Activities" FontSize="20" VerticalAlignment="Top" Height="30" Width="115" SelectionChanged="textBlock_SelectionChanged"/>
+
+            <ListView x:Name="listBoxSingleItems" DataContext="{x:Bind Settings.Settings}" FontSize="10" HorizontalAlignment="Left" Height="246" Margin="0,0,0,0" VerticalAlignment="Top" Width="314" ItemsSource="{x:Bind ActivitiesList}"  ScrollViewer.VerticalScrollBarVisibility="Auto" MaxHeight="160" Visibility="{Binding ActivitiesSingleListVisible, Converter={StaticResource boolToVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}"  >
                 <ListView.Header>
-                    <RelativePanel Height="25">
-                        <TextBlock x:Name="singleActivityNameTextBlock" Text="Name" Tapped="singleActivityNameTextBlock_Tapped"/>
-                        <TextBlock x:Name="singleActivityTimeTextBlock"  Text="Time" Margin="100, 0, 0, 0" Tapped="singleActivityTimeTextBlock_Tapped"/>
-                        <TextBlock Text="" Margin="170, 0, 0, 0" />
-                        <TextBlock Text="" Margin="220, 0, 0, 0" />
-                        <TextBlock Text="" Margin="250, 0, 0, 0" />
-                        <TextBlock Text="" Margin="280, 0, 0, 0" />
+                    <RelativePanel Height="50">
+                        <StackPanel Orientation="Horizontal" Margin="0, 10, 0, 0">
+                            <Button Margin="250,-2,0,0.333" Width="24" Height="25" >
+                                <Button.Background>
+                                    <ImageBrush ImageSource="/Assets/FilterIcon.png"/>
+                                </Button.Background>
+                                <Button.Flyout> 
+                                    <Flyout x:Name="filterButton" Closed="filterButton_Closed">
+                                        <StackPanel Margin="0, 20, 0, 0" Orientation="Vertical" Width="351" Height="186">
+
+                                            <TextBlock Text="Filter Options"/>
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock x:Name="filterQueryTextBlock" Text="Search key" />
+                                                <TextBox Margin="30, 0, 0, 0" Text="..." Width="228"/>
+                                            </StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Text="From"/>
+                                                <DatePicker x:Name="filterStartDate" Margin="20,0,0,0" />
+                                            </StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Text="To"/>
+                                                <DatePicker x:Name="filterEndDate" Margin="20,0,0,0" />
+                                            </StackPanel>
+                                            <Button x:Name="filterOkButton" Content="OK" Click="filterOkButton_Click"/>
+                                        </StackPanel>
+                                    </Flyout>
+                                </Button.Flyout>
+                            </Button>
+                        </StackPanel>
+
+                        <TextBlock x:Name="singleActivityNameTextBlock" Text="Name" Margin="0, 20, 0, 0" Tapped="singleActivityNameTextBlock_Tapped"/>
+                        <TextBlock x:Name="singleActivityTimeTextBlock"  Text="Time" Margin="100, 20, 0, 0" Tapped="singleActivityTimeTextBlock_Tapped"/>
+                        <TextBlock Text="" Margin="170, 20, 0, 0" />
+                        <TextBlock Text="" Margin="220, 20, 0, 0" />
+                        <TextBlock Text="" Margin="250, 20, 0, 0" />
+                        <TextBlock Text="" Margin="280, 20, 0, 0" />
                     </RelativePanel>
                 </ListView.Header>
                 <ListView.ItemTemplate>
@@ -51,12 +109,7 @@
                                 <Button.Flyout>
                                     <Flyout>
                                         <RelativePanel Height="396">
-                                            <Button x:Name="button3" VerticalAlignment="Stretch" Margin="0,358,0,-358" Click="button3_Click" Width="30" Height="30">
-                                                <Button.Background>
-                                                    <ImageBrush ImageSource="/Assets/true.png"/>
-                                                </Button.Background>
-                                            </Button>
-                                            <Maps:MapControl  HorizontalAlignment="Left" Loaded="MapControl_Loaded" VerticalAlignment="Top" MapServiceToken="UWDI1l1XbwkriqZEGETA~MAYOBVQMdUrmOkYYK_sS1g~AoV9cm2Qr83ZnEaIlrcNUwYRTxmA-84sWvikuDFviTbzlIQfBeEto177CiI5jBqc" Height="342" Width="316" />
+                                            <local:PlannerMapControl x:Name="name" Mode="OBSERVANT_VIEW"  DataContext="{Binding }" MovementMode="FOOT" Loaded="name_Loaded"/>
                                         </RelativePanel>
                                     </Flyout>
                                 </Button.Flyout>
@@ -76,29 +129,21 @@
                                     <ImageBrush ImageSource="/Assets/delete.png" />
                                 </Button.Background>
                             </Button>
-                            <TextBlock x:Name="descriptionTextBlock" Text="{Binding Description}" Visibility="Collapsed" />
+                            <TextBlock x:Name="descriptionTextBlock" Text="{Binding Description}" Visibility="Collapsed" Margin="0,20,0,0" />
                         </RelativePanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,15,0,0" TextWrapping="Wrap" Text="Activities" FontSize="20" VerticalAlignment="Top" Height="30" Width="139" SelectionChanged="textBlock_SelectionChanged" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
-            <Button x:Name="button" HorizontalAlignment="Left" Margin="235.667,12,0,0" VerticalAlignment="Top" Grid.Column="1" Height="32" Width="36" Click="button_Click_1" Grid.RowSpan="2">
-                <Button.Background>
-                    <ImageBrush ImageSource="/Assets/plus.png" />
-                </Button.Background>
-            </Button>
-            <Button x:Name="button1" Grid.Column="1" HorizontalAlignment="Left" Margin="267.667,12,0,0" VerticalAlignment="Top" Height="35" Width="42" Click="button1_Click" Grid.RowSpan="2">
-                <Button.Background>
-                    <ImageBrush ImageSource="/Assets/Broom_icon.svg.png" />
-                </Button.Background>
-            </Button>
-            <ListView x:Name="listView" Grid.Column="1" HorizontalAlignment="Left" Height="180" Margin="2.667,340,0,0" VerticalAlignment="Top" Width="305" ItemsSource="{x:Bind Planning.plan.rpi}" FontSize="10" ScrollViewer.VerticalScrollBarVisibility="Auto" MaxHeight="180" Grid.Row="1">
+
+            <ListView x:Name="listView"  DataContext="{x:Bind Settings.Settings}"  HorizontalAlignment="Left" Height="205" Margin="0,100,0,0" VerticalAlignment="Top" Width="314" ItemsSource="{x:Bind Planning.plan.rpi}" FontSize="10" ScrollViewer.VerticalScrollBarVisibility="Auto" MaxHeight="180" Visibility="{Binding ActivitiesRepeatingListVisible, Converter={StaticResource boolToVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}" >
                 <ListView.Header>
-                    <RelativePanel>
-                        <TextBlock x:Name="repeatingNameHeader" Text="Name" Tapped="repeatingNameHeader_Tapped" Margin="0, 0, 0, 0" />
-                        <TextBlock Text="Days" Margin="100, 0, 0, 0"/>
-                        <TextBlock x:Name="repeatingTimeHeader" Text="Time" Tapped="repeatingTimeHeader_Tapped" Margin="200, 0, 0, 0"/>
-                        <TextBlock Text="..." Margin="250, 0, 0, 0" />
+                    <RelativePanel Height="100">
+                        <TextBlock Text="Repeating" HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="41"/>
+
+                        <TextBlock x:Name="repeatingNameHeader" Text="Name" Tapped="repeatingNameHeader_Tapped" Margin="0, 20, 0, 0" />
+                        <TextBlock Text="Days" Margin="100, 20, 0, 0"/>
+                        <TextBlock x:Name="repeatingTimeHeader" Text="Time" Tapped="repeatingTimeHeader_Tapped" Margin="200, 20, 0, 0"/>
+                        <TextBlock Text="..." Margin="250, 20, 0, 0" />
                     </RelativePanel>
                 </ListView.Header>
                 <ListView.ItemTemplate>
@@ -117,35 +162,14 @@
                 </ListView.ItemTemplate>
             </ListView>
 
-            <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="5,301,0,0" TextWrapping="Wrap" Text="Repeating" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.Row="1" Width="69"/>
-            <TextBlock x:Name="textBlock2" Text="Single" HorizontalAlignment="Left" Margin="11,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="1" Grid.ColumnSpan="2" Width="41"/>
-
-        </Grid>
+        </StackPanel>
         <SplitView.Pane>
 
-            <StackPanel HorizontalAlignment="Left" Orientation="Vertical" Width="{Binding ElementName=mainSplitView, Path=Width}">
-                <Button x:Name="splitViewOpenCloseButton" Content="&#xE700;" Click="splitViewOpenCloseButton_Click" Width="30" Height="30" />
-                <!--<Button x:Name="appointmentsButton" Width="50" Height="50" Click="appointmentsButton_Click">
-                    <Button.Background>
-                        <ImageBrush ImageSource="/Assets/appointment_new2.png"/>
-                    </Button.Background>
-                </Button>-->
-                <Button x:Name="todoitemsButton" Width="50" Height="50" Click="todoitemsButton_Click">
-                    <Button.Background>
-                        <ImageBrush ImageSource="/Assets/ToDo_icon.png"/>
-                    </Button.Background>
-                </Button>
-                <Button x:Name="reflectionsButton" Width="50" Height="50" Click="reflectionsButton_Click">
-                    <Button.Background>
-                        <ImageBrush ImageSource="/Assets/journal.png"/>
-                    </Button.Background>
-                </Button>
-                <Button x:Name="settingsButton" Width="50" Height="50" Click="settingsButton_Click">
-                    <Button.Background>
-                        <ImageBrush ImageSource="/Assets/settings_icon.png"/>
-                    </Button.Background>
-                </Button>
-            </StackPanel>
+            <modules:NavigationPanel ActivitiesButtonEnabled="False"/>
         </SplitView.Pane>
+        <SplitView.Background>
+            <ImageBrush ImageSource="/Assets/Background_cyanlight.png" />
+        </SplitView.Background>
+
     </SplitView>
 </Page>

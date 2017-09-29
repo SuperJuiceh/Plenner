@@ -38,9 +38,14 @@ namespace DataLab.Storage
         public async void initStorage(string filename)
         {
             try {
+                
+
                 // File Exists
                 SaveLocation = await ApplicationData.Current.LocalFolder.GetFileAsync(filename);
+                //await SaveLocation.DeleteAsync();
 
+                //SaveLocation = await ApplicationData.Current.LocalFolder.GetFileAsync(filename);
+                
                 Debug.WriteLine(SaveLocation.Path);
                 // Go back here and try again if we cannot load file
                 loadStorageStartLoop:
@@ -55,7 +60,7 @@ namespace DataLab.Storage
                     {
                         await Task.Delay(1250);
                         goto loadStorageStartLoop;
-                    } 
+                    }
 
                 }
             } catch (Exception e) {
@@ -66,7 +71,10 @@ namespace DataLab.Storage
                     StorageObject = Activator.CreateInstance(StorageObjectType);
                     SaveLocation = await ApplicationData.Current.LocalFolder.CreateFileAsync(filename, CreationCollisionOption.ReplaceExisting);
                     saveStorage();
+
+                    
                 }
+
 
                 Debug.WriteLine(e.Message);
             }
@@ -78,26 +86,34 @@ namespace DataLab.Storage
         public async Task<object> loadStorage()
         {
 
-            Stream striem = await SaveLocation.OpenStreamForReadAsync();
+            using (Stream striem = await SaveLocation.OpenStreamForReadAsync())
+            {
+                try
+                {
+
+                    Serializer = new XmlSerializer(StorageObjectType);
+                    //var settings = new XmlReaderSettings();
+                    //settings.Async = true;
+                    XmlReader reader = XmlReader.Create(striem);
+                    
+                    //while (await reader.ReadAsync())
+                    //{
+                    //    Debug.WriteLine(await reader.GetValueAsync());
+                    //}
+
+                    StorageObject = Serializer.Deserialize(reader);
+                }
+                catch (Exception e)
+                {
+                    Debug.WriteLine(e.Message);
+                    StorageObject = Activator.CreateInstance(StorageObjectType);
+                    
+                    saveStorage();
+                }
+
+                striem.Flush();
+            }
             
-            try
-            {
-                
-                Serializer = new XmlSerializer(StorageObjectType);
-                XmlReader reader = XmlReader.Create(striem);
-
-                StorageObject = Serializer.Deserialize(reader);
-            }
-            catch (Exception)
-            {
-                StorageObject = Activator.CreateInstance(StorageObjectType);
-                saveStorage();
-            }
-
-
-            striem.Flush();
-            striem.Dispose();
-
             return StorageObject;
         }
 
@@ -107,21 +123,19 @@ namespace DataLab.Storage
 
             try
             {
-                Stream striem = await SaveLocation.OpenStreamForWriteAsync();
-                striem.SetLength(0);
-                Debug.WriteLine("!");
-                Serializer.Serialize(striem, StorageObject);
-                
+                using (Stream striem = await SaveLocation.OpenStreamForWriteAsync())
+                {
+                    striem.SetLength(0);
+                    Serializer.Serialize(striem, StorageObject);
 
-                striem.Flush();
-                striem.Dispose();
+                    striem.Flush();
+                }
+
             } catch (Exception)
             {
                 await Task.Delay(1000);
                 goto goback;
             }
-
-            Debug.WriteLine("A");
         }
 
         public bool waitToLoad(int timeout)

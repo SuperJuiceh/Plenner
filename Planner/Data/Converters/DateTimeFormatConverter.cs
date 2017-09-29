@@ -27,7 +27,7 @@ namespace Planner.Data.Converters
 
                 stringedTime.Append(dt.Hour.ToString("00") + ":" + dt.Minute.ToString("00")
                                             + " " + dt.Day + "-"
-                                            + StaticTools.monthNumberToString(dt.Month + 1));
+                                            + StaticTools.monthNumberToString(dt.Month));
             }
 
             if (parameter != null)
@@ -39,7 +39,7 @@ namespace Planner.Data.Converters
 
                     stringedTime.Append(" "+ t.Hour.ToString("00") + ":" + t.Minute.ToString("00")
                                                 + " " + t.Day + "-"
-                                                + CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(t.Month + 1).Substring(0, 3));
+                                                + CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(t.Month).Substring(0, 3));
                 }
                 if (parameter is TimeSpan)
                 {

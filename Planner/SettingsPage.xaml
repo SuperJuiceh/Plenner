@@ -7,6 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:conv="using:Planner.Data.Converters"
     xmlns:tools="using:DataLab.Tools"
+    xmlns:modules="using:Planner.Modules"
     mc:Ignorable="d"
     Width="350" Height="635"
     >
@@ -24,8 +25,8 @@
 
     <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="25,25,0,0" TextWrapping="Wrap" Text="Settings" VerticalAlignment="Top" Height="25" Width="75"/>
     <RelativePanel x:Name="settingsPanel" DataContext="{Binding Settings, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
-        <CheckBox x:Name="soundEnabledCheckBox" IsChecked="{Binding Settings.SoundEnabled, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Content="Enable Sound" HorizontalAlignment="Left" Margin="50,70,0,0" VerticalAlignment="Top" Width="145" Checked="soundEnabledCheckBox_Checked"/>
-        <CheckBox x:Name="notificationsEnabledCheckBox" IsChecked="{Binding Settings.EnableNotifications, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Content="Enable Notifications" HorizontalAlignment="Left" Margin="50,108,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="soundEnabledCheckBox" IsChecked="{x:Bind Settings.Settings.SoundEnabled, Mode=TwoWay}" Content="Enable Sound" HorizontalAlignment="Left" Margin="50,70,0,0" VerticalAlignment="Top" Width="145" Checked="soundEnabledCheckBox_Checked"/>
+                <CheckBox x:Name="notificationsEnabledCheckBox" IsChecked="{x:Bind Settings.Settings.EnableNotifications, Mode=TwoWay}" Content="Enable Notifications" HorizontalAlignment="Left" Margin="50,108,0,0" VerticalAlignment="Top"/>
         <RelativePanel Margin="50,207,20,333" x:Name="planningItemExperationPanel">
             <CheckBox x:Name="planningItemExperationCheckBox" Content="PlanningItem Expiration" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Checked="checkBox2_Checked" />
             <StackPanel Margin="5,30,-60,-15" HorizontalAlignment="Left" VerticalAlignment="Top" Width="275" Height="60" Visibility="{Binding ElementName=planningItemExperationCheckBox, Path=IsChecked, Converter={StaticResource boolToVisibilityConv}}">
@@ -47,7 +48,7 @@
         </RelativePanel>
         <RelativePanel Margin="50,145,-305,-199" Visibility="{Binding ElementName=notificationsEnabledCheckBox, Path=IsChecked, Converter={StaticResource boolToVisibilityConv}}">
             <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="Notification Icon" VerticalAlignment="Top" Width="124" Margin="10,0,-72.333,0"/>
-            <Button x:Name="image" Margin="150, 0, 0, 0"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" >
+            <Button x:Name="currentImageButton" Margin="150, 0, 0, 0"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" >
                 <Button.Flyout>
                     <Flyout>
                         <StackPanel Width="204" Height="50" Orientation="Horizontal" VerticalAlignment="Top">
@@ -75,7 +76,7 @@
                     </Flyout>
                 </Button.Flyout>
                 <Button.Background>
-                    <ImageBrush ImageSource="{Binding Settings.Settings.NotificationIconString}" />
+                    <ImageBrush ImageSource="{x:Bind Settings.Settings.NotificationIconString }" />
                 </Button.Background>
             </Button>
         </RelativePanel>
@@ -101,31 +102,7 @@
 </Grid>
         <SplitView.Pane>
 
-            <StackPanel HorizontalAlignment="Left" Orientation="Vertical" Width="{Binding ElementName=mainSplitView, Path=Width}">
-                <Button x:Name="splitViewOpenCloseButton" Content="&#xE700;" Click="splitViewOpenCloseButton_Click" Width="30" Height="30" />
-                <!--<Button x:Name="appointmentsButton" Width="50" Height="50" Click="appointmentsButton_Click">
-                <Button.Background>
-                    <ImageBrush ImageSource="/Assets/appointment_new2.png"/>
-                </Button.Background>
-            </Button>-->
-                <Button x:Name="activitiesButton" Width="50" Height="50" Click="activitiesButton_Click">
-                    <Button.Background>
-                        <ImageBrush ImageSource="/Assets/appointment_new2.png"/>
-                    </Button.Background>
-
-                </Button>
-                <Button x:Name="todoitemsButton" Width="50" Height="50" Click="todoitemsButton_Click">
-                    <Button.Background>
-                        <ImageBrush ImageSource="/Assets/ToDo_icon.png"/>
-                    </Button.Background>
-                </Button>
-
-                <Button x:Name="reflectionsButton" Width="50" Height="50" Click="reflectionsButton_Click">
-                    <Button.Background>
-                        <ImageBrush ImageSource="/Assets/journal.png"/>
-                    </Button.Background>
-                </Button>
-            </StackPanel>
+            <modules:NavigationPanel SettingsButtonEnabled="False" />
         </SplitView.Pane>
     </SplitView>
 </Page>

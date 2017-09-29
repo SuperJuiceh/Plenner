@@ -60,8 +60,8 @@ namespace DataLab.Tools.Connectivity
         public static void sendMailWithPlanning(PlanningItemStorage Planning, PlanningItem pItem)
         {
             
-
             User user;
+
             if (Planning.isDynamic())
             {
                 DynamicPlanningItemStorage dp = Planning as DynamicPlanningItemStorage;

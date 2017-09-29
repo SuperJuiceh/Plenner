@@ -28,7 +28,7 @@ namespace Planner
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class ToDoPage : Page
+    public sealed partial class ToDoPage : Page, INotifyPropertyChanged
     {
 
         private Point manipulationStartingPoint;
@@ -37,6 +37,9 @@ namespace Planner
         public SettingsStorage      Settings { get; private set; }
 
         public bool nameSortAscending, timeSortAscending;
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
 
         public ToDoPage()
         {
@@ -228,7 +231,7 @@ namespace Planner
 
         private void reflectionsButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Reflection));
+            this.Frame.Navigate(typeof(ReflectionsPage));
         }
 
         private void settingsButton_Click(object sender, RoutedEventArgs e)
@@ -236,9 +239,50 @@ namespace Planner
             this.Frame.Navigate(typeof(SettingsPage));
         }
         
+
         private void splitViewOpenCloseButton_Click(object sender, RoutedEventArgs e)
         {
             mainSplitView.IsPaneOpen = !mainSplitView.IsPaneOpen;
+        }
+
+        private void showToDosSingleCheckbox_Checked(object sender, RoutedEventArgs e)
+        {
+            
+            if (Settings.Settings.ToDoItemsSingleListVisible)
+            {
+                if (Settings.Settings.ToDoItemsSetListVisible)
+                {
+                    listView.Height = 250;
+                } else
+                {
+                    listView.Height = 500;
+                }
+            }
+
+            Settings.saveStorage();
+        }
+
+        private void showToDosSetCheckbox_Checked(object sender, RoutedEventArgs e)
+        {
+            if (Settings.Settings.ToDoItemsSetListVisible)
+            {
+                if (Settings.Settings.ToDoItemsSingleListVisible)
+                {
+                    listViewtdiSets.Height = 250;
+                }
+                else
+                {
+                    listViewtdiSets.Height = 500;
+                }
+            }
+
+            Settings.saveStorage();
+
+        }
+
+        private void Changed(string name)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
     }
 

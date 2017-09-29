@@ -50,8 +50,6 @@ namespace Planner
             
             this.InitializeComponent();
 
-            setSettingsFromFile();
-
         }
 
         private void Settings_PropertyChanged(Object sender, System.ComponentModel.PropertyChangedEventArgs e)
@@ -62,6 +60,7 @@ namespace Planner
         private void RelativePanel_ManipulationStarted(object sender, ManipulationStartedRoutedEventArgs e)
         {
             manipulationStartingPoint = e.Position;
+            
         }
 
         private void RelativePanel_ManipulationCompleted(object sender, ManipulationCompletedRoutedEventArgs e)
@@ -249,15 +248,15 @@ namespace Planner
             int iconNum = int.Parse((string)(sender as Button).Tag);
 
             // We have 4 icons
-            if (iconNum != 0 && iconNum < 5)
+            if (iconNum > 0 && iconNum < 5)
             {
-                Settings.Settings.NotificationIconString = "//Assets/NotificationIcons/Notif_icon_"+iconNum.ToString()+".png";
+                Settings.Settings.NotificationIconString = "/Assets/NotificationIcons/notif_icon_" + iconNum.ToString() + ".png";
 
                 Settings.saveStorage();
+
+                currentImageButton.UpdateLayout();
             }
-
-            Debug.WriteLine("End button Click 2()");
-
+            
         }
 
         private void todoitemsButton_Click(object sender, RoutedEventArgs e)

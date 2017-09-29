@@ -31,6 +31,15 @@ namespace DataLab.Data.Planning
 
         public string Description { get { return description; } set { description = value; Changed("Description"); } }
 
+        [XmlIgnore]
+        private DateTime _start;
+
+        public DateTime Start { get { return _start; } set { _start = value; Changed("Start"); } }
+
+        public DateTime _end { get; set; }
+
+        public DateTime End { get { return _end; } set { _end = value; Changed("Start"); } }
+
         public PlanningItem(string name)
         {
             this.Name = name;
@@ -75,6 +84,19 @@ namespace DataLab.Data.Planning
         {
             return base.GetHashCode();
         }
+
+        
+        public static Comparison<PlanningItem> CompareByTime = delegate(PlanningItem x, PlanningItem y) 
+        {
+            return x.Start.CompareTo(y.Start);
+
+        };
+
+        public static Comparison<PlanningItem> CompareByName = delegate (PlanningItem x, PlanningItem y)
+        {
+            return x.Name.CompareTo(y.Name);
+
+        };
     }
 
     public class PlanningItemList: ObservableCollection<PlanningItem>

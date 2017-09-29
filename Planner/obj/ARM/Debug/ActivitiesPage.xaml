@@ -5,6 +5,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:conv="using:Planner.Data.Converters" xmlns:Maps="using:Windows.UI.Xaml.Controls.Maps"
+    xmlns:modules="using:Planner.Modules"
     x:Class="Planner.ActivitiesPage"
     mc:Ignorable="d"
     Width="350" Height="635"
@@ -13,34 +14,81 @@
         <conv:DateTimeFormatConverter x:Key="DTFormatConv" />
         <conv:RandomColorGenerator  x:Key="RandomColor" />
         <conv:DaysListToStringConverter x:Key="daysToStringConv" />
+        <conv:BoolToElementVisibility x:Key="boolToVisibilityConverter"/>
     </Page.Resources>
-    <SplitView x:ConnectionId='2' x:Name="mainSplitView" DisplayMode="CompactOverlay" OpenPaneLength="50" CompactPaneLength="20" >
-        <Grid x:ConnectionId='3'                                  Margin="0,0,0,35" HorizontalAlignment="Left" Width="350">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="7*"/>
-                <RowDefinition Height="143*"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition Width="17*"/>
-            </Grid.ColumnDefinitions>
-            <Grid.Background>
-                <ImageBrush ImageSource="/Assets/Background_cyanlight.png" />
-            </Grid.Background>
-            <ListView x:ConnectionId='4' x:Name="listBoxSingleItems" FontSize="10" HorizontalAlignment="Left" Height="245" Margin="16,47,0,0" VerticalAlignment="Top" Width="314"                                                  ScrollViewer.VerticalScrollBarVisibility="Auto" MaxHeight="160" Grid.Row="1" Grid.ColumnSpan="2">
+    <SplitView x:ConnectionId='2' x:Name="mainSplitView" DisplayMode="CompactOverlay" OpenPaneLength="50" CompactPaneLength="20"                                  >
+        <StackPanel Orientation="Vertical">
+
+            <StackPanel Orientation="Horizontal" Height="39">
+                <Button HorizontalAlignment="Left" Margin="200,0,0,0" VerticalAlignment="Top" Height="31" Width="41">
+                    <Button.Flyout>
+                        <Flyout>
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock Text="Enabled Modules"/>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Single Activities"/>
+                                    <CheckBox x:ConnectionId='21' x:Name="showActivitiesSingleCheckbox"                                          IsChecked="{Binding ActivitiesSingleListVisible, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"                                               />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Set Activities"/>
+                                    <CheckBox x:ConnectionId='20' x:Name="showRepeatingActivitiesCheckbox"                                           IsChecked="{Binding ActivitiesRepeatingListVisible, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"                                                  />
+
+                                </StackPanel>
+                            </StackPanel>
+                        </Flyout>
+                    </Button.Flyout>
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Assets/eye.png"/>
+                    </Button.Background>
+                </Button>
+                <Button x:ConnectionId='18' x:Name="button" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Height="32" Width="36"                        >
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Assets/plus.png" />
+                    </Button.Background>
+                </Button>
+                <Button x:ConnectionId='19' x:Name="button1" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Height="35" Width="42"                       >
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Assets/Broom_icon.svg.png" />
+                    </Button.Background>
+                </Button>
+            </StackPanel>
+            <TextBlock x:ConnectionId='3' x:Name="textBlock" HorizontalAlignment="Left" Margin="0,15,0,0" TextWrapping="Wrap" Text="Activities" FontSize="20" VerticalAlignment="Top" Height="30" Width="115"                                              />
+
+            <ListView x:ConnectionId='4' x:Name="listBoxSingleItems"                                          FontSize="10" HorizontalAlignment="Left" Height="247" Margin="0,0,0,0" VerticalAlignment="Top" Width="314"                                                  ScrollViewer.VerticalScrollBarVisibility="Auto" MaxHeight="160" Visibility="{Binding ActivitiesSingleListVisible, Converter={StaticResource boolToVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}"  >
                 <ListView.Header>
-                    <RelativePanel Height="25">
-                        <TextBlock x:ConnectionId='14' x:Name="singleActivityNameTextBlock" Text="Name"                                            />
-                        <TextBlock x:ConnectionId='15' x:Name="singleActivityTimeTextBlock"  Text="Time" Margin="100, 0, 0, 0"                                            />
-                        <TextBlock Text="" Margin="170, 0, 0, 0" />
-                        <TextBlock Text="" Margin="220, 0, 0, 0" />
-                        <TextBlock Text="" Margin="250, 0, 0, 0" />
-                        <TextBlock Text="" Margin="280, 0, 0, 0" />
+                    <RelativePanel Height="50">
+                        <StackPanel Orientation="Horizontal" Margin="0, 10, 0, 0">
+
+                            <TextBlock x:ConnectionId='11' x:Name="textBlock2" Text="Single" HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="41"/>
+                            <Button Margin="250,-2,0,0.333" Width="24" Height="25" >
+                                <Button.Background>
+                                    <ImageBrush ImageSource="/Assets/FilterIcon.png"/>
+                                </Button.Background>
+                                <Button.Flyout>
+                                    <Flyout x:ConnectionId='12' x:Name="filterButton"                             >
+                                        <StackPanel Margin="0, 20, 0, 0" Orientation="Vertical" Width="351" Height="186">
+                                            <TextBlock Text="Filter Option"/>
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Text="Search key" />
+                                                <TextBox Margin="30, 0, 0, 0" Text="..." Width="228"/>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </Flyout>
+                                </Button.Flyout>
+                            </Button>
+                        </StackPanel>
+
+                        <TextBlock x:ConnectionId='9' x:Name="singleActivityNameTextBlock" Text="Name" Margin="0, 20, 0, 0"                                            />
+                        <TextBlock x:ConnectionId='10' x:Name="singleActivityTimeTextBlock"  Text="Time" Margin="100, 20, 0, 0"                                            />
+                        <TextBlock Text="" Margin="170, 20, 0, 0" />
+                        <TextBlock Text="" Margin="220, 20, 0, 0" />
+                        <TextBlock Text="" Margin="250, 20, 0, 0" />
+                        <TextBlock Text="" Margin="280, 20, 0, 0" />
                     </RelativePanel>
                 </ListView.Header>
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <RelativePanel x:ConnectionId='16' x:Name="relativePanel" Margin="-10, 10, 0, 0" Height="35"                                                   >
+                        <RelativePanel x:ConnectionId='13' x:Name="relativePanel" Margin="-10, 10, 0, 0" Height="35"                                                   >
                             <TextBlock Text="{Binding Name}"  FontSize="10" />
                             <TextBlock Text="{Binding Start, Converter={StaticResource DTFormatConv}, ConverterParameter={Binding End}}" Margin="100, 0, 0, 0" FontSize="10" />
 
@@ -51,54 +99,41 @@
                                 <Button.Flyout>
                                     <Flyout>
                                         <RelativePanel Height="396">
-                                            <Button x:ConnectionId='20' x:Name="button3" VerticalAlignment="Stretch" Margin="0,358,0,-358"                       Width="30" Height="30">
-                                                <Button.Background>
-                                                    <ImageBrush ImageSource="/Assets/true.png"/>
-                                                </Button.Background>
-                                            </Button>
-                                            <Maps:MapControl x:ConnectionId='21'  HorizontalAlignment="Left"                            VerticalAlignment="Top" MapServiceToken="UWDI1l1XbwkriqZEGETA~MAYOBVQMdUrmOkYYK_sS1g~AoV9cm2Qr83ZnEaIlrcNUwYRTxmA-84sWvikuDFviTbzlIQfBeEto177CiI5jBqc" Height="342" Width="316" />
+                                            <local:PlannerMapControl x:ConnectionId='17' x:Name="name" Mode="OBSERVANT_VIEW"  DataContext="{Binding }" MovementMode="FOOT"                     />
                                         </RelativePanel>
                                     </Flyout>
                                 </Button.Flyout>
                             </Button>
-                            <Button x:ConnectionId='17' x:Name="editButton"                          Height="25" Width="25" FontSize="10" Margin="220, 0, 0, 0">
+                            <Button x:ConnectionId='14' x:Name="editButton"                          Height="25" Width="25" FontSize="10" Margin="220, 0, 0, 0">
                                 <Button.Background>
                                     <ImageBrush ImageSource="/Assets/edit.png" />
                                 </Button.Background>
                             </Button>
-                            <Button x:ConnectionId='18' x:Name="mailActivityButton" Height="25" Width="25" FontSize="10" Margin="250, 0, 0, 0"                                  Tag="{Binding }" >
+                            <Button x:ConnectionId='15' x:Name="mailActivityButton" Height="25" Width="25" FontSize="10" Margin="250, 0, 0, 0"                                  Tag="{Binding }" >
                                 <Button.Background>
                                     <ImageBrush ImageSource="/Assets/mail.png" />
                                 </Button.Background>
                             </Button>
-                            <Button x:ConnectionId='19'                      Height="25" Width="25" FontSize="10" Margin="280, 0, 0, 0" >
+                            <Button x:ConnectionId='16'                      Height="25" Width="25" FontSize="10" Margin="280, 0, 0, 0" >
                                 <Button.Background>
                                     <ImageBrush ImageSource="/Assets/delete.png" />
                                 </Button.Background>
                             </Button>
-                            <TextBlock x:Name="descriptionTextBlock" Text="{Binding Description}" Visibility="Collapsed" />
+                            <TextBlock x:Name="descriptionTextBlock" Text="{Binding Description}" Visibility="Collapsed" Margin="0,20,0,0" />
                         </RelativePanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <TextBlock x:ConnectionId='5' x:Name="textBlock" HorizontalAlignment="Left" Margin="10,15,0,0" TextWrapping="Wrap" Text="Activities" FontSize="20" VerticalAlignment="Top" Height="30" Width="139"                                               Grid.ColumnSpan="2" Grid.RowSpan="2"/>
-            <Button x:ConnectionId='6' x:Name="button" HorizontalAlignment="Left" Margin="235.667,12,0,0" VerticalAlignment="Top" Grid.Column="1" Height="32" Width="36"                        Grid.RowSpan="2">
-                <Button.Background>
-                    <ImageBrush ImageSource="/Assets/plus.png" />
-                </Button.Background>
-            </Button>
-            <Button x:ConnectionId='7' x:Name="button1" Grid.Column="1" HorizontalAlignment="Left" Margin="267.667,12,0,0" VerticalAlignment="Top" Height="35" Width="42"                       Grid.RowSpan="2">
-                <Button.Background>
-                    <ImageBrush ImageSource="/Assets/Broom_icon.svg.png" />
-                </Button.Background>
-            </Button>
-            <ListView x:ConnectionId='8' x:Name="listView" Grid.Column="1" HorizontalAlignment="Left" Height="180" Margin="2.667,340,0,0" VerticalAlignment="Top" Width="305"                                          FontSize="10" ScrollViewer.VerticalScrollBarVisibility="Auto" MaxHeight="180" Grid.Row="1">
+
+            <ListView x:ConnectionId='5' x:Name="listView"                                            HorizontalAlignment="Left" Height="205" Margin="0,100,0,0" VerticalAlignment="Top" Width="314"                                          FontSize="10" ScrollViewer.VerticalScrollBarVisibility="Auto" MaxHeight="180" Visibility="{Binding ActivitiesRepeatingListVisible, Converter={StaticResource boolToVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}" >
                 <ListView.Header>
-                    <RelativePanel>
-                        <TextBlock x:ConnectionId='11' x:Name="repeatingNameHeader" Text="Name"                                     Margin="0, 0, 0, 0" />
-                        <TextBlock Text="Days" Margin="100, 0, 0, 0"/>
-                        <TextBlock x:ConnectionId='12' x:Name="repeatingTimeHeader" Text="Time"                                     Margin="200, 0, 0, 0"/>
-                        <TextBlock Text="..." Margin="250, 0, 0, 0" />
+                    <RelativePanel Height="100">
+                        <TextBlock Text="Repeating" HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="41"/>
+
+                        <TextBlock x:ConnectionId='6' x:Name="repeatingNameHeader" Text="Name"                                     Margin="0, 20, 0, 0" />
+                        <TextBlock Text="Days" Margin="100, 20, 0, 0"/>
+                        <TextBlock x:ConnectionId='7' x:Name="repeatingTimeHeader" Text="Time"                                     Margin="200, 20, 0, 0"/>
+                        <TextBlock Text="..." Margin="250, 20, 0, 0" />
                     </RelativePanel>
                 </ListView.Header>
                 <ListView.ItemTemplate>
@@ -107,7 +142,7 @@
                             <TextBlock Text="{Binding Name}" Margin="0, 0, 0, 0" FontSize="10" />
                             <TextBlock Text="{Binding Days, Converter={StaticResource daysToStringConv}  }" Margin="100, 0, 0, 0" FontSize="10" />
                             <TextBlock Text="{Binding Time, Converter={StaticResource DTFormatConv}}" Margin="200, 0, 0, 0" FontSize="10" />
-                            <Button x:ConnectionId='13'                         Height="14" Width="14" FontSize="10" Margin="250, 0, 0, 0" >
+                            <Button x:ConnectionId='8'                         Height="14" Width="14" FontSize="10" Margin="250, 0, 0, 0" >
                                 <Button.Background>
                                     <ImageBrush ImageSource="/Assets/delete.png" />
                                 </Button.Background>
@@ -117,36 +152,15 @@
                 </ListView.ItemTemplate>
             </ListView>
 
-            <TextBlock x:ConnectionId='9' x:Name="textBlock1" HorizontalAlignment="Left" Margin="5,301,0,0" TextWrapping="Wrap" Text="Repeating" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.Row="1" Width="69"/>
-            <TextBlock x:ConnectionId='10' x:Name="textBlock2" Text="Single" HorizontalAlignment="Left" Margin="11,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="1" Grid.ColumnSpan="2" Width="41"/>
-
-        </Grid>
+        </StackPanel>
         <SplitView.Pane>
 
-            <StackPanel HorizontalAlignment="Left" Orientation="Vertical" Width="{Binding ElementName=mainSplitView, Path=Width}">
-                <Button x:ConnectionId='22' x:Name="splitViewOpenCloseButton" Content="&#xE700;"                                        Width="30" Height="30" />
-                <!--<Button x:Name="appointmentsButton" Width="50" Height="50" Click="appointmentsButton_Click">
-                    <Button.Background>
-                        <ImageBrush ImageSource="/Assets/appointment_new2.png"/>
-                    </Button.Background>
-                </Button>-->
-                <Button x:ConnectionId='23' x:Name="todoitemsButton" Width="50" Height="50"                              >
-                    <Button.Background>
-                        <ImageBrush ImageSource="/Assets/ToDo_icon.png"/>
-                    </Button.Background>
-                </Button>
-                <Button x:ConnectionId='24' x:Name="reflectionsButton" Width="50" Height="50"                                >
-                    <Button.Background>
-                        <ImageBrush ImageSource="/Assets/journal.png"/>
-                    </Button.Background>
-                </Button>
-                <Button x:ConnectionId='25' x:Name="settingsButton" Width="50" Height="50"                             >
-                    <Button.Background>
-                        <ImageBrush ImageSource="/Assets/settings_icon.png"/>
-                    </Button.Background>
-                </Button>
-            </StackPanel>
+            <modules:NavigationPanel ActivitiesButtonEnabled="False"/>
         </SplitView.Pane>
+        <SplitView.Background>
+            <ImageBrush ImageSource="/Assets/Background_cyanlight.png" />
+        </SplitView.Background>
+
     </SplitView>
 </Page>
 

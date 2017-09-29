@@ -13,7 +13,7 @@
     </Page.Resources>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" DoubleTapped="Grid_DoubleTapped">
         <TextBox x:Name="username_text_box" HorizontalAlignment="Left" Margin="35,48,0,0" TextWrapping="Wrap" Text="Search for friends..." VerticalAlignment="Top" Width="290" TextChanged="username_text_box_TextChanged"/>
-        <ListView x:Name="listView" HorizontalAlignment="Left" Height="465" Margin="35,105,0,0" VerticalAlignment="Top" Width="295" SelectionChanged="listView_SelectionChanged" ItemsSource="{x:Bind plan.CurrentUser.Friends}">
+        <ListView x:Name="listView" Height="465" Margin="35,105,30,0" VerticalAlignment="Top" SelectionChanged="listView_SelectionChanged" ItemsSource="{x:Bind plan.CurrentUser.Friends}">
             <ListView.Header>
                 <RelativePanel>
                     <TextBlock Text="" Margin="0, 0, 0, 0" />

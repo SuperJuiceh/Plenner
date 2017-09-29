@@ -11,11 +11,13 @@ FriendsPage.xbf
 GrantPermissionsPage.xbf
 LoginPage.xbf
 MailPage.xbf
-MainPage.xbf
+Modules\NavigationPanel.xbf
+PlannerMapControl.xbf
 ReflectionsPage.xbf
 RegistrationPage.xbf
 SendMailPage.xbf
 SettingsPage.xbf
 ShowDiaryPage.xbf
+TimeFlowPage.xbf
 ToDoPage.xbf
 UserPage.xbf

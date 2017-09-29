@@ -19,20 +19,14 @@ namespace DataLab.Data.Planning
     [XmlRoot("Activity")]
     public class Activity: PlanningItem, TimeSpanPlanning
     {
-        [XmlIgnore]
-        private DateTime _start;
-
-        public DateTime Start { get { return _start; } set { _start = value; Changed("Start"); } }
 
         [XmlIgnore]
-        public Geopoint Location { get { return new Geopoint(basicgeoloc); } }
-        public BasicGeoposition basicgeoloc { get; set; }
+        public Geopoint LocationAsGeopoint { get { return new Geopoint(Location); } }
+        public BasicGeoposition Location { get; set; }
 
         [XmlIgnore]
         public TimeSpan ActivityLength { get { return End - Start; } }
         
-        public DateTime End { get; set; }
-
         public Activity(string name, string description, DateTime s, DateTime e): base(name)
         {
             this.Name = name;
@@ -47,7 +41,7 @@ namespace DataLab.Data.Planning
             this.Description = description;
             this.Start = s;
             this.End = e;
-            this.basicgeoloc = bgp;
+            this.Location = bgp;
         }
 
         private Activity() {
@@ -56,7 +50,7 @@ namespace DataLab.Data.Planning
 
         public void setGeoFence()
         {
-            FenceItem fenceItem = new FenceItem(Name, basicgeoloc);
+            FenceItem fenceItem = new FenceItem(Name, Location);
         }
 
         public override bool Equals(object obj)
@@ -95,6 +89,11 @@ namespace DataLab.Data.Planning
             if (Description != null)
                 Changed("Description");
         }
+
+        public int Compare(object x, object y)
+        {
+            throw new NotImplementedException();
+        }
     }
 
     public sealed class ComparatorActivityName: IComparer
@@ -119,25 +118,4 @@ namespace DataLab.Data.Planning
         }
     }
 
-    public sealed class ComparatorActivityTime : IComparer
-    {
-
-        int IComparer.Compare(object x, object y)
-        {
-            Activity a = x as Activity;
-            Activity b = y as Activity;
-
-            if (a != null && b != null)
-            {
-                return a.Start.CompareTo(b.Start);
-
-            }
-
-            if (a == null)
-                throw new Exception("A is null or not an activity");
-            else
-                throw new Exception("B is null or not an activity");
-
-        }
-    }
 }

@@ -421,6 +421,12 @@
     <AppxPackagedFile Include="C:\Users\Bilel\source\repos\Plenner\Planner\Assets\emoticons\neutral.png">
       <PackagePath>Assets\emoticons\neutral.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bilel\source\repos\Plenner\Planner\Assets\eye.png">
+      <PackagePath>Assets\eye.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bilel\source\repos\Plenner\Planner\Assets\FilterIcon.png">
+      <PackagePath>Assets\FilterIcon.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Bilel\source\repos\Plenner\Planner\Assets\Friends.png">
       <PackagePath>Assets\Friends.png</PackagePath>
     </AppxPackagedFile>
@@ -459,6 +465,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Bilel\source\repos\Plenner\Planner\Assets\Planner_logo.png">
       <PackagePath>Assets\Planner_logo.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bilel\source\repos\Plenner\Planner\Assets\Planning_Icon.png">
+      <PackagePath>Assets\Planning_Icon.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Bilel\source\repos\Plenner\Planner\Assets\Plus.png">
       <PackagePath>Assets\Plus.png</PackagePath>

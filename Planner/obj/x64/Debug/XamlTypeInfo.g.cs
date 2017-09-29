@@ -132,7 +132,7 @@ namespace Planner.Planner_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[55];
+            _typeNameTable = new string[72];
             _typeNameTable[0] = "DataLab.Tools.StaticTools";
             _typeNameTable[1] = "Object";
             _typeNameTable[2] = "Int32[]";
@@ -143,53 +143,70 @@ namespace Planner.Planner_XamlTypeInfo
             _typeNameTable[7] = "Planner.Data.Converters.DateTimeFormatConverter";
             _typeNameTable[8] = "Planner.Data.Converters.RandomColorGenerator";
             _typeNameTable[9] = "Planner.Data.Converters.DaysListToStringConverter";
-            _typeNameTable[10] = "Planner.ActivitiesPage";
-            _typeNameTable[11] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[10] = "Planner.Data.Converters.BoolToElementVisibility";
+            _typeNameTable[11] = "Planner.PlannerMapControl";
             _typeNameTable[12] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[13] = "DataLab.Storage.PlanningItemStorage";
-            _typeNameTable[14] = "DataLab.Storage.Storage";
-            _typeNameTable[15] = "DataLab.Storage.SettingsStorage";
-            _typeNameTable[16] = "Planner.Data.Converters.BoolToStackPanelVisibility";
-            _typeNameTable[17] = "Planner.Data.Converters.BoolToElementVisibility";
-            _typeNameTable[18] = "Planner.AddActivity";
-            _typeNameTable[19] = "Planner.AddDiaryPage";
-            _typeNameTable[20] = "Planner.AddReflectionPage";
-            _typeNameTable[21] = "Windows.UI.Xaml.Media.Imaging.SoftwareBitmapSource";
-            _typeNameTable[22] = "Windows.Storage.StorageFile";
-            _typeNameTable[23] = "Planner.AddToDoItemPage";
-            _typeNameTable[24] = "Boolean";
-            _typeNameTable[25] = "DataLab.Data.Planning.ToDoItem";
-            _typeNameTable[26] = "DataLab.Data.Planning.PlanningItem";
-            _typeNameTable[27] = "Planner.AddToDoSetPage";
-            _typeNameTable[28] = "DataLab.Data.Planning.ToDoItemSet";
-            _typeNameTable[29] = "Planner.DiariesPage";
-            _typeNameTable[30] = "Planner.ExtendedSplash";
-            _typeNameTable[31] = "Planner.Data.Converters.NameToOnlineStatusConverter";
-            _typeNameTable[32] = "Planner.Data.Converters.FriendsStringListWithAppliedFilter";
-            _typeNameTable[33] = "Planner.FriendsPage";
-            _typeNameTable[34] = "DataLab.Storage.DynamicPlanningItemStorage";
-            _typeNameTable[35] = "Planner.GrantPermissionsPage";
-            _typeNameTable[36] = "System.Collections.ObjectModel.ObservableCollection`1<DataLab.Data.Users.Contracts.SelectPermission>";
-            _typeNameTable[37] = "System.Collections.ObjectModel.Collection`1<DataLab.Data.Users.Contracts.SelectPermission>";
-            _typeNameTable[38] = "DataLab.Data.Users.Contracts.SelectPermission";
-            _typeNameTable[39] = "Planner.LoginPage";
-            _typeNameTable[40] = "Planner.Data.Converters.StringListToOneStringConverter";
-            _typeNameTable[41] = "Planner.MailPage";
-            _typeNameTable[42] = "Planner.MainPage";
-            _typeNameTable[43] = "Planner.Data.Converters.PhotoToPanelVisibility";
-            _typeNameTable[44] = "Planner.Data.Converters.FeelingEnumToEmoticon";
-            _typeNameTable[45] = "Planner.ReflectionsPage";
-            _typeNameTable[46] = "Windows.Foundation.Point";
-            _typeNameTable[47] = "Planner.RegistrationPage";
-            _typeNameTable[48] = "Planner.SendMailPage";
-            _typeNameTable[49] = "Planner.Data.Converters.UserNullStatusToBoolConverter";
-            _typeNameTable[50] = "Planner.SettingsPage";
-            _typeNameTable[51] = "Planner.ShowDiaryPage";
-            _typeNameTable[52] = "DataLab.Data.Planning.Diary";
-            _typeNameTable[53] = "Planner.ToDoPage";
-            _typeNameTable[54] = "Planner.UserPage";
+            _typeNameTable[13] = "Planner.PlannerMapControl.MapControlMode";
+            _typeNameTable[14] = "System.Enum";
+            _typeNameTable[15] = "System.ValueType";
+            _typeNameTable[16] = "Planner.PlannerMapControl.MOVEMENT_BY";
+            _typeNameTable[17] = "Windows.Devices.Geolocation.BasicGeoposition";
+            _typeNameTable[18] = "DataLab.Data.Planning.Activity";
+            _typeNameTable[19] = "DataLab.Data.Planning.PlanningItem";
+            _typeNameTable[20] = "Planner.Modules.NavigationPanel";
+            _typeNameTable[21] = "Boolean";
+            _typeNameTable[22] = "Planner.ActivitiesPage";
+            _typeNameTable[23] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[24] = "DataLab.Storage.PlanningItemStorage";
+            _typeNameTable[25] = "DataLab.Storage.Storage";
+            _typeNameTable[26] = "DataLab.Storage.SettingsStorage";
+            _typeNameTable[27] = "System.Collections.ObjectModel.ObservableCollection`1<DataLab.Data.Planning.Activity>";
+            _typeNameTable[28] = "System.Collections.ObjectModel.Collection`1<DataLab.Data.Planning.Activity>";
+            _typeNameTable[29] = "Windows.Devices.Geolocation.Geopoint";
+            _typeNameTable[30] = "TimeSpan";
+            _typeNameTable[31] = "System.DateTime";
+            _typeNameTable[32] = "Planner.Data.Converters.BoolToStackPanelVisibility";
+            _typeNameTable[33] = "Planner.AddActivity";
+            _typeNameTable[34] = "Planner.AddDiaryPage";
+            _typeNameTable[35] = "Planner.AddReflectionPage";
+            _typeNameTable[36] = "Windows.UI.Xaml.Media.Imaging.SoftwareBitmapSource";
+            _typeNameTable[37] = "Windows.Storage.StorageFile";
+            _typeNameTable[38] = "Planner.AddToDoItemPage";
+            _typeNameTable[39] = "DataLab.Data.Planning.ToDoItem";
+            _typeNameTable[40] = "Planner.AddToDoSetPage";
+            _typeNameTable[41] = "DataLab.Data.Planning.ToDoItemSet";
+            _typeNameTable[42] = "Planner.DiariesPage";
+            _typeNameTable[43] = "Planner.ExtendedSplash";
+            _typeNameTable[44] = "Planner.Data.Converters.NameToOnlineStatusConverter";
+            _typeNameTable[45] = "Planner.Data.Converters.FriendsStringListWithAppliedFilter";
+            _typeNameTable[46] = "Planner.FriendsPage";
+            _typeNameTable[47] = "DataLab.Storage.DynamicPlanningItemStorage";
+            _typeNameTable[48] = "Planner.GrantPermissionsPage";
+            _typeNameTable[49] = "System.Collections.ObjectModel.ObservableCollection`1<DataLab.Data.Users.Contracts.SelectPermission>";
+            _typeNameTable[50] = "System.Collections.ObjectModel.Collection`1<DataLab.Data.Users.Contracts.SelectPermission>";
+            _typeNameTable[51] = "DataLab.Data.Users.Contracts.SelectPermission";
+            _typeNameTable[52] = "Planner.LoginPage";
+            _typeNameTable[53] = "Planner.Data.Converters.StringListToOneStringConverter";
+            _typeNameTable[54] = "Planner.MailPage";
+            _typeNameTable[55] = "Planner.Data.Converters.PhotoToPanelVisibility";
+            _typeNameTable[56] = "Planner.Data.Converters.FeelingEnumToEmoticon";
+            _typeNameTable[57] = "Planner.ReflectionsPage";
+            _typeNameTable[58] = "Windows.Foundation.Point";
+            _typeNameTable[59] = "Planner.RegistrationPage";
+            _typeNameTable[60] = "Planner.SendMailPage";
+            _typeNameTable[61] = "Planner.Data.Converters.UserNullStatusToBoolConverter";
+            _typeNameTable[62] = "Planner.SettingsPage";
+            _typeNameTable[63] = "Planner.ShowDiaryPage";
+            _typeNameTable[64] = "DataLab.Data.Planning.Diary";
+            _typeNameTable[65] = "Planner.Data.Converters.TimeToElementWidthConverter";
+            _typeNameTable[66] = "Planner.Data.Converters.PlanningItemToInfoPanelConverter";
+            _typeNameTable[67] = "Planner.Data.Converters.ItemTimeToMarginConverter";
+            _typeNameTable[68] = "Planner.TimeFlowPage";
+            _typeNameTable[69] = "Planner.Data.TimeFlowTools.TimeFlow";
+            _typeNameTable[70] = "Planner.ToDoPage";
+            _typeNameTable[71] = "Planner.UserPage";
 
-            _typeTable = new global::System.Type[55];
+            _typeTable = new global::System.Type[72];
             _typeTable[0] = typeof(global::DataLab.Tools.StaticTools);
             _typeTable[1] = typeof(global::System.Object);
             _typeTable[2] = typeof(global::System.Int32[]);
@@ -200,51 +217,68 @@ namespace Planner.Planner_XamlTypeInfo
             _typeTable[7] = typeof(global::Planner.Data.Converters.DateTimeFormatConverter);
             _typeTable[8] = typeof(global::Planner.Data.Converters.RandomColorGenerator);
             _typeTable[9] = typeof(global::Planner.Data.Converters.DaysListToStringConverter);
-            _typeTable[10] = typeof(global::Planner.ActivitiesPage);
-            _typeTable[11] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[10] = typeof(global::Planner.Data.Converters.BoolToElementVisibility);
+            _typeTable[11] = typeof(global::Planner.PlannerMapControl);
             _typeTable[12] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[13] = typeof(global::DataLab.Storage.PlanningItemStorage);
-            _typeTable[14] = typeof(global::DataLab.Storage.Storage);
-            _typeTable[15] = typeof(global::DataLab.Storage.SettingsStorage);
-            _typeTable[16] = typeof(global::Planner.Data.Converters.BoolToStackPanelVisibility);
-            _typeTable[17] = typeof(global::Planner.Data.Converters.BoolToElementVisibility);
-            _typeTable[18] = typeof(global::Planner.AddActivity);
-            _typeTable[19] = typeof(global::Planner.AddDiaryPage);
-            _typeTable[20] = typeof(global::Planner.AddReflectionPage);
-            _typeTable[21] = typeof(global::Windows.UI.Xaml.Media.Imaging.SoftwareBitmapSource);
-            _typeTable[22] = typeof(global::Windows.Storage.StorageFile);
-            _typeTable[23] = typeof(global::Planner.AddToDoItemPage);
-            _typeTable[24] = typeof(global::System.Boolean);
-            _typeTable[25] = typeof(global::DataLab.Data.Planning.ToDoItem);
-            _typeTable[26] = typeof(global::DataLab.Data.Planning.PlanningItem);
-            _typeTable[27] = typeof(global::Planner.AddToDoSetPage);
-            _typeTable[28] = typeof(global::DataLab.Data.Planning.ToDoItemSet);
-            _typeTable[29] = typeof(global::Planner.DiariesPage);
-            _typeTable[30] = typeof(global::Planner.ExtendedSplash);
-            _typeTable[31] = typeof(global::Planner.Data.Converters.NameToOnlineStatusConverter);
-            _typeTable[32] = typeof(global::Planner.Data.Converters.FriendsStringListWithAppliedFilter);
-            _typeTable[33] = typeof(global::Planner.FriendsPage);
-            _typeTable[34] = typeof(global::DataLab.Storage.DynamicPlanningItemStorage);
-            _typeTable[35] = typeof(global::Planner.GrantPermissionsPage);
-            _typeTable[36] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::DataLab.Data.Users.Contracts.SelectPermission>);
-            _typeTable[37] = typeof(global::System.Collections.ObjectModel.Collection<global::DataLab.Data.Users.Contracts.SelectPermission>);
-            _typeTable[38] = typeof(global::DataLab.Data.Users.Contracts.SelectPermission);
-            _typeTable[39] = typeof(global::Planner.LoginPage);
-            _typeTable[40] = typeof(global::Planner.Data.Converters.StringListToOneStringConverter);
-            _typeTable[41] = typeof(global::Planner.MailPage);
-            _typeTable[42] = typeof(global::Planner.MainPage);
-            _typeTable[43] = typeof(global::Planner.Data.Converters.PhotoToPanelVisibility);
-            _typeTable[44] = typeof(global::Planner.Data.Converters.FeelingEnumToEmoticon);
-            _typeTable[45] = typeof(global::Planner.ReflectionsPage);
-            _typeTable[46] = typeof(global::Windows.Foundation.Point);
-            _typeTable[47] = typeof(global::Planner.RegistrationPage);
-            _typeTable[48] = typeof(global::Planner.SendMailPage);
-            _typeTable[49] = typeof(global::Planner.Data.Converters.UserNullStatusToBoolConverter);
-            _typeTable[50] = typeof(global::Planner.SettingsPage);
-            _typeTable[51] = typeof(global::Planner.ShowDiaryPage);
-            _typeTable[52] = typeof(global::DataLab.Data.Planning.Diary);
-            _typeTable[53] = typeof(global::Planner.ToDoPage);
-            _typeTable[54] = typeof(global::Planner.UserPage);
+            _typeTable[13] = typeof(global::Planner.PlannerMapControl.MapControlMode);
+            _typeTable[14] = typeof(global::System.Enum);
+            _typeTable[15] = typeof(global::System.ValueType);
+            _typeTable[16] = typeof(global::Planner.PlannerMapControl.MOVEMENT_BY);
+            _typeTable[17] = typeof(global::Windows.Devices.Geolocation.BasicGeoposition);
+            _typeTable[18] = typeof(global::DataLab.Data.Planning.Activity);
+            _typeTable[19] = typeof(global::DataLab.Data.Planning.PlanningItem);
+            _typeTable[20] = typeof(global::Planner.Modules.NavigationPanel);
+            _typeTable[21] = typeof(global::System.Boolean);
+            _typeTable[22] = typeof(global::Planner.ActivitiesPage);
+            _typeTable[23] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[24] = typeof(global::DataLab.Storage.PlanningItemStorage);
+            _typeTable[25] = typeof(global::DataLab.Storage.Storage);
+            _typeTable[26] = typeof(global::DataLab.Storage.SettingsStorage);
+            _typeTable[27] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::DataLab.Data.Planning.Activity>);
+            _typeTable[28] = typeof(global::System.Collections.ObjectModel.Collection<global::DataLab.Data.Planning.Activity>);
+            _typeTable[29] = typeof(global::Windows.Devices.Geolocation.Geopoint);
+            _typeTable[30] = typeof(global::System.TimeSpan);
+            _typeTable[31] = typeof(global::System.DateTime);
+            _typeTable[32] = typeof(global::Planner.Data.Converters.BoolToStackPanelVisibility);
+            _typeTable[33] = typeof(global::Planner.AddActivity);
+            _typeTable[34] = typeof(global::Planner.AddDiaryPage);
+            _typeTable[35] = typeof(global::Planner.AddReflectionPage);
+            _typeTable[36] = typeof(global::Windows.UI.Xaml.Media.Imaging.SoftwareBitmapSource);
+            _typeTable[37] = typeof(global::Windows.Storage.StorageFile);
+            _typeTable[38] = typeof(global::Planner.AddToDoItemPage);
+            _typeTable[39] = typeof(global::DataLab.Data.Planning.ToDoItem);
+            _typeTable[40] = typeof(global::Planner.AddToDoSetPage);
+            _typeTable[41] = typeof(global::DataLab.Data.Planning.ToDoItemSet);
+            _typeTable[42] = typeof(global::Planner.DiariesPage);
+            _typeTable[43] = typeof(global::Planner.ExtendedSplash);
+            _typeTable[44] = typeof(global::Planner.Data.Converters.NameToOnlineStatusConverter);
+            _typeTable[45] = typeof(global::Planner.Data.Converters.FriendsStringListWithAppliedFilter);
+            _typeTable[46] = typeof(global::Planner.FriendsPage);
+            _typeTable[47] = typeof(global::DataLab.Storage.DynamicPlanningItemStorage);
+            _typeTable[48] = typeof(global::Planner.GrantPermissionsPage);
+            _typeTable[49] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::DataLab.Data.Users.Contracts.SelectPermission>);
+            _typeTable[50] = typeof(global::System.Collections.ObjectModel.Collection<global::DataLab.Data.Users.Contracts.SelectPermission>);
+            _typeTable[51] = typeof(global::DataLab.Data.Users.Contracts.SelectPermission);
+            _typeTable[52] = typeof(global::Planner.LoginPage);
+            _typeTable[53] = typeof(global::Planner.Data.Converters.StringListToOneStringConverter);
+            _typeTable[54] = typeof(global::Planner.MailPage);
+            _typeTable[55] = typeof(global::Planner.Data.Converters.PhotoToPanelVisibility);
+            _typeTable[56] = typeof(global::Planner.Data.Converters.FeelingEnumToEmoticon);
+            _typeTable[57] = typeof(global::Planner.ReflectionsPage);
+            _typeTable[58] = typeof(global::Windows.Foundation.Point);
+            _typeTable[59] = typeof(global::Planner.RegistrationPage);
+            _typeTable[60] = typeof(global::Planner.SendMailPage);
+            _typeTable[61] = typeof(global::Planner.Data.Converters.UserNullStatusToBoolConverter);
+            _typeTable[62] = typeof(global::Planner.SettingsPage);
+            _typeTable[63] = typeof(global::Planner.ShowDiaryPage);
+            _typeTable[64] = typeof(global::DataLab.Data.Planning.Diary);
+            _typeTable[65] = typeof(global::Planner.Data.Converters.TimeToElementWidthConverter);
+            _typeTable[66] = typeof(global::Planner.Data.Converters.PlanningItemToInfoPanelConverter);
+            _typeTable[67] = typeof(global::Planner.Data.Converters.ItemTimeToMarginConverter);
+            _typeTable[68] = typeof(global::Planner.TimeFlowPage);
+            _typeTable[69] = typeof(global::Planner.Data.TimeFlowTools.TimeFlow);
+            _typeTable[70] = typeof(global::Planner.ToDoPage);
+            _typeTable[71] = typeof(global::Planner.UserPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -283,50 +317,65 @@ namespace Planner.Planner_XamlTypeInfo
         private object Activate_7_DateTimeFormatConverter() { return new global::Planner.Data.Converters.DateTimeFormatConverter(); }
         private object Activate_8_RandomColorGenerator() { return new global::Planner.Data.Converters.RandomColorGenerator(); }
         private object Activate_9_DaysListToStringConverter() { return new global::Planner.Data.Converters.DaysListToStringConverter(); }
-        private object Activate_10_ActivitiesPage() { return new global::Planner.ActivitiesPage(); }
-        private object Activate_13_PlanningItemStorage() { return new global::DataLab.Storage.PlanningItemStorage(); }
-        private object Activate_15_SettingsStorage() { return new global::DataLab.Storage.SettingsStorage(); }
-        private object Activate_16_BoolToStackPanelVisibility() { return new global::Planner.Data.Converters.BoolToStackPanelVisibility(); }
-        private object Activate_17_BoolToElementVisibility() { return new global::Planner.Data.Converters.BoolToElementVisibility(); }
-        private object Activate_18_AddActivity() { return new global::Planner.AddActivity(); }
-        private object Activate_19_AddDiaryPage() { return new global::Planner.AddDiaryPage(); }
-        private object Activate_20_AddReflectionPage() { return new global::Planner.AddReflectionPage(); }
-        private object Activate_23_AddToDoItemPage() { return new global::Planner.AddToDoItemPage(); }
-        private object Activate_25_ToDoItem() { return new global::DataLab.Data.Planning.ToDoItem(); }
-        private object Activate_26_PlanningItem() { return new global::DataLab.Data.Planning.PlanningItem(); }
-        private object Activate_27_AddToDoSetPage() { return new global::Planner.AddToDoSetPage(); }
-        private object Activate_28_ToDoItemSet() { return new global::DataLab.Data.Planning.ToDoItemSet(); }
-        private object Activate_29_DiariesPage() { return new global::Planner.DiariesPage(); }
-        private object Activate_30_ExtendedSplash() { return new global::Planner.ExtendedSplash(); }
-        private object Activate_31_NameToOnlineStatusConverter() { return new global::Planner.Data.Converters.NameToOnlineStatusConverter(); }
-        private object Activate_32_FriendsStringListWithAppliedFilter() { return new global::Planner.Data.Converters.FriendsStringListWithAppliedFilter(); }
-        private object Activate_33_FriendsPage() { return new global::Planner.FriendsPage(); }
-        private object Activate_35_GrantPermissionsPage() { return new global::Planner.GrantPermissionsPage(); }
-        private object Activate_36_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::DataLab.Data.Users.Contracts.SelectPermission>(); }
-        private object Activate_37_Collection() { return new global::System.Collections.ObjectModel.Collection<global::DataLab.Data.Users.Contracts.SelectPermission>(); }
-        private object Activate_38_SelectPermission() { return new global::DataLab.Data.Users.Contracts.SelectPermission(); }
-        private object Activate_39_LoginPage() { return new global::Planner.LoginPage(); }
-        private object Activate_40_StringListToOneStringConverter() { return new global::Planner.Data.Converters.StringListToOneStringConverter(); }
-        private object Activate_41_MailPage() { return new global::Planner.MailPage(); }
-        private object Activate_42_MainPage() { return new global::Planner.MainPage(); }
-        private object Activate_43_PhotoToPanelVisibility() { return new global::Planner.Data.Converters.PhotoToPanelVisibility(); }
-        private object Activate_44_FeelingEnumToEmoticon() { return new global::Planner.Data.Converters.FeelingEnumToEmoticon(); }
-        private object Activate_45_ReflectionsPage() { return new global::Planner.ReflectionsPage(); }
-        private object Activate_47_RegistrationPage() { return new global::Planner.RegistrationPage(); }
-        private object Activate_48_SendMailPage() { return new global::Planner.SendMailPage(); }
-        private object Activate_49_UserNullStatusToBoolConverter() { return new global::Planner.Data.Converters.UserNullStatusToBoolConverter(); }
-        private object Activate_50_SettingsPage() { return new global::Planner.SettingsPage(); }
-        private object Activate_51_ShowDiaryPage() { return new global::Planner.ShowDiaryPage(); }
-        private object Activate_52_Diary() { return new global::DataLab.Data.Planning.Diary(); }
-        private object Activate_53_ToDoPage() { return new global::Planner.ToDoPage(); }
-        private object Activate_54_UserPage() { return new global::Planner.UserPage(); }
-        private void VectorAdd_36_ObservableCollection(object instance, object item)
+        private object Activate_10_BoolToElementVisibility() { return new global::Planner.Data.Converters.BoolToElementVisibility(); }
+        private object Activate_11_PlannerMapControl() { return new global::Planner.PlannerMapControl(); }
+        private object Activate_20_NavigationPanel() { return new global::Planner.Modules.NavigationPanel(); }
+        private object Activate_22_ActivitiesPage() { return new global::Planner.ActivitiesPage(); }
+        private object Activate_24_PlanningItemStorage() { return new global::DataLab.Storage.PlanningItemStorage(); }
+        private object Activate_26_SettingsStorage() { return new global::DataLab.Storage.SettingsStorage(); }
+        private object Activate_27_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::DataLab.Data.Planning.Activity>(); }
+        private object Activate_28_Collection() { return new global::System.Collections.ObjectModel.Collection<global::DataLab.Data.Planning.Activity>(); }
+        private object Activate_32_BoolToStackPanelVisibility() { return new global::Planner.Data.Converters.BoolToStackPanelVisibility(); }
+        private object Activate_33_AddActivity() { return new global::Planner.AddActivity(); }
+        private object Activate_34_AddDiaryPage() { return new global::Planner.AddDiaryPage(); }
+        private object Activate_35_AddReflectionPage() { return new global::Planner.AddReflectionPage(); }
+        private object Activate_38_AddToDoItemPage() { return new global::Planner.AddToDoItemPage(); }
+        private object Activate_40_AddToDoSetPage() { return new global::Planner.AddToDoSetPage(); }
+        private object Activate_42_DiariesPage() { return new global::Planner.DiariesPage(); }
+        private object Activate_43_ExtendedSplash() { return new global::Planner.ExtendedSplash(); }
+        private object Activate_44_NameToOnlineStatusConverter() { return new global::Planner.Data.Converters.NameToOnlineStatusConverter(); }
+        private object Activate_45_FriendsStringListWithAppliedFilter() { return new global::Planner.Data.Converters.FriendsStringListWithAppliedFilter(); }
+        private object Activate_46_FriendsPage() { return new global::Planner.FriendsPage(); }
+        private object Activate_48_GrantPermissionsPage() { return new global::Planner.GrantPermissionsPage(); }
+        private object Activate_49_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::DataLab.Data.Users.Contracts.SelectPermission>(); }
+        private object Activate_50_Collection() { return new global::System.Collections.ObjectModel.Collection<global::DataLab.Data.Users.Contracts.SelectPermission>(); }
+        private object Activate_51_SelectPermission() { return new global::DataLab.Data.Users.Contracts.SelectPermission(); }
+        private object Activate_52_LoginPage() { return new global::Planner.LoginPage(); }
+        private object Activate_53_StringListToOneStringConverter() { return new global::Planner.Data.Converters.StringListToOneStringConverter(); }
+        private object Activate_54_MailPage() { return new global::Planner.MailPage(); }
+        private object Activate_55_PhotoToPanelVisibility() { return new global::Planner.Data.Converters.PhotoToPanelVisibility(); }
+        private object Activate_56_FeelingEnumToEmoticon() { return new global::Planner.Data.Converters.FeelingEnumToEmoticon(); }
+        private object Activate_57_ReflectionsPage() { return new global::Planner.ReflectionsPage(); }
+        private object Activate_59_RegistrationPage() { return new global::Planner.RegistrationPage(); }
+        private object Activate_60_SendMailPage() { return new global::Planner.SendMailPage(); }
+        private object Activate_61_UserNullStatusToBoolConverter() { return new global::Planner.Data.Converters.UserNullStatusToBoolConverter(); }
+        private object Activate_62_SettingsPage() { return new global::Planner.SettingsPage(); }
+        private object Activate_63_ShowDiaryPage() { return new global::Planner.ShowDiaryPage(); }
+        private object Activate_65_TimeToElementWidthConverter() { return new global::Planner.Data.Converters.TimeToElementWidthConverter(); }
+        private object Activate_66_PlanningItemToInfoPanelConverter() { return new global::Planner.Data.Converters.PlanningItemToInfoPanelConverter(); }
+        private object Activate_67_ItemTimeToMarginConverter() { return new global::Planner.Data.Converters.ItemTimeToMarginConverter(); }
+        private object Activate_68_TimeFlowPage() { return new global::Planner.TimeFlowPage(); }
+        private object Activate_70_ToDoPage() { return new global::Planner.ToDoPage(); }
+        private object Activate_71_UserPage() { return new global::Planner.UserPage(); }
+        private void VectorAdd_27_ObservableCollection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::DataLab.Data.Planning.Activity>)instance;
+            var newItem = (global::DataLab.Data.Planning.Activity)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_28_Collection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::DataLab.Data.Planning.Activity>)instance;
+            var newItem = (global::DataLab.Data.Planning.Activity)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_49_ObservableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::DataLab.Data.Users.Contracts.SelectPermission>)instance;
             var newItem = (global::DataLab.Data.Users.Contracts.SelectPermission)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_37_Collection(object instance, object item)
+        private void VectorAdd_50_Collection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::DataLab.Data.Users.Contracts.SelectPermission>)instance;
             var newItem = (global::DataLab.Data.Users.Contracts.SelectPermission)item;
@@ -401,75 +450,190 @@ namespace Planner.Planner_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 10:   //  Planner.ActivitiesPage
-                userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_10_ActivitiesPage;
-                userType.AddMemberName("Planning");
-                userType.AddMemberName("Settings");
+            case 10:   //  Planner.Data.Converters.BoolToElementVisibility
+                userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_10_BoolToElementVisibility;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 11:   //  Windows.UI.Xaml.Controls.Page
-                xamlType = new global::Planner.Planner_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+            case 11:   //  Planner.PlannerMapControl
+                userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
+                userType.Activator = Activate_11_PlannerMapControl;
+                userType.AddMemberName("Mode");
+                userType.AddMemberName("MovementMode");
+                userType.AddMemberName("obb");
+                userType.AddMemberName("LastSelectedLocation");
+                userType.AddMemberName("CurrentAddress");
+                userType.AddMemberName("CurrentDestinationAddress");
+                userType.AddMemberName("DestinationActivity");
+                userType.SetIsLocalType();
+                xamlType = userType;
                 break;
 
             case 12:   //  Windows.UI.Xaml.Controls.UserControl
                 xamlType = new global::Planner.Planner_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 13:   //  DataLab.Storage.PlanningItemStorage
-                userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DataLab.Storage.Storage"));
-                userType.Activator = Activate_13_PlanningItemStorage;
+            case 13:   //  Planner.PlannerMapControl.MapControlMode
+                userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.AddEnumValue("SEARCH_VIEW", global::Planner.PlannerMapControl.MapControlMode.SEARCH_VIEW);
+                userType.AddEnumValue("OBSERVANT_VIEW", global::Planner.PlannerMapControl.MapControlMode.OBSERVANT_VIEW);
+                userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 14:   //  DataLab.Storage.Storage
+            case 14:   //  System.Enum
+                userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
+                xamlType = userType;
+                break;
+
+            case 15:   //  System.ValueType
                 userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 xamlType = userType;
                 break;
 
-            case 15:   //  DataLab.Storage.SettingsStorage
+            case 16:   //  Planner.PlannerMapControl.MOVEMENT_BY
+                userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.AddEnumValue("FOOT", global::Planner.PlannerMapControl.MOVEMENT_BY.FOOT);
+                userType.AddEnumValue("VEHICLE", global::Planner.PlannerMapControl.MOVEMENT_BY.VEHICLE);
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 17:   //  Windows.Devices.Geolocation.BasicGeoposition
+                userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 18:   //  DataLab.Data.Planning.Activity
+                userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DataLab.Data.Planning.PlanningItem"));
+                userType.AddMemberName("LocationAsGeopoint");
+                userType.AddMemberName("Location");
+                userType.AddMemberName("ActivityLength");
+                xamlType = userType;
+                break;
+
+            case 19:   //  DataLab.Data.Planning.PlanningItem
+                userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.AddMemberName("Name");
+                userType.AddMemberName("Silent");
+                userType.AddMemberName("MinutesToAlertBeforeActualAlarm");
+                userType.AddMemberName("Description");
+                userType.AddMemberName("Start");
+                userType.AddMemberName("_end");
+                userType.AddMemberName("End");
+                xamlType = userType;
+                break;
+
+            case 20:   //  Planner.Modules.NavigationPanel
+                userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
+                userType.Activator = Activate_20_NavigationPanel;
+                userType.AddMemberName("ActivitiesButtonEnabled");
+                userType.AddMemberName("ReflectionsButtonEnabled");
+                userType.AddMemberName("ToDoButtonEnabled");
+                userType.AddMemberName("TimeFlowButtonEnabled");
+                userType.AddMemberName("SettingsButtonEnabled");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 21:   //  Boolean
+                xamlType = new global::Planner.Planner_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 22:   //  Planner.ActivitiesPage
+                userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_22_ActivitiesPage;
+                userType.AddMemberName("Planning");
+                userType.AddMemberName("Settings");
+                userType.AddMemberName("ActivitiesList");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 23:   //  Windows.UI.Xaml.Controls.Page
+                xamlType = new global::Planner.Planner_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 24:   //  DataLab.Storage.PlanningItemStorage
+                userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DataLab.Storage.Storage"));
+                userType.Activator = Activate_24_PlanningItemStorage;
+                xamlType = userType;
+                break;
+
+            case 25:   //  DataLab.Storage.Storage
+                userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                xamlType = userType;
+                break;
+
+            case 26:   //  DataLab.Storage.SettingsStorage
                 userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DataLab.Storage.Storage"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 16:   //  Planner.Data.Converters.BoolToStackPanelVisibility
+            case 27:   //  System.Collections.ObjectModel.ObservableCollection`1<DataLab.Data.Planning.Activity>
+                userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<DataLab.Data.Planning.Activity>"));
+                userType.CollectionAdd = VectorAdd_27_ObservableCollection;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 28:   //  System.Collections.ObjectModel.Collection`1<DataLab.Data.Planning.Activity>
                 userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_16_BoolToStackPanelVisibility;
+                userType.Activator = Activate_28_Collection;
+                userType.CollectionAdd = VectorAdd_28_Collection;
+                xamlType = userType;
+                break;
+
+            case 29:   //  Windows.Devices.Geolocation.Geopoint
+                userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 30:   //  TimeSpan
+                userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 31:   //  System.DateTime
+                userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 32:   //  Planner.Data.Converters.BoolToStackPanelVisibility
+                userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_32_BoolToStackPanelVisibility;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 17:   //  Planner.Data.Converters.BoolToElementVisibility
-                userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_17_BoolToElementVisibility;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 18:   //  Planner.AddActivity
+            case 33:   //  Planner.AddActivity
                 userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_18_AddActivity;
+                userType.Activator = Activate_33_AddActivity;
                 userType.AddMemberName("Planning");
                 userType.AddMemberName("Settings");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 19:   //  Planner.AddDiaryPage
+            case 34:   //  Planner.AddDiaryPage
                 userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_19_AddDiaryPage;
+                userType.Activator = Activate_34_AddDiaryPage;
                 userType.AddMemberName("Planning");
                 userType.AddMemberName("Settings");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 20:   //  Planner.AddReflectionPage
+            case 35:   //  Planner.AddReflectionPage
                 userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_20_AddReflectionPage;
+                userType.Activator = Activate_35_AddReflectionPage;
                 userType.AddMemberName("Poto");
                 userType.AddMemberName("Photo");
                 userType.AddMemberName("Planning");
@@ -478,19 +642,19 @@ namespace Planner.Planner_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 21:   //  Windows.UI.Xaml.Media.Imaging.SoftwareBitmapSource
+            case 36:   //  Windows.UI.Xaml.Media.Imaging.SoftwareBitmapSource
                 xamlType = new global::Planner.Planner_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 22:   //  Windows.Storage.StorageFile
+            case 37:   //  Windows.Storage.StorageFile
                 userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 23:   //  Planner.AddToDoItemPage
+            case 38:   //  Planner.AddToDoItemPage
                 userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_23_AddToDoItemPage;
+                userType.Activator = Activate_38_AddToDoItemPage;
                 userType.AddMemberName("Planning");
                 userType.AddMemberName("Settings");
                 userType.AddMemberName("MultipleItems");
@@ -499,25 +663,14 @@ namespace Planner.Planner_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 24:   //  Boolean
-                xamlType = new global::Planner.Planner_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 25:   //  DataLab.Data.Planning.ToDoItem
+            case 39:   //  DataLab.Data.Planning.ToDoItem
                 userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DataLab.Data.Planning.PlanningItem"));
-                userType.Activator = Activate_25_ToDoItem;
                 xamlType = userType;
                 break;
 
-            case 26:   //  DataLab.Data.Planning.PlanningItem
-                userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_26_PlanningItem;
-                xamlType = userType;
-                break;
-
-            case 27:   //  Planner.AddToDoSetPage
+            case 40:   //  Planner.AddToDoSetPage
                 userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_27_AddToDoSetPage;
+                userType.Activator = Activate_40_AddToDoSetPage;
                 userType.AddMemberName("plan");
                 userType.AddMemberName("Settings");
                 userType.AddMemberName("tdiSet");
@@ -525,45 +678,45 @@ namespace Planner.Planner_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 28:   //  DataLab.Data.Planning.ToDoItemSet
+            case 41:   //  DataLab.Data.Planning.ToDoItemSet
                 userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DataLab.Data.Planning.ToDoItem"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 29:   //  Planner.DiariesPage
+            case 42:   //  Planner.DiariesPage
                 userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_29_DiariesPage;
+                userType.Activator = Activate_42_DiariesPage;
                 userType.AddMemberName("plan");
                 userType.AddMemberName("Settings");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 30:   //  Planner.ExtendedSplash
+            case 43:   //  Planner.ExtendedSplash
                 userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_30_ExtendedSplash;
+                userType.Activator = Activate_43_ExtendedSplash;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 31:   //  Planner.Data.Converters.NameToOnlineStatusConverter
+            case 44:   //  Planner.Data.Converters.NameToOnlineStatusConverter
                 userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_31_NameToOnlineStatusConverter;
+                userType.Activator = Activate_44_NameToOnlineStatusConverter;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 32:   //  Planner.Data.Converters.FriendsStringListWithAppliedFilter
+            case 45:   //  Planner.Data.Converters.FriendsStringListWithAppliedFilter
                 userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_32_FriendsStringListWithAppliedFilter;
+                userType.Activator = Activate_45_FriendsStringListWithAppliedFilter;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 33:   //  Planner.FriendsPage
+            case 46:   //  Planner.FriendsPage
                 userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_33_FriendsPage;
+                userType.Activator = Activate_46_FriendsPage;
                 userType.AddMemberName("plan");
                 userType.AddMemberName("Settings");
                 userType.AddMemberName("Filter");
@@ -571,38 +724,38 @@ namespace Planner.Planner_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 34:   //  DataLab.Storage.DynamicPlanningItemStorage
+            case 47:   //  DataLab.Storage.DynamicPlanningItemStorage
                 userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DataLab.Storage.PlanningItemStorage"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 35:   //  Planner.GrantPermissionsPage
+            case 48:   //  Planner.GrantPermissionsPage
                 userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_35_GrantPermissionsPage;
+                userType.Activator = Activate_48_GrantPermissionsPage;
                 userType.AddMemberName("plan");
                 userType.AddMemberName("SelectedPermissions");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 36:   //  System.Collections.ObjectModel.ObservableCollection`1<DataLab.Data.Users.Contracts.SelectPermission>
+            case 49:   //  System.Collections.ObjectModel.ObservableCollection`1<DataLab.Data.Users.Contracts.SelectPermission>
                 userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<DataLab.Data.Users.Contracts.SelectPermission>"));
-                userType.CollectionAdd = VectorAdd_36_ObservableCollection;
+                userType.CollectionAdd = VectorAdd_49_ObservableCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 37:   //  System.Collections.ObjectModel.Collection`1<DataLab.Data.Users.Contracts.SelectPermission>
+            case 50:   //  System.Collections.ObjectModel.Collection`1<DataLab.Data.Users.Contracts.SelectPermission>
                 userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_37_Collection;
-                userType.CollectionAdd = VectorAdd_37_Collection;
+                userType.Activator = Activate_50_Collection;
+                userType.CollectionAdd = VectorAdd_50_Collection;
                 xamlType = userType;
                 break;
 
-            case 38:   //  DataLab.Data.Users.Contracts.SelectPermission
+            case 51:   //  DataLab.Data.Users.Contracts.SelectPermission
                 userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_38_SelectPermission;
+                userType.Activator = Activate_51_SelectPermission;
                 userType.AddMemberName("Name");
                 userType.AddMemberName("CanRead");
                 userType.AddMemberName("CanWrite");
@@ -610,102 +763,95 @@ namespace Planner.Planner_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 39:   //  Planner.LoginPage
+            case 52:   //  Planner.LoginPage
                 userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_39_LoginPage;
+                userType.Activator = Activate_52_LoginPage;
                 userType.AddMemberName("plan");
                 userType.AddMemberName("Settings");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 40:   //  Planner.Data.Converters.StringListToOneStringConverter
+            case 53:   //  Planner.Data.Converters.StringListToOneStringConverter
                 userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_40_StringListToOneStringConverter;
+                userType.Activator = Activate_53_StringListToOneStringConverter;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 41:   //  Planner.MailPage
+            case 54:   //  Planner.MailPage
                 userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_41_MailPage;
+                userType.Activator = Activate_54_MailPage;
                 userType.AddMemberName("plan");
                 userType.AddMemberName("Settings");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 42:   //  Planner.MainPage
-                userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_42_MainPage;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 43:   //  Planner.Data.Converters.PhotoToPanelVisibility
+            case 55:   //  Planner.Data.Converters.PhotoToPanelVisibility
                 userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_43_PhotoToPanelVisibility;
+                userType.Activator = Activate_55_PhotoToPanelVisibility;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 44:   //  Planner.Data.Converters.FeelingEnumToEmoticon
+            case 56:   //  Planner.Data.Converters.FeelingEnumToEmoticon
                 userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_44_FeelingEnumToEmoticon;
+                userType.Activator = Activate_56_FeelingEnumToEmoticon;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 45:   //  Planner.ReflectionsPage
+            case 57:   //  Planner.ReflectionsPage
                 userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_45_ReflectionsPage;
+                userType.Activator = Activate_57_ReflectionsPage;
                 userType.AddMemberName("plan");
                 userType.AddMemberName("manipulationStartingPoint");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 46:   //  Windows.Foundation.Point
+            case 58:   //  Windows.Foundation.Point
                 xamlType = new global::Planner.Planner_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 47:   //  Planner.RegistrationPage
+            case 59:   //  Planner.RegistrationPage
                 userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_47_RegistrationPage;
+                userType.Activator = Activate_59_RegistrationPage;
                 userType.AddMemberName("plan");
                 userType.AddMemberName("Settings");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 48:   //  Planner.SendMailPage
+            case 60:   //  Planner.SendMailPage
                 userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_48_SendMailPage;
+                userType.Activator = Activate_60_SendMailPage;
                 userType.AddMemberName("plan");
                 userType.AddMemberName("Settings");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 49:   //  Planner.Data.Converters.UserNullStatusToBoolConverter
+            case 61:   //  Planner.Data.Converters.UserNullStatusToBoolConverter
                 userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_49_UserNullStatusToBoolConverter;
+                userType.Activator = Activate_61_UserNullStatusToBoolConverter;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 50:   //  Planner.SettingsPage
+            case 62:   //  Planner.SettingsPage
                 userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_50_SettingsPage;
+                userType.Activator = Activate_62_SettingsPage;
                 userType.AddMemberName("plan");
                 userType.AddMemberName("Settings");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 51:   //  Planner.ShowDiaryPage
+            case 63:   //  Planner.ShowDiaryPage
                 userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_51_ShowDiaryPage;
+                userType.Activator = Activate_63_ShowDiaryPage;
                 userType.AddMemberName("Journal");
                 userType.AddMemberName("plan");
                 userType.AddMemberName("Settings");
@@ -713,24 +859,62 @@ namespace Planner.Planner_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 52:   //  DataLab.Data.Planning.Diary
+            case 64:   //  DataLab.Data.Planning.Diary
                 userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 53:   //  Planner.ToDoPage
+            case 65:   //  Planner.Data.Converters.TimeToElementWidthConverter
+                userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_65_TimeToElementWidthConverter;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 66:   //  Planner.Data.Converters.PlanningItemToInfoPanelConverter
+                userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_66_PlanningItemToInfoPanelConverter;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 67:   //  Planner.Data.Converters.ItemTimeToMarginConverter
+                userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_67_ItemTimeToMarginConverter;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 68:   //  Planner.TimeFlowPage
                 userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_53_ToDoPage;
+                userType.Activator = Activate_68_TimeFlowPage;
+                userType.AddMemberName("Planning");
+                userType.AddMemberName("Settings");
+                userType.AddMemberName("MainTimeFlow");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 69:   //  Planner.Data.TimeFlowTools.TimeFlow
+                userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 70:   //  Planner.ToDoPage
+                userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_70_ToDoPage;
                 userType.AddMemberName("Planning");
                 userType.AddMemberName("Settings");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 54:   //  Planner.UserPage
+            case 71:   //  Planner.UserPage
                 userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_54_UserPage;
+                userType.Activator = Activate_71_UserPage;
                 userType.AddMemberName("plan");
                 userType.AddMemberName("Settings");
                 userType.SetIsLocalType();
@@ -751,457 +935,707 @@ namespace Planner.Planner_XamlTypeInfo
             var that = (global::DataLab.Tools.StaticTools)instance;
             return that.getFontNames;
         }
-        private object get_2_ActivitiesPage_Planning(object instance)
+        private object get_2_PlannerMapControl_Mode(object instance)
+        {
+            var that = (global::Planner.PlannerMapControl)instance;
+            return that.Mode;
+        }
+        private void set_2_PlannerMapControl_Mode(object instance, object Value)
+        {
+            var that = (global::Planner.PlannerMapControl)instance;
+            that.Mode = (global::Planner.PlannerMapControl.MapControlMode)Value;
+        }
+        private object get_3_PlannerMapControl_MovementMode(object instance)
+        {
+            var that = (global::Planner.PlannerMapControl)instance;
+            return that.MovementMode;
+        }
+        private void set_3_PlannerMapControl_MovementMode(object instance, object Value)
+        {
+            var that = (global::Planner.PlannerMapControl)instance;
+            that.MovementMode = (global::Planner.PlannerMapControl.MOVEMENT_BY)Value;
+        }
+        private object get_4_PlannerMapControl_obb(object instance)
+        {
+            var that = (global::Planner.PlannerMapControl)instance;
+            return that.obb;
+        }
+        private void set_4_PlannerMapControl_obb(object instance, object Value)
+        {
+            var that = (global::Planner.PlannerMapControl)instance;
+            that.obb = (global::System.Object)Value;
+        }
+        private object get_5_PlannerMapControl_LastSelectedLocation(object instance)
+        {
+            var that = (global::Planner.PlannerMapControl)instance;
+            return that.LastSelectedLocation;
+        }
+        private void set_5_PlannerMapControl_LastSelectedLocation(object instance, object Value)
+        {
+            var that = (global::Planner.PlannerMapControl)instance;
+            that.LastSelectedLocation = (global::Windows.Devices.Geolocation.BasicGeoposition)Value;
+        }
+        private object get_6_PlannerMapControl_CurrentAddress(object instance)
+        {
+            var that = (global::Planner.PlannerMapControl)instance;
+            return that.CurrentAddress;
+        }
+        private void set_6_PlannerMapControl_CurrentAddress(object instance, object Value)
+        {
+            var that = (global::Planner.PlannerMapControl)instance;
+            that.CurrentAddress = (global::System.String)Value;
+        }
+        private object get_7_PlannerMapControl_CurrentDestinationAddress(object instance)
+        {
+            var that = (global::Planner.PlannerMapControl)instance;
+            return that.CurrentDestinationAddress;
+        }
+        private void set_7_PlannerMapControl_CurrentDestinationAddress(object instance, object Value)
+        {
+            var that = (global::Planner.PlannerMapControl)instance;
+            that.CurrentDestinationAddress = (global::System.String)Value;
+        }
+        private object get_8_PlannerMapControl_DestinationActivity(object instance)
+        {
+            var that = (global::Planner.PlannerMapControl)instance;
+            return that.DestinationActivity;
+        }
+        private void set_8_PlannerMapControl_DestinationActivity(object instance, object Value)
+        {
+            var that = (global::Planner.PlannerMapControl)instance;
+            that.DestinationActivity = (global::DataLab.Data.Planning.Activity)Value;
+        }
+        private object get_9_NavigationPanel_ActivitiesButtonEnabled(object instance)
+        {
+            var that = (global::Planner.Modules.NavigationPanel)instance;
+            return that.ActivitiesButtonEnabled;
+        }
+        private void set_9_NavigationPanel_ActivitiesButtonEnabled(object instance, object Value)
+        {
+            var that = (global::Planner.Modules.NavigationPanel)instance;
+            that.ActivitiesButtonEnabled = (global::System.Boolean)Value;
+        }
+        private object get_10_NavigationPanel_ReflectionsButtonEnabled(object instance)
+        {
+            var that = (global::Planner.Modules.NavigationPanel)instance;
+            return that.ReflectionsButtonEnabled;
+        }
+        private void set_10_NavigationPanel_ReflectionsButtonEnabled(object instance, object Value)
+        {
+            var that = (global::Planner.Modules.NavigationPanel)instance;
+            that.ReflectionsButtonEnabled = (global::System.Boolean)Value;
+        }
+        private object get_11_NavigationPanel_ToDoButtonEnabled(object instance)
+        {
+            var that = (global::Planner.Modules.NavigationPanel)instance;
+            return that.ToDoButtonEnabled;
+        }
+        private void set_11_NavigationPanel_ToDoButtonEnabled(object instance, object Value)
+        {
+            var that = (global::Planner.Modules.NavigationPanel)instance;
+            that.ToDoButtonEnabled = (global::System.Boolean)Value;
+        }
+        private object get_12_NavigationPanel_TimeFlowButtonEnabled(object instance)
+        {
+            var that = (global::Planner.Modules.NavigationPanel)instance;
+            return that.TimeFlowButtonEnabled;
+        }
+        private void set_12_NavigationPanel_TimeFlowButtonEnabled(object instance, object Value)
+        {
+            var that = (global::Planner.Modules.NavigationPanel)instance;
+            that.TimeFlowButtonEnabled = (global::System.Boolean)Value;
+        }
+        private object get_13_NavigationPanel_SettingsButtonEnabled(object instance)
+        {
+            var that = (global::Planner.Modules.NavigationPanel)instance;
+            return that.SettingsButtonEnabled;
+        }
+        private void set_13_NavigationPanel_SettingsButtonEnabled(object instance, object Value)
+        {
+            var that = (global::Planner.Modules.NavigationPanel)instance;
+            that.SettingsButtonEnabled = (global::System.Boolean)Value;
+        }
+        private object get_14_ActivitiesPage_Planning(object instance)
         {
             var that = (global::Planner.ActivitiesPage)instance;
             return that.Planning;
         }
-        private void set_2_ActivitiesPage_Planning(object instance, object Value)
+        private void set_14_ActivitiesPage_Planning(object instance, object Value)
         {
             var that = (global::Planner.ActivitiesPage)instance;
             that.Planning = (global::DataLab.Storage.PlanningItemStorage)Value;
         }
-        private object get_3_ActivitiesPage_Settings(object instance)
+        private object get_15_ActivitiesPage_Settings(object instance)
         {
             var that = (global::Planner.ActivitiesPage)instance;
             return that.Settings;
         }
-        private void set_3_ActivitiesPage_Settings(object instance, object Value)
+        private void set_15_ActivitiesPage_Settings(object instance, object Value)
         {
             var that = (global::Planner.ActivitiesPage)instance;
             that.Settings = (global::DataLab.Storage.SettingsStorage)Value;
         }
-        private object get_4_AddActivity_Planning(object instance)
+        private object get_16_ActivitiesPage_ActivitiesList(object instance)
+        {
+            var that = (global::Planner.ActivitiesPage)instance;
+            return that.ActivitiesList;
+        }
+        private void set_16_ActivitiesPage_ActivitiesList(object instance, object Value)
+        {
+            var that = (global::Planner.ActivitiesPage)instance;
+            that.ActivitiesList = (global::System.Collections.ObjectModel.ObservableCollection<global::DataLab.Data.Planning.Activity>)Value;
+        }
+        private object get_17_Activity_LocationAsGeopoint(object instance)
+        {
+            var that = (global::DataLab.Data.Planning.Activity)instance;
+            return that.LocationAsGeopoint;
+        }
+        private object get_18_Activity_Location(object instance)
+        {
+            var that = (global::DataLab.Data.Planning.Activity)instance;
+            return that.Location;
+        }
+        private void set_18_Activity_Location(object instance, object Value)
+        {
+            var that = (global::DataLab.Data.Planning.Activity)instance;
+            that.Location = (global::Windows.Devices.Geolocation.BasicGeoposition)Value;
+        }
+        private object get_19_Activity_ActivityLength(object instance)
+        {
+            var that = (global::DataLab.Data.Planning.Activity)instance;
+            return that.ActivityLength;
+        }
+        private object get_20_PlanningItem_Name(object instance)
+        {
+            var that = (global::DataLab.Data.Planning.PlanningItem)instance;
+            return that.Name;
+        }
+        private void set_20_PlanningItem_Name(object instance, object Value)
+        {
+            var that = (global::DataLab.Data.Planning.PlanningItem)instance;
+            that.Name = (global::System.String)Value;
+        }
+        private object get_21_PlanningItem_Silent(object instance)
+        {
+            var that = (global::DataLab.Data.Planning.PlanningItem)instance;
+            return that.Silent;
+        }
+        private void set_21_PlanningItem_Silent(object instance, object Value)
+        {
+            var that = (global::DataLab.Data.Planning.PlanningItem)instance;
+            that.Silent = (global::System.Boolean)Value;
+        }
+        private object get_22_PlanningItem_MinutesToAlertBeforeActualAlarm(object instance)
+        {
+            var that = (global::DataLab.Data.Planning.PlanningItem)instance;
+            return that.MinutesToAlertBeforeActualAlarm;
+        }
+        private void set_22_PlanningItem_MinutesToAlertBeforeActualAlarm(object instance, object Value)
+        {
+            var that = (global::DataLab.Data.Planning.PlanningItem)instance;
+            that.MinutesToAlertBeforeActualAlarm = (global::System.Int32)Value;
+        }
+        private object get_23_PlanningItem_Description(object instance)
+        {
+            var that = (global::DataLab.Data.Planning.PlanningItem)instance;
+            return that.Description;
+        }
+        private void set_23_PlanningItem_Description(object instance, object Value)
+        {
+            var that = (global::DataLab.Data.Planning.PlanningItem)instance;
+            that.Description = (global::System.String)Value;
+        }
+        private object get_24_PlanningItem_Start(object instance)
+        {
+            var that = (global::DataLab.Data.Planning.PlanningItem)instance;
+            return that.Start;
+        }
+        private void set_24_PlanningItem_Start(object instance, object Value)
+        {
+            var that = (global::DataLab.Data.Planning.PlanningItem)instance;
+            that.Start = (global::System.DateTime)Value;
+        }
+        private object get_25_PlanningItem__end(object instance)
+        {
+            var that = (global::DataLab.Data.Planning.PlanningItem)instance;
+            return that._end;
+        }
+        private void set_25_PlanningItem__end(object instance, object Value)
+        {
+            var that = (global::DataLab.Data.Planning.PlanningItem)instance;
+            that._end = (global::System.DateTime)Value;
+        }
+        private object get_26_PlanningItem_End(object instance)
+        {
+            var that = (global::DataLab.Data.Planning.PlanningItem)instance;
+            return that.End;
+        }
+        private void set_26_PlanningItem_End(object instance, object Value)
+        {
+            var that = (global::DataLab.Data.Planning.PlanningItem)instance;
+            that.End = (global::System.DateTime)Value;
+        }
+        private object get_27_AddActivity_Planning(object instance)
         {
             var that = (global::Planner.AddActivity)instance;
             return that.Planning;
         }
-        private void set_4_AddActivity_Planning(object instance, object Value)
+        private void set_27_AddActivity_Planning(object instance, object Value)
         {
             var that = (global::Planner.AddActivity)instance;
             that.Planning = (global::DataLab.Storage.PlanningItemStorage)Value;
         }
-        private object get_5_AddActivity_Settings(object instance)
+        private object get_28_AddActivity_Settings(object instance)
         {
             var that = (global::Planner.AddActivity)instance;
             return that.Settings;
         }
-        private void set_5_AddActivity_Settings(object instance, object Value)
+        private void set_28_AddActivity_Settings(object instance, object Value)
         {
             var that = (global::Planner.AddActivity)instance;
             that.Settings = (global::DataLab.Storage.SettingsStorage)Value;
         }
-        private object get_6_AddDiaryPage_Planning(object instance)
+        private object get_29_AddDiaryPage_Planning(object instance)
         {
             var that = (global::Planner.AddDiaryPage)instance;
             return that.Planning;
         }
-        private void set_6_AddDiaryPage_Planning(object instance, object Value)
+        private void set_29_AddDiaryPage_Planning(object instance, object Value)
         {
             var that = (global::Planner.AddDiaryPage)instance;
             that.Planning = (global::DataLab.Storage.PlanningItemStorage)Value;
         }
-        private object get_7_AddDiaryPage_Settings(object instance)
+        private object get_30_AddDiaryPage_Settings(object instance)
         {
             var that = (global::Planner.AddDiaryPage)instance;
             return that.Settings;
         }
-        private void set_7_AddDiaryPage_Settings(object instance, object Value)
+        private void set_30_AddDiaryPage_Settings(object instance, object Value)
         {
             var that = (global::Planner.AddDiaryPage)instance;
             that.Settings = (global::DataLab.Storage.SettingsStorage)Value;
         }
-        private object get_8_AddReflectionPage_Poto(object instance)
+        private object get_31_AddReflectionPage_Poto(object instance)
         {
             var that = (global::Planner.AddReflectionPage)instance;
             return that.Poto;
         }
-        private void set_8_AddReflectionPage_Poto(object instance, object Value)
+        private void set_31_AddReflectionPage_Poto(object instance, object Value)
         {
             var that = (global::Planner.AddReflectionPage)instance;
             that.Poto = (global::Windows.UI.Xaml.Media.Imaging.SoftwareBitmapSource)Value;
         }
-        private object get_9_AddReflectionPage_Photo(object instance)
+        private object get_32_AddReflectionPage_Photo(object instance)
         {
             var that = (global::Planner.AddReflectionPage)instance;
             return that.Photo;
         }
-        private void set_9_AddReflectionPage_Photo(object instance, object Value)
+        private void set_32_AddReflectionPage_Photo(object instance, object Value)
         {
             var that = (global::Planner.AddReflectionPage)instance;
             that.Photo = (global::Windows.Storage.StorageFile)Value;
         }
-        private object get_10_AddReflectionPage_Planning(object instance)
+        private object get_33_AddReflectionPage_Planning(object instance)
         {
             var that = (global::Planner.AddReflectionPage)instance;
             return that.Planning;
         }
-        private void set_10_AddReflectionPage_Planning(object instance, object Value)
+        private void set_33_AddReflectionPage_Planning(object instance, object Value)
         {
             var that = (global::Planner.AddReflectionPage)instance;
             that.Planning = (global::DataLab.Storage.PlanningItemStorage)Value;
         }
-        private object get_11_AddReflectionPage_Settings(object instance)
+        private object get_34_AddReflectionPage_Settings(object instance)
         {
             var that = (global::Planner.AddReflectionPage)instance;
             return that.Settings;
         }
-        private void set_11_AddReflectionPage_Settings(object instance, object Value)
+        private void set_34_AddReflectionPage_Settings(object instance, object Value)
         {
             var that = (global::Planner.AddReflectionPage)instance;
             that.Settings = (global::DataLab.Storage.SettingsStorage)Value;
         }
-        private object get_12_AddToDoItemPage_Planning(object instance)
+        private object get_35_AddToDoItemPage_Planning(object instance)
         {
             var that = (global::Planner.AddToDoItemPage)instance;
             return that.Planning;
         }
-        private void set_12_AddToDoItemPage_Planning(object instance, object Value)
+        private void set_35_AddToDoItemPage_Planning(object instance, object Value)
         {
             var that = (global::Planner.AddToDoItemPage)instance;
             that.Planning = (global::DataLab.Storage.PlanningItemStorage)Value;
         }
-        private object get_13_AddToDoItemPage_Settings(object instance)
+        private object get_36_AddToDoItemPage_Settings(object instance)
         {
             var that = (global::Planner.AddToDoItemPage)instance;
             return that.Settings;
         }
-        private void set_13_AddToDoItemPage_Settings(object instance, object Value)
+        private void set_36_AddToDoItemPage_Settings(object instance, object Value)
         {
             var that = (global::Planner.AddToDoItemPage)instance;
             that.Settings = (global::DataLab.Storage.SettingsStorage)Value;
         }
-        private object get_14_AddToDoItemPage_MultipleItems(object instance)
+        private object get_37_AddToDoItemPage_MultipleItems(object instance)
         {
             var that = (global::Planner.AddToDoItemPage)instance;
             return that.MultipleItems;
         }
-        private void set_14_AddToDoItemPage_MultipleItems(object instance, object Value)
+        private void set_37_AddToDoItemPage_MultipleItems(object instance, object Value)
         {
             var that = (global::Planner.AddToDoItemPage)instance;
             that.MultipleItems = (global::System.Boolean)Value;
         }
-        private object get_15_AddToDoItemPage_CurrentTdi(object instance)
+        private object get_38_AddToDoItemPage_CurrentTdi(object instance)
         {
             var that = (global::Planner.AddToDoItemPage)instance;
             return that.CurrentTdi;
         }
-        private void set_15_AddToDoItemPage_CurrentTdi(object instance, object Value)
+        private void set_38_AddToDoItemPage_CurrentTdi(object instance, object Value)
         {
             var that = (global::Planner.AddToDoItemPage)instance;
             that.CurrentTdi = (global::DataLab.Data.Planning.ToDoItem)Value;
         }
-        private object get_16_AddToDoSetPage_plan(object instance)
+        private object get_39_AddToDoSetPage_plan(object instance)
         {
             var that = (global::Planner.AddToDoSetPage)instance;
             return that.plan;
         }
-        private void set_16_AddToDoSetPage_plan(object instance, object Value)
+        private void set_39_AddToDoSetPage_plan(object instance, object Value)
         {
             var that = (global::Planner.AddToDoSetPage)instance;
             that.plan = (global::DataLab.Storage.PlanningItemStorage)Value;
         }
-        private object get_17_AddToDoSetPage_Settings(object instance)
+        private object get_40_AddToDoSetPage_Settings(object instance)
         {
             var that = (global::Planner.AddToDoSetPage)instance;
             return that.Settings;
         }
-        private void set_17_AddToDoSetPage_Settings(object instance, object Value)
+        private void set_40_AddToDoSetPage_Settings(object instance, object Value)
         {
             var that = (global::Planner.AddToDoSetPage)instance;
             that.Settings = (global::DataLab.Storage.SettingsStorage)Value;
         }
-        private object get_18_AddToDoSetPage_tdiSet(object instance)
+        private object get_41_AddToDoSetPage_tdiSet(object instance)
         {
             var that = (global::Planner.AddToDoSetPage)instance;
             return that.tdiSet;
         }
-        private void set_18_AddToDoSetPage_tdiSet(object instance, object Value)
+        private void set_41_AddToDoSetPage_tdiSet(object instance, object Value)
         {
             var that = (global::Planner.AddToDoSetPage)instance;
             that.tdiSet = (global::DataLab.Data.Planning.ToDoItemSet)Value;
         }
-        private object get_19_DiariesPage_plan(object instance)
+        private object get_42_DiariesPage_plan(object instance)
         {
             var that = (global::Planner.DiariesPage)instance;
             return that.plan;
         }
-        private void set_19_DiariesPage_plan(object instance, object Value)
+        private void set_42_DiariesPage_plan(object instance, object Value)
         {
             var that = (global::Planner.DiariesPage)instance;
             that.plan = (global::DataLab.Storage.PlanningItemStorage)Value;
         }
-        private object get_20_DiariesPage_Settings(object instance)
+        private object get_43_DiariesPage_Settings(object instance)
         {
             var that = (global::Planner.DiariesPage)instance;
             return that.Settings;
         }
-        private void set_20_DiariesPage_Settings(object instance, object Value)
+        private void set_43_DiariesPage_Settings(object instance, object Value)
         {
             var that = (global::Planner.DiariesPage)instance;
             that.Settings = (global::DataLab.Storage.SettingsStorage)Value;
         }
-        private object get_21_FriendsPage_plan(object instance)
+        private object get_44_FriendsPage_plan(object instance)
         {
             var that = (global::Planner.FriendsPage)instance;
             return that.plan;
         }
-        private void set_21_FriendsPage_plan(object instance, object Value)
+        private void set_44_FriendsPage_plan(object instance, object Value)
         {
             var that = (global::Planner.FriendsPage)instance;
             that.plan = (global::DataLab.Storage.DynamicPlanningItemStorage)Value;
         }
-        private object get_22_FriendsPage_Settings(object instance)
+        private object get_45_FriendsPage_Settings(object instance)
         {
             var that = (global::Planner.FriendsPage)instance;
             return that.Settings;
         }
-        private void set_22_FriendsPage_Settings(object instance, object Value)
+        private void set_45_FriendsPage_Settings(object instance, object Value)
         {
             var that = (global::Planner.FriendsPage)instance;
             that.Settings = (global::DataLab.Storage.SettingsStorage)Value;
         }
-        private object get_23_FriendsPage_Filter(object instance)
+        private object get_46_FriendsPage_Filter(object instance)
         {
             var that = (global::Planner.FriendsPage)instance;
             return that.Filter;
         }
-        private object get_24_GrantPermissionsPage_plan(object instance)
+        private object get_47_GrantPermissionsPage_plan(object instance)
         {
             var that = (global::Planner.GrantPermissionsPage)instance;
             return that.plan;
         }
-        private void set_24_GrantPermissionsPage_plan(object instance, object Value)
+        private void set_47_GrantPermissionsPage_plan(object instance, object Value)
         {
             var that = (global::Planner.GrantPermissionsPage)instance;
             that.plan = (global::DataLab.Storage.PlanningItemStorage)Value;
         }
-        private object get_25_GrantPermissionsPage_SelectedPermissions(object instance)
+        private object get_48_GrantPermissionsPage_SelectedPermissions(object instance)
         {
             var that = (global::Planner.GrantPermissionsPage)instance;
             return that.SelectedPermissions;
         }
-        private void set_25_GrantPermissionsPage_SelectedPermissions(object instance, object Value)
+        private void set_48_GrantPermissionsPage_SelectedPermissions(object instance, object Value)
         {
             var that = (global::Planner.GrantPermissionsPage)instance;
             that.SelectedPermissions = (global::System.Collections.ObjectModel.ObservableCollection<global::DataLab.Data.Users.Contracts.SelectPermission>)Value;
         }
-        private object get_26_SelectPermission_Name(object instance)
+        private object get_49_SelectPermission_Name(object instance)
         {
             var that = (global::DataLab.Data.Users.Contracts.SelectPermission)instance;
             return that.Name;
         }
-        private void set_26_SelectPermission_Name(object instance, object Value)
+        private void set_49_SelectPermission_Name(object instance, object Value)
         {
             var that = (global::DataLab.Data.Users.Contracts.SelectPermission)instance;
             that.Name = (global::System.String)Value;
         }
-        private object get_27_SelectPermission_CanRead(object instance)
+        private object get_50_SelectPermission_CanRead(object instance)
         {
             var that = (global::DataLab.Data.Users.Contracts.SelectPermission)instance;
             return that.CanRead;
         }
-        private void set_27_SelectPermission_CanRead(object instance, object Value)
+        private void set_50_SelectPermission_CanRead(object instance, object Value)
         {
             var that = (global::DataLab.Data.Users.Contracts.SelectPermission)instance;
             that.CanRead = (global::System.Boolean)Value;
         }
-        private object get_28_SelectPermission_CanWrite(object instance)
+        private object get_51_SelectPermission_CanWrite(object instance)
         {
             var that = (global::DataLab.Data.Users.Contracts.SelectPermission)instance;
             return that.CanWrite;
         }
-        private void set_28_SelectPermission_CanWrite(object instance, object Value)
+        private void set_51_SelectPermission_CanWrite(object instance, object Value)
         {
             var that = (global::DataLab.Data.Users.Contracts.SelectPermission)instance;
             that.CanWrite = (global::System.Boolean)Value;
         }
-        private object get_29_SelectPermission_CanDelete(object instance)
+        private object get_52_SelectPermission_CanDelete(object instance)
         {
             var that = (global::DataLab.Data.Users.Contracts.SelectPermission)instance;
             return that.CanDelete;
         }
-        private void set_29_SelectPermission_CanDelete(object instance, object Value)
+        private void set_52_SelectPermission_CanDelete(object instance, object Value)
         {
             var that = (global::DataLab.Data.Users.Contracts.SelectPermission)instance;
             that.CanDelete = (global::System.Boolean)Value;
         }
-        private object get_30_LoginPage_plan(object instance)
+        private object get_53_LoginPage_plan(object instance)
         {
             var that = (global::Planner.LoginPage)instance;
             return that.plan;
         }
-        private void set_30_LoginPage_plan(object instance, object Value)
+        private void set_53_LoginPage_plan(object instance, object Value)
         {
             var that = (global::Planner.LoginPage)instance;
             that.plan = (global::DataLab.Storage.PlanningItemStorage)Value;
         }
-        private object get_31_LoginPage_Settings(object instance)
+        private object get_54_LoginPage_Settings(object instance)
         {
             var that = (global::Planner.LoginPage)instance;
             return that.Settings;
         }
-        private void set_31_LoginPage_Settings(object instance, object Value)
+        private void set_54_LoginPage_Settings(object instance, object Value)
         {
             var that = (global::Planner.LoginPage)instance;
             that.Settings = (global::DataLab.Storage.SettingsStorage)Value;
         }
-        private object get_32_MailPage_plan(object instance)
+        private object get_55_MailPage_plan(object instance)
         {
             var that = (global::Planner.MailPage)instance;
             return that.plan;
         }
-        private void set_32_MailPage_plan(object instance, object Value)
+        private void set_55_MailPage_plan(object instance, object Value)
         {
             var that = (global::Planner.MailPage)instance;
             that.plan = (global::DataLab.Storage.DynamicPlanningItemStorage)Value;
         }
-        private object get_33_MailPage_Settings(object instance)
+        private object get_56_MailPage_Settings(object instance)
         {
             var that = (global::Planner.MailPage)instance;
             return that.Settings;
         }
-        private void set_33_MailPage_Settings(object instance, object Value)
+        private void set_56_MailPage_Settings(object instance, object Value)
         {
             var that = (global::Planner.MailPage)instance;
             that.Settings = (global::DataLab.Storage.SettingsStorage)Value;
         }
-        private object get_34_ReflectionsPage_plan(object instance)
+        private object get_57_ReflectionsPage_plan(object instance)
         {
             var that = (global::Planner.ReflectionsPage)instance;
             return that.plan;
         }
-        private void set_34_ReflectionsPage_plan(object instance, object Value)
+        private void set_57_ReflectionsPage_plan(object instance, object Value)
         {
             var that = (global::Planner.ReflectionsPage)instance;
             that.plan = (global::DataLab.Storage.PlanningItemStorage)Value;
         }
-        private object get_35_ReflectionsPage_manipulationStartingPoint(object instance)
+        private object get_58_ReflectionsPage_manipulationStartingPoint(object instance)
         {
             var that = (global::Planner.ReflectionsPage)instance;
             return that.manipulationStartingPoint;
         }
-        private void set_35_ReflectionsPage_manipulationStartingPoint(object instance, object Value)
+        private void set_58_ReflectionsPage_manipulationStartingPoint(object instance, object Value)
         {
             var that = (global::Planner.ReflectionsPage)instance;
             that.manipulationStartingPoint = (global::Windows.Foundation.Point)Value;
         }
-        private object get_36_RegistrationPage_plan(object instance)
+        private object get_59_RegistrationPage_plan(object instance)
         {
             var that = (global::Planner.RegistrationPage)instance;
             return that.plan;
         }
-        private void set_36_RegistrationPage_plan(object instance, object Value)
+        private void set_59_RegistrationPage_plan(object instance, object Value)
         {
             var that = (global::Planner.RegistrationPage)instance;
             that.plan = (global::DataLab.Storage.PlanningItemStorage)Value;
         }
-        private object get_37_RegistrationPage_Settings(object instance)
+        private object get_60_RegistrationPage_Settings(object instance)
         {
             var that = (global::Planner.RegistrationPage)instance;
             return that.Settings;
         }
-        private void set_37_RegistrationPage_Settings(object instance, object Value)
+        private void set_60_RegistrationPage_Settings(object instance, object Value)
         {
             var that = (global::Planner.RegistrationPage)instance;
             that.Settings = (global::DataLab.Storage.SettingsStorage)Value;
         }
-        private object get_38_SendMailPage_plan(object instance)
+        private object get_61_SendMailPage_plan(object instance)
         {
             var that = (global::Planner.SendMailPage)instance;
             return that.plan;
         }
-        private void set_38_SendMailPage_plan(object instance, object Value)
+        private void set_61_SendMailPage_plan(object instance, object Value)
         {
             var that = (global::Planner.SendMailPage)instance;
             that.plan = (global::DataLab.Storage.DynamicPlanningItemStorage)Value;
         }
-        private object get_39_SendMailPage_Settings(object instance)
+        private object get_62_SendMailPage_Settings(object instance)
         {
             var that = (global::Planner.SendMailPage)instance;
             return that.Settings;
         }
-        private void set_39_SendMailPage_Settings(object instance, object Value)
+        private void set_62_SendMailPage_Settings(object instance, object Value)
         {
             var that = (global::Planner.SendMailPage)instance;
             that.Settings = (global::DataLab.Storage.SettingsStorage)Value;
         }
-        private object get_40_SettingsPage_plan(object instance)
+        private object get_63_SettingsPage_plan(object instance)
         {
             var that = (global::Planner.SettingsPage)instance;
             return that.plan;
         }
-        private void set_40_SettingsPage_plan(object instance, object Value)
+        private void set_63_SettingsPage_plan(object instance, object Value)
         {
             var that = (global::Planner.SettingsPage)instance;
             that.plan = (global::DataLab.Storage.PlanningItemStorage)Value;
         }
-        private object get_41_SettingsPage_Settings(object instance)
+        private object get_64_SettingsPage_Settings(object instance)
         {
             var that = (global::Planner.SettingsPage)instance;
             return that.Settings;
         }
-        private void set_41_SettingsPage_Settings(object instance, object Value)
+        private void set_64_SettingsPage_Settings(object instance, object Value)
         {
             var that = (global::Planner.SettingsPage)instance;
             that.Settings = (global::DataLab.Storage.SettingsStorage)Value;
         }
-        private object get_42_ShowDiaryPage_Journal(object instance)
+        private object get_65_ShowDiaryPage_Journal(object instance)
         {
             var that = (global::Planner.ShowDiaryPage)instance;
             return that.Journal;
         }
-        private void set_42_ShowDiaryPage_Journal(object instance, object Value)
+        private void set_65_ShowDiaryPage_Journal(object instance, object Value)
         {
             var that = (global::Planner.ShowDiaryPage)instance;
             that.Journal = (global::DataLab.Data.Planning.Diary)Value;
         }
-        private object get_43_ShowDiaryPage_plan(object instance)
+        private object get_66_ShowDiaryPage_plan(object instance)
         {
             var that = (global::Planner.ShowDiaryPage)instance;
             return that.plan;
         }
-        private void set_43_ShowDiaryPage_plan(object instance, object Value)
+        private void set_66_ShowDiaryPage_plan(object instance, object Value)
         {
             var that = (global::Planner.ShowDiaryPage)instance;
             that.plan = (global::DataLab.Storage.PlanningItemStorage)Value;
         }
-        private object get_44_ShowDiaryPage_Settings(object instance)
+        private object get_67_ShowDiaryPage_Settings(object instance)
         {
             var that = (global::Planner.ShowDiaryPage)instance;
             return that.Settings;
         }
-        private void set_44_ShowDiaryPage_Settings(object instance, object Value)
+        private void set_67_ShowDiaryPage_Settings(object instance, object Value)
         {
             var that = (global::Planner.ShowDiaryPage)instance;
             that.Settings = (global::DataLab.Storage.SettingsStorage)Value;
         }
-        private object get_45_ToDoPage_Planning(object instance)
+        private object get_68_TimeFlowPage_Planning(object instance)
+        {
+            var that = (global::Planner.TimeFlowPage)instance;
+            return that.Planning;
+        }
+        private void set_68_TimeFlowPage_Planning(object instance, object Value)
+        {
+            var that = (global::Planner.TimeFlowPage)instance;
+            that.Planning = (global::DataLab.Storage.PlanningItemStorage)Value;
+        }
+        private object get_69_TimeFlowPage_Settings(object instance)
+        {
+            var that = (global::Planner.TimeFlowPage)instance;
+            return that.Settings;
+        }
+        private void set_69_TimeFlowPage_Settings(object instance, object Value)
+        {
+            var that = (global::Planner.TimeFlowPage)instance;
+            that.Settings = (global::DataLab.Storage.SettingsStorage)Value;
+        }
+        private object get_70_TimeFlowPage_MainTimeFlow(object instance)
+        {
+            var that = (global::Planner.TimeFlowPage)instance;
+            return that.MainTimeFlow;
+        }
+        private void set_70_TimeFlowPage_MainTimeFlow(object instance, object Value)
+        {
+            var that = (global::Planner.TimeFlowPage)instance;
+            that.MainTimeFlow = (global::Planner.Data.TimeFlowTools.TimeFlow)Value;
+        }
+        private object get_71_ToDoPage_Planning(object instance)
         {
             var that = (global::Planner.ToDoPage)instance;
             return that.Planning;
         }
-        private object get_46_ToDoPage_Settings(object instance)
+        private object get_72_ToDoPage_Settings(object instance)
         {
             var that = (global::Planner.ToDoPage)instance;
             return that.Settings;
         }
-        private object get_47_UserPage_plan(object instance)
+        private object get_73_UserPage_plan(object instance)
         {
             var that = (global::Planner.UserPage)instance;
             return that.plan;
         }
-        private void set_47_UserPage_plan(object instance, object Value)
+        private void set_73_UserPage_plan(object instance, object Value)
         {
             var that = (global::Planner.UserPage)instance;
             that.plan = (global::DataLab.Storage.DynamicPlanningItemStorage)Value;
         }
-        private object get_48_UserPage_Settings(object instance)
+        private object get_74_UserPage_Settings(object instance)
         {
             var that = (global::Planner.UserPage)instance;
             return that.Settings;
         }
-        private void set_48_UserPage_Settings(object instance, object Value)
+        private void set_74_UserPage_Settings(object instance, object Value)
         {
             var that = (global::Planner.UserPage)instance;
             that.Settings = (global::DataLab.Storage.SettingsStorage)Value;
@@ -1226,287 +1660,443 @@ namespace Planner.Planner_XamlTypeInfo
                 xamlMember.Getter = get_1_StaticTools_getFontNames;
                 xamlMember.SetIsReadOnly();
                 break;
+            case "Planner.PlannerMapControl.Mode":
+                userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.PlannerMapControl");
+                xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "Mode", "Planner.PlannerMapControl.MapControlMode");
+                xamlMember.Getter = get_2_PlannerMapControl_Mode;
+                xamlMember.Setter = set_2_PlannerMapControl_Mode;
+                break;
+            case "Planner.PlannerMapControl.MovementMode":
+                userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.PlannerMapControl");
+                xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "MovementMode", "Planner.PlannerMapControl.MOVEMENT_BY");
+                xamlMember.Getter = get_3_PlannerMapControl_MovementMode;
+                xamlMember.Setter = set_3_PlannerMapControl_MovementMode;
+                break;
+            case "Planner.PlannerMapControl.obb":
+                userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.PlannerMapControl");
+                xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "obb", "Object");
+                xamlMember.Getter = get_4_PlannerMapControl_obb;
+                xamlMember.Setter = set_4_PlannerMapControl_obb;
+                break;
+            case "Planner.PlannerMapControl.LastSelectedLocation":
+                userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.PlannerMapControl");
+                xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "LastSelectedLocation", "Windows.Devices.Geolocation.BasicGeoposition");
+                xamlMember.Getter = get_5_PlannerMapControl_LastSelectedLocation;
+                xamlMember.Setter = set_5_PlannerMapControl_LastSelectedLocation;
+                break;
+            case "Planner.PlannerMapControl.CurrentAddress":
+                userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.PlannerMapControl");
+                xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "CurrentAddress", "String");
+                xamlMember.Getter = get_6_PlannerMapControl_CurrentAddress;
+                xamlMember.Setter = set_6_PlannerMapControl_CurrentAddress;
+                break;
+            case "Planner.PlannerMapControl.CurrentDestinationAddress":
+                userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.PlannerMapControl");
+                xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "CurrentDestinationAddress", "String");
+                xamlMember.Getter = get_7_PlannerMapControl_CurrentDestinationAddress;
+                xamlMember.Setter = set_7_PlannerMapControl_CurrentDestinationAddress;
+                break;
+            case "Planner.PlannerMapControl.DestinationActivity":
+                userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.PlannerMapControl");
+                xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "DestinationActivity", "DataLab.Data.Planning.Activity");
+                xamlMember.Getter = get_8_PlannerMapControl_DestinationActivity;
+                xamlMember.Setter = set_8_PlannerMapControl_DestinationActivity;
+                break;
+            case "Planner.Modules.NavigationPanel.ActivitiesButtonEnabled":
+                userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.Modules.NavigationPanel");
+                xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "ActivitiesButtonEnabled", "Boolean");
+                xamlMember.Getter = get_9_NavigationPanel_ActivitiesButtonEnabled;
+                xamlMember.Setter = set_9_NavigationPanel_ActivitiesButtonEnabled;
+                break;
+            case "Planner.Modules.NavigationPanel.ReflectionsButtonEnabled":
+                userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.Modules.NavigationPanel");
+                xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "ReflectionsButtonEnabled", "Boolean");
+                xamlMember.Getter = get_10_NavigationPanel_ReflectionsButtonEnabled;
+                xamlMember.Setter = set_10_NavigationPanel_ReflectionsButtonEnabled;
+                break;
+            case "Planner.Modules.NavigationPanel.ToDoButtonEnabled":
+                userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.Modules.NavigationPanel");
+                xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "ToDoButtonEnabled", "Boolean");
+                xamlMember.Getter = get_11_NavigationPanel_ToDoButtonEnabled;
+                xamlMember.Setter = set_11_NavigationPanel_ToDoButtonEnabled;
+                break;
+            case "Planner.Modules.NavigationPanel.TimeFlowButtonEnabled":
+                userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.Modules.NavigationPanel");
+                xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "TimeFlowButtonEnabled", "Boolean");
+                xamlMember.Getter = get_12_NavigationPanel_TimeFlowButtonEnabled;
+                xamlMember.Setter = set_12_NavigationPanel_TimeFlowButtonEnabled;
+                break;
+            case "Planner.Modules.NavigationPanel.SettingsButtonEnabled":
+                userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.Modules.NavigationPanel");
+                xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "SettingsButtonEnabled", "Boolean");
+                xamlMember.Getter = get_13_NavigationPanel_SettingsButtonEnabled;
+                xamlMember.Setter = set_13_NavigationPanel_SettingsButtonEnabled;
+                break;
             case "Planner.ActivitiesPage.Planning":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.ActivitiesPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "Planning", "DataLab.Storage.PlanningItemStorage");
-                xamlMember.Getter = get_2_ActivitiesPage_Planning;
-                xamlMember.Setter = set_2_ActivitiesPage_Planning;
+                xamlMember.Getter = get_14_ActivitiesPage_Planning;
+                xamlMember.Setter = set_14_ActivitiesPage_Planning;
                 break;
             case "Planner.ActivitiesPage.Settings":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.ActivitiesPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "Settings", "DataLab.Storage.SettingsStorage");
-                xamlMember.Getter = get_3_ActivitiesPage_Settings;
-                xamlMember.Setter = set_3_ActivitiesPage_Settings;
+                xamlMember.Getter = get_15_ActivitiesPage_Settings;
+                xamlMember.Setter = set_15_ActivitiesPage_Settings;
+                break;
+            case "Planner.ActivitiesPage.ActivitiesList":
+                userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.ActivitiesPage");
+                xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "ActivitiesList", "System.Collections.ObjectModel.ObservableCollection`1<DataLab.Data.Planning.Activity>");
+                xamlMember.Getter = get_16_ActivitiesPage_ActivitiesList;
+                xamlMember.Setter = set_16_ActivitiesPage_ActivitiesList;
+                break;
+            case "DataLab.Data.Planning.Activity.LocationAsGeopoint":
+                userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DataLab.Data.Planning.Activity");
+                xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "LocationAsGeopoint", "Windows.Devices.Geolocation.Geopoint");
+                xamlMember.Getter = get_17_Activity_LocationAsGeopoint;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "DataLab.Data.Planning.Activity.Location":
+                userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DataLab.Data.Planning.Activity");
+                xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "Location", "Windows.Devices.Geolocation.BasicGeoposition");
+                xamlMember.Getter = get_18_Activity_Location;
+                xamlMember.Setter = set_18_Activity_Location;
+                break;
+            case "DataLab.Data.Planning.Activity.ActivityLength":
+                userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DataLab.Data.Planning.Activity");
+                xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "ActivityLength", "TimeSpan");
+                xamlMember.Getter = get_19_Activity_ActivityLength;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "DataLab.Data.Planning.PlanningItem.Name":
+                userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DataLab.Data.Planning.PlanningItem");
+                xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "Name", "String");
+                xamlMember.Getter = get_20_PlanningItem_Name;
+                xamlMember.Setter = set_20_PlanningItem_Name;
+                break;
+            case "DataLab.Data.Planning.PlanningItem.Silent":
+                userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DataLab.Data.Planning.PlanningItem");
+                xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "Silent", "Boolean");
+                xamlMember.Getter = get_21_PlanningItem_Silent;
+                xamlMember.Setter = set_21_PlanningItem_Silent;
+                break;
+            case "DataLab.Data.Planning.PlanningItem.MinutesToAlertBeforeActualAlarm":
+                userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DataLab.Data.Planning.PlanningItem");
+                xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "MinutesToAlertBeforeActualAlarm", "Int32");
+                xamlMember.Getter = get_22_PlanningItem_MinutesToAlertBeforeActualAlarm;
+                xamlMember.Setter = set_22_PlanningItem_MinutesToAlertBeforeActualAlarm;
+                break;
+            case "DataLab.Data.Planning.PlanningItem.Description":
+                userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DataLab.Data.Planning.PlanningItem");
+                xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "Description", "String");
+                xamlMember.Getter = get_23_PlanningItem_Description;
+                xamlMember.Setter = set_23_PlanningItem_Description;
+                break;
+            case "DataLab.Data.Planning.PlanningItem.Start":
+                userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DataLab.Data.Planning.PlanningItem");
+                xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "Start", "System.DateTime");
+                xamlMember.Getter = get_24_PlanningItem_Start;
+                xamlMember.Setter = set_24_PlanningItem_Start;
+                break;
+            case "DataLab.Data.Planning.PlanningItem._end":
+                userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DataLab.Data.Planning.PlanningItem");
+                xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "_end", "System.DateTime");
+                xamlMember.Getter = get_25_PlanningItem__end;
+                xamlMember.Setter = set_25_PlanningItem__end;
+                break;
+            case "DataLab.Data.Planning.PlanningItem.End":
+                userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DataLab.Data.Planning.PlanningItem");
+                xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "End", "System.DateTime");
+                xamlMember.Getter = get_26_PlanningItem_End;
+                xamlMember.Setter = set_26_PlanningItem_End;
                 break;
             case "Planner.AddActivity.Planning":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.AddActivity");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "Planning", "DataLab.Storage.PlanningItemStorage");
-                xamlMember.Getter = get_4_AddActivity_Planning;
-                xamlMember.Setter = set_4_AddActivity_Planning;
+                xamlMember.Getter = get_27_AddActivity_Planning;
+                xamlMember.Setter = set_27_AddActivity_Planning;
                 break;
             case "Planner.AddActivity.Settings":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.AddActivity");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "Settings", "DataLab.Storage.SettingsStorage");
-                xamlMember.Getter = get_5_AddActivity_Settings;
-                xamlMember.Setter = set_5_AddActivity_Settings;
+                xamlMember.Getter = get_28_AddActivity_Settings;
+                xamlMember.Setter = set_28_AddActivity_Settings;
                 break;
             case "Planner.AddDiaryPage.Planning":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.AddDiaryPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "Planning", "DataLab.Storage.PlanningItemStorage");
-                xamlMember.Getter = get_6_AddDiaryPage_Planning;
-                xamlMember.Setter = set_6_AddDiaryPage_Planning;
+                xamlMember.Getter = get_29_AddDiaryPage_Planning;
+                xamlMember.Setter = set_29_AddDiaryPage_Planning;
                 break;
             case "Planner.AddDiaryPage.Settings":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.AddDiaryPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "Settings", "DataLab.Storage.SettingsStorage");
-                xamlMember.Getter = get_7_AddDiaryPage_Settings;
-                xamlMember.Setter = set_7_AddDiaryPage_Settings;
+                xamlMember.Getter = get_30_AddDiaryPage_Settings;
+                xamlMember.Setter = set_30_AddDiaryPage_Settings;
                 break;
             case "Planner.AddReflectionPage.Poto":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.AddReflectionPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "Poto", "Windows.UI.Xaml.Media.Imaging.SoftwareBitmapSource");
-                xamlMember.Getter = get_8_AddReflectionPage_Poto;
-                xamlMember.Setter = set_8_AddReflectionPage_Poto;
+                xamlMember.Getter = get_31_AddReflectionPage_Poto;
+                xamlMember.Setter = set_31_AddReflectionPage_Poto;
                 break;
             case "Planner.AddReflectionPage.Photo":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.AddReflectionPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "Photo", "Windows.Storage.StorageFile");
-                xamlMember.Getter = get_9_AddReflectionPage_Photo;
-                xamlMember.Setter = set_9_AddReflectionPage_Photo;
+                xamlMember.Getter = get_32_AddReflectionPage_Photo;
+                xamlMember.Setter = set_32_AddReflectionPage_Photo;
                 break;
             case "Planner.AddReflectionPage.Planning":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.AddReflectionPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "Planning", "DataLab.Storage.PlanningItemStorage");
-                xamlMember.Getter = get_10_AddReflectionPage_Planning;
-                xamlMember.Setter = set_10_AddReflectionPage_Planning;
+                xamlMember.Getter = get_33_AddReflectionPage_Planning;
+                xamlMember.Setter = set_33_AddReflectionPage_Planning;
                 break;
             case "Planner.AddReflectionPage.Settings":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.AddReflectionPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "Settings", "DataLab.Storage.SettingsStorage");
-                xamlMember.Getter = get_11_AddReflectionPage_Settings;
-                xamlMember.Setter = set_11_AddReflectionPage_Settings;
+                xamlMember.Getter = get_34_AddReflectionPage_Settings;
+                xamlMember.Setter = set_34_AddReflectionPage_Settings;
                 break;
             case "Planner.AddToDoItemPage.Planning":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.AddToDoItemPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "Planning", "DataLab.Storage.PlanningItemStorage");
-                xamlMember.Getter = get_12_AddToDoItemPage_Planning;
-                xamlMember.Setter = set_12_AddToDoItemPage_Planning;
+                xamlMember.Getter = get_35_AddToDoItemPage_Planning;
+                xamlMember.Setter = set_35_AddToDoItemPage_Planning;
                 break;
             case "Planner.AddToDoItemPage.Settings":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.AddToDoItemPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "Settings", "DataLab.Storage.SettingsStorage");
-                xamlMember.Getter = get_13_AddToDoItemPage_Settings;
-                xamlMember.Setter = set_13_AddToDoItemPage_Settings;
+                xamlMember.Getter = get_36_AddToDoItemPage_Settings;
+                xamlMember.Setter = set_36_AddToDoItemPage_Settings;
                 break;
             case "Planner.AddToDoItemPage.MultipleItems":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.AddToDoItemPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "MultipleItems", "Boolean");
-                xamlMember.Getter = get_14_AddToDoItemPage_MultipleItems;
-                xamlMember.Setter = set_14_AddToDoItemPage_MultipleItems;
+                xamlMember.Getter = get_37_AddToDoItemPage_MultipleItems;
+                xamlMember.Setter = set_37_AddToDoItemPage_MultipleItems;
                 break;
             case "Planner.AddToDoItemPage.CurrentTdi":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.AddToDoItemPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "CurrentTdi", "DataLab.Data.Planning.ToDoItem");
-                xamlMember.Getter = get_15_AddToDoItemPage_CurrentTdi;
-                xamlMember.Setter = set_15_AddToDoItemPage_CurrentTdi;
+                xamlMember.Getter = get_38_AddToDoItemPage_CurrentTdi;
+                xamlMember.Setter = set_38_AddToDoItemPage_CurrentTdi;
                 break;
             case "Planner.AddToDoSetPage.plan":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.AddToDoSetPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "plan", "DataLab.Storage.PlanningItemStorage");
-                xamlMember.Getter = get_16_AddToDoSetPage_plan;
-                xamlMember.Setter = set_16_AddToDoSetPage_plan;
+                xamlMember.Getter = get_39_AddToDoSetPage_plan;
+                xamlMember.Setter = set_39_AddToDoSetPage_plan;
                 break;
             case "Planner.AddToDoSetPage.Settings":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.AddToDoSetPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "Settings", "DataLab.Storage.SettingsStorage");
-                xamlMember.Getter = get_17_AddToDoSetPage_Settings;
-                xamlMember.Setter = set_17_AddToDoSetPage_Settings;
+                xamlMember.Getter = get_40_AddToDoSetPage_Settings;
+                xamlMember.Setter = set_40_AddToDoSetPage_Settings;
                 break;
             case "Planner.AddToDoSetPage.tdiSet":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.AddToDoSetPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "tdiSet", "DataLab.Data.Planning.ToDoItemSet");
-                xamlMember.Getter = get_18_AddToDoSetPage_tdiSet;
-                xamlMember.Setter = set_18_AddToDoSetPage_tdiSet;
+                xamlMember.Getter = get_41_AddToDoSetPage_tdiSet;
+                xamlMember.Setter = set_41_AddToDoSetPage_tdiSet;
                 break;
             case "Planner.DiariesPage.plan":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.DiariesPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "plan", "DataLab.Storage.PlanningItemStorage");
-                xamlMember.Getter = get_19_DiariesPage_plan;
-                xamlMember.Setter = set_19_DiariesPage_plan;
+                xamlMember.Getter = get_42_DiariesPage_plan;
+                xamlMember.Setter = set_42_DiariesPage_plan;
                 break;
             case "Planner.DiariesPage.Settings":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.DiariesPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "Settings", "DataLab.Storage.SettingsStorage");
-                xamlMember.Getter = get_20_DiariesPage_Settings;
-                xamlMember.Setter = set_20_DiariesPage_Settings;
+                xamlMember.Getter = get_43_DiariesPage_Settings;
+                xamlMember.Setter = set_43_DiariesPage_Settings;
                 break;
             case "Planner.FriendsPage.plan":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.FriendsPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "plan", "DataLab.Storage.DynamicPlanningItemStorage");
-                xamlMember.Getter = get_21_FriendsPage_plan;
-                xamlMember.Setter = set_21_FriendsPage_plan;
+                xamlMember.Getter = get_44_FriendsPage_plan;
+                xamlMember.Setter = set_44_FriendsPage_plan;
                 break;
             case "Planner.FriendsPage.Settings":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.FriendsPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "Settings", "DataLab.Storage.SettingsStorage");
-                xamlMember.Getter = get_22_FriendsPage_Settings;
-                xamlMember.Setter = set_22_FriendsPage_Settings;
+                xamlMember.Getter = get_45_FriendsPage_Settings;
+                xamlMember.Setter = set_45_FriendsPage_Settings;
                 break;
             case "Planner.FriendsPage.Filter":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.FriendsPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "Filter", "String");
-                xamlMember.Getter = get_23_FriendsPage_Filter;
+                xamlMember.Getter = get_46_FriendsPage_Filter;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Planner.GrantPermissionsPage.plan":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.GrantPermissionsPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "plan", "DataLab.Storage.PlanningItemStorage");
-                xamlMember.Getter = get_24_GrantPermissionsPage_plan;
-                xamlMember.Setter = set_24_GrantPermissionsPage_plan;
+                xamlMember.Getter = get_47_GrantPermissionsPage_plan;
+                xamlMember.Setter = set_47_GrantPermissionsPage_plan;
                 break;
             case "Planner.GrantPermissionsPage.SelectedPermissions":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.GrantPermissionsPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "SelectedPermissions", "System.Collections.ObjectModel.ObservableCollection`1<DataLab.Data.Users.Contracts.SelectPermission>");
-                xamlMember.Getter = get_25_GrantPermissionsPage_SelectedPermissions;
-                xamlMember.Setter = set_25_GrantPermissionsPage_SelectedPermissions;
+                xamlMember.Getter = get_48_GrantPermissionsPage_SelectedPermissions;
+                xamlMember.Setter = set_48_GrantPermissionsPage_SelectedPermissions;
                 break;
             case "DataLab.Data.Users.Contracts.SelectPermission.Name":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DataLab.Data.Users.Contracts.SelectPermission");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "Name", "String");
-                xamlMember.Getter = get_26_SelectPermission_Name;
-                xamlMember.Setter = set_26_SelectPermission_Name;
+                xamlMember.Getter = get_49_SelectPermission_Name;
+                xamlMember.Setter = set_49_SelectPermission_Name;
                 break;
             case "DataLab.Data.Users.Contracts.SelectPermission.CanRead":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DataLab.Data.Users.Contracts.SelectPermission");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "CanRead", "Boolean");
-                xamlMember.Getter = get_27_SelectPermission_CanRead;
-                xamlMember.Setter = set_27_SelectPermission_CanRead;
+                xamlMember.Getter = get_50_SelectPermission_CanRead;
+                xamlMember.Setter = set_50_SelectPermission_CanRead;
                 break;
             case "DataLab.Data.Users.Contracts.SelectPermission.CanWrite":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DataLab.Data.Users.Contracts.SelectPermission");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "CanWrite", "Boolean");
-                xamlMember.Getter = get_28_SelectPermission_CanWrite;
-                xamlMember.Setter = set_28_SelectPermission_CanWrite;
+                xamlMember.Getter = get_51_SelectPermission_CanWrite;
+                xamlMember.Setter = set_51_SelectPermission_CanWrite;
                 break;
             case "DataLab.Data.Users.Contracts.SelectPermission.CanDelete":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DataLab.Data.Users.Contracts.SelectPermission");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "CanDelete", "Boolean");
-                xamlMember.Getter = get_29_SelectPermission_CanDelete;
-                xamlMember.Setter = set_29_SelectPermission_CanDelete;
+                xamlMember.Getter = get_52_SelectPermission_CanDelete;
+                xamlMember.Setter = set_52_SelectPermission_CanDelete;
                 break;
             case "Planner.LoginPage.plan":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.LoginPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "plan", "DataLab.Storage.PlanningItemStorage");
-                xamlMember.Getter = get_30_LoginPage_plan;
-                xamlMember.Setter = set_30_LoginPage_plan;
+                xamlMember.Getter = get_53_LoginPage_plan;
+                xamlMember.Setter = set_53_LoginPage_plan;
                 break;
             case "Planner.LoginPage.Settings":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.LoginPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "Settings", "DataLab.Storage.SettingsStorage");
-                xamlMember.Getter = get_31_LoginPage_Settings;
-                xamlMember.Setter = set_31_LoginPage_Settings;
+                xamlMember.Getter = get_54_LoginPage_Settings;
+                xamlMember.Setter = set_54_LoginPage_Settings;
                 break;
             case "Planner.MailPage.plan":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.MailPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "plan", "DataLab.Storage.DynamicPlanningItemStorage");
-                xamlMember.Getter = get_32_MailPage_plan;
-                xamlMember.Setter = set_32_MailPage_plan;
+                xamlMember.Getter = get_55_MailPage_plan;
+                xamlMember.Setter = set_55_MailPage_plan;
                 break;
             case "Planner.MailPage.Settings":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.MailPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "Settings", "DataLab.Storage.SettingsStorage");
-                xamlMember.Getter = get_33_MailPage_Settings;
-                xamlMember.Setter = set_33_MailPage_Settings;
+                xamlMember.Getter = get_56_MailPage_Settings;
+                xamlMember.Setter = set_56_MailPage_Settings;
                 break;
             case "Planner.ReflectionsPage.plan":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.ReflectionsPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "plan", "DataLab.Storage.PlanningItemStorage");
-                xamlMember.Getter = get_34_ReflectionsPage_plan;
-                xamlMember.Setter = set_34_ReflectionsPage_plan;
+                xamlMember.Getter = get_57_ReflectionsPage_plan;
+                xamlMember.Setter = set_57_ReflectionsPage_plan;
                 break;
             case "Planner.ReflectionsPage.manipulationStartingPoint":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.ReflectionsPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "manipulationStartingPoint", "Windows.Foundation.Point");
-                xamlMember.Getter = get_35_ReflectionsPage_manipulationStartingPoint;
-                xamlMember.Setter = set_35_ReflectionsPage_manipulationStartingPoint;
+                xamlMember.Getter = get_58_ReflectionsPage_manipulationStartingPoint;
+                xamlMember.Setter = set_58_ReflectionsPage_manipulationStartingPoint;
                 break;
             case "Planner.RegistrationPage.plan":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.RegistrationPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "plan", "DataLab.Storage.PlanningItemStorage");
-                xamlMember.Getter = get_36_RegistrationPage_plan;
-                xamlMember.Setter = set_36_RegistrationPage_plan;
+                xamlMember.Getter = get_59_RegistrationPage_plan;
+                xamlMember.Setter = set_59_RegistrationPage_plan;
                 break;
             case "Planner.RegistrationPage.Settings":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.RegistrationPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "Settings", "DataLab.Storage.SettingsStorage");
-                xamlMember.Getter = get_37_RegistrationPage_Settings;
-                xamlMember.Setter = set_37_RegistrationPage_Settings;
+                xamlMember.Getter = get_60_RegistrationPage_Settings;
+                xamlMember.Setter = set_60_RegistrationPage_Settings;
                 break;
             case "Planner.SendMailPage.plan":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.SendMailPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "plan", "DataLab.Storage.DynamicPlanningItemStorage");
-                xamlMember.Getter = get_38_SendMailPage_plan;
-                xamlMember.Setter = set_38_SendMailPage_plan;
+                xamlMember.Getter = get_61_SendMailPage_plan;
+                xamlMember.Setter = set_61_SendMailPage_plan;
                 break;
             case "Planner.SendMailPage.Settings":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.SendMailPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "Settings", "DataLab.Storage.SettingsStorage");
-                xamlMember.Getter = get_39_SendMailPage_Settings;
-                xamlMember.Setter = set_39_SendMailPage_Settings;
+                xamlMember.Getter = get_62_SendMailPage_Settings;
+                xamlMember.Setter = set_62_SendMailPage_Settings;
                 break;
             case "Planner.SettingsPage.plan":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.SettingsPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "plan", "DataLab.Storage.PlanningItemStorage");
-                xamlMember.Getter = get_40_SettingsPage_plan;
-                xamlMember.Setter = set_40_SettingsPage_plan;
+                xamlMember.Getter = get_63_SettingsPage_plan;
+                xamlMember.Setter = set_63_SettingsPage_plan;
                 break;
             case "Planner.SettingsPage.Settings":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.SettingsPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "Settings", "DataLab.Storage.SettingsStorage");
-                xamlMember.Getter = get_41_SettingsPage_Settings;
-                xamlMember.Setter = set_41_SettingsPage_Settings;
+                xamlMember.Getter = get_64_SettingsPage_Settings;
+                xamlMember.Setter = set_64_SettingsPage_Settings;
                 break;
             case "Planner.ShowDiaryPage.Journal":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.ShowDiaryPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "Journal", "DataLab.Data.Planning.Diary");
-                xamlMember.Getter = get_42_ShowDiaryPage_Journal;
-                xamlMember.Setter = set_42_ShowDiaryPage_Journal;
+                xamlMember.Getter = get_65_ShowDiaryPage_Journal;
+                xamlMember.Setter = set_65_ShowDiaryPage_Journal;
                 break;
             case "Planner.ShowDiaryPage.plan":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.ShowDiaryPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "plan", "DataLab.Storage.PlanningItemStorage");
-                xamlMember.Getter = get_43_ShowDiaryPage_plan;
-                xamlMember.Setter = set_43_ShowDiaryPage_plan;
+                xamlMember.Getter = get_66_ShowDiaryPage_plan;
+                xamlMember.Setter = set_66_ShowDiaryPage_plan;
                 break;
             case "Planner.ShowDiaryPage.Settings":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.ShowDiaryPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "Settings", "DataLab.Storage.SettingsStorage");
-                xamlMember.Getter = get_44_ShowDiaryPage_Settings;
-                xamlMember.Setter = set_44_ShowDiaryPage_Settings;
+                xamlMember.Getter = get_67_ShowDiaryPage_Settings;
+                xamlMember.Setter = set_67_ShowDiaryPage_Settings;
+                break;
+            case "Planner.TimeFlowPage.Planning":
+                userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.TimeFlowPage");
+                xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "Planning", "DataLab.Storage.PlanningItemStorage");
+                xamlMember.Getter = get_68_TimeFlowPage_Planning;
+                xamlMember.Setter = set_68_TimeFlowPage_Planning;
+                break;
+            case "Planner.TimeFlowPage.Settings":
+                userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.TimeFlowPage");
+                xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "Settings", "DataLab.Storage.SettingsStorage");
+                xamlMember.Getter = get_69_TimeFlowPage_Settings;
+                xamlMember.Setter = set_69_TimeFlowPage_Settings;
+                break;
+            case "Planner.TimeFlowPage.MainTimeFlow":
+                userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.TimeFlowPage");
+                xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "MainTimeFlow", "Planner.Data.TimeFlowTools.TimeFlow");
+                xamlMember.Getter = get_70_TimeFlowPage_MainTimeFlow;
+                xamlMember.Setter = set_70_TimeFlowPage_MainTimeFlow;
                 break;
             case "Planner.ToDoPage.Planning":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.ToDoPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "Planning", "DataLab.Storage.PlanningItemStorage");
-                xamlMember.Getter = get_45_ToDoPage_Planning;
+                xamlMember.Getter = get_71_ToDoPage_Planning;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Planner.ToDoPage.Settings":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.ToDoPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "Settings", "DataLab.Storage.SettingsStorage");
-                xamlMember.Getter = get_46_ToDoPage_Settings;
+                xamlMember.Getter = get_72_ToDoPage_Settings;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Planner.UserPage.plan":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.UserPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "plan", "DataLab.Storage.DynamicPlanningItemStorage");
-                xamlMember.Getter = get_47_UserPage_plan;
-                xamlMember.Setter = set_47_UserPage_plan;
+                xamlMember.Getter = get_73_UserPage_plan;
+                xamlMember.Setter = set_73_UserPage_plan;
                 break;
             case "Planner.UserPage.Settings":
                 userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.UserPage");
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "Settings", "DataLab.Storage.SettingsStorage");
-                xamlMember.Getter = get_48_UserPage_Settings;
-                xamlMember.Setter = set_48_UserPage_Settings;
+                xamlMember.Getter = get_74_UserPage_Settings;
+                xamlMember.Setter = set_74_UserPage_Settings;
                 break;
             }
             return xamlMember;

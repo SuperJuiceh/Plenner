@@ -157,6 +157,7 @@
     <Compile Include="Tools\ClassConverters.cs" />
     <Compile Include="Tools\Connectivity\MailClient.cs" />
     <Compile Include="Tools\Connectivity\MessageFactory.cs" />
+    <Compile Include="Tools\DateTools.cs" />
     <Compile Include="Tools\GeoTools.cs" />
     <Compile Include="Tools\PasswordHasher.cs" />
     <Compile Include="Tools\StaticTools.cs" />

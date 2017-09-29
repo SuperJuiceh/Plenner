@@ -19,6 +19,9 @@ using Windows.UI.Core;
 using Planner.Data.Styling;
 using DataLab.Tools.Connectivity;
 using DataLab.Data.Users;
+using Windows.UI.Xaml.Data;
+using System.Collections.ObjectModel;
+using DataLab.Tools;
 
 
 
@@ -31,7 +34,7 @@ namespace Planner
     /// </summary>
     public sealed partial class ActivitiesPage : Page
     {
-        
+
         private int num;
 
         public PlanningItemStorage Planning { get { return GeneralApplicationData.Planning; } set { GeneralApplicationData.Planning = value; } }
@@ -40,13 +43,26 @@ namespace Planner
 
         private bool singleActivityNameSortedAscending, singleActivityTimeSortedAscending, repeatingActivityNameSortedAscending, repeatingActivityTimeSortedAscending;
 
+        private DateTime FilterStartTime { get { return filterStartDate.Date.Date; } }
+
+        private DateTime FilterEndTime { get { return filterEndDate.Date.Date; } }
+        private string _filterQuery;
+
+
+        private string FilterQuery { get { return filterQueryTextBlock.Text; }  }
+
+        public ObservableCollection<Activity> ActivitiesList { get; set; } = new ObservableCollection<Activity>();
+
         //public SolidColorBrush RandomColor { get { return new SolidColorBrush(RandomColorGenerator.randomColor()); } }
 
         public ActivitiesPage()
         {
             UserStyleFactory.addStyles(this.Resources, this.Settings.Settings);
 
+            this.ActivitiesList = Planning.plan.Activities;
             this.InitializeComponent();
+
+
 
         }
 
@@ -91,18 +107,20 @@ namespace Planner
 
         private async void MapControl_Loaded(object sender, RoutedEventArgs e)
         {
+
+
             MapControl map = (MapControl)sender;
             Activity activity = map.DataContext as Activity;
+            await map.TrySetViewAsync(activity.LocationAsGeopoint, 10D);
 
-            await map.TrySetViewAsync(activity.Location, 10D);
-
-            while (map.ZoomLevel < 19) {
+            while (map.ZoomLevel < 19)
+            {
                 await map.TryZoomInAsync();
             }
 
             // Geofence setup
 
-            Geocircle geo = new Geocircle(activity.basicgeoloc, 10);
+            Geocircle geo = new Geocircle(activity.Location, 10);
             Geofence geofence = new Geofence(new Random().Next(1000).ToString(), geo,
                                             MonitoredGeofenceStates.Entered, true, TimeSpan.FromMilliseconds(20),
                                             DateTime.Now, TimeSpan.FromHours(1));
@@ -133,7 +151,44 @@ namespace Planner
                 Planning.removePlanningItem(rpi);
             }
         }
-        
+
+        public void filterList()
+        {
+            // Orderedlist placeholder
+            IOrderedEnumerable<Activity> ok;
+            // How will we sort the data? (Asc/Desc)
+            if (singleActivityNameSortedAscending)
+                ok = Planning.plan.Activities.OrderBy(item => item.Name);
+            else
+                ok = Planning.plan.Activities.OrderByDescending(item => item.Name);
+
+            // Flip state
+            repeatingActivityNameSortedAscending = !repeatingActivityNameSortedAscending;
+
+            List<Activity> items = null;
+
+            if (!String.IsNullOrWhiteSpace(FilterQuery) && filterStartDate != null && filterEndDate != null)
+                items = ok.Where(item => item.Start.isBetweenStartAndEnd(FilterStartTime, FilterEndTime) && (item.Name.Contains(FilterQuery) || item.Description.Contains(FilterQuery))).ToList();
+            else
+            {
+                items = ok.ToList();
+
+            }
+            Debug.WriteLine(items.Count().ToString());
+            if (items.Count() > 0)
+            {
+                Debug.WriteLine("Hi");
+                ActivitiesList.Clear();
+                // Add all items from the list
+                items.ToList().ForEach(item =>
+                {
+                    ActivitiesList.Add(item);
+                });
+            }
+
+            repeatingActivityTimeSortedAscending = false;
+        }
+
 
         private void repeatingNameHeader_Tapped(object sender, TappedRoutedEventArgs e)
         {
@@ -195,9 +250,7 @@ namespace Planner
         {
 
             Button but = sender as Button;
-
-            Debug.WriteLine(but.DataContext is Activity);
-
+            
             this.Frame.Navigate(typeof(AddActivity), but.DataContext as Activity);
         }
 
@@ -214,7 +267,8 @@ namespace Planner
                     block.Visibility = Visibility.Visible;
                     panel.Height = 80;
                 }
-                else {
+                else
+                {
                     block.Visibility = Visibility.Collapsed;
                     panel.Height = 35;
                 }
@@ -224,7 +278,7 @@ namespace Planner
         private void mailActivityButton_Click(object sender, RoutedEventArgs e)
         {
             Activity activity = (sender as Button).Tag as Activity;
-            
+
             if (activity != null)
             {
                 MailClient.sendMailWithPlanning(Planning, activity);
@@ -239,7 +293,7 @@ namespace Planner
 
         private void reflectionsButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Reflection));
+            this.Frame.Navigate(typeof(ReflectionsPage));
         }
 
         private void settingsButton_Click(object sender, RoutedEventArgs e)
@@ -250,6 +304,68 @@ namespace Planner
         private void splitViewOpenCloseButton_Click(object sender, RoutedEventArgs e)
         {
             this.mainSplitView.IsPaneOpen = !this.mainSplitView.IsPaneOpen;
+        }
+
+        private void showActivitiesSingleCheckbox_Checked(object sender, RoutedEventArgs e)
+        {
+            if (Settings.Settings.ActivitiesSingleListVisible)
+            {
+                if (Settings.Settings.ToDoItemsSingleListVisible)
+                {
+                    listView.Height = 250;
+                }
+                else
+                {
+                    listView.Height = 500;
+                }
+            }
+
+            Settings.saveStorage();
+        }
+
+
+        private void showRepeatingActivitiesCheckbox_Checked(object sender, RoutedEventArgs e)
+        {
+            if (Settings.Settings.ActivitiesRepeatingListVisible)
+            {
+                if (Settings.Settings.ActivitiesSingleListVisible)
+                {
+                    listView.Height = 250;
+                }
+                else
+                {
+                    listView.Height = 500;
+                }
+            }
+
+            
+            Settings.saveStorage();
+        }
+
+        private void name_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void filterButton_Closed(object sender, object e)
+        {
+
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(TimeFlowPage));
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void filterOkButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Set filters
+            filterList();
         }
 
         private void singleActivityNameTextBlock_Tapped(object sender, TappedRoutedEventArgs e)
@@ -279,7 +395,7 @@ namespace Planner
 
             singleActivityTimeSortedAscending = false;
         }
-        
+
 
         private void singleActivityTimeTextBlock_Tapped(object sender, TappedRoutedEventArgs e)
         {
@@ -347,6 +463,6 @@ namespace Planner
                 }
             });
         }
-        
+
     }
 }

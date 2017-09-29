@@ -104,7 +104,7 @@ namespace Planner.Data.Notify
                         xmlNodes[0].AppendChild(xml.CreateTextNode(tdi.Name));
                         xmlNodes[1].AppendChild(xml.CreateTextNode(tdi.Description));
 
-                        ((XmlElement)xmlNode2[0]).SetAttribute("src", "ms-appx:/"+GeneralApplicationData.Settings.Settings.NotificationIconString);
+                        ((XmlElement)xmlNode2[0]).SetAttribute("src", "ms-appx://"+GeneralApplicationData.Settings.Settings.NotificationIconString);
 
                         ScheduledToastNotification toast = new ScheduledToastNotification(xml, tdi.Deadline - TimeSpan.FromMinutes(15));
                         toast.Tag = "Planner";

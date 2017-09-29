@@ -59,24 +59,12 @@
             </Button.Background>
             <Button.Flyout>
                 <Flyout x:Name="addLocationFlyout" Opened="addLocationFlyout_Opened" Closed="addLocationFlyout_Closed">
-                    <RelativePanel Height="396">
-                        <Maps:MapControl HorizontalAlignment="Left" MapTapped="MapControl_MapTapped" Loaded="MapControl_Loaded" VerticalAlignment="Top" MapElementClick="MapControl_MapElementClick" MapServiceToken="UWDI1l1XbwkriqZEGETA~MAYOBVQMdUrmOkYYK_sS1g~AoV9cm2Qr83ZnEaIlrcNUwYRTxmA-84sWvikuDFviTbzlIQfBeEto177CiI5jBqc" Height="342" Width="316" />
-                        <Button x:Name="button3" VerticalAlignment="Stretch" Margin="0,358,0,-358" Click="button3_Click" Width="30" Height="30">
-                            <Button.Background>
-                                <ImageBrush ImageSource="/Assets/true.png"/>
-                            </Button.Background>
-                        </Button>
-                        <Button x:Name="button4" Height="32" VerticalAlignment="Top" Margin="50,360,0,-351" Width="39" Click="button4_Click">
-                            <Button.Background>
-                                <ImageBrush ImageSource="/Assets/pinpoint_gps.png" />
-                            </Button.Background>
-                        </Button>
-                    <CheckBox x:Name="proximityNotification" Margin="150,360,0,-351"  Content="Proximity notification" HorizontalAlignment="Left" VerticalAlignment="Top" Width="194" RenderTransformOrigin="-0.167,0.625" Checked="proximityNotification_Click"/></RelativePanel>
+                    <RelativePanel Width="400" Height="350">
+                        <local:PlannerMapControl x:Name="mapControl" Mode="SEARCH_VIEW" />
+                    </RelativePanel>
                 </Flyout>
             </Button.Flyout>
         </Button>
-        <TextBlock x:Name="textBlock5" HorizontalAlignment="Left" Margin="50,460,0,0" TextWrapping="Wrap" Text="Location" FontSize="16" VerticalAlignment="Top"/>
-        <TextBlock x:Name="selectedLocationTextBlock" HorizontalAlignment="Left" Margin="48,485,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
         <CheckBox x:Name="checkBox2" Content="Warn before?" HorizontalAlignment="Left" Margin="40,290,0,0" VerticalAlignment="Top"/>
         <!-- if checkbox2 is checked -->
         <TextBlock x:Name="textBlock6" HorizontalAlignment="Left" Margin="260,295,0,0" TextWrapping="Wrap" Text="Minutes" VerticalAlignment="Top" Visibility="{Binding ElementName=checkBox2, Path=IsChecked, Converter={StaticResource boolToElementConv}}"/>

@@ -12,7 +12,7 @@ namespace Planner.Data.Converters
     {
         object IValueConverter.Convert(object value, Type targetType, object parameter, string language)
         {
-            
+
             bool state = (bool)value;
 
             if (state)
