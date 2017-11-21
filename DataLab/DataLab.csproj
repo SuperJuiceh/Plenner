@@ -128,6 +128,9 @@
     <Compile Include="Data\Users\User.cs" />
     <Compile Include="Data\Users\UserInfo.cs" />
     <Compile Include="Data\Users\UserManager.cs" />
+    <Compile Include="Data\Work\WorkingHours.cs" />
+    <Compile Include="Data\Work\WorkingPlace.cs" />
+    <Compile Include="Data\Work\WorkManager.cs" />
     <Compile Include="NetworkPackaging\PacketClient.cs" />
     <Compile Include="NetworkPackaging\PacketClientLibrary.cs" />
     <Compile Include="NetworkPackaging\PacketClientNotifier.cs" />

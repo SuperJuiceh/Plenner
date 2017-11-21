@@ -77,18 +77,19 @@ namespace Planner
         {
             // Navigate to ActivitiesPage
             await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.High, () => {
+                //this.Frame.Navigate(typeof(WorkingHoursPage));
 
 
                 // Place the frame in the current Window
                 loadingStatusTextBlock.Text = "Loading Planner XML Data";
-                
+
                 // Check auto-login feature, auto login if present
                 if (GeneralApplicationData.Settings.Settings.AutoLogIn)
                 {
                     PacketClient.Connect();
                     string deviceID = new EasClientDeviceInformation().Id.ToString();
                     QuestionPacket qPacket = QuestionPacket.AskIfTokenIsValid(GeneralApplicationData.Settings.Settings.LognToken.UserName, GeneralApplicationData.Settings.Settings.LognToken.ID, deviceID);
-                    
+
                     QuestionPacket packet = PacketClient.SendAndReceive(qPacket) as QuestionPacket;
 
                     if (packet.A)
@@ -96,18 +97,20 @@ namespace Planner
                         DynamicPlanningItemStorage p = new DynamicPlanningItemStorage(new PlanningItemStorage(), (User)packet.Question_data[3]);
                         GeneralApplicationData.Planning.plan = p.CurrentUser.plan;
                         this.Frame.Navigate(typeof(ActivitiesPage));
-                    } else
+                    }
+                    else
                     {
                         this.rootFrame.Navigate(typeof(LoginPage));
                     }
-                } else
+                }
+                else
                 {
-                    this.rootFrame.Navigate(typeof(LoginPage));
+                    this.rootFrame.Navigate(typeof(WorkingHoursPage));
                 }
 
-                
+
                 //GeneralApplicationData.Planning.plan.archiveToDoItems(); // Archive old items
-                
+
                 Window.Current.Content = rootFrame;
              
 

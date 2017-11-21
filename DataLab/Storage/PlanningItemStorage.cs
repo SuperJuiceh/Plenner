@@ -16,7 +16,7 @@ using DataLab.Data.Users;
 
 namespace DataLab.Storage
 {
-    public class PlanningItemStorage : Storage, INotifyPropertyChanged
+    public class PlanningItemStorage : Storage<Plan>, INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
         

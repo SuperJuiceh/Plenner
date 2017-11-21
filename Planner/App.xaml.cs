@@ -50,8 +50,6 @@ namespace Planner
 
             GeneralApplicationData.Settings = Settings = new SettingsStorage();
 
-
-            
             
             try
             {

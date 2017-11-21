@@ -322,3 +322,8 @@ C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\Modules\NavigationPane
 C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\Modules\NavigationPanel.g.cs
 C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\Modules\NavigationPanel.xaml
 C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\Modules\NavigationPanel.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\WorkingHoursPage.g.i.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\WorkingHoursPage.g.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\WorkingHoursPage.xaml
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\x64\Debug\WorkingHoursPage.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\bin\x64\Debug\WorkingHoursPage.xbf

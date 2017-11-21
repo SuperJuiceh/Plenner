@@ -41,35 +41,35 @@
                                 <TextBlock Text="Enabled Items"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal">
-                                <CheckBox x:ConnectionId='17' Content="Activities" HorizontalAlignment="Left" Margin="10,15,0,0" VerticalAlignment="Top"                                     IsChecked="{Binding ActivitiesEnabled, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-                                <CheckBox x:ConnectionId='18' Content="Reflections" HorizontalAlignment="Left" Margin="10,15,0,0" VerticalAlignment="Top"                                     IsChecked="{Binding ReflectionsEnabled, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-                                <CheckBox x:ConnectionId='19' Content="ToDoItems" HorizontalAlignment="Left" Margin="10,15,0,0" VerticalAlignment="Top"                                     IsChecked="{Binding TodoitemsEnabled, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                                <CheckBox x:ConnectionId='18' Content="Activities" HorizontalAlignment="Left" Margin="10,15,0,0" VerticalAlignment="Top"                                     IsChecked="{Binding ActivitiesEnabled, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                                <CheckBox x:ConnectionId='19' Content="Reflections" HorizontalAlignment="Left" Margin="10,15,0,0" VerticalAlignment="Top"                                     IsChecked="{Binding ReflectionsEnabled, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                                <CheckBox x:ConnectionId='20' Content="ToDoItems" HorizontalAlignment="Left" Margin="10,15,0,0" VerticalAlignment="Top"                                     IsChecked="{Binding TodoitemsEnabled, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Text="Date"/>
-                                <DatePicker x:ConnectionId='16' Margin="40, 0, 0, 0" x:Name="timeFlowDatePicker"                                             />
+                                <DatePicker x:ConnectionId='17' Margin="40, 0, 0, 0" x:Name="timeFlowDatePicker"                                             />
                             </StackPanel>
                         </StackPanel>
                     </Flyout>
                 </Button.Flyout>
             </Button>
             <StackPanel Height="39" Orientation="Vertical" VerticalAlignment="Top" Margin="0,40,0,0" Width="400">
-                <ItemsControl x:ConnectionId='15'                                         Width="380" Style="{StaticResource horizontalListBoxStyle}" >
+                <ItemsControl x:ConnectionId='16'                                         Width="380" Style="{StaticResource horizontalListBoxStyle}" >
                     <ItemsPanelTemplate>
-                        <TextBlock Width="300" Foreground="Black" IsColorFontEnabled="True" Margin="0,0,0,0" >
-                        <Run Foreground="Orange" Text="{Binding }" FontSize="20"/>
+                        <TextBlock Width="16" Foreground="Black" IsColorFontEnabled="True" Margin="0,0,0,0" >
+                            <Run Foreground="Orange" Text="{Binding }" FontSize="20"/>
                         </TextBlock>
                     </ItemsPanelTemplate>
                 </ItemsControl>
             </StackPanel>
-            <RelativePanel Height="380" Margin="0,60,0,0">
-                <RelativePanel Height="127" Margin="0,0,0,0">
-                    <ItemsControl x:ConnectionId='12' x:Name="timeLineActivitiesItemsControl"                                                        Height="127">
+            <RelativePanel Height="380" Margin="0,60,0,0" Width="280">
+                <RelativePanel Height="127" Margin="0,0,0,0" Width="300">
+                    <ItemsControl x:ConnectionId='12' x:Name="timeLineActivitiesItemsControl"                                                        Height="127" Width="300">
                         <ItemsControl.ItemTemplate>
                             <DataTemplate                                   >
-                                <RelativePanel x:ConnectionId='13' Height="126">
-                                    <RelativePanel Background="Cyan" x:Name="activitiesPanel" Margin="{Binding Converter={StaticResource timeToMarginConv}}" Height="126">
-                                        <TextBlock x:ConnectionId='14' Height="126" Foreground="Cyan" ToolTipService.ToolTip="{Binding Converter={StaticResource itemToPanelInfo}}"                                                                                                                                  />
+                                <RelativePanel x:ConnectionId='13' Height="126" Width="280">
+                                    <RelativePanel x:ConnectionId='14' Background="Cyan" x:Name="activitiesPanel" Margin="{Binding Converter={StaticResource timeToMarginConv}}" Height="126"                                                                                                                                 >
+                                        <TextBlock x:ConnectionId='15' Height="126" ToolTipService.ToolTip="{Binding Converter={StaticResource itemToPanelInfo}}"                                                                                                                                  />
                                     </RelativePanel>
                                 </RelativePanel>
                             </DataTemplate>
@@ -80,9 +80,8 @@
                     <ItemsControl x:ConnectionId='9'                                                         Height="256">
                         <ItemsControl.ItemTemplate>
                             <DataTemplate                                   >
-                                <RelativePanel x:ConnectionId='10' x:Name="reflectionsTextBlock" Background="Green" Height="126">
+                                <RelativePanel x:ConnectionId='10' x:Name="reflectionsTextBlock" Background="Green" Height="126"                                                                                                                                 >
                                     <TextBlock x:ConnectionId='11' Height="126" ToolTipService.ToolTip="{Binding Converter={StaticResource itemToPanelInfo}}"                                                                                                                                   >
-
                                     </TextBlock>
                                 </RelativePanel>
                             </DataTemplate>
@@ -93,7 +92,7 @@
                     <ItemsControl x:ConnectionId='6'                                                       Height="127">
                         <ItemsControl.ItemTemplate>
                             <DataTemplate                                   >
-                                <RelativePanel x:ConnectionId='7' x:Name="todoitemsPanel" Background="Green" Height="126">
+                                <RelativePanel x:ConnectionId='7' x:Name="todoitemsPanel" Background="Green" Height="126"                                                                                                                                 >
                                     <TextBlock x:ConnectionId='8' Height="126" ToolTipService.ToolTip="{Binding Converter={StaticResource itemToPanelInfo}}"                                                                                                                                 >
 
                                     </TextBlock>

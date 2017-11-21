@@ -10,11 +10,13 @@
     mc:Ignorable="d"
     Width="350" Height="635"
     >
+    
     <Page.Resources>
         <conv:DateTimeFormatConverter x:Key="DTFormatConv" />
         <conv:RandomColorGenerator  x:Key="RandomColor" />
         <conv:DaysListToStringConverter x:Key="daysToStringConv" />
         <conv:BoolToElementVisibility x:Key="boolToVisibilityConverter"/>
+
     </Page.Resources>
     <SplitView x:ConnectionId='2' x:Name="mainSplitView" DisplayMode="CompactOverlay" OpenPaneLength="50" CompactPaneLength="20"                                  >
         <StackPanel Orientation="Vertical">
@@ -27,11 +29,11 @@
                                 <TextBlock Text="Enabled Modules"/>
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Text="Single Activities"/>
-                                    <CheckBox x:ConnectionId='21' x:Name="showActivitiesSingleCheckbox"                                          IsChecked="{Binding ActivitiesSingleListVisible, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"                                               />
+                                    <CheckBox x:ConnectionId='24' x:Name="showActivitiesSingleCheckbox"                                          IsChecked="{Binding ActivitiesSingleListVisible, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"                                               />
                                 </StackPanel>
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Text="Set Activities"/>
-                                    <CheckBox x:ConnectionId='20' x:Name="showRepeatingActivitiesCheckbox"                                           IsChecked="{Binding ActivitiesRepeatingListVisible, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"                                                  />
+                                    <CheckBox x:ConnectionId='23' x:Name="showRepeatingActivitiesCheckbox"                                           IsChecked="{Binding ActivitiesRepeatingListVisible, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"                                                  />
 
                                 </StackPanel>
                             </StackPanel>
@@ -41,12 +43,12 @@
                         <ImageBrush ImageSource="/Assets/eye.png"/>
                     </Button.Background>
                 </Button>
-                <Button x:ConnectionId='18' x:Name="button" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Height="32" Width="36"                        >
+                <Button x:ConnectionId='21' x:Name="button" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Height="32" Width="36"                        >
                     <Button.Background>
                         <ImageBrush ImageSource="/Assets/plus.png" />
                     </Button.Background>
                 </Button>
-                <Button x:ConnectionId='19' x:Name="button1" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Height="35" Width="42"                       >
+                <Button x:ConnectionId='22' x:Name="button1" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Height="35" Width="42"                       >
                     <Button.Background>
                         <ImageBrush ImageSource="/Assets/Broom_icon.svg.png" />
                     </Button.Background>
@@ -54,24 +56,32 @@
             </StackPanel>
             <TextBlock x:ConnectionId='3' x:Name="textBlock" HorizontalAlignment="Left" Margin="0,15,0,0" TextWrapping="Wrap" Text="Activities" FontSize="20" VerticalAlignment="Top" Height="30" Width="115"                                              />
 
-            <ListView x:ConnectionId='4' x:Name="listBoxSingleItems"                                          FontSize="10" HorizontalAlignment="Left" Height="247" Margin="0,0,0,0" VerticalAlignment="Top" Width="314"                                                  ScrollViewer.VerticalScrollBarVisibility="Auto" MaxHeight="160" Visibility="{Binding ActivitiesSingleListVisible, Converter={StaticResource boolToVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}"  >
+            <ListView x:ConnectionId='4' x:Name="listBoxSingleItems"                                          FontSize="10" HorizontalAlignment="Left" Height="246" Margin="0,0,0,0" VerticalAlignment="Top" Width="314"                                        ScrollViewer.VerticalScrollBarVisibility="Auto" MaxHeight="160" Visibility="{Binding ActivitiesSingleListVisible, Converter={StaticResource boolToVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}"  >
                 <ListView.Header>
                     <RelativePanel Height="50">
                         <StackPanel Orientation="Horizontal" Margin="0, 10, 0, 0">
-
-                            <TextBlock x:ConnectionId='11' x:Name="textBlock2" Text="Single" HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="41"/>
                             <Button Margin="250,-2,0,0.333" Width="24" Height="25" >
                                 <Button.Background>
                                     <ImageBrush ImageSource="/Assets/FilterIcon.png"/>
                                 </Button.Background>
-                                <Button.Flyout>
-                                    <Flyout x:ConnectionId='12' x:Name="filterButton"                             >
+                                <Button.Flyout> 
+                                    <Flyout x:ConnectionId='11' x:Name="filterButton"                             >
                                         <StackPanel Margin="0, 20, 0, 0" Orientation="Vertical" Width="351" Height="186">
-                                            <TextBlock Text="Filter Option"/>
+
+                                            <TextBlock Text="Filter Options"/>
                                             <StackPanel Orientation="Horizontal">
-                                                <TextBlock Text="Search key" />
+                                                <TextBlock x:ConnectionId='15' x:Name="filterQueryTextBlock" Text="Search key" />
                                                 <TextBox Margin="30, 0, 0, 0" Text="..." Width="228"/>
                                             </StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Text="From"/>
+                                                <DatePicker x:ConnectionId='14' x:Name="filterStartDate" Margin="20,0,0,0" />
+                                            </StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Text="To"/>
+                                                <DatePicker x:ConnectionId='13' x:Name="filterEndDate" Margin="20,0,0,0" />
+                                            </StackPanel>
+                                            <Button x:ConnectionId='12' x:Name="filterOkButton" Content="OK"                             />
                                         </StackPanel>
                                     </Flyout>
                                 </Button.Flyout>
@@ -88,7 +98,7 @@
                 </ListView.Header>
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <RelativePanel x:ConnectionId='13' x:Name="relativePanel" Margin="-10, 10, 0, 0" Height="35"                                                   >
+                        <RelativePanel x:ConnectionId='16' x:Name="relativePanel" Margin="-10, 10, 0, 0" Height="35"                                                   >
                             <TextBlock Text="{Binding Name}"  FontSize="10" />
                             <TextBlock Text="{Binding Start, Converter={StaticResource DTFormatConv}, ConverterParameter={Binding End}}" Margin="100, 0, 0, 0" FontSize="10" />
 
@@ -99,22 +109,22 @@
                                 <Button.Flyout>
                                     <Flyout>
                                         <RelativePanel Height="396">
-                                            <local:PlannerMapControl x:ConnectionId='17' x:Name="name" Mode="OBSERVANT_VIEW"  DataContext="{Binding }" MovementMode="FOOT"                     />
+                                            <local:PlannerMapControl x:ConnectionId='20' x:Name="name" Mode="OBSERVANT_VIEW"  DataContext="{Binding }" MovementMode="FOOT"                     />
                                         </RelativePanel>
                                     </Flyout>
                                 </Button.Flyout>
                             </Button>
-                            <Button x:ConnectionId='14' x:Name="editButton"                          Height="25" Width="25" FontSize="10" Margin="220, 0, 0, 0">
+                            <Button x:ConnectionId='17' x:Name="editButton"                          Height="25" Width="25" FontSize="10" Margin="220, 0, 0, 0">
                                 <Button.Background>
                                     <ImageBrush ImageSource="/Assets/edit.png" />
                                 </Button.Background>
                             </Button>
-                            <Button x:ConnectionId='15' x:Name="mailActivityButton" Height="25" Width="25" FontSize="10" Margin="250, 0, 0, 0"                                  Tag="{Binding }" >
+                            <Button x:ConnectionId='18' x:Name="mailActivityButton" Height="25" Width="25" FontSize="10" Margin="250, 0, 0, 0"                                  Tag="{Binding }" >
                                 <Button.Background>
                                     <ImageBrush ImageSource="/Assets/mail.png" />
                                 </Button.Background>
                             </Button>
-                            <Button x:ConnectionId='16'                      Height="25" Width="25" FontSize="10" Margin="280, 0, 0, 0" >
+                            <Button x:ConnectionId='19'                      Height="25" Width="25" FontSize="10" Margin="280, 0, 0, 0" >
                                 <Button.Background>
                                     <ImageBrush ImageSource="/Assets/delete.png" />
                                 </Button.Background>

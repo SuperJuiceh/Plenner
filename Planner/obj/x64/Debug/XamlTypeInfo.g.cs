@@ -132,7 +132,7 @@ namespace Planner.Planner_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[72];
+            _typeNameTable = new string[75];
             _typeNameTable[0] = "DataLab.Tools.StaticTools";
             _typeNameTable[1] = "Object";
             _typeNameTable[2] = "Int32[]";
@@ -205,8 +205,11 @@ namespace Planner.Planner_XamlTypeInfo
             _typeNameTable[69] = "Planner.Data.TimeFlowTools.TimeFlow";
             _typeNameTable[70] = "Planner.ToDoPage";
             _typeNameTable[71] = "Planner.UserPage";
+            _typeNameTable[72] = "Planner.WorkingHoursPage";
+            _typeNameTable[73] = "DataLab.Data.Work.WorkingPlace";
+            _typeNameTable[74] = "System.Nullable`1<System.DateTime>";
 
-            _typeTable = new global::System.Type[72];
+            _typeTable = new global::System.Type[75];
             _typeTable[0] = typeof(global::DataLab.Tools.StaticTools);
             _typeTable[1] = typeof(global::System.Object);
             _typeTable[2] = typeof(global::System.Int32[]);
@@ -279,6 +282,9 @@ namespace Planner.Planner_XamlTypeInfo
             _typeTable[69] = typeof(global::Planner.Data.TimeFlowTools.TimeFlow);
             _typeTable[70] = typeof(global::Planner.ToDoPage);
             _typeTable[71] = typeof(global::Planner.UserPage);
+            _typeTable[72] = typeof(global::Planner.WorkingHoursPage);
+            _typeTable[73] = typeof(global::DataLab.Data.Work.WorkingPlace);
+            _typeTable[74] = typeof(global::System.Nullable<global::System.DateTime>);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -357,6 +363,7 @@ namespace Planner.Planner_XamlTypeInfo
         private object Activate_68_TimeFlowPage() { return new global::Planner.TimeFlowPage(); }
         private object Activate_70_ToDoPage() { return new global::Planner.ToDoPage(); }
         private object Activate_71_UserPage() { return new global::Planner.UserPage(); }
+        private object Activate_72_WorkingHoursPage() { return new global::Planner.WorkingHoursPage(); }
         private void VectorAdd_27_ObservableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::DataLab.Data.Planning.Activity>)instance;
@@ -918,6 +925,28 @@ namespace Planner.Planner_XamlTypeInfo
                 userType.AddMemberName("plan");
                 userType.AddMemberName("Settings");
                 userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 72:   //  Planner.WorkingHoursPage
+                userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_72_WorkingHoursPage;
+                userType.AddMemberName("Place");
+                userType.AddMemberName("CurrentStartTime");
+                userType.AddMemberName("CurrentEndTime");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 73:   //  DataLab.Data.Work.WorkingPlace
+                userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 74:   //  System.Nullable`1<System.DateTime>
+                userType = new global::Planner.Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
+                userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
             }
@@ -1640,6 +1669,36 @@ namespace Planner.Planner_XamlTypeInfo
             var that = (global::Planner.UserPage)instance;
             that.Settings = (global::DataLab.Storage.SettingsStorage)Value;
         }
+        private object get_75_WorkingHoursPage_Place(object instance)
+        {
+            var that = (global::Planner.WorkingHoursPage)instance;
+            return that.Place;
+        }
+        private void set_75_WorkingHoursPage_Place(object instance, object Value)
+        {
+            var that = (global::Planner.WorkingHoursPage)instance;
+            that.Place = (global::DataLab.Data.Work.WorkingPlace)Value;
+        }
+        private object get_76_WorkingHoursPage_CurrentStartTime(object instance)
+        {
+            var that = (global::Planner.WorkingHoursPage)instance;
+            return that.CurrentStartTime;
+        }
+        private void set_76_WorkingHoursPage_CurrentStartTime(object instance, object Value)
+        {
+            var that = (global::Planner.WorkingHoursPage)instance;
+            that.CurrentStartTime = (global::System.Nullable<global::System.DateTime>)Value;
+        }
+        private object get_77_WorkingHoursPage_CurrentEndTime(object instance)
+        {
+            var that = (global::Planner.WorkingHoursPage)instance;
+            return that.CurrentEndTime;
+        }
+        private void set_77_WorkingHoursPage_CurrentEndTime(object instance, object Value)
+        {
+            var that = (global::Planner.WorkingHoursPage)instance;
+            that.CurrentEndTime = (global::System.Nullable<global::System.DateTime>)Value;
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
@@ -2097,6 +2156,24 @@ namespace Planner.Planner_XamlTypeInfo
                 xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "Settings", "DataLab.Storage.SettingsStorage");
                 xamlMember.Getter = get_74_UserPage_Settings;
                 xamlMember.Setter = set_74_UserPage_Settings;
+                break;
+            case "Planner.WorkingHoursPage.Place":
+                userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.WorkingHoursPage");
+                xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "Place", "DataLab.Data.Work.WorkingPlace");
+                xamlMember.Getter = get_75_WorkingHoursPage_Place;
+                xamlMember.Setter = set_75_WorkingHoursPage_Place;
+                break;
+            case "Planner.WorkingHoursPage.CurrentStartTime":
+                userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.WorkingHoursPage");
+                xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "CurrentStartTime", "System.Nullable`1<System.DateTime>");
+                xamlMember.Getter = get_76_WorkingHoursPage_CurrentStartTime;
+                xamlMember.Setter = set_76_WorkingHoursPage_CurrentStartTime;
+                break;
+            case "Planner.WorkingHoursPage.CurrentEndTime":
+                userType = (global::Planner.Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Planner.WorkingHoursPage");
+                xamlMember = new global::Planner.Planner_XamlTypeInfo.XamlMember(this, "CurrentEndTime", "System.Nullable`1<System.DateTime>");
+                xamlMember.Getter = get_77_WorkingHoursPage_CurrentEndTime;
+                xamlMember.Setter = set_77_WorkingHoursPage_CurrentEndTime;
                 break;
             }
             return xamlMember;

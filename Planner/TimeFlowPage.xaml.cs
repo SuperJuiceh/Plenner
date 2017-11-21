@@ -53,6 +53,8 @@ namespace Planner
             if (MainTimeFlow == null || timeFlowDatePicker.Date == null)
             {
                 DateTime now = DateTime.Now;
+
+
                 MainTimeFlow = new TimeFlow(true, true, true, DateTime.Now, Planning.plan.AllItems.Where(item => item.Start != null && item.Start.IsSameDay(now)).ToList());
             }
             else

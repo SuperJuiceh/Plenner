@@ -163,11 +163,11 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="Background" />
       <RootProperty Name="Flyout" />
+      <RootProperty Name="Content" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="RenderTransformOrigin" />
       <RootProperty Name="Tag" />
-      <RootProperty Name="Content" />
       <RootProperty Name="Visibility" />
       <RootProperty Name="DataContext" />
       <RootEvent Name="Click" />
@@ -179,6 +179,14 @@
       <RootProperty Name="Content" />
       <RootEvent Name="Closed" />
       <RootEvent Name="Opened" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.DatePicker">
+      <RootProperty Name="Margin" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
+      <RootEvent Name="DateChanged" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="Margin" />
@@ -258,14 +266,6 @@
       <RootProperty Name="Width" />
       <RootProperty Name="RenderTransformOrigin" />
       <RootEvent Name="Loaded" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.DatePicker">
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Height" />
-      <RootProperty Name="Width" />
-      <RootEvent Name="DateChanged" />
     </RootType>
     <RootType FullName="Planner.AddActivity" />
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
@@ -347,7 +347,6 @@
     <RootType FullName="Planner.LoginPage" />
     <RootType FullName="Planner.Data.Converters.StringListToOneStringConverter" />
     <RootType FullName="Planner.MailPage" />
-    <RootType FullName="Planner.MainPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.UserControl">
       <RootProperty Name="Resources" />
       <RootProperty Name="Content" />

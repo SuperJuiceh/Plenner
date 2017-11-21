@@ -9,29 +9,26 @@ using Windows.Storage;
 
 namespace DataLab.Storage
 {
-    public abstract class Storage
+    public abstract class Storage<T>
     {
 
         public StorageFile   SaveLocation { get; set; }
 
-        public Object        StorageObject;
-        public Type          StorageObjectType;
+        public T             StorageObject;
 
         public XmlSerializer    Serializer;
 
-        public Storage(string filename, Type objectType)
+        public Storage(string filename)
         {
-            Serializer          = new XmlSerializer(objectType);
-            StorageObjectType   = objectType;
+            Serializer          = new XmlSerializer(typeof(T));
 
             Task.Run(() => initStorage(filename));
         }
 
-        public Storage(Storage s)
+        public Storage(Storage<T> s)
         {
             this.SaveLocation = s.SaveLocation;
             this.StorageObject = s.StorageObject;
-            this.StorageObjectType = s.StorageObjectType;
             this.Serializer = s.Serializer;
         }
 
@@ -68,7 +65,7 @@ namespace DataLab.Storage
                 if (e is FileNotFoundException)
                 {
                     // File doesnt exist yet
-                    StorageObject = Activator.CreateInstance(StorageObjectType);
+                    StorageObject = (T)Activator.CreateInstance(typeof(T));
                     SaveLocation = await ApplicationData.Current.LocalFolder.CreateFileAsync(filename, CreationCollisionOption.ReplaceExisting);
                     saveStorage();
 
@@ -83,7 +80,7 @@ namespace DataLab.Storage
             Debug.WriteLine("Done");
         }
 
-        public async Task<object> loadStorage()
+        public async Task<T> loadStorage()
         {
 
             using (Stream striem = await SaveLocation.OpenStreamForReadAsync())
@@ -91,7 +88,7 @@ namespace DataLab.Storage
                 try
                 {
 
-                    Serializer = new XmlSerializer(StorageObjectType);
+                    Serializer = new XmlSerializer(typeof(T));
                     //var settings = new XmlReaderSettings();
                     //settings.Async = true;
                     XmlReader reader = XmlReader.Create(striem);
@@ -101,12 +98,12 @@ namespace DataLab.Storage
                     //    Debug.WriteLine(await reader.GetValueAsync());
                     //}
 
-                    StorageObject = Serializer.Deserialize(reader);
+                    StorageObject = (T)Serializer.Deserialize(reader);
                 }
                 catch (Exception e)
                 {
                     Debug.WriteLine(e.Message);
-                    StorageObject = Activator.CreateInstance(StorageObjectType);
+                    StorageObject = (T)Activator.CreateInstance(typeof(T));
                     
                     saveStorage();
                 }

@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace DataLab.Storage
 {
-    public class SettingsStorage: Storage
+    public class SettingsStorage: Storage<PlannerSettings>
     {
         
-        public PlannerSettings Settings { get { return (PlannerSettings)this.StorageObject; } set { this.StorageObject = value; } }
+        public PlannerSettings Settings { get { return this.StorageObject; } set { this.StorageObject = value; } }
 
-        public SettingsStorage(): base("settings.pln", typeof(PlannerSettings))
+        public SettingsStorage(): base("settings.pln")
         {
 
         }

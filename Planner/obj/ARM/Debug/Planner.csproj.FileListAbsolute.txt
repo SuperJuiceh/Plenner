@@ -11,7 +11,6 @@ C:\Users\Bilel\source\repos\Plenner\Planner\bin\ARM\Debug\FriendsPage.xbf
 C:\Users\Bilel\source\repos\Plenner\Planner\bin\ARM\Debug\GrantPermissionsPage.xbf
 C:\Users\Bilel\source\repos\Plenner\Planner\bin\ARM\Debug\LoginPage.xbf
 C:\Users\Bilel\source\repos\Plenner\Planner\bin\ARM\Debug\MailPage.xbf
-C:\Users\Bilel\source\repos\Plenner\Planner\bin\ARM\Debug\MainPage.xbf
 C:\Users\Bilel\source\repos\Plenner\Planner\bin\ARM\Debug\PlannerMapControl.xbf
 C:\Users\Bilel\source\repos\Plenner\Planner\bin\ARM\Debug\ReflectionsPage.xbf
 C:\Users\Bilel\source\repos\Plenner\Planner\bin\ARM\Debug\RegistrationPage.xbf
@@ -173,8 +172,6 @@ C:\Users\Bilel\source\repos\Plenner\Planner\obj\ARM\Debug\LoginPage.g.i.cs
 C:\Users\Bilel\source\repos\Plenner\Planner\obj\ARM\Debug\LoginPage.g.cs
 C:\Users\Bilel\source\repos\Plenner\Planner\obj\ARM\Debug\MailPage.g.i.cs
 C:\Users\Bilel\source\repos\Plenner\Planner\obj\ARM\Debug\MailPage.g.cs
-C:\Users\Bilel\source\repos\Plenner\Planner\obj\ARM\Debug\MainPage.g.i.cs
-C:\Users\Bilel\source\repos\Plenner\Planner\obj\ARM\Debug\MainPage.g.cs
 C:\Users\Bilel\source\repos\Plenner\Planner\obj\ARM\Debug\PlannerMapControl.g.i.cs
 C:\Users\Bilel\source\repos\Plenner\Planner\obj\ARM\Debug\PlannerMapControl.g.cs
 C:\Users\Bilel\source\repos\Plenner\Planner\obj\ARM\Debug\ReflectionsPage.g.i.cs
@@ -207,7 +204,6 @@ C:\Users\Bilel\source\repos\Plenner\Planner\obj\ARM\Debug\FriendsPage.xaml
 C:\Users\Bilel\source\repos\Plenner\Planner\obj\ARM\Debug\GrantPermissionsPage.xaml
 C:\Users\Bilel\source\repos\Plenner\Planner\obj\ARM\Debug\LoginPage.xaml
 C:\Users\Bilel\source\repos\Plenner\Planner\obj\ARM\Debug\MailPage.xaml
-C:\Users\Bilel\source\repos\Plenner\Planner\obj\ARM\Debug\MainPage.xaml
 C:\Users\Bilel\source\repos\Plenner\Planner\obj\ARM\Debug\PlannerMapControl.xaml
 C:\Users\Bilel\source\repos\Plenner\Planner\obj\ARM\Debug\ReflectionsPage.xaml
 C:\Users\Bilel\source\repos\Plenner\Planner\obj\ARM\Debug\RegistrationPage.xaml
@@ -230,7 +226,6 @@ C:\Users\Bilel\source\repos\Plenner\Planner\obj\ARM\Debug\FriendsPage.xbf
 C:\Users\Bilel\source\repos\Plenner\Planner\obj\ARM\Debug\GrantPermissionsPage.xbf
 C:\Users\Bilel\source\repos\Plenner\Planner\obj\ARM\Debug\LoginPage.xbf
 C:\Users\Bilel\source\repos\Plenner\Planner\obj\ARM\Debug\MailPage.xbf
-C:\Users\Bilel\source\repos\Plenner\Planner\obj\ARM\Debug\MainPage.xbf
 C:\Users\Bilel\source\repos\Plenner\Planner\obj\ARM\Debug\PlannerMapControl.xbf
 C:\Users\Bilel\source\repos\Plenner\Planner\obj\ARM\Debug\ReflectionsPage.xbf
 C:\Users\Bilel\source\repos\Plenner\Planner\obj\ARM\Debug\RegistrationPage.xbf
@@ -326,3 +321,7 @@ C:\Users\Bilel\source\repos\Plenner\Planner\obj\ARM\Debug\Modules\NavigationPane
 C:\Users\Bilel\source\repos\Plenner\Planner\obj\ARM\Debug\Modules\NavigationPanel.g.cs
 C:\Users\Bilel\source\repos\Plenner\Planner\obj\ARM\Debug\Modules\NavigationPanel.xaml
 C:\Users\Bilel\source\repos\Plenner\Planner\obj\ARM\Debug\Modules\NavigationPanel.xbf
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\ARM\Debug\WorkingHoursPage.g.i.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\ARM\Debug\WorkingHoursPage.g.cs
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\ARM\Debug\WorkingHoursPage.xaml
+C:\Users\Bilel\source\repos\Plenner\Planner\obj\ARM\Debug\WorkingHoursPage.xbf

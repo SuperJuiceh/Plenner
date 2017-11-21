@@ -49,6 +49,7 @@
     <RootPropertyPathName Name="UserInfo" />
     <RootPropertyPathName Name="CountryOfLiving" />
     <RootPropertyPathName Name="FullName" />
+    <RootPropertyPathName Name="TotalHours" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
@@ -416,5 +417,6 @@
     <RootType FullName="Planner.TimeFlowPage" />
     <RootType FullName="Planner.ToDoPage" />
     <RootType FullName="Planner.UserPage" />
+    <RootType FullName="Planner.WorkingHoursPage" />
   </Roots.RootTypes>
 </Roots>

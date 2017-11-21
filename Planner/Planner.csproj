@@ -116,6 +116,7 @@
     <Compile Include="Data\Converters\BoolToStackPanelVisibility.cs" />
     <Compile Include="Data\Converters\ClassConverters.cs" />
     <Compile Include="Data\Converters\DateTimeFormatConverter.cs" />
+    <Compile Include="Data\Converters\DateTimeToStringConverter.cs" />
     <Compile Include="Data\Converters\DaysListToStringConverter.cs" />
     <Compile Include="Data\Converters\FeelingEnumToEmoticon.cs" />
     <Compile Include="Data\Converters\FriendsStringListWithAppliedFilter.cs" />
@@ -183,6 +184,9 @@
     </Compile>
     <Compile Include="UserPage.xaml.cs">
       <DependentUpon>UserPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WorkingHoursPage.xaml.cs">
+      <DependentUpon>WorkingHoursPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -338,6 +342,10 @@
     <Page Include="UserPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WorkingHoursPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>

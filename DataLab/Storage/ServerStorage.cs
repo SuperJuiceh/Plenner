@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace PlannerServer.Server
 {
-    public class ServerStorage: Storage
+    public class ServerStorage: Storage<ServerDataContainer>
     {
 
-        public ServerDataContainer ServerData { get { return (ServerDataContainer)StorageObject; } set { this.StorageObject = value; } } 
+        public ServerDataContainer ServerData { get { return StorageObject; } set { this.StorageObject = value; } } 
 
-        public ServerStorage(): base("server.pln", typeof(ServerDataContainer))
+        public ServerStorage(): base("server.pln")
         {
             //Debug.WriteLine(this.SaveLocation.Path);
 
