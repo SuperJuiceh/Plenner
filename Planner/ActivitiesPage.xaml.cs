@@ -22,6 +22,8 @@ using DataLab.Data.Users;
 using Windows.UI.Xaml.Data;
 using System.Collections.ObjectModel;
 using DataLab.Tools;
+using DataLab.Storage.Backups;
+using System.Threading.Tasks;
 
 
 
@@ -47,8 +49,6 @@ namespace Planner
 
         private DateTime FilterEndTime { get { return filterEndDate.Date.Date; } }
         private string _filterQuery;
-
-
         private string FilterQuery { get { return filterQueryTextBlock.Text; }  }
 
         public ObservableCollection<Activity> ActivitiesList { get; set; } = new ObservableCollection<Activity>();
@@ -61,9 +61,7 @@ namespace Planner
 
             this.ActivitiesList = Planning.plan.Activities;
             this.InitializeComponent();
-
-
-
+            
         }
 
 
@@ -72,9 +70,15 @@ namespace Planner
             this.Frame.Navigate(typeof(AddToDoItemPage));
         }
 
-        protected override void OnNavigatedTo(NavigationEventArgs e)
+        protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
+
+            StorageBackups backups = await StorageBackups.Create();
+            
+            backups.SetBackUpAsDefault(0);
+
+            
         }
 
         private void textBlock_SelectionChanged(object sender, RoutedEventArgs e)
@@ -174,10 +178,9 @@ namespace Planner
                 items = ok.ToList();
 
             }
-            Debug.WriteLine(items.Count().ToString());
+
             if (items.Count() > 0)
             {
-                Debug.WriteLine("Hi");
                 ActivitiesList.Clear();
                 // Add all items from the list
                 items.ToList().ForEach(item =>

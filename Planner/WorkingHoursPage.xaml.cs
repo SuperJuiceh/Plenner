@@ -1,4 +1,5 @@
-﻿using DataLab.Data.Work;
+﻿using DataLab.Data.Planning;
+using DataLab.Data.Work;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -34,6 +35,7 @@ namespace Planner
         public WorkingHoursPage()
         {
             this.InitializeComponent();
+            
         }
 
         private void addNewHoursButton_Click(object sender, RoutedEventArgs e)

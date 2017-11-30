@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -97,6 +98,20 @@ namespace DataLab.Data.Planning
             return x.Name.CompareTo(y.Name);
 
         };
+        
+        public bool isOfType<T>() where T : PlanningItem
+        {
+            try
+            {
+                T a = (T)this;
+
+                return true;
+            }
+            catch (InvalidCastException)
+            {
+                return false;
+            }
+        }
     }
 
     public class PlanningItemList: ObservableCollection<PlanningItem>
@@ -110,8 +125,5 @@ namespace DataLab.Data.Planning
         {
 
         }
-        
-        
-
     }
 }

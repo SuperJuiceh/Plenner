@@ -2,6 +2,7 @@
 using System;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Serialization;
@@ -9,24 +10,48 @@ using Windows.Storage;
 
 namespace DataLab.Storage
 {
-    public abstract class Storage<T>
+    public class Storage<T>
     {
 
-        public StorageFile   SaveLocation { get; set; }
+        public StorageFile      SaveLocation { get; set; }
 
-        public T             StorageObject;
+        public T                StorageObject;
 
         public XmlSerializer    Serializer;
 
-        public Storage(string filename)
+        public string           FilePath { get; set; }
+        /// <summary>
+        /// Storage() that auto grabs object from path
+        /// </summary>
+        /// <param name="filePath"></param>
+        public Storage(string filePath)
         {
-            Serializer          = new XmlSerializer(typeof(T));
+            this.Serializer     =   new XmlSerializer(typeof(T));
+            this.FilePath       =   filePath;
 
-            Task.Run(() => initStorage(filename));
+            Task.Run(() => initStorage(FilePath));
         }
+        /// <summary>
+        /// <para>Storage() with object that auto saves</para>
+        /// </summary>
+        /// <param name="filename"></param>
+        /// <param name="instance"></param>
+        public Storage(string filename, T instance)
+        {
+            Serializer = new XmlSerializer(typeof(T));
 
+            this.StorageObject = instance;
+            this.FilePath = filename;
+
+            Task.Run(() => saveStorage());
+        }
+        /// <summary>
+        /// <para>Copy Constructor</para>
+        /// </summary>
+        /// <param name="s"></param>
         public Storage(Storage<T> s)
         {
+            this.FilePath = s.FilePath;
             this.SaveLocation = s.SaveLocation;
             this.StorageObject = s.StorageObject;
             this.Serializer = s.Serializer;
@@ -35,10 +60,9 @@ namespace DataLab.Storage
         public async void initStorage(string filename)
         {
             try {
-                
 
                 // File Exists
-                SaveLocation = await ApplicationData.Current.LocalFolder.GetFileAsync(filename);
+                SaveLocation = await StorageFile.GetFileFromPathAsync(filename);
                 //await SaveLocation.DeleteAsync();
 
                 //SaveLocation = await ApplicationData.Current.LocalFolder.GetFileAsync(filename);
@@ -117,19 +141,34 @@ namespace DataLab.Storage
         public virtual async void saveStorage()
         {
             goback:
-
+            
             try
             {
-                using (Stream striem = await SaveLocation.OpenStreamForWriteAsync())
+                using (Stream striem = await (await StorageFile.GetFileFromPathAsync(this.FilePath)).OpenStreamForWriteAsync())
                 {
                     striem.SetLength(0);
                     Serializer.Serialize(striem, StorageObject);
-
+                    Debug.WriteLine("Serializing done");
                     striem.Flush();
                 }
 
-            } catch (Exception)
+            } catch (Exception e)
             {
+                if (e is FileNotFoundException && this.StorageObject != null)
+                {
+                    StorageFolder folder = await StorageFolder.GetFolderFromPathAsync(FilePath.Substring(0, FilePath.LastIndexOf('\\')));
+                    StorageFile file = await folder.CreateFileAsync(FilePath.Split('\\').Last(str => !String.IsNullOrEmpty(str)));
+
+                    using (Stream stream = await file.OpenStreamForWriteAsync())
+                    {
+                        stream.SetLength(0);
+                        Serializer.Serialize(stream, StorageObject);
+                        
+                    }
+
+                    Debug.WriteLine("Done writing");
+                }
+
                 await Task.Delay(1000);
                 goto goback;
             }
@@ -151,5 +190,14 @@ namespace DataLab.Storage
         }
         
         
+    }
+
+    public static class StorageDefaults
+    {
+
+        public static readonly string DefaultPlanningPath = ApplicationData.Current.LocalFolder.Path + "\\planning.pln";
+        public static readonly string DefaultSettingsPath = ApplicationData.Current.LocalFolder.Path + "\\settings.pln";
+        public static readonly string DefaultBackupsPath = ApplicationData.Current.LocalFolder.Path + "\\Backups\\";
+
     }
 }

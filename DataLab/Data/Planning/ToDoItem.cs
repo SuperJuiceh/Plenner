@@ -15,13 +15,12 @@ namespace DataLab.Data.Planning
         [XmlAttribute("IsDone")]
         public virtual bool IsDone { get; set; }
         [XmlAttribute("Deadline")]
-        public virtual DateTime Deadline { get; set; }
+        public virtual DateTime Deadline { get { return this.End; } set { End = value; }  }
         [XmlAttribute("CompletedAt")]
         public virtual DateTime CompletedAt { get; set; }
         [XmlAttribute("NotifySpanBeforeDeadline")]
         public virtual TimeSpan NotifySpanBeforeDeadline { get; set; }
-
-
+        
         public virtual bool HasDeadline { get { return hasDeadline(); } }
 
         public ToDoItem(string name, string description, DateTime deadline): base(name)

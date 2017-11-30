@@ -89,10 +89,6 @@ namespace Planner
 
         private void withoutLoginButton_Click(object sender, RoutedEventArgs e)
         {
-            GeneralApplicationData.Planning = new PlanningItemStorage();
-
-            while (!GeneralApplicationData.Planning.waitToLoad(1)) { }
-
             this.Frame.Navigate(typeof(ActivitiesPage));
         }
 

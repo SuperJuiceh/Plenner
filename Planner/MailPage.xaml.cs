@@ -51,7 +51,6 @@ namespace Planner
 
             if (p != null)
             {
-                Debug.WriteLine("Mails: "+ p.CurrentUser.Mails.Count());
                 plan = p;
             }
         }

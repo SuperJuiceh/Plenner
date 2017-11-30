@@ -90,6 +90,7 @@ namespace DataLab.Data.Planning
                 Changed("Description");
         }
 
+
         public int Compare(object x, object y)
         {
             throw new NotImplementedException();

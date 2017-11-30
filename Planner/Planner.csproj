@@ -114,14 +114,12 @@
     </Compile>
     <Compile Include="Data\Converters\BoolToElementVisibility.cs" />
     <Compile Include="Data\Converters\BoolToStackPanelVisibility.cs" />
-    <Compile Include="Data\Converters\ClassConverters.cs" />
     <Compile Include="Data\Converters\DateTimeFormatConverter.cs" />
     <Compile Include="Data\Converters\DateTimeToStringConverter.cs" />
     <Compile Include="Data\Converters\DaysListToStringConverter.cs" />
     <Compile Include="Data\Converters\FeelingEnumToEmoticon.cs" />
     <Compile Include="Data\Converters\FriendsStringListWithAppliedFilter.cs" />
     <Compile Include="Data\Converters\ItemTimeToMarginConverter.cs" />
-    <Compile Include="Data\Converters\IValueChanged.cs" />
     <Compile Include="Data\Converters\NameToOnlineStatusConverter.cs" />
     <Compile Include="Data\Converters\PhotoToPanelVisibility.cs" />
     <Compile Include="Data\Converters\PlanningItemToInfoPanelConverter.cs" />
@@ -133,7 +131,9 @@
     <Compile Include="Data\GeneralApplicationData.cs" />
     <Compile Include="Data\Notify\ToastNotifier.cs" />
     <Compile Include="Data\Styling\UserStyleFactory.cs" />
-    <Compile Include="Data\TimeFlowTools\TimeFlow.cs" />
+    <Compile Include="Data\Tools\GUI\DeviceResolution.cs" />
+    <Compile Include="Data\Tools\GUI\PlannerFilePicker.cs" />
+    <Compile Include="Data\Tools\TimeFlow\TimeFlow.cs" />
     <Compile Include="DiariesPage.xaml.cs">
       <DependentUpon>DiariesPage.xaml</DependentUpon>
     </Compile>
@@ -156,6 +156,9 @@
     <Compile Include="Modules\IPropertyChanged.cs" />
     <Compile Include="Modules\NavigationPanel.xaml.cs">
       <DependentUpon>NavigationPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\TimeFlowPanel.xaml.cs">
+      <DependentUpon>TimeFlowPanel.xaml</DependentUpon>
     </Compile>
     <Compile Include="PlannerMapControl.xaml.cs">
       <DependentUpon>PlannerMapControl.xaml</DependentUpon>
@@ -307,6 +310,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Modules\TimeFlowPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PlannerMapControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -358,10 +365,14 @@
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>5.3.3</Version>
     </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>10.0.3</Version>
+    </PackageReference>
     <PackageReference Include="System.ValueTuple">
       <Version>4.3.1</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '15.0' ">
     <VisualStudioVersion>15.0</VisualStudioVersion>
   </PropertyGroup>

@@ -149,7 +149,7 @@
     <Compile Include="Server\Packets\OneWayPacket.cs" />
     <Compile Include="Server\Packets\Packet.cs" />
     <Compile Include="Server\Packets\QuestionPacket.cs" />
-    <Compile Include="Storage\ComboStorage.cs" />
+    <Compile Include="Storage\Backups\StorageBackups.cs" />
     <Compile Include="Storage\DynamicPlanningItemStorage.cs" />
     <Compile Include="Storage\PlannerSettings.cs" />
     <Compile Include="Storage\PlanningItemStorage.cs" />
@@ -170,6 +170,9 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>5.3.3</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>10.0.3</Version>
     </PackageReference>
     <PackageReference Include="System.ValueTuple">
       <Version>4.3.1</Version>

@@ -96,7 +96,6 @@ namespace Planner
             
             SelectedPermissions.ToList().ForEach(perm =>
             {
-                Debug.WriteLine("Scanning a Permission class");
 
                 if (perm.Name == "Activities")
                 {
@@ -140,9 +139,7 @@ namespace Planner
                 }
 
             });
-
-            Debug.WriteLine("Permissions list has {0} Permissions inside", permissions.Count);
-
+            
             return permissions;
 
         }

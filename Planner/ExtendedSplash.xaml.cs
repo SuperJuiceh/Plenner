@@ -105,7 +105,7 @@ namespace Planner
                 }
                 else
                 {
-                    this.rootFrame.Navigate(typeof(WorkingHoursPage));
+                    this.rootFrame.Navigate(typeof(ActivitiesPage));
                 }
 
 

@@ -12,6 +12,7 @@ GrantPermissionsPage.xbf
 LoginPage.xbf
 MailPage.xbf
 Modules\NavigationPanel.xbf
+Modules\TimeFlowPanel.xbf
 PlannerMapControl.xbf
 ReflectionsPage.xbf
 RegistrationPage.xbf
@@ -21,3 +22,4 @@ ShowDiaryPage.xbf
 TimeFlowPage.xbf
 ToDoPage.xbf
 UserPage.xbf
+WorkingHoursPage.xbf

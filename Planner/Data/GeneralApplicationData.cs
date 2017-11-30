@@ -9,6 +9,11 @@ namespace Planner.Data
 {
     public static class GeneralApplicationData
     {
+        static GeneralApplicationData() {
+
+            Planning = PlanningItemStorage.GetConcreteStorage();
+
+        }
 
         public static PlanningItemStorage        Planning { get; set; }
 

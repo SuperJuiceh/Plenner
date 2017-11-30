@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.Storage;
 
 namespace DataLab.Storage
 {
@@ -12,7 +13,7 @@ namespace DataLab.Storage
         
         public PlannerSettings Settings { get { return this.StorageObject; } set { this.StorageObject = value; } }
 
-        public SettingsStorage(): base("settings.pln")
+        public SettingsStorage(): base(StorageDefaults.DefaultSettingsPath)
         {
 
         }

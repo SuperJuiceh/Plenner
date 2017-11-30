@@ -70,7 +70,6 @@ namespace DataLab.Storage
 
         public void Changed(string name)
         {
-            Debug.WriteLine("Changed {0}", name);
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
 

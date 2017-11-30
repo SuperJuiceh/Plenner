@@ -13,20 +13,51 @@ using System.Diagnostics;
 using System.ComponentModel;
 using DataLab.Data.Planning;
 using DataLab.Data.Users;
+using Windows.Storage;
 
 namespace DataLab.Storage
 {
     public class PlanningItemStorage : Storage<Plan>, INotifyPropertyChanged
     {
+        private StorageFile storageFile;
+
         public event PropertyChangedEventHandler PropertyChanged;
         
         public virtual Plan plan { get { return (Plan)StorageObject; } set { StorageObject = value; setChanged("plan"); } }
-        
-        public PlanningItemStorage() : base("planning.pln", typeof(Plan))
+
+        public PlanningItemStorage(): base(StorageDefaults.DefaultPlanningPath)
         {
-            
+
+        }
+
+        public PlanningItemStorage(string filename,  Plan p): base(filename, p)
+        {
+
         }
         
+        public PlanningItemStorage(Plan s, Windows.Storage.StorageFile storageFile) : base(StorageDefaults.DefaultPlanningPath)
+        {
+            this.SaveLocation = storageFile;
+
+        }
+        public PlanningItemStorage(StorageFile storageFile): base(storageFile.Path)
+        {
+            this.SaveLocation = storageFile;
+        }
+
+        public static PlanningItemStorage CreateFromPlan(Plan p, string filename)
+        {
+            PlanningItemStorage s = new PlanningItemStorage(filename, p);
+
+            s.StorageObject = p;
+            filename += DateTime.Now.ToString();
+            Debug.WriteLine("Filename: " + filename);
+            s.saveStorage();
+
+            return s;
+
+        }
+
 
         public virtual void addPlanningItem(PlanningItem pi)
         {
@@ -39,7 +70,7 @@ namespace DataLab.Storage
             else if (piType == typeof(Reflection))
                 addReflection((Reflection)pi);
             else if (piType == typeof(RepeatingPlanningItem))
-                plan.rpi.Remove((RepeatingPlanningItem)pi);
+                plan.rpi.Add((RepeatingPlanningItem)pi);
             else if (piType == typeof(ToDoItem))
                 addToDoItem((ToDoItem)pi);
             else if (piType == typeof(ToDoItemSet))
@@ -172,6 +203,18 @@ namespace DataLab.Storage
         public virtual bool isDynamic()
         {
             return false;
+        }
+
+        public static PlanningItemStorage GetConcreteStorage()
+        {
+            PlanningItemStorage storage = new PlanningItemStorage();
+
+            while (!storage.waitToLoad(1)){
+
+            }
+            Debug.WriteLine("GotConcreteStorage()");
+
+            return storage;
         }
     }
 }

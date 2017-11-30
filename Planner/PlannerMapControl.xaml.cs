@@ -125,12 +125,9 @@ namespace Planner
 
             if (Mode == MapControlMode.OBSERVANT_VIEW)
             {
-                Debug.WriteLine(" Set loaded as observant viewer");
                 _geo.PositionChanged += _geo_PositionChanged;
 
             }
-
-
         }
 
         public async void setmaptogps(int zoom)
@@ -177,24 +174,6 @@ namespace Planner
             }
         }
 
-        private async void okayButton_Click(object sender, RoutedEventArgs e)
-        {
-            //// Try because we can't check if struct is a NULL, nor an int.
-            //try
-            //{
-            //    if (Mode == MapControlMode.OBSERVANT_VIEW)
-            //    {
-
-            //    }
-            //} catch (Exception f)
-            //{
-            //    Debug.WriteLine(f.Message);
-            //}
-
-
-
-        }
-
 
         private async void setLastLocationAsAddressString()
         {
@@ -214,10 +193,8 @@ namespace Planner
 
         private async void setDestinationAsAddressString()
         {
-            Debug.WriteLine("setDestinationAsAddressString()");
             if (_destinationActivity != null)
             {
-                Debug.WriteLine("Working");
                 MapLocationFinderResult result = await MapLocationFinder.FindLocationsAtAsync(new Geopoint(_destinationActivity.Location));
 
                 if (result.Status == MapLocationFinderStatus.Success)
@@ -261,8 +238,7 @@ namespace Planner
                 activeIcon.Location = args.Location;
 
                 sender.MapElements.Add(activeIcon);
-
-                Debug.WriteLine("Added maptapped");
+                
             }
 
         }
@@ -304,9 +280,7 @@ namespace Planner
 
         private async void setActivity()
         {
-            Debug.WriteLine("Set Activity");
             Activity activity = DataContext as Activity;
-            Debug.WriteLine("Activity is null? {0}", activity == null);
 
             if (activity != null)
             {

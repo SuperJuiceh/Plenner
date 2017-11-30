@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.Storage;
 
 namespace PlannerServer.Server
 {
@@ -13,7 +14,7 @@ namespace PlannerServer.Server
 
         public ServerDataContainer ServerData { get { return StorageObject; } set { this.StorageObject = value; } } 
 
-        public ServerStorage(): base("server.pln")
+        public ServerStorage(): base(ApplicationData.Current.LocalFolder.Path + "server.pln")
         {
             //Debug.WriteLine(this.SaveLocation.Path);
 

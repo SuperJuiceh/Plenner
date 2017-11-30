@@ -14,14 +14,8 @@ namespace DataLab.Tools.Connectivity
 {
     public class MailClient
     {
-
-        public void run()
-        {
-
-        }
-
         private string _senderUsernamé;
-        private string _senderMailAddress;
+        //private string _senderMailAddress;
 
         private string[] _receiverUsernames = new string[] { "bilel@live.nl" };
         private string[] _receiverMailAddresses = new string[] { "Bilel Bghiel" };
