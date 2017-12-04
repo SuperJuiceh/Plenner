@@ -415,6 +415,9 @@
     <AppxPackagedFile Include="C:\Users\Bilel\source\repos\Plenner\Plenner\Planner\Assets\Background_redlight.png">
       <PackagePath>Assets\Background_redlight.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bilel\source\repos\Plenner\Plenner\Planner\Assets\Backup_icon.png">
+      <PackagePath>Assets\Backup_icon.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Bilel\source\repos\Plenner\Plenner\Planner\Assets\blue-plus-sign-md.png">
       <PackagePath>Assets\blue-plus-sign-md.png</PackagePath>
     </AppxPackagedFile>

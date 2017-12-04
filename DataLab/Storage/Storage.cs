@@ -148,7 +148,6 @@ namespace DataLab.Storage
                 {
                     striem.SetLength(0);
                     Serializer.Serialize(striem, StorageObject);
-                    Debug.WriteLine("Serializing done");
                     striem.Flush();
                 }
 

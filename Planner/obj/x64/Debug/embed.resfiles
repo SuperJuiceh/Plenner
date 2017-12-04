@@ -11,6 +11,7 @@ FriendsPage.xbf
 GrantPermissionsPage.xbf
 LoginPage.xbf
 MailPage.xbf
+Modules\BackupModule.xbf
 Modules\NavigationPanel.xbf
 Modules\TimeFlowPanel.xbf
 PlannerMapControl.xbf

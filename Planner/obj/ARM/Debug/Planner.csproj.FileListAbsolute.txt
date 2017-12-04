@@ -669,3 +669,8 @@ C:\Users\Bilel\source\repos\Plenner\Plenner\Planner\obj\ARM\Debug\FxResources.Sy
 C:\Users\Bilel\source\repos\Plenner\Plenner\Planner\obj\ARM\Debug\FxResources.System.ComponentModel.TypeConverter.SR.resw
 C:\Users\Bilel\source\repos\Plenner\Plenner\Planner\obj\ARM\Debug\FxResources.System.Runtime.InteropServices.RuntimeInformation.SR.resw
 C:\Users\Bilel\source\repos\Plenner\Plenner\Planner\obj\ARM\Debug\FxResources.System.Runtime.Serialization.Formatters.SR.resw
+C:\Users\Bilel\source\repos\Plenner\Plenner\Planner\bin\ARM\Debug\Modules\BackupModule.xbf
+C:\Users\Bilel\source\repos\Plenner\Plenner\Planner\obj\ARM\Debug\Modules\BackupModule.g.i.cs
+C:\Users\Bilel\source\repos\Plenner\Plenner\Planner\obj\ARM\Debug\Modules\BackupModule.g.cs
+C:\Users\Bilel\source\repos\Plenner\Plenner\Planner\obj\ARM\Debug\Modules\BackupModule.xaml
+C:\Users\Bilel\source\repos\Plenner\Plenner\Planner\obj\ARM\Debug\Modules\BackupModule.xbf

@@ -74,10 +74,6 @@ namespace Planner
         {
             base.OnNavigatedTo(e);
 
-            StorageBackups backups = await StorageBackups.Create();
-            
-            backups.SetBackUpAsDefault(0);
-
             
         }
 

@@ -119,6 +119,7 @@
     <Compile Include="Data\Converters\DaysListToStringConverter.cs" />
     <Compile Include="Data\Converters\FeelingEnumToEmoticon.cs" />
     <Compile Include="Data\Converters\FriendsStringListWithAppliedFilter.cs" />
+    <Compile Include="Data\Converters\FullPathToFileNameStringConverter.cs" />
     <Compile Include="Data\Converters\ItemTimeToMarginConverter.cs" />
     <Compile Include="Data\Converters\NameToOnlineStatusConverter.cs" />
     <Compile Include="Data\Converters\PhotoToPanelVisibility.cs" />
@@ -133,6 +134,7 @@
     <Compile Include="Data\Styling\UserStyleFactory.cs" />
     <Compile Include="Data\Tools\GUI\DeviceResolution.cs" />
     <Compile Include="Data\Tools\GUI\PlannerFilePicker.cs" />
+    <Compile Include="Data\Tools\GUI\PopupMachine.cs" />
     <Compile Include="Data\Tools\TimeFlow\TimeFlow.cs" />
     <Compile Include="DiariesPage.xaml.cs">
       <DependentUpon>DiariesPage.xaml</DependentUpon>
@@ -152,6 +154,9 @@
     </Compile>
     <Compile Include="MailPage.xaml.cs">
       <DependentUpon>MailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BackupModule.xaml.cs">
+      <DependentUpon>BackupModule.xaml</DependentUpon>
     </Compile>
     <Compile Include="Modules\IPropertyChanged.cs" />
     <Compile Include="Modules\NavigationPanel.xaml.cs">
@@ -207,6 +212,7 @@
     <Content Include="Assets\Background_greenlight.png" />
     <Content Include="Assets\Background_orange.png" />
     <Content Include="Assets\Background_redlight.png" />
+    <Content Include="Assets\Backup_icon.png" />
     <Content Include="Assets\blue-plus-sign-md.png" />
     <Content Include="Assets\Broom_icon.svg.png" />
     <Content Include="Assets\Camera-con.png" />
@@ -305,6 +311,10 @@
     <Page Include="MailPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\BackupModule.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Modules\NavigationPanel.xaml">
       <SubType>Designer</SubType>

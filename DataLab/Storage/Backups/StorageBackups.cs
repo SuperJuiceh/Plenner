@@ -1,8 +1,11 @@
 ﻿using DataLab.Data.Planning;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,11 +14,11 @@ using Windows.Storage;
 
 namespace DataLab.Storage.Backups
 {
-    public class StorageBackups
+    public class StorageBackups: INotifyPropertyChanged
     {
         private BackUpSettings BackupSettings { get; set; } = new BackUpSettings(10);
         [XmlArray("BackUpLocationPaths"), XmlArrayItem(typeof(string))]
-        private List<string> BackUpLocationPaths { get; set; } = new List<string>();
+        public ObservableCollection<string> BackUpLocationPaths { get; private set; } = new ObservableCollection<string>();
         private string BackupsFolderName { get; set; } = "\\Backups\\";
         private string BackupsFolderPath { get; set; }
 
@@ -26,19 +29,41 @@ namespace DataLab.Storage.Backups
         {
             
             this.BackupsFolderPath = ApplicationData.Current.LocalFolder.Path + BackupsFolderName;
+            createFolderIfNeeded();
+            
         }
-        
+
+        private async void createFolderIfNeeded()
+        {
+
+            try
+            {
+                await StorageFolder.GetFolderFromPathAsync(StorageDefaults.DefaultBackupsPath);
+            } catch (FileNotFoundException e) { 
+                StorageFolder folder = ApplicationData.Current.LocalFolder;
+                await folder.CreateFolderAsync(BackupsFolderName.Replace('\\','\\'));
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public int getBackupFilePosition(string backupPath)
+        {
+            BackUpLocationPaths.ToList().ForEach(s => Debug.WriteLine(s));
+            return BackUpLocationPaths.ToList().Contains(backupPath) ? BackUpLocationPaths.IndexOf(backupPath) : -1;
+        }
+
         public PlanningItemStorage CreatePlanningNewItemsBackUp(Plan s, bool overideOld)
         {
+            Debug.WriteLine("Creating new itemsbackup");
             string newFileName = StorageDefaults.DefaultBackupsPath+ "planning"+ DateTime.Now.ToString().Replace(':', ';').Replace('/', '-') + ".pln";
             PlanningItemStorage storage = null;
             bool couldAdd = AddBackup(newFileName);
-            Debug.WriteLine("Couuld add: " + couldAdd);
+
             if (couldAdd || overideOld)
             {
-                Debug.WriteLine("Can add");
                 storage = new PlanningItemStorage(newFileName, s);
-                while (storage.StorageObject == null) { Debug.WriteLine("Waiting"); }
+
             } else
             {
                 throw new Exception("Backup already exists");
@@ -65,19 +90,15 @@ namespace DataLab.Storage.Backups
             return true;
         }
 
-        private void RemoveBackup(string Path)
-        {
-            if (!BackUpLocationPaths.Contains(Path))
+        public async void RemoveBackup(string Path)
+        { 
+            if (BackUpLocationPaths.Contains(Path) && !(Path == StorageDefaults.DefaultBackupsPath))
             {
-                if (!(BackUpLocationPaths.Count() >= BackupSettings.MaxBackups))
-                {
-                    BackUpLocationPaths.Add(Path);
-                    BackupSettings.MaxBackups -= 1;
-                }
-                else
-                    throw new Exception("Max capacity already reached, will not add Backup.");
-            }
-                
+                await (await GetBackUpFile(Path)).SaveLocation.DeleteAsync();
+                BackupSettings.MaxBackups -= 1;
+                BackUpLocationPaths.Remove(Path);
+                Debug.WriteLine("Backups Removed");
+            }   
         }
 
         public static async Task<StorageBackups> Create()
@@ -87,13 +108,31 @@ namespace DataLab.Storage.Backups
 
             while (!backups.IsInit)
             {
-                Debug.WriteLine("not init yet");
                 await Task.Delay(250);
             }
 
             Debug.WriteLine(backups.ToString());
 
             return backups;
+        }
+
+        public async Task<PlanningItemStorage> GetBackUpFile(string filepath)
+        {
+            Debug.WriteLine(filepath);
+            Debug.WriteLine(BackUpLocationPaths.Count().ToString());
+
+            for (int counter = 0; counter < BackUpLocationPaths.Count(); counter++)
+            {
+                Debug.WriteLine(BackUpLocationPaths[counter] == filepath);
+                if (BackUpLocationPaths[counter] == filepath)
+                {
+                    PlanningItemStorage s = new PlanningItemStorage(await StorageFile.GetFileFromPathAsync(BackUpLocationPaths[counter]));
+                    await s.loadStorage();
+                    return s;
+                }
+            }
+
+            throw new NullReferenceException("Backup Not Found");
         }
 
         /// <summary>
@@ -126,8 +165,7 @@ namespace DataLab.Storage.Backups
                 await backupPlanning.MoveAndReplaceAsync(originalPlanning.SaveLocation);
 
                 PlanningItemStorage a = CreatePlanningNewItemsBackUp(originalPlanning.plan, true);
-
-                Debug.WriteLine("Replaced with backup");
+                
                 Debug.WriteLine(a.plan.Activities.Count().ToString());
 
             }
@@ -137,19 +175,16 @@ namespace DataLab.Storage.Backups
         {
             if (BackUpLocationPaths.Count() > pos)
             {
-                Debug.WriteLine(DateTime.Now.ToString().Replace(':', ';').Replace('/', '-'));
-                Debug.WriteLine("Back up location: "+ BackUpLocationPaths[0]);
                 string dateString = BackUpLocationPaths[pos].Split('\\')
                                                             .First(str => str.Contains(".pln"))
                                                             .Replace(".pln", "")
                                                             .Replace("planning", "")
                                                             .Replace(";", ":");
-                Debug.WriteLine("date string: " + dateString);
+
                 DateTime foundDate;
 
                 if (DateTime.TryParse(dateString, out foundDate))
                 {
-                    Debug.WriteLine("Found Backup");
                     SetBackUpAsDefault(foundDate);
                 }
             }
@@ -189,11 +224,23 @@ namespace DataLab.Storage.Backups
 
             return builder.ToString();
         }
+
+        public void Changed(string name)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(name));
+            }
+        }
     }
 
-    public class BackUpSettings
+    public class BackUpSettings: INotifyPropertyChanged
     {
-        public int MaxBackups { get; set; }
+        private int _maxBackups;
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public int MaxBackups { get => _maxBackups; set { _maxBackups = value; Changed("MaxBackups"); } }
 
         public BackUpSettings(int maxBackups)
         {
@@ -203,6 +250,14 @@ namespace DataLab.Storage.Backups
         private BackUpSettings()
         {
 
+        }
+
+        public void Changed(string name)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(name));
+            }
         }
     }
 }

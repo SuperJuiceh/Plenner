@@ -19,8 +19,6 @@ namespace DataLab.Storage
 {
     public class PlanningItemStorage : Storage<Plan>, INotifyPropertyChanged
     {
-        private StorageFile storageFile;
-
         public event PropertyChangedEventHandler PropertyChanged;
         
         public virtual Plan plan { get { return (Plan)StorageObject; } set { StorageObject = value; setChanged("plan"); } }
@@ -100,6 +98,11 @@ namespace DataLab.Storage
                 removeToDoItem((ToDoItem)pi);
             else if (piType == typeof(ToDoItemSet))
                 removeToDoItemSet((ToDoItemSet)pi);
+        }
+
+        internal void Delete()
+        {
+            throw new NotImplementedException();
         }
 
         public virtual void replacePlanningItem(PlanningItem pi)
